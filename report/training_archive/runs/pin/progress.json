@@ -1,0 +1,8 @@
+{
+  "state": "training",
+  "epoch": 201,
+  "epochs": 300,
+  "batch": 0,
+  "batches": 400,
+  "updated_at": "2026-10-24T00:34:24.312955+08:00"
+}

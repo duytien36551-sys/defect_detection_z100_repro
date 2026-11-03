@@ -1,0 +1,57 @@
+{
+  "status": "PASS_BOARD_INFERENCE_REFERENCE_EQUAL",
+  "retries": 0,
+  "cache_policy": "FULL (no scoped JTAG receipt)",
+  "scope": "one frozen image, no dataset accuracy/FPS acceptance",
+  "transaction_seconds": 0.5244989999919198,
+  "detections": [
+    {
+      "class_id": 6,
+      "class_name": "PIN_有机物污染",
+      "score": 0.87188375,
+      "xyxy": [
+        86.82688704,
+        356.07326528,
+        200.00102976,
+        423.55358144
+      ]
+    },
+    {
+      "class_id": 0,
+      "class_name": "PIN_破损",
+      "score": 0.866531312,
+      "xyxy": [
+        373.51764672,
+        545.34271232,
+        477.5776288,
+        587.81616192
+      ]
+    }
+  ],
+  "expected": [
+    {
+      "class_id": 6,
+      "class_name": "PIN_有机物污染",
+      "score": 0.87188375,
+      "xyxy": [
+        86.82688704,
+        356.07326528,
+        200.00102976,
+        423.55358144
+      ]
+    },
+    {
+      "class_id": 0,
+      "class_name": "PIN_破损",
+      "score": 0.866531312,
+      "xyxy": [
+        373.51764672,
+        545.34271232,
+        477.5776288,
+        587.81616192
+      ]
+    }
+  ],
+  "reference_equal": true,
+  "post_inference_hello": "PASS"
+}

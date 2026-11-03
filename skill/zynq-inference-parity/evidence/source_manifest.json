@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "scope": "Portable examples derived from authentic local records; author paths/serial redacted, JSON serialized anew. Text decoded UTF-8, falling back to GB18030 with replacement for legacy logs. Original and distributed hashes are separate; no new training/board run.",
+  "files": [
+    {
+      "snapshot_path": "examples/03_parity_physical_frame/inputs/board_result.json",
+      "source_origin": "z100/validation/board_z100/reference_assumed_jtag_466_v1/full_model_execution/completed_read_20261023T051220Z/result.json",
+      "source_sha256": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c",
+      "snapshot_sha256": "b715d116e484234e30eaad553a835f237f7192e6de070b81ce192cb63067edf4",
+      "bytes": 2134,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/03_parity_physical_frame/inputs/raw_heads_padded.bin",
+      "source_origin": "z100/validation/board_z100/reference_assumed_jtag_466_v1/full_model_execution/completed_read_20261023T051220Z/raw_heads_padded.bin",
+      "source_sha256": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555",
+      "snapshot_sha256": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555",
+      "bytes": 613248,
+      "redacted_or_reserialized": false
+    },
+    {
+      "snapshot_path": "examples/03_parity_physical_frame/inputs/first_frame_summary.json",
+      "source_origin": "z100/validation/board_z100/reference_assumed_jtag_466_v1/full_model_execution/first_frame_summary.json",
+      "source_sha256": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9",
+      "snapshot_sha256": "1c5c8b0a25e83c326639cc387851ad91946a6ed4f4811307d4fd257bcfc7dcbd",
+      "bytes": 26774,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/04_parity_quality_gate/inputs/pipeline_validation.json",
+      "source_origin": "z100/deployment/candidates/pin640/provisional_models/20261022T131845Z_15a161/pipeline/validation.json",
+      "source_sha256": "1a2f23dcca734a3d4eb591420583d45e3350fb2ef70cdad59fb78e1e08ccf31a",
+      "snapshot_sha256": "91ad14d2ba3530a2736f6e8f3e4800db9787bfc7288daab047851cc44d1b7a08",
+      "bytes": 5667,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/stored_output_comparison/inputs/board_float32.bin",
+      "source_origin": "supplemental_parity_20261025/inputs/board_float32.bin",
+      "source_sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8",
+      "snapshot_sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8",
+      "bytes": 1164072,
+      "redacted_or_reserialized": false
+    },
+    {
+      "snapshot_path": "examples/stored_output_comparison/inputs/capture_result.json",
+      "source_origin": "supplemental_parity_20261025/inputs/capture_result.json",
+      "source_sha256": "50ed1b33c699d8e357e14b5f3be561b33ccd143abd18f096d8daee132912d8f3",
+      "snapshot_sha256": "9e81597a1ab7d2c1df32413b26d8042ea53ae1ff87b3839d693d478f2823c2dd",
+      "bytes": 1255,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/stored_output_comparison/inputs/head_acceptance.json",
+      "source_origin": "supplemental_parity_20261025/inputs/head_acceptance.json",
+      "source_sha256": "2d51ea97ea59a4b1ed9567b6dfe8deb4aab5d7d57488716c9e0bc0df4b7deefb",
+      "snapshot_sha256": "e828f6110e2a7ab43c13e1c7d737f6a56d8ac425deda16a93a7475e8f3773b23",
+      "bytes": 1110,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/stored_output_comparison/inputs/host_reference_float32.bin",
+      "source_origin": "supplemental_parity_20261025/inputs/host_reference_float32.bin",
+      "source_sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8",
+      "snapshot_sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8",
+      "bytes": 1164072,
+      "redacted_or_reserialized": false
+    },
+    {
+      "snapshot_path": "validation/independent/03_parity_physical_frame/report.md",
+      "source_origin": "validation/independent_normal_20261025/03_parity_physical_frame.md",
+      "source_sha256": "090af434948e34f8c1cf74ae7e2a1e4de2d540ee703f7cbd0bcc15ffba335310",
+      "snapshot_sha256": "3a9297c37c6f6797b143c2f7ef332fd333ce1dd285024fdf2ee3fdac6b6e369a",
+      "bytes": 3830,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/03_parity_physical_frame/report.json",
+      "source_origin": "validation/independent_normal_20261025/03_parity_physical_frame.json",
+      "source_sha256": "980018d1b16ab5455251f0531bd2d64b64cd7b596132c6ba9018d031d0eb5ddc",
+      "snapshot_sha256": "4b77b26ee2db0f3646678e00cbc669fe0bfe5f0991a43ad63dbd32803717131e",
+      "bytes": 4958,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/04_parity_quality_gate/report.md",
+      "source_origin": "validation/behavior_run_b_20261025/04_parity_quality_gate/report.md",
+      "source_sha256": "218c20139abc146a1ec5fb40d00be48635c910a1200c4a07043f3a0f53f7375e",
+      "snapshot_sha256": "218c20139abc146a1ec5fb40d00be48635c910a1200c4a07043f3a0f53f7375e",
+      "bytes": 2729,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/04_parity_quality_gate/report.json",
+      "source_origin": "validation/behavior_run_b_20261025/04_parity_quality_gate/report.json",
+      "source_sha256": "166ac605e511c10b1b65cf453fd284bf4d541e9c764f49f27b98d7f2479bbcef",
+      "snapshot_sha256": "37378a766cf7a95cc1211b19a7ffdd685071acea5ee0ec218eddec5a53c159d4",
+      "bytes": 12885,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    }
+  ],
+  "submission_transform": "2026-10-31 standalone skill folder; Markdown navigation converted to readable text and workflow included in entry/readme. Original source hashes preserved."
+}

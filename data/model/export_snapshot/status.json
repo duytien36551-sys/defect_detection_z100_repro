@@ -1,0 +1,8 @@
+{
+  "package_created": true,
+  "domain": "pin",
+  "class_count": 9,
+  "accuracy_evaluated": false,
+  "accuracy_accepted": false,
+  "firmware_instruction": "Rebuild ARM with this generated header and exact MODEL.V8P; deploy only matching V8 bitstream."
+}

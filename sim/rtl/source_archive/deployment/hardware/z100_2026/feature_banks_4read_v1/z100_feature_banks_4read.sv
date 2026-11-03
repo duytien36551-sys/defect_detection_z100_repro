@@ -1,0 +1,201 @@
+`default_nettype none
+
+// Private four-read-port view of the frozen two-port addressed feature store.
+// Two identical physical stores receive atomic writes; reads 0/1 come from
+// copy_a and reads 2/3 come from copy_b. Payload RAM is never reset or cleared.
+(* use_dsp = "no" *)
+module z100_feature_banks_4read #(
+    parameter integer ADDR_BITS = 13,
+    parameter integer DEPTH = 8192
+) (
+    input  wire                       clk,
+    input  wire                       rst_n,
+    input  wire                       cancel,
+
+    input  wire                       cfg_begin,
+    output wire                       cfg_begin_ready,
+    input  wire [31:0]                cfg_epoch,
+    input  wire [10:0]                cfg_channels,
+    input  wire [9:0]                 cfg_height,
+    input  wire [9:0]                 cfg_width,
+
+    input  wire                       cfg_word_valid,
+    output wire                       cfg_word_ready,
+    input  wire [511:0]               cfg_word_data,
+    input  wire [31:0]                cfg_word_epoch,
+    input  wire [12:0]                cfg_word_address,
+    input  wire                       cfg_word_last,
+    input  wire                       cfg_commit,
+    output wire                       cfg_commit_ready,
+
+    output wire                       error_valid,
+    output wire [3:0]                 error_code,
+    output wire                       store_valid,
+    output wire [31:0]                active_epoch,
+    output wire                       loading,
+
+    input  wire                       req_valid,
+    output wire                       req_ready,
+    input  wire [31:0]                req_epoch,
+    input  wire [64*4*ADDR_BITS-1:0]  req_addresses,
+    input  wire [255:0]               req_mask,
+    output wire                       out_valid,
+    input  wire                       out_ready,
+    output wire [31:0]                out_epoch,
+    output wire [2047:0]              out_data
+);
+    localparam [3:0] ERR_MIRROR_MISMATCH = 4'd8;
+
+    wire cfg_begin_ready_a, cfg_begin_ready_b;
+    wire cfg_word_ready_a, cfg_word_ready_b;
+    wire cfg_commit_ready_a, cfg_commit_ready_b;
+    wire req_ready_a, req_ready_b;
+    // The addressed child suppresses each ready while another command class
+    // is active. Keep those child gates acyclic if a caller presents two
+    // command classes together: hold all of them until the inputs are exclusive.
+    wire input_classes_exclusive = !(
+        (cfg_begin && (cfg_word_valid || cfg_commit || req_valid)) ||
+        (cfg_word_valid && (cfg_commit || req_valid)) ||
+        (cfg_commit && req_valid));
+    wire cfg_begin_fire_ready;
+    wire cfg_word_fire_ready;
+    wire cfg_commit_fire_ready;
+    wire req_fire_ready;
+    wire cfg_begin_i = cfg_begin && cfg_begin_fire_ready;
+    wire cfg_word_valid_i = cfg_word_valid && cfg_word_fire_ready;
+    wire cfg_commit_i = cfg_commit && cfg_commit_fire_ready;
+    wire req_valid_i = req_valid && req_fire_ready;
+
+    wire error_valid_a, error_valid_b;
+    wire [2:0] error_code_a, error_code_b;
+    wire store_valid_a, store_valid_b;
+    wire [31:0] active_epoch_a, active_epoch_b;
+    wire loading_a, loading_b;
+    wire out_valid_a, out_valid_b;
+    wire [31:0] out_epoch_a, out_epoch_b;
+    wire [1023:0] out_data_a, out_data_b;
+    wire [128*ADDR_BITS-1:0] req_addresses_a, req_addresses_b;
+    wire [127:0] req_mask_a, req_mask_b;
+    wire child_cancel;
+    wire child_out_ready_a, child_out_ready_b;
+    reg mirror_fault_latched;
+    reg mirror_mismatch;
+
+    assign cfg_begin_fire_ready = input_classes_exclusive && rst_n && !cancel && !mirror_fault_latched &&
+                                  !mirror_mismatch &&
+                                  cfg_begin_ready_a && cfg_begin_ready_b;
+    assign cfg_word_fire_ready = input_classes_exclusive && rst_n && !cancel && !mirror_fault_latched &&
+                                 !mirror_mismatch &&
+                                 cfg_word_ready_a && cfg_word_ready_b;
+    assign cfg_commit_fire_ready = input_classes_exclusive && rst_n && !cancel && !mirror_fault_latched &&
+                                   !mirror_mismatch &&
+                                   cfg_commit_ready_a && cfg_commit_ready_b;
+    assign req_fire_ready = input_classes_exclusive && rst_n && !cancel && !mirror_fault_latched &&
+                            !mirror_mismatch && req_ready_a && req_ready_b;
+    assign cfg_begin_ready = cfg_begin_fire_ready;
+    assign cfg_word_ready = cfg_word_fire_ready;
+    assign cfg_commit_ready = cfg_commit_fire_ready;
+    assign req_ready = req_fire_ready;
+
+    assign child_cancel = cancel || mirror_fault_latched || mirror_mismatch;
+    assign child_out_ready_a = out_ready && out_valid_b && rst_n && !cancel &&
+                               !mirror_fault_latched && !mirror_mismatch;
+    assign child_out_ready_b = out_ready && out_valid_a && rst_n && !cancel &&
+                               !mirror_fault_latched && !mirror_mismatch;
+
+    always @* begin
+        mirror_mismatch = 1'b0;
+        if (rst_n && !cancel &&
+            ((loading_a != loading_b) || (store_valid_a != store_valid_b) ||
+             (active_epoch_a != active_epoch_b) || (out_valid_a != out_valid_b) ||
+             (error_valid_a != error_valid_b) ||
+             (error_valid_a && (error_code_a != error_code_b)) ||
+             (out_valid_a && out_valid_b && (out_epoch_a != out_epoch_b)))
+        )
+            mirror_mismatch = 1'b1;
+    end
+
+    always @(posedge clk) begin
+        if (!rst_n || cancel)
+            mirror_fault_latched <= 1'b0;
+        else if (mirror_mismatch)
+            mirror_fault_latched <= 1'b1;
+    end
+
+    assign loading = loading_a || loading_b;
+    assign store_valid = rst_n && !cancel && !mirror_fault_latched &&
+                         !mirror_mismatch && store_valid_a && store_valid_b &&
+                         (active_epoch_a == active_epoch_b);
+    assign active_epoch = store_valid ? active_epoch_a : 32'b0;
+    assign out_valid = rst_n && !cancel && !mirror_fault_latched &&
+                       !mirror_mismatch && out_valid_a && out_valid_b &&
+                       (out_epoch_a == out_epoch_b);
+    assign out_epoch = out_valid ? out_epoch_a : 32'b0;
+    assign error_valid = mirror_fault_latched || mirror_mismatch ||
+                         error_valid_a || error_valid_b;
+    assign error_code = (mirror_fault_latched || mirror_mismatch) ? ERR_MIRROR_MISMATCH :
+                        error_valid_a ? {1'b0, error_code_a} :
+                        error_valid_b ? {1'b0, error_code_b} : 4'b0;
+
+    genvar bank;
+    generate for (bank = 0; bank < 64; bank = bank + 1) begin : gen_port_map
+        assign req_addresses_a[(bank*2)*ADDR_BITS +: ADDR_BITS] =
+            req_addresses[(bank*4)*ADDR_BITS +: ADDR_BITS];
+        assign req_addresses_a[(bank*2+1)*ADDR_BITS +: ADDR_BITS] =
+            req_addresses[(bank*4+1)*ADDR_BITS +: ADDR_BITS];
+        assign req_addresses_b[(bank*2)*ADDR_BITS +: ADDR_BITS] =
+            req_addresses[(bank*4+2)*ADDR_BITS +: ADDR_BITS];
+        assign req_addresses_b[(bank*2+1)*ADDR_BITS +: ADDR_BITS] =
+            req_addresses[(bank*4+3)*ADDR_BITS +: ADDR_BITS];
+        assign req_mask_a[bank*2] = req_mask[bank*4];
+        assign req_mask_a[bank*2+1] = req_mask[bank*4+1];
+        assign req_mask_b[bank*2] = req_mask[bank*4+2];
+        assign req_mask_b[bank*2+1] = req_mask[bank*4+3];
+
+        assign out_data[(bank*4)*8 +: 8] = out_data_a[(bank*2)*8 +: 8];
+        assign out_data[(bank*4+1)*8 +: 8] = out_data_a[(bank*2+1)*8 +: 8];
+        assign out_data[(bank*4+2)*8 +: 8] = out_data_b[(bank*2)*8 +: 8];
+        assign out_data[(bank*4+3)*8 +: 8] = out_data_b[(bank*2+1)*8 +: 8];
+    end endgenerate
+
+    z100_feature_banks_addressed #(.ADDR_BITS(ADDR_BITS), .DEPTH(DEPTH)) copy_a (
+        .clk(clk), .rst_n(rst_n), .cancel(child_cancel),
+        .cfg_begin(cfg_begin_i), .cfg_begin_ready(cfg_begin_ready_a),
+        .cfg_epoch(cfg_epoch), .cfg_channels(cfg_channels),
+        .cfg_height(cfg_height), .cfg_width(cfg_width),
+        .cfg_word_valid(cfg_word_valid_i), .cfg_word_ready(cfg_word_ready_a),
+        .cfg_word_data(cfg_word_data), .cfg_word_epoch(cfg_word_epoch),
+        .cfg_word_address(cfg_word_address), .cfg_word_last(cfg_word_last),
+        .cfg_commit(cfg_commit_i), .cfg_commit_ready(cfg_commit_ready_a),
+        .error_valid(error_valid_a), .error_code(error_code_a),
+        .store_valid(store_valid_a), .active_epoch(active_epoch_a),
+        .loading(loading_a), .req_valid(req_valid_i), .req_ready(req_ready_a),
+        .req_epoch(req_epoch), .req_addresses(req_addresses_a),
+        .req_mask(req_mask_a), .out_valid(out_valid_a),
+        .out_ready(child_out_ready_a), .out_epoch(out_epoch_a), .out_data(out_data_a)
+    );
+
+    z100_feature_banks_addressed #(.ADDR_BITS(ADDR_BITS), .DEPTH(DEPTH)) copy_b (
+        .clk(clk), .rst_n(rst_n), .cancel(child_cancel),
+        .cfg_begin(cfg_begin_i), .cfg_begin_ready(cfg_begin_ready_b),
+        .cfg_epoch(cfg_epoch), .cfg_channels(cfg_channels),
+        .cfg_height(cfg_height), .cfg_width(cfg_width),
+        .cfg_word_valid(cfg_word_valid_i), .cfg_word_ready(cfg_word_ready_b),
+        .cfg_word_data(cfg_word_data), .cfg_word_epoch(cfg_word_epoch),
+        .cfg_word_address(cfg_word_address), .cfg_word_last(cfg_word_last),
+        .cfg_commit(cfg_commit_i), .cfg_commit_ready(cfg_commit_ready_b),
+        .error_valid(error_valid_b), .error_code(error_code_b),
+        .store_valid(store_valid_b), .active_epoch(active_epoch_b),
+        .loading(loading_b), .req_valid(req_valid_i), .req_ready(req_ready_b),
+        .req_epoch(req_epoch), .req_addresses(req_addresses_b),
+        .req_mask(req_mask_b), .out_valid(out_valid_b),
+        .out_ready(child_out_ready_b), .out_epoch(out_epoch_b), .out_data(out_data_b)
+    );
+
+    initial begin
+        if ((ADDR_BITS != 13) || (DEPTH != 8192))
+            $error("z100_feature_banks_4read requires ADDR_BITS=13 and DEPTH=8192");
+    end
+endmodule
+
+`default_nettype wire

@@ -1,0 +1,172 @@
+{
+  "epoch": 130,
+  "seconds": 1048.0309999999881,
+  "metrics": {
+    "metrics/precision(B)": 0.9757,
+    "metrics/recall(B)": 0.95347,
+    "metrics/mAP50(B)": 0.97036,
+    "metrics/mAP50-95(B)": 0.77588,
+    "val/box_loss": 0.8119,
+    "val/cls_loss": 0.4452,
+    "val/dfl_loss": 1.07427
+  },
+  "lr": {
+    "lr/pg0": 0.005743000000000001,
+    "lr/pg1": 0.005743000000000001,
+    "lr/pg2": 0.005743000000000001
+  },
+  "validation": {
+    "domain": "pin",
+    "baseline_joint18": false,
+    "images": 800,
+    "normal_images": 0,
+    "targets": 2295,
+    "ap50": 0.9703557839595705,
+    "ap50_95": 0.7758788729993795,
+    "per_class": [
+      {
+        "class_id": 0,
+        "name": "PIN_破损",
+        "targets": 680,
+        "ap50": 0.9754694392730875,
+        "ap50_95": 0.7658794602439216,
+        "tp": 655,
+        "fp": 47,
+        "fn": 25,
+        "precision": 0.9330484330484331,
+        "recall": 0.9632352941176471
+      },
+      {
+        "class_id": 1,
+        "name": "PIN_裂痕",
+        "targets": 392,
+        "ap50": 0.9152078788852244,
+        "ap50_95": 0.6876689424350912,
+        "tp": 349,
+        "fp": 50,
+        "fn": 43,
+        "precision": 0.87468671679198,
+        "recall": 0.8903061224489796
+      },
+      {
+        "class_id": 2,
+        "name": "PIN_击穿",
+        "targets": 84,
+        "ap50": 0.995,
+        "ap50_95": 0.9700523204687649,
+        "tp": 84,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "class_id": 3,
+        "name": "PIN_薄膜破损",
+        "targets": 361,
+        "ap50": 0.9760149864932898,
+        "ap50_95": 0.7606784379821846,
+        "tp": 344,
+        "fp": 34,
+        "fn": 17,
+        "precision": 0.91005291005291,
+        "recall": 0.9529085872576177
+      },
+      {
+        "class_id": 4,
+        "name": "PIN_电极缺失",
+        "targets": 141,
+        "ap50": 0.995,
+        "ap50_95": 0.8713962717495004,
+        "tp": 141,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "class_id": 5,
+        "name": "PIN_异物",
+        "targets": 100,
+        "ap50": 0.985,
+        "ap50_95": 0.8522795107930928,
+        "tp": 99,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.99
+      },
+      {
+        "class_id": 6,
+        "name": "PIN_有机物污染",
+        "targets": 353,
+        "ap50": 0.90320786419208,
+        "ap50_95": 0.736566497267633,
+        "tp": 312,
+        "fp": 21,
+        "fn": 41,
+        "precision": 0.9369369369369369,
+        "recall": 0.8838526912181303
+      },
+      {
+        "class_id": 7,
+        "name": "PIN_部分缺失",
+        "targets": 78,
+        "ap50": 0.995,
+        "ap50_95": 0.7008345014909392,
+        "tp": 78,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.9873417721518988,
+        "recall": 1.0
+      },
+      {
+        "class_id": 8,
+        "name": "PIN_冗余",
+        "targets": 106,
+        "ap50": 0.9933018867924529,
+        "ap50_95": 0.6375539145632877,
+        "tp": 105,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.9905660377358491,
+        "recall": 0.9905660377358491
+      }
+    ],
+    "fixed_point": {
+      "confidence": 0.25,
+      "nms_iou": 0.45,
+      "match_iou": 0.5,
+      "max_det": 300,
+      "matching": "Installed Ultralytics same-class IoU greedy one-to-one matching, recomputed after confidence filtering",
+      "classes_filtered": false,
+      "tp": 2167,
+      "fp": 154,
+      "fn": 128,
+      "precision": 0.933649289099526,
+      "recall": 0.9442265795206972,
+      "f1": 0.9389081455805892,
+      "cross_domain_false_predictions": 0,
+      "normal_false_images": 0,
+      "normal_false_image_rate": null
+    },
+    "evaluation": {
+      "imgsz": 640,
+      "actual_input_shapes": [
+        [
+          3,
+          672,
+          672
+        ]
+      ],
+      "batch": 16,
+      "rect": true,
+      "conf": 0.001,
+      "nms_iou": 0.45,
+      "max_det": 300
+    },
+    "test_used": false
+  },
+  "updated_at": "2026-10-23T03:46:05.857391+08:00",
+  "test_used": false
+}

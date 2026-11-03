@@ -1,0 +1,11 @@
+{
+  "start_epoch": 17,
+  "optimizer_state_count": 183,
+  "lr": [
+    0.009505,
+    0.009505,
+    0.009505
+  ],
+  "scheduler_restored": true,
+  "live_state_restored": true
+}

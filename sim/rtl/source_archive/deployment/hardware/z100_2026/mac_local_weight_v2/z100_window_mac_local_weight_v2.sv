@@ -1,0 +1,261 @@
+`default_nettype none
+// Private native-window engine. Four taps x32 channels xSITES products.
+// A group contains four adjacent input channels at one ky/kx, rather than
+// tile64's flattened tap order. Matching reordered weights are mandatory.
+// One buffer: no next-job compute until the previous result has drained.
+module z100_window_mac_local_weight_v2 #(
+    parameter integer SITES=20
+) (
+    input wire clk, rst_n, cancel,
+    input wire cfg_begin,
+    output wire cfg_begin_ready,
+    input wire [31:0] cfg_epoch,
+    input wire [10:0] cfg_groups,
+    input wire cfg_weight_valid,
+    output wire cfg_weight_ready,
+    input wire [1023:0] cfg_weights,
+    input wire cfg_bias_valid,
+    output wire cfg_bias_ready,
+    input wire [1023:0] cfg_bias,
+    input wire cfg_commit,
+    output wire cfg_commit_ready,
+    output reg weights_valid,
+    output reg [31:0] weights_epoch,
+    output reg error_valid,
+    output reg [2:0] error_code,
+    input wire run_valid,
+    output wire run_ready,
+    input wire [31:0] run_epoch,
+    input wire [31:0] run_token,
+    input wire [5:0] run_lanes,
+    input wire [4:0] run_sites,
+    input wire act_valid,
+    output wire act_ready,
+    input wire [31:0] act_token,
+    input wire act_last,
+    input wire [4*SITES*8-1:0] act_data,
+    output wire out_valid,
+    input wire out_ready,
+    output wire [31:0] out_token,
+    output wire [4:0] out_site,
+    output wire out_last,
+    output wire [5:0] out_lanes,
+    output wire [1023:0] out_data,
+    output wire [31:0] out_overflow
+);
+    localparam [1:0] IDLE=0, INPUTS=1, FLUSH=2, OUTPUTS=3;
+    reg [1:0] state;
+    reg loading, bias_loaded;
+    reg [10:0] expected_groups, written_groups, accepted_groups;
+    reg [31:0] pending_epoch, token;
+    reg [5:0] lanes;
+    reg [4:0] sites, drain_site;
+    reg p0_valid,p1_valid,p2_valid,p3_valid;
+    reg p0_last,p1_last,p2_last,p3_last;
+    reg [4*SITES*8-1:0] activation_q;
+    wire [255:0] weight_read_q[0:3];
+    // Each site receives a same-edge copy so the registered operand only
+    // drives the packed multipliers local to that site.
+    (* dont_touch="true", keep="true" *) reg [255:0] weight_operand_local_q[0:SITES-1][0:3];
+    // Replicas are local to each8-output group, limiting activation fanout.
+    (* dont_touch="true" *) reg signed [7:0] activation_operand_q[0:SITES-1][0:3][0:3];
+    // Exact paired products are registered by one MULT_MACRO per adjacent
+    // output-lane pair/tap/site; the native validity pipeline remains authoritative.
+    wire signed [15:0] product_q[0:SITES-1][0:31][0:3];
+    (* use_dsp="no" *) reg signed [18:0] sum_q[0:SITES-1][0:31];
+    wire signed [32:0] accum[0:SITES-1][0:31];
+    reg signed [31:0] bias[0:31];
+    wire idle = state==IDLE;
+    assign cfg_begin_ready=rst_n && idle && !loading && !cancel;
+    assign cfg_weight_ready=rst_n && loading && !cfg_begin && !cfg_commit && !cancel;
+    assign cfg_bias_ready=cfg_weight_ready;
+    assign cfg_commit_ready=rst_n && loading && !cfg_begin && !cancel;
+    assign run_ready=rst_n && idle && weights_valid && !loading && !cfg_begin && !cancel;
+    assign act_ready=rst_n && state==INPUTS && !cancel;
+    assign out_valid=rst_n && state==OUTPUTS && !cancel;
+    assign out_token=token;
+    assign out_site=drain_site;
+    assign out_lanes=lanes;
+    assign out_last=(drain_site+1'b1)==sites;
+    wire input_fire=act_valid && act_ready;
+    wire expected_last=(accepted_groups+1'b1)==expected_groups;
+    wire input_good=input_fire && act_token==token && act_last==expected_last;
+    wire input_abort=input_fire && !input_good;
+    // Bias capture shares the accepted-run boundary; rejected runs never touch feedback state.
+    wire accumulator_load_bias=run_valid && run_ready && run_epoch==weights_epoch &&
+        run_token!=0 && run_lanes!=0 && run_lanes<=32 && run_sites!=0 && run_sites<=SITES;
+    wire weight_write=cfg_weight_valid && cfg_weight_ready && written_groups<expected_groups;
+    // Each site/8-lane cluster retains its own p3-valid copy. The active mask
+    // is captured on the exact accepted run edge that loads accumulator bias.
+    // These controls replace the high-fanout state/site/lane decode on DSP CEP;
+    // the data and valid pipeline remain at the original cycle boundaries.
+    wire [SITES*32-1:0] local_accumulator_enable;
+    genvar control_site, control_group, control_lane;
+    generate for(control_site=0;control_site<SITES;control_site=control_site+1) begin : gen_feedback_local_site
+        for(control_group=0;control_group<4;control_group=control_group+1) begin : gen_feedback_local_group
+            (* dont_touch="true", keep="true" *) reg local_p3_valid;
+            always @(posedge clk) begin
+                if(!rst_n || cancel || input_abort) local_p3_valid<=1'b0;
+                else local_p3_valid<=p2_valid;
+            end
+            for(control_lane=0;control_lane<8;control_lane=control_lane+1) begin : gen_feedback_local_lane
+                (* dont_touch="true", keep="true" *) reg local_active;
+                always @(posedge clk) begin
+                    if(!rst_n || cancel || input_abort || (out_valid && out_ready && out_last))
+                        local_active<=1'b0;
+                    else if(accumulator_load_bias)
+                        local_active<=(control_site<run_sites) &&
+                                      ((control_group*8+control_lane)<run_lanes);
+                end
+                assign local_accumulator_enable[control_site*32+control_group*8+control_lane]=
+                    local_p3_valid && local_active;
+            end
+        end
+    end endgenerate
+    genvar tap, site, lane, packed_site, packed_pair, packed_tap;
+    generate for(tap=0;tap<4;tap=tap+1) begin : gen_weights
+        (* ram_style="block" *) reg [255:0] memory[0:1023];
+        reg [255:0] read_q;
+        always @(posedge clk) begin
+            if(weight_write) memory[written_groups[9:0]]<=cfg_weights[tap*256+:256];
+            if(input_good) read_q<=memory[accepted_groups[9:0]];
+        end
+        assign weight_read_q[tap]=read_q;
+    end endgenerate
+    // Adjacent lanes share one signed activation.  The explicit macro inside
+    // each pair primitive preserves the original one-cycle product boundary.
+    generate for(packed_site=0;packed_site<SITES;packed_site=packed_site+1) begin : gen_packed_site
+        for(packed_pair=0;packed_pair<16;packed_pair=packed_pair+1) begin : gen_packed_pair
+            for(packed_tap=0;packed_tap<4;packed_tap=packed_tap+1) begin : gen_packed_tap
+                wire pair_out_valid;
+                z100_int8_pair_packing packed_products (
+                    .clk(clk), .rst_n(1'b1), .cancel(1'b0), .in_valid(1'b1),
+                    .in_activation(activation_operand_q[packed_site][packed_pair/4][packed_tap]),
+                    .in_weight_low(weight_operand_local_q[packed_site][packed_tap][(packed_pair*2)*8+:8]),
+                    .in_weight_high(weight_operand_local_q[packed_site][packed_tap][(packed_pair*2+1)*8+:8]),
+                    .out_valid(pair_out_valid),
+                    .out_product_low(product_q[packed_site][packed_pair*2][packed_tap]),
+                    .out_product_high(product_q[packed_site][packed_pair*2+1][packed_tap])
+                );
+            end
+        end
+    end endgenerate
+    generate for(site=0;site<SITES;site=site+1) begin : gen_site
+        for(lane=0;lane<32;lane=lane+1) begin : gen_lane
+            wire signed [16:0] pair0=$signed({product_q[site][lane][0][15],product_q[site][lane][0]})+
+                                            $signed({product_q[site][lane][1][15],product_q[site][lane][1]});
+            wire signed [16:0] pair1=$signed({product_q[site][lane][2][15],product_q[site][lane][2]})+
+                                            $signed({product_q[site][lane][3][15],product_q[site][lane][3]});
+            wire signed [18:0] total=$signed({{2{pair0[16]}},pair0})+$signed({{2{pair1[16]}},pair1});
+            always @(posedge clk) begin
+                // Free-running data registers have no reset/CE fanout.
+                // product_q is driven by the paired one-cycle macro instances.
+                sum_q[site][lane]<=total;
+            end
+        end
+    end endgenerate
+    integer s,l,t,g;
+    genvar accum_site, accum_lane;
+    generate for(accum_site=0;accum_site<SITES;accum_site=accum_site+1) begin : gen_feedback_site
+        for(accum_lane=0;accum_lane<32;accum_lane=accum_lane+1) begin : gen_feedback_lane
+            z100_accum33_dsp feedback_accumulator (
+                .clk(clk), .rst_n(rst_n), .cancel(cancel),
+                .load_bias(accumulator_load_bias),
+                .enable(local_accumulator_enable[accum_site*32+accum_lane]),
+                .bias((accum_site<run_sites && accum_lane<run_lanes) ? bias[accum_lane] : 32'sd0),
+                .delta(sum_q[accum_site][accum_lane]), .value_valid(),
+                .value(accum[accum_site][accum_lane]), .clamped(), .overflow()
+            );
+        end
+    end endgenerate
+    always @(posedge clk) begin
+        for(t=0;t<4;t=t+1) begin
+            for(s=0;s<SITES;s=s+1) begin
+                weight_operand_local_q[s][t]<=weight_read_q[t];
+                for(g=0;g<4;g=g+1)
+                    activation_operand_q[s][g][t]<=activation_q[(t*SITES+s)*8+:8];
+            end
+        end
+        if(input_good) activation_q<=act_data;
+    end
+    function automatic [31:0] clamp33(input signed [32:0] value);
+        if(value[32]!=value[31]) clamp33=value[32] ? 32'h80000000 : 32'h7fffffff;
+        else clamp33=value[31:0];
+    endfunction
+    generate for(lane=0;lane<32;lane=lane+1) begin : gen_output
+        wire signed [32:0] value=accum[drain_site][lane];
+        assign out_data[lane*32+:32]=(lane<lanes) ? clamp33(value) : 32'd0;
+        assign out_overflow[lane]=(lane<lanes) && (value[32]!=value[31]);
+    end endgenerate
+
+    always @(posedge clk) begin
+        if(!rst_n || cancel) begin
+            state<=IDLE; loading<=0; bias_loaded<=0;
+            expected_groups<=0; written_groups<=0; accepted_groups<=0;
+            weights_valid<=0; weights_epoch<=0; pending_epoch<=0;
+            token<=0; lanes<=0; sites<=0; drain_site<=0;
+            p0_valid<=0;p1_valid<=0;p2_valid<=0;p3_valid<=0;
+            p0_last<=0;p1_last<=0;p2_last<=0;p3_last<=0;
+            error_valid<=0;error_code<=0;
+        end else begin
+            error_valid<=0;error_code<=0;
+            p0_valid<=input_good; p1_valid<=p0_valid; p2_valid<=p1_valid; p3_valid<=p2_valid;
+            p0_last<=input_good && expected_last;
+            p1_last<=p0_last; p2_last<=p1_last; p3_last<=p2_last;
+            if(cfg_begin && cfg_begin_ready) begin
+                weights_valid<=0; weights_epoch<=0;
+                written_groups<=0; bias_loaded<=0;
+                if(cfg_epoch==0 || cfg_groups==0 || cfg_groups>1024 || cfg_weight_valid || cfg_bias_valid || cfg_commit) begin
+                    loading<=0;error_valid<=1;error_code<=1;
+                end else begin
+                    loading<=1;pending_epoch<=cfg_epoch;expected_groups<=cfg_groups;
+                end
+            end else if(loading) begin
+                if(cfg_commit && cfg_commit_ready) begin
+                    loading<=0;
+                    if(written_groups!=expected_groups || !bias_loaded || cfg_weight_valid || cfg_bias_valid) begin
+                        error_valid<=1;error_code<=2;
+                    end else begin weights_valid<=1;weights_epoch<=pending_epoch;end
+                end else begin
+                    if(cfg_weight_valid && cfg_weight_ready) begin
+                        if(written_groups>=expected_groups) begin
+                            loading<=0;error_valid<=1;error_code<=3;
+                        end else written_groups<=written_groups+1'b1;
+                    end
+                    if(cfg_bias_valid && cfg_bias_ready) begin
+                        if(bias_loaded) begin loading<=0;error_valid<=1;error_code<=3;end
+                        else begin
+                            for(l=0;l<32;l=l+1) bias[l]<=cfg_bias[l*32+:32];
+                            bias_loaded<=1;
+                        end
+                    end
+                end
+            end else if(run_valid && run_ready) begin
+                if(run_epoch!=weights_epoch || run_token==0 || run_lanes==0 || run_lanes>32 || run_sites==0 || run_sites>SITES) begin
+                    error_valid<=1;error_code<=4;
+                end else begin
+                    state<=INPUTS;accepted_groups<=0;
+                    token<=run_token;lanes<=run_lanes;sites<=run_sites;drain_site<=0;
+                end
+            end
+            if(input_fire) begin
+                if(!input_good) begin
+                    state<=IDLE;weights_valid<=0;weights_epoch<=0;
+                    p0_valid<=0;p1_valid<=0;p2_valid<=0;p3_valid<=0;
+                    error_valid<=1;error_code<=5;
+                end else begin
+                    accepted_groups<=accepted_groups+1'b1;
+                    if(expected_last) state<=FLUSH;
+                end
+            end
+            if(p3_valid && (state==INPUTS || state==FLUSH)) begin
+                if(p3_last) begin state<=OUTPUTS;drain_site<=0;end
+            end
+            if(out_valid && out_ready) begin
+                if(out_last) state<=IDLE;
+                else drain_site<=drain_site+1'b1;
+            end
+        end
+    end
+endmodule
+`default_nettype wire

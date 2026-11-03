@@ -1,0 +1,75 @@
+{
+  "status": "PASS_6_HELLO_PLUS_TCP_ONLY_CLOSE",
+  "results": [
+    {
+      "index": 1,
+      "status": "HELLO_OK",
+      "local": [
+        "192.168.10.1",
+        64548
+      ],
+      "peer": [
+        "192.168.10.2",
+        5001
+      ],
+      "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+    },
+    {
+      "index": 2,
+      "status": "HELLO_OK",
+      "local": [
+        "192.168.10.1",
+        64549
+      ],
+      "peer": [
+        "192.168.10.2",
+        5001
+      ],
+      "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+    },
+    {
+      "index": 3,
+      "status": "HELLO_OK",
+      "local": [
+        "192.168.10.1",
+        64550
+      ],
+      "peer": [
+        "192.168.10.2",
+        5001
+      ],
+      "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+    },
+    {
+      "index": 4,
+      "status": "HELLO_OK",
+      "local": [
+        "192.168.10.1",
+        64551
+      ],
+      "peer": [
+        "192.168.10.2",
+        5001
+      ],
+      "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+    },
+    {
+      "index": 5,
+      "status": "HELLO_OK",
+      "local": [
+        "192.168.10.1",
+        64552
+      ],
+      "peer": [
+        "192.168.10.2",
+        5001
+      ],
+      "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+    },
+    {
+      "index": 6,
+      "status": "HELLO_OK_AFTER_TCP_ONLY_CLOSE"
+    }
+  ],
+  "method": "JTAG matched ps7_init, original bit, default FULL cache policy; not a new SD cold-boot test"
+}

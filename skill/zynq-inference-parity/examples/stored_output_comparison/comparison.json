@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "label": "binary-comparison",
+  "status": "equal",
+  "reference": {
+    "path": "<local-path>",
+    "bytes": 1164072,
+    "sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8"
+  },
+  "observed": {
+    "path": "<local-path>",
+    "bytes": 1164072,
+    "sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8"
+  },
+  "shared_different_bytes": 0,
+  "extra_bytes": 0,
+  "different_positions": 0,
+  "first_difference": null,
+  "interpretation": "Byte equality only; verify input, model, dtype, shape and layout independently.",
+  "scope": "New comparison of two independently stored historical outputs, not new board inference; little-endian float32 post-dequantization,291018 elements. Reference was corrected after capture as explicitly recorded."
+}

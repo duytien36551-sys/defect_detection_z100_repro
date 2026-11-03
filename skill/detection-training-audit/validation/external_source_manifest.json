@@ -1,0 +1,69 @@
+{
+  "repository": "https://github.com/microsoft/onnxruntime-inference-examples",
+  "commit": "16e32e87c81648773b8da2a80434a672e3b9dad6",
+  "retrieved_at": "2026-10-25T15:46:32.380572+08:00",
+  "scope": "Unrelated public detector quantization/evaluation recipe plus real COCO person annotations; static audit only, no model execution",
+  "license": "Repository license retained; COCO data annotations keep source info/licenses in JSON",
+  "files": [
+    {
+      "path": "license",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime-inference-examples/16e32e87c81648773b8da2a80434a672e3b9dad6/license",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "path": "quantization/object_detection/trt/yolov3/data_reader.py",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime-inference-examples/16e32e87c81648773b8da2a80434a672e3b9dad6/quantization/object_detection/trt/yolov3/data_reader.py",
+      "sha256": "743f90953d10c7c8d8b81e5b651da5b389bc682fa5c9e5a4e14b0fe6ef4cf0c3",
+      "bytes": 10053
+    },
+    {
+      "path": "quantization/object_detection/trt/yolov3/e2e_user_yolov3_example.py",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime-inference-examples/16e32e87c81648773b8da2a80434a672e3b9dad6/quantization/object_detection/trt/yolov3/e2e_user_yolov3_example.py",
+      "sha256": "a3279055020a18d2c0dbfe2a163a2cae3a923a2a0c5e45e56bd7cec281ef420c",
+      "bytes": 9036
+    },
+    {
+      "path": "quantization/object_detection/trt/yolov3/evaluate.py",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime-inference-examples/16e32e87c81648773b8da2a80434a672e3b9dad6/quantization/object_detection/trt/yolov3/evaluate.py",
+      "sha256": "07982c6368f8f878fb25dbed716a611f004a1ea282f5131632a92f70510cae98",
+      "bytes": 20374
+    },
+    {
+      "path": "quantization/object_detection/trt/yolov3/preprocessing.py",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime-inference-examples/16e32e87c81648773b8da2a80434a672e3b9dad6/quantization/object_detection/trt/yolov3/preprocessing.py",
+      "sha256": "1e80cb34043ae3fdb2766a800179281f9940bbd127b4e88821fd2afacc678399",
+      "bytes": 10414
+    },
+    {
+      "path": "quantization/object_detection/trt/yolov3/postprocessing.py",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime-inference-examples/16e32e87c81648773b8da2a80434a672e3b9dad6/quantization/object_detection/trt/yolov3/postprocessing.py",
+      "sha256": "9df911855101991b5e80c404407f15f4c23b2ceca7fa54c554c73b487179ee93",
+      "bytes": 13353
+    },
+    {
+      "path": "quantization/object_detection/trt/yolov3/coco_filter.py",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime-inference-examples/16e32e87c81648773b8da2a80434a672e3b9dad6/quantization/object_detection/trt/yolov3/coco_filter.py",
+      "sha256": "924cdbae8c086029241d13133c60ab6aa962cc68b697d2db14690c2c4f72e637",
+      "bytes": 6128
+    },
+    {
+      "path": "quantization/object_detection/trt/yolov3/coco-object-categories-2017.json",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime-inference-examples/16e32e87c81648773b8da2a80434a672e3b9dad6/quantization/object_detection/trt/yolov3/coco-object-categories-2017.json",
+      "sha256": "752e7df9bb007eb948570c5236bd933b4b6655a15cda465b1ced8973eef4353d",
+      "bytes": 4685
+    },
+    {
+      "path": "quantization/object_detection/trt/yolov3/onnx_coco_classes.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime-inference-examples/16e32e87c81648773b8da2a80434a672e3b9dad6/quantization/object_detection/trt/yolov3/onnx_coco_classes.txt",
+      "sha256": "634a1132eb33f8091d60f2c346ababe8b905ae08387037aed883953b7329af84",
+      "bytes": 625
+    },
+    {
+      "path": "quantization/object_detection/trt/yolov3/annotations/instances_val2017_person.json",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime-inference-examples/16e32e87c81648773b8da2a80434a672e3b9dad6/quantization/object_detection/trt/yolov3/annotations/instances_val2017_person.json",
+      "sha256": "7cbea0268996b833c82f9f0dce47b596b7f1b091bf61362cf0a067938ea16739",
+      "bytes": 8759429
+    }
+  ]
+}

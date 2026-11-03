@@ -1,0 +1,45 @@
+{
+  "status": "PASS_ABABA_RAW_HEADS",
+  "records": [
+    {
+      "frame": 1,
+      "image": 1,
+      "bytes": 613200,
+      "reference_equal": true,
+      "sha256": "6ca6c5f8f9fc0729045efdf95cc368959a6c49803e90e2c3cd09ee48dbaab0c9",
+      "reference_sha256": "6ca6c5f8f9fc0729045efdf95cc368959a6c49803e90e2c3cd09ee48dbaab0c9"
+    },
+    {
+      "frame": 2,
+      "image": 2,
+      "bytes": 613200,
+      "reference_equal": true,
+      "sha256": "486a0ddfde6beca0bc0f62c3b2cab15af4df8a4826554bab5ae8d363f40bcd14",
+      "reference_sha256": "486a0ddfde6beca0bc0f62c3b2cab15af4df8a4826554bab5ae8d363f40bcd14"
+    },
+    {
+      "frame": 3,
+      "image": 1,
+      "bytes": 613200,
+      "reference_equal": true,
+      "sha256": "6ca6c5f8f9fc0729045efdf95cc368959a6c49803e90e2c3cd09ee48dbaab0c9",
+      "reference_sha256": "6ca6c5f8f9fc0729045efdf95cc368959a6c49803e90e2c3cd09ee48dbaab0c9"
+    },
+    {
+      "frame": 4,
+      "image": 2,
+      "bytes": 613200,
+      "reference_equal": true,
+      "sha256": "486a0ddfde6beca0bc0f62c3b2cab15af4df8a4826554bab5ae8d363f40bcd14",
+      "reference_sha256": "486a0ddfde6beca0bc0f62c3b2cab15af4df8a4826554bab5ae8d363f40bcd14"
+    },
+    {
+      "frame": 5,
+      "image": 1,
+      "bytes": 613200,
+      "reference_equal": true,
+      "sha256": "6ca6c5f8f9fc0729045efdf95cc368959a6c49803e90e2c3cd09ee48dbaab0c9",
+      "reference_sha256": "6ca6c5f8f9fc0729045efdf95cc368959a6c49803e90e2c3cd09ee48dbaab0c9"
+    }
+  ]
+}

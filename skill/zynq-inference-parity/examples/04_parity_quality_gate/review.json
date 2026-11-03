@@ -1,0 +1,225 @@
+{
+  "case": "04_parity_quality_gate",
+  "skill": "zynq-inference-parity",
+  "review_method": "main-thread full-context deterministic evidence audit; NOT independent agent behavioral validation",
+  "status": "evidence_checks_pass",
+  "authenticity": "authentic_quantized_validation_gate_failure",
+  "facts": {
+    "candidate_checkpoint_sha256": "603853a8ec851b32578d79d34ddaeb9487f1c7924dc815d557565725f275a034",
+    "images": 800,
+    "classes": 9,
+    "all_backend_metrics": {
+      "official": {
+        "images": 800,
+        "ap50": 0.9700577299258034,
+        "ap50_95": 0.7638386295266794,
+        "per_class": {
+          "PIN_破损": {
+            "class_id": 0,
+            "ap50": 0.9727476121012508,
+            "ap50_95": 0.7442095095170493,
+            "ground_truth_count": 680
+          },
+          "PIN_裂痕": {
+            "class_id": 1,
+            "ap50": 0.9158228487371506,
+            "ap50_95": 0.66636315554044,
+            "ground_truth_count": 392
+          },
+          "PIN_击穿": {
+            "class_id": 2,
+            "ap50": 0.995,
+            "ap50_95": 0.9686680491741477,
+            "ground_truth_count": 84
+          },
+          "PIN_薄膜破损": {
+            "class_id": 3,
+            "ap50": 0.978953158030263,
+            "ap50_95": 0.7431591481606377,
+            "ground_truth_count": 361
+          },
+          "PIN_电极缺失": {
+            "class_id": 4,
+            "ap50": 0.995,
+            "ap50_95": 0.8599447481850395,
+            "ground_truth_count": 141
+          },
+          "PIN_异物": {
+            "class_id": 5,
+            "ap50": 0.985,
+            "ap50_95": 0.8539657948139471,
+            "ground_truth_count": 100
+          },
+          "PIN_有机物污染": {
+            "class_id": 6,
+            "ap50": 0.8984998912326139,
+            "ap50_95": 0.7186255444233565,
+            "ground_truth_count": 353
+          },
+          "PIN_部分缺失": {
+            "class_id": 7,
+            "ap50": 0.9948734177215189,
+            "ap50_95": 0.68470189856733,
+            "ground_truth_count": 78
+          },
+          "PIN_冗余": {
+            "class_id": 8,
+            "ap50": 0.9946226415094339,
+            "ap50_95": 0.6349098173581668,
+            "ground_truth_count": 106
+          }
+        }
+      },
+      "float": {
+        "images": 800,
+        "ap50": 0.9700577299258034,
+        "ap50_95": 0.7638386295266794,
+        "per_class": {
+          "PIN_破损": {
+            "class_id": 0,
+            "ap50": 0.9727476121012508,
+            "ap50_95": 0.7442095095170493,
+            "ground_truth_count": 680
+          },
+          "PIN_裂痕": {
+            "class_id": 1,
+            "ap50": 0.9158228487371506,
+            "ap50_95": 0.66636315554044,
+            "ground_truth_count": 392
+          },
+          "PIN_击穿": {
+            "class_id": 2,
+            "ap50": 0.995,
+            "ap50_95": 0.9686680491741477,
+            "ground_truth_count": 84
+          },
+          "PIN_薄膜破损": {
+            "class_id": 3,
+            "ap50": 0.978953158030263,
+            "ap50_95": 0.7431591481606377,
+            "ground_truth_count": 361
+          },
+          "PIN_电极缺失": {
+            "class_id": 4,
+            "ap50": 0.995,
+            "ap50_95": 0.8599447481850395,
+            "ground_truth_count": 141
+          },
+          "PIN_异物": {
+            "class_id": 5,
+            "ap50": 0.985,
+            "ap50_95": 0.8539657948139471,
+            "ground_truth_count": 100
+          },
+          "PIN_有机物污染": {
+            "class_id": 6,
+            "ap50": 0.8984998912326139,
+            "ap50_95": 0.7186255444233565,
+            "ground_truth_count": 353
+          },
+          "PIN_部分缺失": {
+            "class_id": 7,
+            "ap50": 0.9948734177215189,
+            "ap50_95": 0.68470189856733,
+            "ground_truth_count": 78
+          },
+          "PIN_冗余": {
+            "class_id": 8,
+            "ap50": 0.9946226415094339,
+            "ap50_95": 0.6349098173581668,
+            "ground_truth_count": 106
+          }
+        }
+      },
+      "int8": {
+        "images": 800,
+        "ap50": 0.9655576656815845,
+        "ap50_95": 0.7185254309787138,
+        "per_class": {
+          "PIN_破损": {
+            "class_id": 0,
+            "ap50": 0.961442082885497,
+            "ap50_95": 0.6889501766532027,
+            "ground_truth_count": 680
+          },
+          "PIN_裂痕": {
+            "class_id": 1,
+            "ap50": 0.9079744442160608,
+            "ap50_95": 0.6128317131120125,
+            "ground_truth_count": 392
+          },
+          "PIN_击穿": {
+            "class_id": 2,
+            "ap50": 0.995,
+            "ap50_95": 0.9469268292682926,
+            "ground_truth_count": 84
+          },
+          "PIN_薄膜破损": {
+            "class_id": 3,
+            "ap50": 0.9744005128482597,
+            "ap50_95": 0.6976540771949318,
+            "ground_truth_count": 361
+          },
+          "PIN_电极缺失": {
+            "class_id": 4,
+            "ap50": 0.995,
+            "ap50_95": 0.8446892946172806,
+            "ground_truth_count": 141
+          },
+          "PIN_异物": {
+            "class_id": 5,
+            "ap50": 0.985,
+            "ap50_95": 0.8125025967397503,
+            "ground_truth_count": 100
+          },
+          "PIN_有机物污染": {
+            "class_id": 6,
+            "ap50": 0.8888757032742451,
+            "ap50_95": 0.6506030441579638,
+            "ground_truth_count": 353
+          },
+          "PIN_部分缺失": {
+            "class_id": 7,
+            "ap50": 0.9948734177215189,
+            "ap50_95": 0.6259308563217975,
+            "ground_truth_count": 78
+          },
+          "PIN_冗余": {
+            "class_id": 8,
+            "ap50": 0.9874528301886795,
+            "ap50_95": 0.5866402907431931,
+            "ground_truth_count": 106
+          }
+        }
+      }
+    },
+    "loss_percentage_points": {
+      "ap50": 0.4500064244218893,
+      "ap50_95": 4.531319854796556
+    },
+    "recorded_float_pass": true,
+    "recorded_int8_pass": false,
+    "accuracy_accepted": false
+  },
+  "findings": [
+    "Recorded float export comparison passes while INT8 validation quality fails. Changes are percentage points on the same 800-image, nine-class PIN validation; no actual-board dataset accuracy is supplied. Fixed-point recall and normal-image evidence are absent from this file."
+  ],
+  "checks": [
+    "source snapshot SHA-256 intact",
+    "paired quality differences recomputed without changing thresholds"
+  ],
+  "input_sha256": {
+    "pipeline_validation.json": "1a2f23dcca734a3d4eb591420583d45e3350fb2ef70cdad59fb78e1e08ccf31a"
+  },
+  "evidence_refs": [
+    {
+      "path": "cases_20261025/04_parity_quality_gate/inputs/pipeline_validation.json",
+      "sha256": "1a2f23dcca734a3d4eb591420583d45e3350fb2ef70cdad59fb78e1e08ccf31a"
+    }
+  ],
+  "not_performed": [
+    "new training/model evaluation or model selection",
+    "board operations",
+    "blind independent model execution"
+  ]
+}

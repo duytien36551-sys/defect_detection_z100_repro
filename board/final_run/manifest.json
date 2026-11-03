@@ -1,0 +1,21 @@
+{
+  "status": "PREPARED_REVIEW_REQUIRED",
+  "files": {
+    "hardware_workspace\\gpt_softpack_build_plan01\\prepare_transition.py": "317d7bd879dddd919355a4234d8b4c0c68c4a2a146ca56826a7ef4ae9815a32a",
+    "hardware_workspace\\gpt_softpack_launch02\\launch.tcl": "d657fe6d8528df6a5a2d87e34d210ebd8fdf8007ba62e7b07d71df98ef4d62aa",
+    "hardware_workspace\\gpt_softpack_build_plan01\\build_output\\native_board_pool.elf": "a1fb69729ac1dd2f4ec142819b0ec703fe1c8b8a548c84f9b1415a4683a9cdae",
+    "hardware_workspace\\gpt_acp_neon_build01\\native_board_pool.elf": "cd554b7c5508f3cfbdd74e1f20687c0a70e8a1c3cead5bc905fd467eca5132b4",
+    "hardware_workspace\\gpt_acp01\\compat_epoch30000\\fsbl.elf": "7cbeb8a07d3c6da4d272c96f7266e3348d60d977aa3e2411274932a105a1e06e",
+    "hardware_workspace\\gpt_ctrp_phys01\\export_01\\artifacts\\z100_platform.bit": "9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f",
+    "hardware_workspace\\gpt_ctrp_phys01\\export_01\\artifacts\\z100_platform.xsa": "d314d650e12e36e4669f956e03f7388d95b4f3031a9da071dea7366495a57b5e",
+    "hardware_workspace\\gpt_counter_board_plan01\\ps_handoff_pairing_review.json": "0b5038c6c423c76fdb7d30d0b95b6bb88b12ae21fadfa07bdd4726b28230760b",
+    "hardware_workspace\\gpt_ctrp_phys01\\export_01\\final_artifact_review.json": "3ae27bb63b39d6d76ba90468e48a363ed928c8ac6e2185ef1d785a61b604777e",
+    "hardware_workspace\\gpt_acp_transport02\\acp_handoff_xsdb_v1.tcl": "a4a2082dd9b329f1b7e73340721c2e24a071a7c26cd098f598bb8beed2befcd2",
+    "hardware_workspace\\gpt_acp_dirty_launch01\\batch_result.json": "6ac853b504fcb3240bf5af36856e6a9a9852ac0854f3c1ba3e49a5ca3d98d058",
+    "hardware_workspace\\gpt_acp_scoped_launch01\\acceptance.json": "03200591f6a684910ac517d3c37285e8da37dead7d5285539b07699372282631"
+  },
+  "build": "hardware_workspace\\gpt_softpack_build_plan01\\build_output",
+  "source_initial": 42000,
+  "source_delivered": 44,
+  "new_epoch": 49000
+}

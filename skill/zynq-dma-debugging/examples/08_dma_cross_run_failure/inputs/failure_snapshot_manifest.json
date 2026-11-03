@@ -1,0 +1,408 @@
+{
+  "format": "tile64-jtag-read-only-snapshot-v1",
+  "status": "captured_and_cpu_resumed",
+  "generated_utc": "2026-10-15T18:45:03.060841+00:00",
+  "board_operation": "explicit XSCT capture requested",
+  "cpu_policy": "requires initial Running state; stop for snapshot; restore host XSDB access setting and resume even if a read fails",
+  "xsdb_host_access_policy": "save global force-mem-accesses, enable only for this XSDB read snapshot, restore and verify the saved value before resuming; generated Tcl uses mrd only",
+  "memory_source": "nm -S -n addresses and sizes from the ELF whose SHA-256 is recorded below",
+  "artifacts": {
+    "elf": "<local-path>",
+    "elf_sha256": "2655c9fdbad33ac948c0c404117cc7d6210a38b56061d863e57b4d466a603e6b",
+    "xsa": "<local-path>",
+    "xsa_sha256": "66669f87ef9a4ff2c3aa6fecc09adaee78beb0b0c6fa11a96b9e3ecf4db52f50",
+    "build_report": "<local-path>",
+    "build_report_sha256": "925bf7f8a2a82e6f370a706ef3aa18886f859715eb57442d33bd4eb652d6c198",
+    "nm": "<local-path>"
+  },
+  "control_base_from_xsa": "0x43c10000",
+  "axi_dma_base_from_xsa": "0x40400000",
+  "elf_memory_captures": [
+    {
+      "name": "runtime",
+      "kind": "elf_symbol",
+      "address": "0x00200300",
+      "size_bytes": 56,
+      "word_count": 14,
+      "file": "memory/runtime.bin",
+      "description": "runtime execution state",
+      "source_evidence": "candidates/tile64/firmware/v8_runtime.h",
+      "sha256": "9e943d437cecd762c10bd17eaf7a2d3e6703b51fb522e606cdacea54766202d1"
+    },
+    {
+      "name": "tile_executor",
+      "kind": "elf_symbol",
+      "address": "0x00200338",
+      "size_bytes": 48,
+      "word_count": 12,
+      "file": "memory/tile_executor.bin",
+      "description": "tile sequence/load/run counters",
+      "source_evidence": "candidates/tile64/firmware/v8_tile_executor.h",
+      "sha256": "3c782ed75cd0387d7854793dd9ec9ed914ff3be714c6518561ffef11e266e43a"
+    },
+    {
+      "name": "dma_context",
+      "kind": "elf_symbol",
+      "address": "0x002012b8",
+      "size_bytes": 72,
+      "word_count": 18,
+      "file": "memory/dma_context.bin",
+      "description": "tile DMA state and last transfer status",
+      "source_evidence": "candidates/tile64/firmware/v8_tile_board_dma.h",
+      "sha256": "b7d47fec45c5784f7a3f2327b876e8502919a0e92b18acfe4b2274742de2f079"
+    },
+    {
+      "name": "dma",
+      "kind": "elf_symbol",
+      "address": "0x00200b68",
+      "size_bytes": 1872,
+      "word_count": 468,
+      "file": "memory/dma.bin",
+      "description": "XAxiDma driver instance",
+      "source_evidence": "BSP xaxidma.h",
+      "sha256": "b242d346d40cf8b4c1f1a7576107971514be219c78284c20f876c3d2aebfc3b8"
+    },
+    {
+      "name": "pipeline",
+      "kind": "elf_symbol",
+      "address": "0x00201300",
+      "size_bytes": 52,
+      "word_count": 13,
+      "file": "memory/pipeline.bin",
+      "description": "pipeline runtime and buffer pointers",
+      "source_evidence": "candidates/tile64/firmware/v8_pipeline.h",
+      "sha256": "c2915aac038c5e3dd802b300549c4e2372ddf42ad9a3fca298c2d6282b760daf"
+    },
+    {
+      "name": "v8_pipeline_diagnostics",
+      "kind": "elf_symbol",
+      "address": "0x00200380",
+      "size_bytes": 2024,
+      "word_count": 506,
+      "file": "memory/v8_pipeline_diagnostics.bin",
+      "description": "phase and per-node timing counters",
+      "source_evidence": "candidates/tile64/firmware/v8_pipeline.h",
+      "sha256": "d192540cbcf4e5d25f8c6a52758d41abd30858ef551c32c497dc8f58aa3000c3"
+    },
+    {
+      "name": "dma_taps",
+      "kind": "elf_symbol",
+      "address": "0x00205380",
+      "size_bytes": 262144,
+      "word_count": 65536,
+      "file": "memory/dma_taps.bin",
+      "description": "last tile TX payload buffer",
+      "source_evidence": "candidates/tile64/firmware/v8_board_tile_main.c",
+      "sha256": "09550fbe0067126719e75ac4414d4ddf7a19fec3951133d9c2e537200e02cd03"
+    },
+    {
+      "name": "dma_result",
+      "kind": "elf_symbol",
+      "address": "0x00201340",
+      "size_bytes": 16448,
+      "word_count": 4112,
+      "file": "memory/dma_result.bin",
+      "description": "last tile RX response buffer, including prior response bytes",
+      "source_evidence": "candidates/tile64/firmware/v8_board_tile_main.c",
+      "sha256": "8aa5bd68982fa3d1475c9d366527c526ddd6eb389104f79fd2cc16a41c6b233b"
+    },
+    {
+      "name": "v8_graph",
+      "kind": "elf_symbol",
+      "address": "0x00128ba8",
+      "size_bytes": 40,
+      "word_count": 10,
+      "file": "memory/v8_graph.bin",
+      "description": "loaded graph descriptor",
+      "source_evidence": "packages/<current>/v8_generated_model.h",
+      "sha256": "31a51c0205b25776b9240a73bce4a530bd235a3b255fa09f13ad8288b74aedc3"
+    },
+    {
+      "name": "v8_nodes",
+      "kind": "elf_symbol",
+      "address": "0x00128bf0",
+      "size_bytes": 16952,
+      "word_count": 4238,
+      "file": "memory/v8_nodes.bin",
+      "description": "compiled node descriptors; inspect node at runtime.completed",
+      "source_evidence": "packages/<current>/v8_generated_model.h",
+      "sha256": "2589c4bf595df15a500ba5a22ec271364c01799b654fe62dfba0597c7c93256c"
+    },
+    {
+      "name": "v8_jtag_trigger",
+      "kind": "elf_symbol",
+      "address": "0x00b80540",
+      "size_bytes": 4,
+      "word_count": 1,
+      "file": "memory/v8_jtag_trigger.bin",
+      "description": "JTAG inference trigger",
+      "source_evidence": "candidates/tile64/firmware/v8_board_tile_main.c",
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "name": "v8_jtag_result",
+      "kind": "elf_symbol",
+      "address": "0x00b7e840",
+      "size_bytes": 4,
+      "word_count": 1,
+      "file": "memory/v8_jtag_result.bin",
+      "description": "JTAG inference return code",
+      "source_evidence": "candidates/tile64/firmware/v8_board_tile_main.c",
+      "sha256": "6d58692645c9d1cfaf13541cbd258f86193ef63c2f1d38f6bbca9617372d7bd6"
+    },
+    {
+      "name": "v8_jtag_count",
+      "kind": "elf_symbol",
+      "address": "0x00b7e800",
+      "size_bytes": 4,
+      "word_count": 1,
+      "file": "memory/v8_jtag_count.bin",
+      "description": "JTAG inference detection count",
+      "source_evidence": "candidates/tile64/firmware/v8_board_tile_main.c",
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "name": "v8_jtag_completed",
+      "kind": "elf_symbol",
+      "address": "0x00b7e7c0",
+      "size_bytes": 4,
+      "word_count": 1,
+      "file": "memory/v8_jtag_completed.bin",
+      "description": "JTAG inference completion counter",
+      "source_evidence": "candidates/tile64/firmware/v8_board_tile_main.c",
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "name": "v8_jtag_detections",
+      "kind": "elf_symbol",
+      "address": "0x00b7e8c0",
+      "size_bytes": 7200,
+      "word_count": 1800,
+      "file": "memory/v8_jtag_detections.bin",
+      "description": "JTAG-visible detection output",
+      "source_evidence": "candidates/tile64/firmware/v8_board_tile_main.c",
+      "sha256": "e4331b4b5dff91084b34db4018c5905a016cdf9c0d74d02c0d5af88dabfc6bc6"
+    },
+    {
+      "name": "v8_startup_stage",
+      "kind": "elf_symbol",
+      "address": "0x00b7e880",
+      "size_bytes": 4,
+      "word_count": 1,
+      "file": "memory/v8_startup_stage.bin",
+      "description": "startup stage",
+      "source_evidence": "candidates/tile64/firmware/v8_startup_diagnostics.h",
+      "sha256": "9f076b7eb7fdc0311cd3208cdbbebbf8014dd3a05e35191c96947b358a362b40"
+    },
+    {
+      "name": "v8_startup_error",
+      "kind": "elf_symbol",
+      "address": "0x00b80500",
+      "size_bytes": 4,
+      "word_count": 1,
+      "file": "memory/v8_startup_error.bin",
+      "description": "startup error code",
+      "source_evidence": "candidates/tile64/firmware/v8_startup_diagnostics.h",
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "name": "v8_ticks_per_second",
+      "kind": "elf_symbol",
+      "address": "0x0012e820",
+      "size_bytes": 8,
+      "word_count": 2,
+      "file": "memory/v8_ticks_per_second.bin",
+      "description": "XTime ticks per second",
+      "source_evidence": "candidates/tile64/firmware/v8_board_tile_main.c",
+      "sha256": "dbbffd46412b87b2e656faa89d84fd8ef3c165b7315fbbf00092f83d4a02718e"
+    }
+  ],
+  "register_captures": [
+    {
+      "name": "PL_R0_R3",
+      "kind": "mmio_register_block",
+      "address": "0x43c10000",
+      "size_bytes": 16,
+      "word_count": 4,
+      "file": "registers/pl_r0_r3.bin",
+      "registers": [
+        {
+          "name": "R0_CONTROL",
+          "offset": 0,
+          "address": "0x43c10000"
+        },
+        {
+          "name": "R1_CONFIG",
+          "offset": 4,
+          "address": "0x43c10004"
+        },
+        {
+          "name": "R2_SEQUENCE",
+          "offset": 8,
+          "address": "0x43c10008"
+        },
+        {
+          "name": "R3_FILTER_ID",
+          "offset": 12,
+          "address": "0x43c1000c"
+        }
+      ],
+      "source_evidence": "candidates/tile64/firmware/v8_tile_board_dma.c: transfer_once writes control_base + 0/4/8/12",
+      "sha256": "648d35eb325e994d0cb6d47275cb0ac9c744c0ea19517e16a5842db52395c0fb",
+      "decoded_registers": [
+        {
+          "name": "R0_CONTROL",
+          "offset": 0,
+          "address": "0x43c10000",
+          "value": "0x00000002"
+        },
+        {
+          "name": "R1_CONFIG",
+          "offset": 4,
+          "address": "0x43c10004",
+          "value": "0x0010001b"
+        },
+        {
+          "name": "R2_SEQUENCE",
+          "offset": 8,
+          "address": "0x43c10008",
+          "value": "0x00000001"
+        },
+        {
+          "name": "R3_FILTER_ID",
+          "offset": 12,
+          "address": "0x43c1000c",
+          "value": "0x00000001"
+        }
+      ]
+    },
+    {
+      "name": "AXI_DMA_register_block",
+      "kind": "mmio_register_block",
+      "address": "0x40400000",
+      "size_bytes": 92,
+      "word_count": 23,
+      "file": "registers/axi_dma.bin",
+      "registers": [
+        {
+          "name": "MM2S_DMACR",
+          "offset": 0,
+          "address": "0x40400000"
+        },
+        {
+          "name": "MM2S_DMASR",
+          "offset": 4,
+          "address": "0x40400004"
+        },
+        {
+          "name": "MM2S_SA",
+          "offset": 24,
+          "address": "0x40400018"
+        },
+        {
+          "name": "MM2S_SA_MSB",
+          "offset": 28,
+          "address": "0x4040001c"
+        },
+        {
+          "name": "MM2S_LENGTH",
+          "offset": 40,
+          "address": "0x40400028"
+        },
+        {
+          "name": "S2MM_DMACR",
+          "offset": 48,
+          "address": "0x40400030"
+        },
+        {
+          "name": "S2MM_DMASR",
+          "offset": 52,
+          "address": "0x40400034"
+        },
+        {
+          "name": "S2MM_DA",
+          "offset": 72,
+          "address": "0x40400048"
+        },
+        {
+          "name": "S2MM_DA_MSB",
+          "offset": 76,
+          "address": "0x4040004c"
+        },
+        {
+          "name": "S2MM_LENGTH",
+          "offset": 88,
+          "address": "0x40400058"
+        }
+      ],
+      "source_evidence": "current XSA system.hwh: axi_dma_0/Reg ADDRESSBLOCK register offsets",
+      "sha256": "07bad70df8676d51526a41216dcbf901772e62bc3c98c0bfed70c9717061deae",
+      "decoded_registers": [
+        {
+          "name": "MM2S_DMACR",
+          "offset": 0,
+          "address": "0x40400000",
+          "value": "0x00010006"
+        },
+        {
+          "name": "MM2S_DMASR",
+          "offset": 4,
+          "address": "0x40400004",
+          "value": "0x00001002"
+        },
+        {
+          "name": "MM2S_SA",
+          "offset": 24,
+          "address": "0x40400018",
+          "value": "0x00205380"
+        },
+        {
+          "name": "MM2S_SA_MSB",
+          "offset": 28,
+          "address": "0x4040001c",
+          "value": "0x00000000"
+        },
+        {
+          "name": "MM2S_LENGTH",
+          "offset": 40,
+          "address": "0x40400028",
+          "value": "0x000007c0"
+        },
+        {
+          "name": "S2MM_DMACR",
+          "offset": 48,
+          "address": "0x40400030",
+          "value": "0x00010006"
+        },
+        {
+          "name": "S2MM_DMASR",
+          "offset": 52,
+          "address": "0x40400034",
+          "value": "0x00001001"
+        },
+        {
+          "name": "S2MM_DA",
+          "offset": 72,
+          "address": "0x40400048",
+          "value": "0x00201340"
+        },
+        {
+          "name": "S2MM_DA_MSB",
+          "offset": 76,
+          "address": "0x4040004c",
+          "value": "0x00000000"
+        },
+        {
+          "name": "S2MM_LENGTH",
+          "offset": 88,
+          "address": "0x40400058",
+          "value": "0x00000014"
+        }
+      ]
+    }
+  ],
+  "xsct_tcl": "capture_read_only.tcl",
+  "xsct_log": "xsct.log",
+  "capture_completed_utc": "2026-10-15T18:45:05.111888+00:00",
+  "xsct_log_sha256": "1dbf4016b19a99011d4f08e1756bf915e9e91799581c78c13dbf3a1f76252e71"
+}

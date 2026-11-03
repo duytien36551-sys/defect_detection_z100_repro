@@ -1,0 +1,16 @@
+{
+  "names": [
+    "PIN_破损",
+    "PIN_裂痕",
+    "PIN_击穿",
+    "PIN_薄膜破损",
+    "PIN_电极缺失",
+    "PIN_异物",
+    "PIN_有机物污染",
+    "PIN_部分缺失",
+    "PIN_冗余"
+  ],
+  "domain": "pin",
+  "protocol": "pin9-v8/2-input640",
+  "classes_sha256": "d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754"
+}

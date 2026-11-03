@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "batch": 16,
+  "imgsz": 640,
+  "cpu_result": {
+    "status": "passed",
+    "device": "cpu",
+    "batch": 16,
+    "imgsz": 640,
+    "loss": 189.95205688476562,
+    "seconds": 2.7732667999807745,
+    "finite_gradients": true
+  },
+  "source_groups_overlap": 0,
+  "split_manifest_sha256": "cea60674b314b3d5ddf85d51f9d3b85cf563ded5fa29b85a2553aaef6aad189d",
+  "data_yaml_sha256": "bd292275fdb9cffc7b1cd2746e2df62874a784180606ab2bd933725c78566cc9",
+  "gpu_gate": "Small DirectML steps possible, batch32 forward failed and gradient numerical mismatch; CPU selected",
+  "paper_batch32_resource_check": "CPU watchdog interrupted before OOM; batch16 full step passed",
+  "test_used": false
+}

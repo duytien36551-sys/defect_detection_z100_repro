@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "scope": "Portable examples derived from authentic local records; author paths/serial redacted, JSON serialized anew. Text decoded UTF-8, falling back to GB18030 with replacement for legacy logs. Original and distributed hashes are separate; no new training/board run.",
+  "files": [
+    {
+      "snapshot_path": "examples/07_dma_normal_batch/inputs/batch_acceptance.json",
+      "source_origin": "v8/deployment/validation/board_session/tile64_reset_fullinit2_batch20/batch_acceptance.json",
+      "source_sha256": "d1b566a36adaff79bd12fe09f8bff343214f2ecf2d9434d58837aca741135452",
+      "snapshot_sha256": "1df503c1b5ba05c2c963fde6dd481603b965e6ad8b3a5721f536bd4cd6bdb135",
+      "bytes": 40277,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/07_dma_normal_batch/inputs/batch_log.log",
+      "source_origin": "v8/deployment/validation/board_session/tile64_reset_fullinit2_batch20.log",
+      "source_sha256": "5a8816fc3215c0a589edba098f79c62edc1a3232018ae60ddd849776ef9df1a4",
+      "snapshot_sha256": "0b5df49e056ca6f8ff4dbbfad7fb0b920fb939dc50035a2d7c07d1d17560278b",
+      "bytes": 42443,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/07_dma_normal_batch/inputs/requests.jsonl",
+      "source_origin": "v8/deployment/validation/board_session/tile64_reset_fullinit2_batch20/requests.jsonl",
+      "source_sha256": "85194fc32dc559899e8bca2aa02e6af97a4bcab23b300276a362cc36f0e83ac6",
+      "snapshot_sha256": "b3c2daab52515250ad9790fba9f4a343d45453121db142e9be8222daf8a4d945",
+      "bytes": 24507,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/failed_run.log",
+      "source_origin": "v8/deployment/validation/board_session/tile64_original_retest_pair.log",
+      "source_sha256": "14f01301f66b3654d3fd1f2600dc6ea3bf8ce0fddfd20053338cde0218b7ee91",
+      "snapshot_sha256": "f9e0ffab41d0113239c8d4fc0942716dda29d3e01ebca70ed6a2b380ed36c5f5",
+      "bytes": 2922,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/failed_run_acceptance.json",
+      "source_origin": "v8/deployment/validation/board_session/tile64_original_retest_pair/batch_acceptance.json",
+      "source_sha256": "3b615322378d4605de05991eff9d90e53415fed6b67f42a59b824dd91325e8d6",
+      "snapshot_sha256": "7d031098c9c062a9e5bf20d36ad13f12859ca2dc3205a7bf2c134c8f99f4cbe3",
+      "bytes": 2803,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/failed_run_build_report.json",
+      "source_origin": "v8/deployment/validation/board_session/tile64_original_retest_report.json",
+      "source_sha256": "925bf7f8a2a82e6f370a706ef3aa18886f859715eb57442d33bd4eb652d6c198",
+      "snapshot_sha256": "a80e7f576a73b5d547a2cc78763857c1a5dc539f60d637c84a41f81e1f5fefbe",
+      "bytes": 6366,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/failure_snapshot_manifest.json",
+      "source_origin": "v8/deployment/validation/board_session/tile64_original_retest_snapshot/capture_manifest.json",
+      "source_sha256": "64ff0fe52bf8660c365420bdb6db019b98d7f22e931da441e193dafa5a37946c",
+      "snapshot_sha256": "c4371d3696a81b74f923410c06672c93ec7702fff3e5c3b1f70683507490dca8",
+      "bytes": 13126,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/snapshot_xsct.log",
+      "source_origin": "v8/deployment/validation/board_session/tile64_original_retest_snapshot/xsct.log",
+      "source_sha256": "1fec3df39c81b84a99dcd6693fa10d97b522e0b4bbce67de93c118a8f7aabb3d",
+      "snapshot_sha256": "1fec3df39c81b84a99dcd6693fa10d97b522e0b4bbce67de93c118a8f7aabb3d",
+      "bytes": 1180,
+      "redacted_or_reserialized": false
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/failure_axi_dma_registers.bin",
+      "source_origin": "v8/deployment/validation/board_session/tile64_original_retest_snapshot/registers/axi_dma.bin",
+      "source_sha256": "07bad70df8676d51526a41216dcbf901772e62bc3c98c0bfed70c9717061deae",
+      "snapshot_sha256": "07bad70df8676d51526a41216dcbf901772e62bc3c98c0bfed70c9717061deae",
+      "bytes": 92,
+      "redacted_or_reserialized": false
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/failure_dma_context.bin",
+      "source_origin": "v8/deployment/validation/board_session/tile64_original_retest_snapshot/memory/dma_context.bin",
+      "source_sha256": "b7d47fec45c5784f7a3f2327b876e8502919a0e92b18acfe4b2274742de2f079",
+      "snapshot_sha256": "b7d47fec45c5784f7a3f2327b876e8502919a0e92b18acfe4b2274742de2f079",
+      "bytes": 72,
+      "redacted_or_reserialized": false
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/failure_dma_driver_state.bin",
+      "source_origin": "v8/deployment/validation/board_session/tile64_original_retest_snapshot/memory/dma.bin",
+      "source_sha256": "b242d346d40cf8b4c1f1a7576107971514be219c78284c20f876c3d2aebfc3b8",
+      "snapshot_sha256": "b242d346d40cf8b4c1f1a7576107971514be219c78284c20f876c3d2aebfc3b8",
+      "bytes": 1872,
+      "redacted_or_reserialized": false
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/failure_dma_tx_buffer.bin",
+      "source_origin": "v8/deployment/validation/board_session/tile64_original_retest_snapshot/memory/dma_taps.bin",
+      "source_sha256": "09550fbe0067126719e75ac4414d4ddf7a19fec3951133d9c2e537200e02cd03",
+      "snapshot_sha256": "09550fbe0067126719e75ac4414d4ddf7a19fec3951133d9c2e537200e02cd03",
+      "bytes": 262144,
+      "redacted_or_reserialized": false
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/failure_dma_rx_buffer.bin",
+      "source_origin": "v8/deployment/validation/board_session/tile64_original_retest_snapshot/memory/dma_result.bin",
+      "source_sha256": "8aa5bd68982fa3d1475c9d366527c526ddd6eb389104f79fd2cc16a41c6b233b",
+      "snapshot_sha256": "8aa5bd68982fa3d1475c9d366527c526ddd6eb389104f79fd2cc16a41c6b233b",
+      "bytes": 16448,
+      "redacted_or_reserialized": false
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/later_diagnostic_run.log",
+      "source_origin": "v8/deployment/validation/board_session/tile64_diagnostic_batch20.log",
+      "source_sha256": "473b1ae28af370ac51bf0b1dc61cf998e473946438ebe244612cb5885e8c8636",
+      "snapshot_sha256": "d6bc3f96146588f3905cbc36be7e7544067d07f65930fa9372a2040e20741fd1",
+      "bytes": 42325,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/08_dma_cross_run_failure/inputs/later_diagnostic_acceptance.json",
+      "source_origin": "v8/deployment/validation/board_session/tile64_diagnostic_batch20/batch_acceptance.json",
+      "source_sha256": "96cbf9b8feb0fffa42151592e7a6549c5b60735ab4d74a3e27a13fe16c25cb81",
+      "snapshot_sha256": "ae7d51738ef6f0ace7d947ad4f21d85782a5a7470f3ba2e290d5c59783c02d2c",
+      "bytes": 40279,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "validation/independent/07_dma_normal_batch/report.md",
+      "source_origin": "validation/independent_normal_20261025/07_dma_normal_batch.md",
+      "source_sha256": "a905a60357925a568cc552a910f2991113b744d9e13ca96327247ea605c4d5e0",
+      "snapshot_sha256": "8aba26bc4f8b40d554cb7a76c1e5d3cfca7c1621986d038d9e07d058b84d8431",
+      "bytes": 3843,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/07_dma_normal_batch/report.json",
+      "source_origin": "validation/independent_normal_20261025/07_dma_normal_batch.json",
+      "source_sha256": "13d5c15052f902b3d908663e033adcbc9753b6389a99fad3d80730acd8e73e03",
+      "snapshot_sha256": "767c73c17c389cd209f5377ff14f948ee2c5e69ff6546d728d71ed1fde94b01f",
+      "bytes": 6077,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/08_dma_cross_run_failure/report.md",
+      "source_origin": "validation/behavior_run_b_20261025/08_dma_cross_run_failure/report.md",
+      "source_sha256": "91451234ba8e708220246386d8644611fa0912117c18bd7e1d5e6632a71b26dd",
+      "snapshot_sha256": "91451234ba8e708220246386d8644611fa0912117c18bd7e1d5e6632a71b26dd",
+      "bytes": 3933,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/08_dma_cross_run_failure/report.json",
+      "source_origin": "validation/behavior_run_b_20261025/08_dma_cross_run_failure/report.json",
+      "source_sha256": "4cafd402556b5562fa36c5c463850c4f8b59044fdf4f43f73fe4554b2f3ecf00",
+      "snapshot_sha256": "17d052f94f1caeedfc49bf3b39b8445639d54523adb53aa0bf8a69de2fbc2f26",
+      "bytes": 12843,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    }
+  ],
+  "submission_transform": "2026-10-31 standalone skill folder; Markdown navigation converted to readable text and workflow included in entry/readme. Original source hashes preserved."
+}

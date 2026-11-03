@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+ [bootloader] fsbl.elf
+ z100_platform.bit
+ native_board_pool.elf
+}

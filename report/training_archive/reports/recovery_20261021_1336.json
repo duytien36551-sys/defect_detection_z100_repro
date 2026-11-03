@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-10-21T13:36:38.786015+08:00",
+  "reason": "Windows reboot at13:32:28 (System1074), event log stopped13:32:40 and started13:33:12; no training exception or stop marker",
+  "checkpoint_epoch0": 15,
+  "optimizer_state_count": 183,
+  "scheduler_last_epoch": 15,
+  "backup": "training_run\\runs\\pin\\weights\\unexpected_exit_epoch16_resume.pt",
+  "sha256": "57caaa3d763a9c9aff25f19b777cee44a2083af903dcbf96826658172ad9a9f6",
+  "resume_from_epoch": 17
+}

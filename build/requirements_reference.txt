@@ -1,0 +1,5 @@
+# Validated on Python 3.12.14, Windows x64, CPU.
+# Use --extra-index-url https://download.pytorch.org/whl/cpu (readme.md).
+numpy==2.5.4
+opencv-python==5.0.0.93
+torch==2.14.1+cpu

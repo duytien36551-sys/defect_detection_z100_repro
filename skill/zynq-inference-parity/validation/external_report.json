@@ -1,0 +1,1388 @@
+{
+  "report_id": "external_detector_sources_20261025_static_audit",
+  "generated_at_local": "2026-10-25T15:55:36.065+08:00",
+  "result": "Static audit only. The split and evaluator design are visible in source, but no accuracy result is evidenced. The supplied annotation subset is person-only and contains no person-negative images.",
+  "source_provenance": {
+    "repository": "https://github.com/microsoft/onnxruntime-inference-examples",
+    "commit": "16e32e87c81648773b8da2a80434a672e3b9dad6",
+    "retrieved_at_recorded": "2026-10-25T15:46:32.380572+08:00",
+    "manifest_scope": "Unrelated public detector quantization/evaluation recipe plus real COCO person annotations; static audit only, no model execution",
+    "license_statement": "Repository license retained; COCO data annotations keep source info/licenses in JSON",
+    "upstream_fetch_or_verification_performed": false
+  },
+  "review_scope": {
+    "task": "Audit calibration/validation isolation, class mapping, preprocessing, and accuracy comparison design from supplied materials only.",
+    "code_execution": false,
+    "model_download_or_inference": false,
+    "network_access": false,
+    "training_or_board_operation": false,
+    "data_modified": false,
+    "read_sources": [
+      "task.md",
+      "source_manifest.json",
+      "manifest-listed files under inputs/",
+      "the four named skill/workflow files"
+    ],
+    "prohibited_sources_read": false
+  },
+  "skills_loaded": [
+    {
+      "skill": "zynq-inference-parity",
+      "version": "1.0.0-rc1",
+      "file": "<project-root>\\skill\\installed_sources\\zynq-inference-parity\\skill.md",
+      "bytes_computed": 2888,
+      "sha256_computed": "f6e63ff2e1890dc1232d4bfc33858ccae6cac26351a6d586c3fe7849c9f10541",
+      "loaded": true
+    },
+    {
+      "skill": "zynq-inference-parity",
+      "version": "1.0.0-rc1",
+      "file": "<project-root>\\skill\\installed_sources\\zynq-inference-parity\\references\\workflow.md",
+      "bytes_computed": 3018,
+      "sha256_computed": "31e5b151fa0e29638edabd2acde725d776c9236dfaf6bf4b5f3a782a79a546ef",
+      "loaded": true
+    },
+    {
+      "skill": "detection-training-audit",
+      "version": "1.0.0-rc1",
+      "file": "<project-root>\\skill\\installed_sources\\detection-training-audit\\skill.md",
+      "bytes_computed": 2901,
+      "sha256_computed": "23aa86ce5f55b7a3156b4bd5eaf82309f7fd5353d0a71ba680cd6d5e6928ca77",
+      "loaded": true
+    },
+    {
+      "skill": "detection-training-audit",
+      "version": "1.0.0-rc1",
+      "file": "<project-root>\\skill\\installed_sources\\detection-training-audit\\references\\workflow.md",
+      "bytes_computed": 3149,
+      "sha256_computed": "7efff7cdd804eab56dd1af58bcb80ed4040f245d5b94ed6c5e7b8601fad2bfdc",
+      "loaded": true
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\task.md",
+      "relative_path": "task.md",
+      "role": "task request",
+      "bytes_before": 444,
+      "sha256_before": "f7fd7b77e8a9d3b129b9f63c0fba15eb417afc0d4bdfe5e24cb77defccb4778a",
+      "sha256_manifest_recorded": null,
+      "bytes_manifest_recorded": null,
+      "manifest_sha256_matches": null,
+      "manifest_bytes_match": null,
+      "bytes_after": 444,
+      "sha256_after": "f7fd7b77e8a9d3b129b9f63c0fba15eb417afc0d4bdfe5e24cb77defccb4778a",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\source_manifest.json",
+      "relative_path": "source_manifest.json",
+      "role": "pinned source manifest",
+      "bytes_before": 4345,
+      "sha256_before": "605aa5ae1f299a8f70232cf3df6fdc617aa77ea02beefaa0d1cd8ed715a69797",
+      "sha256_manifest_recorded": null,
+      "bytes_manifest_recorded": null,
+      "manifest_sha256_matches": null,
+      "manifest_bytes_match": null,
+      "bytes_after": 4345,
+      "sha256_after": "605aa5ae1f299a8f70232cf3df6fdc617aa77ea02beefaa0d1cd8ed715a69797",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\inputs\\license",
+      "relative_path": "inputs/license",
+      "role": "manifest-listed source/input",
+      "bytes_before": 1141,
+      "sha256_before": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "sha256_manifest_recorded": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes_manifest_recorded": 1141,
+      "manifest_sha256_matches": true,
+      "manifest_bytes_match": true,
+      "bytes_after": 1141,
+      "sha256_after": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\inputs\\quantization\\object_detection\\trt\\yolov3\\data_reader.py",
+      "relative_path": "inputs/quantization/object_detection/trt/yolov3/data_reader.py",
+      "role": "manifest-listed source/input",
+      "bytes_before": 10053,
+      "sha256_before": "743f90953d10c7c8d8b81e5b651da5b389bc682fa5c9e5a4e14b0fe6ef4cf0c3",
+      "sha256_manifest_recorded": "743f90953d10c7c8d8b81e5b651da5b389bc682fa5c9e5a4e14b0fe6ef4cf0c3",
+      "bytes_manifest_recorded": 10053,
+      "manifest_sha256_matches": true,
+      "manifest_bytes_match": true,
+      "bytes_after": 10053,
+      "sha256_after": "743f90953d10c7c8d8b81e5b651da5b389bc682fa5c9e5a4e14b0fe6ef4cf0c3",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\inputs\\quantization\\object_detection\\trt\\yolov3\\e2e_user_yolov3_example.py",
+      "relative_path": "inputs/quantization/object_detection/trt/yolov3/e2e_user_yolov3_example.py",
+      "role": "manifest-listed source/input",
+      "bytes_before": 9036,
+      "sha256_before": "a3279055020a18d2c0dbfe2a163a2cae3a923a2a0c5e45e56bd7cec281ef420c",
+      "sha256_manifest_recorded": "a3279055020a18d2c0dbfe2a163a2cae3a923a2a0c5e45e56bd7cec281ef420c",
+      "bytes_manifest_recorded": 9036,
+      "manifest_sha256_matches": true,
+      "manifest_bytes_match": true,
+      "bytes_after": 9036,
+      "sha256_after": "a3279055020a18d2c0dbfe2a163a2cae3a923a2a0c5e45e56bd7cec281ef420c",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\inputs\\quantization\\object_detection\\trt\\yolov3\\evaluate.py",
+      "relative_path": "inputs/quantization/object_detection/trt/yolov3/evaluate.py",
+      "role": "manifest-listed source/input",
+      "bytes_before": 20374,
+      "sha256_before": "07982c6368f8f878fb25dbed716a611f004a1ea282f5131632a92f70510cae98",
+      "sha256_manifest_recorded": "07982c6368f8f878fb25dbed716a611f004a1ea282f5131632a92f70510cae98",
+      "bytes_manifest_recorded": 20374,
+      "manifest_sha256_matches": true,
+      "manifest_bytes_match": true,
+      "bytes_after": 20374,
+      "sha256_after": "07982c6368f8f878fb25dbed716a611f004a1ea282f5131632a92f70510cae98",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\inputs\\quantization\\object_detection\\trt\\yolov3\\preprocessing.py",
+      "relative_path": "inputs/quantization/object_detection/trt/yolov3/preprocessing.py",
+      "role": "manifest-listed source/input",
+      "bytes_before": 10414,
+      "sha256_before": "1e80cb34043ae3fdb2766a800179281f9940bbd127b4e88821fd2afacc678399",
+      "sha256_manifest_recorded": "1e80cb34043ae3fdb2766a800179281f9940bbd127b4e88821fd2afacc678399",
+      "bytes_manifest_recorded": 10414,
+      "manifest_sha256_matches": true,
+      "manifest_bytes_match": true,
+      "bytes_after": 10414,
+      "sha256_after": "1e80cb34043ae3fdb2766a800179281f9940bbd127b4e88821fd2afacc678399",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\inputs\\quantization\\object_detection\\trt\\yolov3\\postprocessing.py",
+      "relative_path": "inputs/quantization/object_detection/trt/yolov3/postprocessing.py",
+      "role": "manifest-listed source/input",
+      "bytes_before": 13353,
+      "sha256_before": "9df911855101991b5e80c404407f15f4c23b2ceca7fa54c554c73b487179ee93",
+      "sha256_manifest_recorded": "9df911855101991b5e80c404407f15f4c23b2ceca7fa54c554c73b487179ee93",
+      "bytes_manifest_recorded": 13353,
+      "manifest_sha256_matches": true,
+      "manifest_bytes_match": true,
+      "bytes_after": 13353,
+      "sha256_after": "9df911855101991b5e80c404407f15f4c23b2ceca7fa54c554c73b487179ee93",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\inputs\\quantization\\object_detection\\trt\\yolov3\\coco_filter.py",
+      "relative_path": "inputs/quantization/object_detection/trt/yolov3/coco_filter.py",
+      "role": "manifest-listed source/input",
+      "bytes_before": 6128,
+      "sha256_before": "924cdbae8c086029241d13133c60ab6aa962cc68b697d2db14690c2c4f72e637",
+      "sha256_manifest_recorded": "924cdbae8c086029241d13133c60ab6aa962cc68b697d2db14690c2c4f72e637",
+      "bytes_manifest_recorded": 6128,
+      "manifest_sha256_matches": true,
+      "manifest_bytes_match": true,
+      "bytes_after": 6128,
+      "sha256_after": "924cdbae8c086029241d13133c60ab6aa962cc68b697d2db14690c2c4f72e637",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\inputs\\quantization\\object_detection\\trt\\yolov3\\coco-object-categories-2017.json",
+      "relative_path": "inputs/quantization/object_detection/trt/yolov3/coco-object-categories-2017.json",
+      "role": "manifest-listed source/input",
+      "bytes_before": 4685,
+      "sha256_before": "752e7df9bb007eb948570c5236bd933b4b6655a15cda465b1ced8973eef4353d",
+      "sha256_manifest_recorded": "752e7df9bb007eb948570c5236bd933b4b6655a15cda465b1ced8973eef4353d",
+      "bytes_manifest_recorded": 4685,
+      "manifest_sha256_matches": true,
+      "manifest_bytes_match": true,
+      "bytes_after": 4685,
+      "sha256_after": "752e7df9bb007eb948570c5236bd933b4b6655a15cda465b1ced8973eef4353d",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\inputs\\quantization\\object_detection\\trt\\yolov3\\onnx_coco_classes.txt",
+      "relative_path": "inputs/quantization/object_detection/trt/yolov3/onnx_coco_classes.txt",
+      "role": "manifest-listed source/input",
+      "bytes_before": 625,
+      "sha256_before": "634a1132eb33f8091d60f2c346ababe8b905ae08387037aed883953b7329af84",
+      "sha256_manifest_recorded": "634a1132eb33f8091d60f2c346ababe8b905ae08387037aed883953b7329af84",
+      "bytes_manifest_recorded": 625,
+      "manifest_sha256_matches": true,
+      "manifest_bytes_match": true,
+      "bytes_after": 625,
+      "sha256_after": "634a1132eb33f8091d60f2c346ababe8b905ae08387037aed883953b7329af84",
+      "unchanged_after_report": true
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\external_detector_sources_20261025\\inputs\\quantization\\object_detection\\trt\\yolov3\\annotations\\instances_val2017_person.json",
+      "relative_path": "inputs/quantization/object_detection/trt/yolov3/annotations/instances_val2017_person.json",
+      "role": "manifest-listed source/input",
+      "bytes_before": 8759429,
+      "sha256_before": "7cbea0268996b833c82f9f0dce47b596b7f1b091bf61362cf0a067938ea16739",
+      "sha256_manifest_recorded": "7cbea0268996b833c82f9f0dce47b596b7f1b091bf61362cf0a067938ea16739",
+      "bytes_manifest_recorded": 8759429,
+      "manifest_sha256_matches": true,
+      "manifest_bytes_match": true,
+      "bytes_after": 8759429,
+      "sha256_after": "7cbea0268996b833c82f9f0dce47b596b7f1b091bf61362cf0a067938ea16739",
+      "unchanged_after_report": true
+    }
+  ],
+  "annotation_statistics": {
+    "file": "inputs/quantization/object_detection/trt/yolov3/annotations/instances_val2017_person.json",
+    "sha256_computed": "7cbea0268996b833c82f9f0dce47b596b7f1b091bf61362cf0a067938ea16739",
+    "image_records": 2693,
+    "distinct_image_ids": 2693,
+    "annotation_records": 11004,
+    "distinct_annotation_ids": 11004,
+    "category_records": 1,
+    "categories": [
+      {
+        "id": 1,
+        "name": "person",
+        "annotation_count": 11004,
+        "annotated_image_count": 2693
+      }
+    ],
+    "person_annotation_records": 11004,
+    "person_non_crowd_annotations": 10777,
+    "person_iscrowd_annotations": 227,
+    "images_with_person": 2693,
+    "images_without_person_annotation_in_supplied_file": 0,
+    "normal_images_for_fpr": {
+      "count_in_supplied_subset": 0,
+      "false_alarm_rate_status": "not_evaluable",
+      "explanation": "All supplied image records have at least one person annotation; the person-only subset has no negative denominator. Do not interpret as 0% false alarms."
+    },
+    "annotations_with_missing_image_reference": 0,
+    "invalid_bbox_records": 0,
+    "duplicate_image_id_count": 0,
+    "duplicate_annotation_id_count": 0,
+    "non_person_class_counts": "null/not represented in this one-category annotation; not measured zeros",
+    "info": {
+      "description": "COCO 2017 Dataset",
+      "url": "http://cocodataset.org",
+      "version": "1.0",
+      "year": 2017,
+      "contributor": "COCO Consortium",
+      "date_created": "2017/09/01"
+    },
+    "license_record_count": 8
+  },
+  "class_mapping_audit": {
+    "onnx_class_lines": 80,
+    "coco_category_records": 80,
+    "aliases": {
+      "motorbike": "motorcycle",
+      "aeroplane": "airplane",
+      "sofa": "couch",
+      "pottedplant": "potted plant",
+      "diningtable": "dining table",
+      "tvmonitor": "tv"
+    },
+    "mapped_names_missing_from_coco": [],
+    "duplicate_mapped_names": 0,
+    "mapping_complete_and_unique": true,
+    "person_output_index": 0,
+    "person_coco_category_id": 1,
+    "mapping_records": [
+      {
+        "output_index": 0,
+        "onnx_class_name": "person",
+        "alias_applied": false,
+        "coco_name_after_alias": "person",
+        "coco_category_id": 1,
+        "annotation_target_count": 11004,
+        "annotation_image_count": 2693,
+        "annotation_count_status": "observed in supplied person-only annotation"
+      },
+      {
+        "output_index": 1,
+        "onnx_class_name": "bicycle",
+        "alias_applied": false,
+        "coco_name_after_alias": "bicycle",
+        "coco_category_id": 2,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 2,
+        "onnx_class_name": "car",
+        "alias_applied": false,
+        "coco_name_after_alias": "car",
+        "coco_category_id": 3,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 3,
+        "onnx_class_name": "motorbike",
+        "alias_applied": true,
+        "coco_name_after_alias": "motorcycle",
+        "coco_category_id": 4,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 4,
+        "onnx_class_name": "aeroplane",
+        "alias_applied": true,
+        "coco_name_after_alias": "airplane",
+        "coco_category_id": 5,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 5,
+        "onnx_class_name": "bus",
+        "alias_applied": false,
+        "coco_name_after_alias": "bus",
+        "coco_category_id": 6,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 6,
+        "onnx_class_name": "train",
+        "alias_applied": false,
+        "coco_name_after_alias": "train",
+        "coco_category_id": 7,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 7,
+        "onnx_class_name": "truck",
+        "alias_applied": false,
+        "coco_name_after_alias": "truck",
+        "coco_category_id": 8,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 8,
+        "onnx_class_name": "boat",
+        "alias_applied": false,
+        "coco_name_after_alias": "boat",
+        "coco_category_id": 9,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 9,
+        "onnx_class_name": "traffic light",
+        "alias_applied": false,
+        "coco_name_after_alias": "traffic light",
+        "coco_category_id": 10,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 10,
+        "onnx_class_name": "fire hydrant",
+        "alias_applied": false,
+        "coco_name_after_alias": "fire hydrant",
+        "coco_category_id": 11,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 11,
+        "onnx_class_name": "stop sign",
+        "alias_applied": false,
+        "coco_name_after_alias": "stop sign",
+        "coco_category_id": 13,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 12,
+        "onnx_class_name": "parking meter",
+        "alias_applied": false,
+        "coco_name_after_alias": "parking meter",
+        "coco_category_id": 14,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 13,
+        "onnx_class_name": "bench",
+        "alias_applied": false,
+        "coco_name_after_alias": "bench",
+        "coco_category_id": 15,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 14,
+        "onnx_class_name": "bird",
+        "alias_applied": false,
+        "coco_name_after_alias": "bird",
+        "coco_category_id": 16,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 15,
+        "onnx_class_name": "cat",
+        "alias_applied": false,
+        "coco_name_after_alias": "cat",
+        "coco_category_id": 17,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 16,
+        "onnx_class_name": "dog",
+        "alias_applied": false,
+        "coco_name_after_alias": "dog",
+        "coco_category_id": 18,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 17,
+        "onnx_class_name": "horse",
+        "alias_applied": false,
+        "coco_name_after_alias": "horse",
+        "coco_category_id": 19,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 18,
+        "onnx_class_name": "sheep",
+        "alias_applied": false,
+        "coco_name_after_alias": "sheep",
+        "coco_category_id": 20,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 19,
+        "onnx_class_name": "cow",
+        "alias_applied": false,
+        "coco_name_after_alias": "cow",
+        "coco_category_id": 21,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 20,
+        "onnx_class_name": "elephant",
+        "alias_applied": false,
+        "coco_name_after_alias": "elephant",
+        "coco_category_id": 22,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 21,
+        "onnx_class_name": "bear",
+        "alias_applied": false,
+        "coco_name_after_alias": "bear",
+        "coco_category_id": 23,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 22,
+        "onnx_class_name": "zebra",
+        "alias_applied": false,
+        "coco_name_after_alias": "zebra",
+        "coco_category_id": 24,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 23,
+        "onnx_class_name": "giraffe",
+        "alias_applied": false,
+        "coco_name_after_alias": "giraffe",
+        "coco_category_id": 25,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 24,
+        "onnx_class_name": "backpack",
+        "alias_applied": false,
+        "coco_name_after_alias": "backpack",
+        "coco_category_id": 27,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 25,
+        "onnx_class_name": "umbrella",
+        "alias_applied": false,
+        "coco_name_after_alias": "umbrella",
+        "coco_category_id": 28,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 26,
+        "onnx_class_name": "handbag",
+        "alias_applied": false,
+        "coco_name_after_alias": "handbag",
+        "coco_category_id": 31,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 27,
+        "onnx_class_name": "tie",
+        "alias_applied": false,
+        "coco_name_after_alias": "tie",
+        "coco_category_id": 32,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 28,
+        "onnx_class_name": "suitcase",
+        "alias_applied": false,
+        "coco_name_after_alias": "suitcase",
+        "coco_category_id": 33,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 29,
+        "onnx_class_name": "frisbee",
+        "alias_applied": false,
+        "coco_name_after_alias": "frisbee",
+        "coco_category_id": 34,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 30,
+        "onnx_class_name": "skis",
+        "alias_applied": false,
+        "coco_name_after_alias": "skis",
+        "coco_category_id": 35,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 31,
+        "onnx_class_name": "snowboard",
+        "alias_applied": false,
+        "coco_name_after_alias": "snowboard",
+        "coco_category_id": 36,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 32,
+        "onnx_class_name": "sports ball",
+        "alias_applied": false,
+        "coco_name_after_alias": "sports ball",
+        "coco_category_id": 37,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 33,
+        "onnx_class_name": "kite",
+        "alias_applied": false,
+        "coco_name_after_alias": "kite",
+        "coco_category_id": 38,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 34,
+        "onnx_class_name": "baseball bat",
+        "alias_applied": false,
+        "coco_name_after_alias": "baseball bat",
+        "coco_category_id": 39,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 35,
+        "onnx_class_name": "baseball glove",
+        "alias_applied": false,
+        "coco_name_after_alias": "baseball glove",
+        "coco_category_id": 40,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 36,
+        "onnx_class_name": "skateboard",
+        "alias_applied": false,
+        "coco_name_after_alias": "skateboard",
+        "coco_category_id": 41,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 37,
+        "onnx_class_name": "surfboard",
+        "alias_applied": false,
+        "coco_name_after_alias": "surfboard",
+        "coco_category_id": 42,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 38,
+        "onnx_class_name": "tennis racket",
+        "alias_applied": false,
+        "coco_name_after_alias": "tennis racket",
+        "coco_category_id": 43,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 39,
+        "onnx_class_name": "bottle",
+        "alias_applied": false,
+        "coco_name_after_alias": "bottle",
+        "coco_category_id": 44,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 40,
+        "onnx_class_name": "wine glass",
+        "alias_applied": false,
+        "coco_name_after_alias": "wine glass",
+        "coco_category_id": 46,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 41,
+        "onnx_class_name": "cup",
+        "alias_applied": false,
+        "coco_name_after_alias": "cup",
+        "coco_category_id": 47,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 42,
+        "onnx_class_name": "fork",
+        "alias_applied": false,
+        "coco_name_after_alias": "fork",
+        "coco_category_id": 48,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 43,
+        "onnx_class_name": "knife",
+        "alias_applied": false,
+        "coco_name_after_alias": "knife",
+        "coco_category_id": 49,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 44,
+        "onnx_class_name": "spoon",
+        "alias_applied": false,
+        "coco_name_after_alias": "spoon",
+        "coco_category_id": 50,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 45,
+        "onnx_class_name": "bowl",
+        "alias_applied": false,
+        "coco_name_after_alias": "bowl",
+        "coco_category_id": 51,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 46,
+        "onnx_class_name": "banana",
+        "alias_applied": false,
+        "coco_name_after_alias": "banana",
+        "coco_category_id": 52,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 47,
+        "onnx_class_name": "apple",
+        "alias_applied": false,
+        "coco_name_after_alias": "apple",
+        "coco_category_id": 53,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 48,
+        "onnx_class_name": "sandwich",
+        "alias_applied": false,
+        "coco_name_after_alias": "sandwich",
+        "coco_category_id": 54,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 49,
+        "onnx_class_name": "orange",
+        "alias_applied": false,
+        "coco_name_after_alias": "orange",
+        "coco_category_id": 55,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 50,
+        "onnx_class_name": "broccoli",
+        "alias_applied": false,
+        "coco_name_after_alias": "broccoli",
+        "coco_category_id": 56,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 51,
+        "onnx_class_name": "carrot",
+        "alias_applied": false,
+        "coco_name_after_alias": "carrot",
+        "coco_category_id": 57,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 52,
+        "onnx_class_name": "hot dog",
+        "alias_applied": false,
+        "coco_name_after_alias": "hot dog",
+        "coco_category_id": 58,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 53,
+        "onnx_class_name": "pizza",
+        "alias_applied": false,
+        "coco_name_after_alias": "pizza",
+        "coco_category_id": 59,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 54,
+        "onnx_class_name": "donut",
+        "alias_applied": false,
+        "coco_name_after_alias": "donut",
+        "coco_category_id": 60,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 55,
+        "onnx_class_name": "cake",
+        "alias_applied": false,
+        "coco_name_after_alias": "cake",
+        "coco_category_id": 61,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 56,
+        "onnx_class_name": "chair",
+        "alias_applied": false,
+        "coco_name_after_alias": "chair",
+        "coco_category_id": 62,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 57,
+        "onnx_class_name": "sofa",
+        "alias_applied": true,
+        "coco_name_after_alias": "couch",
+        "coco_category_id": 63,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 58,
+        "onnx_class_name": "pottedplant",
+        "alias_applied": true,
+        "coco_name_after_alias": "potted plant",
+        "coco_category_id": 64,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 59,
+        "onnx_class_name": "bed",
+        "alias_applied": false,
+        "coco_name_after_alias": "bed",
+        "coco_category_id": 65,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 60,
+        "onnx_class_name": "diningtable",
+        "alias_applied": true,
+        "coco_name_after_alias": "dining table",
+        "coco_category_id": 67,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 61,
+        "onnx_class_name": "toilet",
+        "alias_applied": false,
+        "coco_name_after_alias": "toilet",
+        "coco_category_id": 70,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 62,
+        "onnx_class_name": "tvmonitor",
+        "alias_applied": true,
+        "coco_name_after_alias": "tv",
+        "coco_category_id": 72,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 63,
+        "onnx_class_name": "laptop",
+        "alias_applied": false,
+        "coco_name_after_alias": "laptop",
+        "coco_category_id": 73,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 64,
+        "onnx_class_name": "mouse",
+        "alias_applied": false,
+        "coco_name_after_alias": "mouse",
+        "coco_category_id": 74,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 65,
+        "onnx_class_name": "remote",
+        "alias_applied": false,
+        "coco_name_after_alias": "remote",
+        "coco_category_id": 75,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 66,
+        "onnx_class_name": "keyboard",
+        "alias_applied": false,
+        "coco_name_after_alias": "keyboard",
+        "coco_category_id": 76,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 67,
+        "onnx_class_name": "cell phone",
+        "alias_applied": false,
+        "coco_name_after_alias": "cell phone",
+        "coco_category_id": 77,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 68,
+        "onnx_class_name": "microwave",
+        "alias_applied": false,
+        "coco_name_after_alias": "microwave",
+        "coco_category_id": 78,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 69,
+        "onnx_class_name": "oven",
+        "alias_applied": false,
+        "coco_name_after_alias": "oven",
+        "coco_category_id": 79,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 70,
+        "onnx_class_name": "toaster",
+        "alias_applied": false,
+        "coco_name_after_alias": "toaster",
+        "coco_category_id": 80,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 71,
+        "onnx_class_name": "sink",
+        "alias_applied": false,
+        "coco_name_after_alias": "sink",
+        "coco_category_id": 81,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 72,
+        "onnx_class_name": "refrigerator",
+        "alias_applied": false,
+        "coco_name_after_alias": "refrigerator",
+        "coco_category_id": 82,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 73,
+        "onnx_class_name": "book",
+        "alias_applied": false,
+        "coco_name_after_alias": "book",
+        "coco_category_id": 84,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 74,
+        "onnx_class_name": "clock",
+        "alias_applied": false,
+        "coco_name_after_alias": "clock",
+        "coco_category_id": 85,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 75,
+        "onnx_class_name": "vase",
+        "alias_applied": false,
+        "coco_name_after_alias": "vase",
+        "coco_category_id": 86,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 76,
+        "onnx_class_name": "scissors",
+        "alias_applied": false,
+        "coco_name_after_alias": "scissors",
+        "coco_category_id": 87,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 77,
+        "onnx_class_name": "teddy bear",
+        "alias_applied": false,
+        "coco_name_after_alias": "teddy bear",
+        "coco_category_id": 88,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 78,
+        "onnx_class_name": "hair drier",
+        "alias_applied": false,
+        "coco_name_after_alias": "hair drier",
+        "coco_category_id": 89,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      },
+      {
+        "output_index": 79,
+        "onnx_class_name": "toothbrush",
+        "alias_applied": false,
+        "coco_name_after_alias": "toothbrush",
+        "coco_category_id": 90,
+        "annotation_target_count": null,
+        "annotation_image_count": null,
+        "annotation_count_status": "not represented in supplied person-only annotation; not a measured zero"
+      }
+    ],
+    "limitation": "This validates the supplied text/JSON mapping algorithmically; the ONNX model file is absent, so output channel semantics are not independently verified."
+  },
+  "calibration_validation_design": {
+    "intended_source_split": "COCO 2017 Train",
+    "intended_validation_split": "COCO 2017 Val",
+    "evidence": "e2e_user_yolov3_example.py lines 155-170, 181-189",
+    "sampler_command": "coco_filter.py with -c all",
+    "selection_rule": "randomly shuffle images per category and take at most first 20 per category; union image IDs",
+    "categories_in_supplied_model_map": 80,
+    "max_unique_images_by_code_bound": 1600,
+    "actual_materialized_calibration_image_count": null,
+    "random_seed_pinned": false,
+    "selected_image_ids_manifest_supplied": false,
+    "actual_calibration_image_hashes_supplied": false,
+    "explicit_split_overlap_check_evidence_supplied": false
+  },
+  "active_recipe": {
+    "default_flag_is_onnx_model_zoo_yolov3": false,
+    "selected_model_path": "yolov3-608.onnx",
+    "calibration_split_path": "./train2017/calib",
+    "evaluation_split_path": "./val2017",
+    "calibration_function": "get_calibration_table_yolov3_variant",
+    "evaluation_function": "get_prediction_evaluation_yolov3_variant",
+    "data_reader": "YoloV3VariantDataReader",
+    "evaluator": "YoloV3VariantEvaluator",
+    "input_shape_declared_by_call": {
+      "width": 608,
+      "height": 608,
+      "batch_size": 1
+    },
+    "default_preprocess_function": "yolov3_variant_preprocess_func",
+    "preprocessing": {
+      "reader": "cv2.imread (BGR)",
+      "resize": "direct cv2.resize to 608x608; aspect ratio is not preserved",
+      "channel_order": "BGR to RGB",
+      "dtype": "float32",
+      "scaling": "divide by 255.0",
+      "layout": "CHW, with batch dimension per image",
+      "model_input_metadata_verified": false
+    },
+    "quantization_intent": {
+      "calibration_method": "Entropy",
+      "calibrator_execution_provider": "CUDAExecutionProvider",
+      "inference_execution_provider": "TensorrtExecutionProvider",
+      "fp16_enable_environment_value": "1",
+      "int8_enable_environment_value": "1",
+      "calibration_table_name": "calibration.flatbuffers",
+      "calibration_input_model_path": "yolov3-608.onnx",
+      "augmented_model_path": "augmented_model.onnx",
+      "evaluation_model_path": "yolov3-608.onnx",
+      "separate_fp32_baseline_run_in_recipe": false,
+      "separate_pure_int8_result_identity": false
+    },
+    "evaluation_postprocessing": {
+      "confidence_prefilter": 0.01,
+      "nms_iou_threshold": 0.5,
+      "nms_per_class": true,
+      "maximum_detections_explicitly_set_in_recipe": false,
+      "evaluator": "COCOeval bbox, summarize() called",
+      "annotation_path_used_by_example": "./annotations/instances_val2017.json",
+      "supplied_annotation_file_path": "inputs/quantization/object_detection/trt/yolov3/annotations/instances_val2017_person.json",
+      "actual_annotation_path_binding_to_supplied_subset": false
+    }
+  },
+  "quality_evidence": {
+    "float_model_metrics_supplied": false,
+    "int8_or_trt_calibration_metrics_supplied": false,
+    "board_or_c_rtl_metrics_supplied": false,
+    "raw_prediction_files_supplied": false,
+    "ap50_observed": null,
+    "ap50_95_observed": null,
+    "precision_recall_f1_fixed_workpoint_observed": null,
+    "tp_fp_fn_observed": null,
+    "quantization_loss_percentage_points": null,
+    "normal_image_false_alarm_rate": {
+      "status": "not_evaluable",
+      "value": null,
+      "reason": "The supplied person-only annotations contain 0 person-negative images; no FP counts or normal-image denominator."
+    },
+    "source_support": "Static source shows a COCO bbox evaluation path, not completed accuracy results."
+  },
+  "static_findings": [
+    {
+      "id": "split_design",
+      "status": "intent_present_actual_isolation_unverified",
+      "finding": "Recipe names COCO 2017 Train for calibration and COCO 2017 Val for evaluation. No materialized image lists or hashes establish the realized split or overlap.",
+      "evidence": [
+        "e2e_user_yolov3_example.py:L151-L170",
+        "e2e_user_yolov3_example.py:L181-L189",
+        "coco_filter.py:L99-L116"
+      ]
+    },
+    {
+      "id": "calibration_reproducibility",
+      "status": "gap",
+      "finding": "Sampler uses random.shuffle without a recorded seed, takes up to 20 image IDs per category, unions them, and downloads them; no selected-ID manifest or calibration image hashes are supplied.",
+      "evidence": [
+        "coco_filter.py:L99-L116"
+      ]
+    },
+    {
+      "id": "class_mapping",
+      "status": "static_mapping_consistent",
+      "finding": "The 80 ONNX class names map uniquely to 80 COCO categories after six explicit aliases; person is output index 0 and COCO category ID 1. The ONNX model file is absent, so its output-channel semantics are not independently verified.",
+      "evidence": [
+        "evaluate.py:L36-L65",
+        "evaluate.py:L82-L109",
+        "onnx_coco_classes.txt:80 lines",
+        "coco-object-categories-2017.json#/"
+      ]
+    },
+    {
+      "id": "annotation_scope",
+      "status": "person_only_no_negatives",
+      "finding": "Supplied JSON has 2,693 distinct images and 11,004 person boxes; all 2,693 images have person annotations and no person-negative image is present. It cannot support an 80-class score or normal-image false-alarm rate.",
+      "evidence": [
+        "instances_val2017_person.json#/images",
+        "instances_val2017_person.json#/annotations",
+        "instances_val2017_person.json#/categories"
+      ]
+    },
+    {
+      "id": "preprocessing",
+      "status": "recipe_contract_declared_model_contract_unverified",
+      "finding": "Default execution branch selects yolov3-608 and direct 608x608 resize, BGR to RGB, float32/255, CHW. This differs from other preprocessing variants included in the source; input tensor metadata is not provided.",
+      "evidence": [
+        "e2e_user_yolov3_example.py:L168-L189",
+        "data_reader.py:L172-L186",
+        "preprocessing.py:L127-L184"
+      ]
+    },
+    {
+      "id": "accuracy_comparison",
+      "status": "no_measured_comparison",
+      "finding": "The recipe config enables both TensorRT FP16 and INT8 and evaluates a single model path; no separate FP32 baseline, pure INT8 artifact identity, predictions, or metric output is provided.",
+      "evidence": [
+        "e2e_user_yolov3_example.py:L65-L68",
+        "e2e_user_yolov3_example.py:L121-L148",
+        "e2e_user_yolov3_example.py:L173-L189"
+      ]
+    },
+    {
+      "id": "person_annotation_binding",
+      "status": "unresolved_mismatch",
+      "finding": "The example defaults to instances_val2017.json; the supplied file is instances_val2017_person.json with only category ID 1. The recipe does not explicitly bind the supplied subset.",
+      "evidence": [
+        "data_reader.py:L45-L73",
+        "e2e_user_yolov3_example.py:L50-L62",
+        "e2e_user_yolov3_example.py:L121-L148",
+        "instances_val2017_person.json#/categories"
+      ]
+    },
+    {
+      "id": "reader_code_path",
+      "status": "static_issue_on_base_and_batch_paths",
+      "finding": "Base YoloV3DataReader stores self.preprocess_func but load_serial/load_batches call unqualified preprocess_func; the supplied module does not define that global. Variant serial load uses self.preprocess_func; variant batch path again calls unqualified preprocess_func. No project Python was executed.",
+      "evidence": [
+        "data_reader.py:L45-L73",
+        "data_reader.py:L97-L100",
+        "data_reader.py:L124-L135",
+        "data_reader.py:L190-L195",
+        "data_reader.py:L217-L229"
+      ]
+    },
+    {
+      "id": "training_or_board",
+      "status": "not_applicable_evidence_absent",
+      "finding": "This is an external TensorRT quantization/evaluation recipe, not a training run or Zynq C/RTL/board deployment record. Those measurements remain unknown.",
+      "evidence": [
+        "source_manifest.json#/scope",
+        "e2e_user_yolov3_example.py:L151-L189"
+      ]
+    }
+  ],
+  "evidence_refs": [
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/e2e_user_yolov3_example.py",
+      "lines": "151-189",
+      "supports": "Train/Val paths, active default branch, model path, TensorRT FP16/INT8 flags, calibration/evaluation calls."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/e2e_user_yolov3_example.py",
+      "lines": "8-47,65-118",
+      "supports": "Calibration table creation, selected readers, entropy method, calibration provider."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/e2e_user_yolov3_example.py",
+      "lines": "121-148",
+      "supports": "Evaluation reader, model path use, validation annotation path, evaluation call."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/coco_filter.py",
+      "lines": "54-85,99-116",
+      "supports": "Category mapping construction, unseeded sampling, 20-per-category limit and image download."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/data_reader.py",
+      "lines": "45-73,97-122,124-169,172-245",
+      "supports": "Input defaults, annotations lookup, preprocess function assignment/calls, serial/batch behavior."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/preprocessing.py",
+      "lines": "9-65",
+      "supports": "416 PIL letterbox path, pad value 128, float32 scaling, NCHW."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/preprocessing.py",
+      "lines": "127-184",
+      "supports": "Default variant direct resize, BGR-to-RGB, float32 scaling, CHW."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/preprocessing.py",
+      "lines": "188-253",
+      "supports": "Alternative letterbox path with pad 114; not selected by the default variant reader."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/evaluate.py",
+      "lines": "36-65,82-109",
+      "supports": "Class-name aliases and ONNX-output-index to COCO category ID mapping."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/evaluate.py",
+      "lines": "160-178,180-247",
+      "supports": "COCO bbox evaluation and selected variant evaluator mapping."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/postprocessing.py",
+      "lines": "30-61,94-134,248-296",
+      "supports": "Detection conversion, class-wise NMS, model wrapper NMS threshold configuration."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/evaluate.py",
+      "lines": "234-247",
+      "supports": "Active variant confidence prefilter 0.01 and detection serialization."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/data_reader.py",
+      "json_fields": [
+        "/images",
+        "/annotations",
+        "/categories"
+      ],
+      "supports": "Annotation counts, person category, and image coverage."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/onnx_coco_classes.txt",
+      "json_fields": [
+        "line order 0..79"
+      ],
+      "supports": "ONNX class output-index list."
+    },
+    {
+      "file": "inputs/quantization/object_detection/trt/yolov3/coco-object-categories-2017.json",
+      "json_fields": [
+        "/0..79/id",
+        "/0..79/name"
+      ],
+      "supports": "COCO category name-to-ID map."
+    },
+    {
+      "file": "source_manifest.json",
+      "json_fields": [
+        "/repository",
+        "/commit",
+        "/retrieved_at",
+        "/scope",
+        "/license",
+        "/files"
+      ],
+      "supports": "Pinned provenance and expected file hashes/sizes."
+    }
+  ],
+  "minimum_additional_evidence": [
+    "Freeze and hash calibration image IDs/files, source split, sampling seed, and calibration table; record train/validation ID overlap check.",
+    "Supply the exact ONNX model and hash/input metadata; bind class output order and preprocessing contract to that model.",
+    "Supply full validation images and full COCO validation annotations (or explicitly score a defined person-only subset including negative images) with hashes and category IDs.",
+    "Run the same frozen model/input set through a separate FP32 baseline and the intended INT8 path; save raw predictions and COCO metric logs, evaluator/dependency versions, and compare AP50/AP50:95 in percentage points.",
+    "For fixed-workpoint claims, additionally record confidence threshold, NMS IoU, matching IoU/rule, max detections, class filtering, TP/FP/FN, and normal-image false alarms."
+  ],
+  "execution_log": {
+    "actions": [
+      "Read task and pinned manifest",
+      "Recomputed manifest-listed input SHA-256 and sizes",
+      "Inspected source lines statically",
+      "Parsed supplied annotation JSON summary",
+      "Compared 80 class labels with 80 COCO category names using listed aliases"
+    ],
+    "non_actions": [
+      "No downloaded Python source was executed",
+      "No network or model download",
+      "No inference, training, board operation, or data modification"
+    ]
+  },
+  "source_hash_recheck": {
+    "post_write_status": "unchanged",
+    "checked_count": 12
+  }
+}

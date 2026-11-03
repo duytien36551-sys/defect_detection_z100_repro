@@ -1,0 +1,236 @@
+{
+  "status": "PASS_CONSECUTIVE_BOARD_RESULTS_REFERENCE_EQUAL",
+  "input": "same frozen RGB repeated",
+  "requested_frames": 30,
+  "frames": [
+    {
+      "index": 1,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.34516480000456795,
+      "reference_equal": true
+    },
+    {
+      "index": 2,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.36343299999134615,
+      "reference_equal": true
+    },
+    {
+      "index": 3,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.36512069997843355,
+      "reference_equal": true
+    },
+    {
+      "index": 4,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3632177999825217,
+      "reference_equal": true
+    },
+    {
+      "index": 5,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3450213000178337,
+      "reference_equal": true
+    },
+    {
+      "index": 6,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3675690999953076,
+      "reference_equal": true
+    },
+    {
+      "index": 7,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.36683509999420494,
+      "reference_equal": true
+    },
+    {
+      "index": 8,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.361745800008066,
+      "reference_equal": true
+    },
+    {
+      "index": 9,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.36345750000327826,
+      "reference_equal": true
+    },
+    {
+      "index": 10,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.361915500019677,
+      "reference_equal": true
+    },
+    {
+      "index": 11,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3639140999875963,
+      "reference_equal": true
+    },
+    {
+      "index": 12,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3448305000201799,
+      "reference_equal": true
+    },
+    {
+      "index": 13,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3542066999943927,
+      "reference_equal": true
+    },
+    {
+      "index": 14,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.36114809999708086,
+      "reference_equal": true
+    },
+    {
+      "index": 15,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.364474700007122,
+      "reference_equal": true
+    },
+    {
+      "index": 16,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3670888000051491,
+      "reference_equal": true
+    },
+    {
+      "index": 17,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.368006200005766,
+      "reference_equal": true
+    },
+    {
+      "index": 18,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3668611000175588,
+      "reference_equal": true
+    },
+    {
+      "index": 19,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3602594999829307,
+      "reference_equal": true
+    },
+    {
+      "index": 20,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3626077999942936,
+      "reference_equal": true
+    },
+    {
+      "index": 21,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.36265530000673607,
+      "reference_equal": true
+    },
+    {
+      "index": 22,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3447122999932617,
+      "reference_equal": true
+    },
+    {
+      "index": 23,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3443870999617502,
+      "reference_equal": true
+    },
+    {
+      "index": 24,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3682293000165373,
+      "reference_equal": true
+    },
+    {
+      "index": 25,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3612227999838069,
+      "reference_equal": true
+    },
+    {
+      "index": 26,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.36299470002995804,
+      "reference_equal": true
+    },
+    {
+      "index": 27,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3626329000107944,
+      "reference_equal": true
+    },
+    {
+      "index": 28,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3647229999769479,
+      "reference_equal": true
+    },
+    {
+      "index": 29,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3445236000115983,
+      "reference_equal": true
+    },
+    {
+      "index": 30,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3557106999796815,
+      "reference_equal": true
+    }
+  ],
+  "retries": 0,
+  "hashes_computed": false,
+  "clock": {
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-07
+  },
+  "limitation": "short same-image diagnostic; no dataset accuracy or sustained >10 FPS acceptance",
+  "batch_wall_seconds": 11.20922530000098,
+  "offered_frames": 30,
+  "completed_verified_frames": 30,
+  "failed_or_unknown_frames": 0,
+  "unoffered_frames": 0,
+  "completed_verified_fps": 2.676366938578474,
+  "batch_scope": "sequential requests, including per-frame fixture preparation, input reads, connect/HELLO/upload/inference/validation and reporting; one outstanding request, no intentional request pause; excludes final aggregate JSON write",
+  "median_seconds": 0.36264410000876524,
+  "p95_seconds": 0.36780950500105974,
+  "scope": "host transaction: connect,HELLO,RGB transfer,inference,RESULT validation; no GUI or debug pauses during each sample"
+}

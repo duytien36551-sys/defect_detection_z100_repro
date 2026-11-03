@@ -1,0 +1,109 @@
+{
+  "status": "VERIFIED_FIRST_SUCCESSFUL_7Z100_FRAME_EVIDENCE",
+  "date": "2026-10-23",
+  "selected_as_submission_baseline": true,
+  "model_epoch": 108,
+  "input_size": 640,
+  "class_count": 9,
+  "model_sha256": "603853a8ec851b32578d79d34ddaeb9487f1c7924dc815d557565725f275a034",
+  "v8p_sha256": "96211aa416da6b23955a8b62cca594275daaa4db3e3954632960707c0ec0d44f",
+  "elf_sha256_reported": "9f326aa8d74c47fc0dca860d359de1a5e37997ebf686c5d3dc1507cbc0ffb3df",
+  "timer_hz_from_matched_bsp": 333333343,
+  "phase_milliseconds": {
+    "preprocess_ticks": 27.65933619787925,
+    "graph_ticks": 6403.554000296934,
+    "dequantization_ticks": 16.235102529182026,
+    "decode_ticks": 131.64308318235058,
+    "total_ticks": 6579.094519206259
+  },
+  "timing_scope": "One board function execution; excludes JTAG input/output transfer; oscillator frequency not independently measured",
+  "sustained_fps_measured": false,
+  "p50_p95_measured": false,
+  "source_inputs_verified": [
+    {
+      "source": "validation/board_z100/reference_assumed_jtag_466_v1/full_model_execution/completed_read_20261023T051220Z/result.json",
+      "sha256": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c"
+    },
+    {
+      "source": "validation/board_z100/reference_assumed_jtag_466_v1/full_model_execution/completed_read_20261023T051220Z/raw_heads_padded.bin",
+      "sha256": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555"
+    },
+    {
+      "source": "validation/board_z100/reference_assumed_jtag_466_v1/full_model_execution/completed_read_20261023T051220Z/pipeline_diagnostics.bin",
+      "sha256": "595ddda7f61336125dee1950be289f6d21122e1990237f955d809b7d7119e158"
+    },
+    {
+      "source": "deployment/candidates/pin640/provisional_models/20261022T131845Z_15a161/pipeline/model/graph.json",
+      "sha256": "6ad39858999c9d7bc57b44887ad487f38a1a678d32e887a1c5c89fdcdd34e0b8"
+    },
+    {
+      "source": "deployment/build/vitis2026_compat/w/12a0e527/plt/export/plt/sw/dom/include/xparameters.h",
+      "sha256": "8e688340bce848458928e7b9e687c1e1721e8e3ddcf9216fbd46ad211e6a848c"
+    }
+  ],
+  "files": [
+    {
+      "path": "first_frame_summary.json",
+      "bytes": 28056,
+      "sha256": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9"
+    },
+    {
+      "path": "result.json",
+      "bytes": 2214,
+      "sha256": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c"
+    },
+    {
+      "path": "raw_heads_padded.bin",
+      "bytes": 613248,
+      "sha256": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555"
+    },
+    {
+      "path": "pipeline_diagnostics.bin",
+      "bytes": 2024,
+      "sha256": "595ddda7f61336125dee1950be289f6d21122e1990237f955d809b7d7119e158"
+    },
+    {
+      "path": "timing_metrics.txt",
+      "bytes": 62,
+      "sha256": "7b66c77963313b31395acf182e8407760a84afa774ebd5c68151dc95f40640ed"
+    },
+    {
+      "path": "utilization.rpt",
+      "bytes": 12620,
+      "sha256": "50b3f4bc18845a59c9664988974156eca4764f08322b68ee49dbcb36d23ed1e6",
+      "original_sha256": "a50bb6ff5b528ee75d36d06d51e14eed9ce90c3c14284aa2c5f6fb70c37599f9",
+      "path_normalization": "Historical machine path changed to logical source identifier; measurement values unchanged"
+    }
+  ],
+  "submission_modified": true,
+  "files_deleted": false,
+  "artifact_hashes_recomputed": [
+    {
+      "path": "board/baseline/artifacts/full_model_jtag.elf",
+      "sha256": "9f326aa8d74c47fc0dca860d359de1a5e37997ebf686c5d3dc1507cbc0ffb3df",
+      "bytes": 3518424
+    },
+    {
+      "path": "board/baseline/artifacts/system.bit",
+      "sha256": "4607feee24c1c00ac7c02fa310e204523aeabfeef0c2bbdb350fcfc709b706c3",
+      "bytes": 17416553
+    },
+    {
+      "path": "board/baseline/artifacts/system.xsa",
+      "sha256": "66c9d20271bdf67ac9b9d6ce0e508051925adf9c4892d18f8b4f6427c5aa514b",
+      "bytes": 299996
+    },
+    {
+      "path": "data/baseline/epoch108.pt",
+      "sha256": "603853a8ec851b32578d79d34ddaeb9487f1c7924dc815d557565725f275a034",
+      "bytes": 12356163
+    },
+    {
+      "path": "data/baseline/epoch108_int8.v8p",
+      "sha256": "96211aa416da6b23955a8b62cca594275daaa4db3e3954632960707c0ec0d44f",
+      "bytes": 3081632
+    }
+  ],
+  "intermediate_versions_removed_from_submission": true,
+  "removal_method": "Moved outside submission to recoverable provenance storage"
+}

@@ -1,0 +1,85 @@
+{
+  "completion": {
+    "completed_epochs": 200,
+    "original_schedule_epochs": 300,
+    "finish_reason": "User requested epoch-200 cutoff; original LR and mosaic schedules preserved",
+    "best_epoch": 200,
+    "best_selection": "Maximum frozen validation AP50:95",
+    "seconds": 229836.46999999997,
+    "completed_at": "2026-10-24T00:34:32.473982+08:00",
+    "test_used": false
+  },
+  "checkpoint": {
+    "epoch0": 199,
+    "optimizer_states": 183,
+    "scheduler_last_epoch": 199,
+    "live_state_present": true,
+    "ema_present": true,
+    "rng_present": true,
+    "checkpoint_sha256": "5f18ce20c1d4a95029accd213bb90e27833af9cacc18aa49ea311f0de0fd8a92"
+  },
+  "initialization": {
+    "initialization": "RANDOM_FROM_ARCHITECTURE_ONLY",
+    "pretrained": false,
+    "weights_argument_was_none": true,
+    "loaded_checkpoint_paths": [],
+    "seed": 20261021,
+    "nc": 9,
+    "created_at": "2026-10-21T08:32:06.055302+08:00",
+    "parameter_count": 3012603,
+    "initial_state_sha256": "557b35268a72813dc0289c821065a487e9b54053fee5be39bcc29b66f8361131",
+    "architecture_yaml": "training_run\\yolov8n_scratch9.yaml"
+  },
+  "csv_contiguous": true,
+  "epoch_records_contiguous": true,
+  "stopped_processes": [
+    {
+      "pid": 3624,
+      "command": [
+        "tool_environment\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-u",
+        "training_run\\run.py",
+        "--domain",
+        "pin",
+        "--resume",
+        "training_run\\runs\\pin\\weights\\resume.pt"
+      ],
+      "created": 1792561010.7092445
+    },
+    {
+      "pid": 11340,
+      "command": [
+        "training_workspace\\.venv\\Scripts\\python.exe",
+        "-u",
+        "training_run\\background.py"
+      ],
+      "created": 1792561008.8520677
+    },
+    {
+      "pid": 24284,
+      "command": [
+        "training_workspace\\.venv\\Scripts\\python.exe",
+        "-u",
+        "training_run\\run.py",
+        "--domain",
+        "pin",
+        "--resume",
+        "training_run\\runs\\pin\\weights\\resume.pt"
+      ],
+      "created": 1792561010.6884556
+    },
+    {
+      "pid": 27912,
+      "command": [
+        "tool_environment\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-u",
+        "training_run\\background.py"
+      ],
+      "created": 1792561008.888769
+    }
+  ],
+  "frozen_best": "training_run\\runs\\pin\\weights\\user_finish_epoch200_best.pt",
+  "best_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+  "partial_next_epoch_discarded": true,
+  "split_manifest_sha256": "cea60674b314b3d5ddf85d51f9d3b85cf563ded5fa29b85a2553aaef6aad189d"
+}

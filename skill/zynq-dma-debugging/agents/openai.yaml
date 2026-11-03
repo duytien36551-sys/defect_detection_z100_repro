@@ -1,0 +1,4 @@
+interface:
+  display_name: "DMA、缓存与初始化排查"
+  short_description: "保留失败现场并核对DMA、缓存和初始化，设计最小区分检查与回归"
+  default_prompt: "使用 $zynq-dma-debugging，自动查找当前工程材料，按对应工作流执行并说明证据与缺项。"

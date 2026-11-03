@@ -1,0 +1,57 @@
+{
+  "source_repository": "https://github.com/Xilinx/PYNQ-HelloWorld",
+  "commit": "9728edf2ea6b7bc157acb126f773e93c3e9561c2",
+  "license": "BSD-3-Clause; original license retained",
+  "acquired_at": "2026-10-25T15:19:34.544480+08:00",
+  "scope": "Real unrelated public project source, read-only analysis; not physical execution on any board",
+  "files": [
+    {
+      "path": "license",
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ-HelloWorld/9728edf2ea6b7bc157acb126f773e93c3e9561c2/license",
+      "sha256": "46ad5847120c5b73447e7ce08a1cc33ad44f786f203a76fdcb287016f4be383b",
+      "bytes": 1506
+    },
+    {
+      "path": "readme.md",
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ-HelloWorld/9728edf2ea6b7bc157acb126f773e93c3e9561c2/readme.md",
+      "sha256": "95209743631ec022ed559f8099c811e6cf409453a38a738197f7ae3b7d4d2237",
+      "bytes": 1599
+    },
+    {
+      "path": "setup.py",
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ-HelloWorld/9728edf2ea6b7bc157acb126f773e93c3e9561c2/setup.py",
+      "sha256": "00a36253e06341cb8ca5ea3c9f9b3d5cb86fe112023574ea87a681f6c389af20",
+      "bytes": 3053
+    },
+    {
+      "path": "boards/Pynq-Z2/resizer/resizer.tcl",
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ-HelloWorld/9728edf2ea6b7bc157acb126f773e93c3e9561c2/boards/Pynq-Z2/resizer/resizer.tcl",
+      "sha256": "9a56c31e61cc99ba089f84309b013632be643dd10565557e8787607f1f217d56",
+      "bytes": 16344
+    },
+    {
+      "path": "boards/Pynq-Z2/resizer/__init__.py",
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ-HelloWorld/9728edf2ea6b7bc157acb126f773e93c3e9561c2/boards/Pynq-Z2/resizer/__init__.py",
+      "sha256": "fe25233b1c6a4434a9a2263bc0046ec401433836d9260e764fba251f3042ef77",
+      "bytes": 1619
+    },
+    {
+      "path": "boards/Pynq-Z2/resizer/check_resizer.tcl",
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ-HelloWorld/9728edf2ea6b7bc157acb126f773e93c3e9561c2/boards/Pynq-Z2/resizer/check_resizer.tcl",
+      "sha256": "4413450fd4cd3ce41a17397b23b1da559a9e76ce9303402e4d63c7c224c975ea",
+      "bytes": 491
+    },
+    {
+      "path": "boards/ip/src/xf_resize_accel_stream.cpp",
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ-HelloWorld/9728edf2ea6b7bc157acb126f773e93c3e9561c2/boards/ip/src/xf_resize_accel_stream.cpp",
+      "sha256": "3df90bfedf576bcc1f622d35d272ca50d7fd2ff9c42c25e1081c528214e7970c",
+      "bytes": 3600
+    },
+    {
+      "path": "pynq_helloworld/notebooks/edge/resizer_pl.ipynb",
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ-HelloWorld/9728edf2ea6b7bc157acb126f773e93c3e9561c2/pynq_helloworld/notebooks/edge/resizer_pl.ipynb",
+      "sha256": "a4ca9e4e49a65266ae3554ba662f2259af6752cda5f9f204e0eb5a75a9577624",
+      "bytes": 649101
+    }
+  ]
+}

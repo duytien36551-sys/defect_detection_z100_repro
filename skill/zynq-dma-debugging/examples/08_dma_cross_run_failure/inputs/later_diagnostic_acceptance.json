@@ -1,0 +1,1435 @@
+{
+  "status": "complete",
+  "dry_run": false,
+  "case_parity_pass": true,
+  "batch_acceptance_pass": true,
+  "board_verified_note": "Cold boot and DMA recovery are separate acceptance stages.",
+  "protocol": "joint18-v8/1",
+  "model": {
+    "path": "<local-path>",
+    "exists": true,
+    "sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "expected_baseline_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "matches_baselines": true
+  },
+  "classes_sha256": "5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1",
+  "timeout_seconds": 30.0,
+  "local_address": "192.168.10.1",
+  "interface_index": 23,
+  "planned_count": 20,
+  "minimum_batch_roundtrips": 20,
+  "minimum_batch_met": true,
+  "started_at_utc": "2026-10-15T18:41:21.113766+00:00",
+  "output_directory": "<local-path>",
+  "identity_probe": {
+    "runtime": "board",
+    "protocol": "joint18-v8/1",
+    "model_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "classes_sha256": "5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1",
+    "input": "rgb-u8-416-letterbox114",
+    "box_space": "normalized-model-xyxy",
+    "local_address": [
+      "192.168.10.1",
+      56292
+    ],
+    "peer_address": [
+      "192.168.10.2",
+      5001
+    ]
+  },
+  "requests": [
+    {
+      "sequence": 1,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:41:21.169506+00:00",
+      "finished_at_utc": "2026-10-15T18:41:24.555859+00:00",
+      "elapsed_seconds": 3.375,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 3,
+            "actual_class_id": 3,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.360646933,
+            "actual_score": 0.360646933,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "actual_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 2,
+      "task": "pin",
+      "image_sha256": "6c5cd9028553a0691700392bdc3223f474f9686cad7e423d2a240ac3e54a8b8f",
+      "tensor_sha256": "06dd6b44ef4c59824c57db9465627151a4e65d9a85e32b006b80e71c9ffab15e",
+      "started_at_utc": "2026-10-15T18:41:24.563134+00:00",
+      "finished_at_utc": "2026-10-15T18:41:27.934395+00:00",
+      "elapsed_seconds": 3.375,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 9,
+            "actual_class_id": 9,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.387279868,
+            "actual_score": 0.387279868,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "actual_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 3,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:41:27.939386+00:00",
+      "finished_at_utc": "2026-10-15T18:41:31.325382+00:00",
+      "elapsed_seconds": 3.39,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 3,
+            "actual_class_id": 3,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.360646933,
+            "actual_score": 0.360646933,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "actual_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 4,
+      "task": "pin",
+      "image_sha256": "6c5cd9028553a0691700392bdc3223f474f9686cad7e423d2a240ac3e54a8b8f",
+      "tensor_sha256": "06dd6b44ef4c59824c57db9465627151a4e65d9a85e32b006b80e71c9ffab15e",
+      "started_at_utc": "2026-10-15T18:41:31.330394+00:00",
+      "finished_at_utc": "2026-10-15T18:41:34.695276+00:00",
+      "elapsed_seconds": 3.36,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 9,
+            "actual_class_id": 9,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.387279868,
+            "actual_score": 0.387279868,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "actual_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 5,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:41:34.702848+00:00",
+      "finished_at_utc": "2026-10-15T18:41:38.078964+00:00",
+      "elapsed_seconds": 3.375,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 3,
+            "actual_class_id": 3,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.360646933,
+            "actual_score": 0.360646933,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "actual_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 6,
+      "task": "pin",
+      "image_sha256": "6c5cd9028553a0691700392bdc3223f474f9686cad7e423d2a240ac3e54a8b8f",
+      "tensor_sha256": "06dd6b44ef4c59824c57db9465627151a4e65d9a85e32b006b80e71c9ffab15e",
+      "started_at_utc": "2026-10-15T18:41:38.084989+00:00",
+      "finished_at_utc": "2026-10-15T18:41:41.470641+00:00",
+      "elapsed_seconds": 3.391,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 9,
+            "actual_class_id": 9,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.387279868,
+            "actual_score": 0.387279868,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "actual_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 7,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:41:41.480626+00:00",
+      "finished_at_utc": "2026-10-15T18:41:44.853557+00:00",
+      "elapsed_seconds": 3.359,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 3,
+            "actual_class_id": 3,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.360646933,
+            "actual_score": 0.360646933,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "actual_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 8,
+      "task": "pin",
+      "image_sha256": "6c5cd9028553a0691700392bdc3223f474f9686cad7e423d2a240ac3e54a8b8f",
+      "tensor_sha256": "06dd6b44ef4c59824c57db9465627151a4e65d9a85e32b006b80e71c9ffab15e",
+      "started_at_utc": "2026-10-15T18:41:44.861519+00:00",
+      "finished_at_utc": "2026-10-15T18:41:48.237068+00:00",
+      "elapsed_seconds": 3.375,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 9,
+            "actual_class_id": 9,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.387279868,
+            "actual_score": 0.387279868,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "actual_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 9,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:41:48.245861+00:00",
+      "finished_at_utc": "2026-10-15T18:41:51.628809+00:00",
+      "elapsed_seconds": 3.375,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 3,
+            "actual_class_id": 3,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.360646933,
+            "actual_score": 0.360646933,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "actual_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 10,
+      "task": "pin",
+      "image_sha256": "6c5cd9028553a0691700392bdc3223f474f9686cad7e423d2a240ac3e54a8b8f",
+      "tensor_sha256": "06dd6b44ef4c59824c57db9465627151a4e65d9a85e32b006b80e71c9ffab15e",
+      "started_at_utc": "2026-10-15T18:41:51.635408+00:00",
+      "finished_at_utc": "2026-10-15T18:41:54.999840+00:00",
+      "elapsed_seconds": 3.359,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 9,
+            "actual_class_id": 9,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.387279868,
+            "actual_score": 0.387279868,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "actual_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 11,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:41:55.008041+00:00",
+      "finished_at_utc": "2026-10-15T18:41:58.382490+00:00",
+      "elapsed_seconds": 3.375,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 3,
+            "actual_class_id": 3,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.360646933,
+            "actual_score": 0.360646933,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "actual_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 12,
+      "task": "pin",
+      "image_sha256": "6c5cd9028553a0691700392bdc3223f474f9686cad7e423d2a240ac3e54a8b8f",
+      "tensor_sha256": "06dd6b44ef4c59824c57db9465627151a4e65d9a85e32b006b80e71c9ffab15e",
+      "started_at_utc": "2026-10-15T18:41:58.388642+00:00",
+      "finished_at_utc": "2026-10-15T18:42:01.758450+00:00",
+      "elapsed_seconds": 3.359,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 9,
+            "actual_class_id": 9,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.387279868,
+            "actual_score": 0.387279868,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "actual_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 13,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:42:01.766470+00:00",
+      "finished_at_utc": "2026-10-15T18:42:05.155644+00:00",
+      "elapsed_seconds": 3.391,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 3,
+            "actual_class_id": 3,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.360646933,
+            "actual_score": 0.360646933,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "actual_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 14,
+      "task": "pin",
+      "image_sha256": "6c5cd9028553a0691700392bdc3223f474f9686cad7e423d2a240ac3e54a8b8f",
+      "tensor_sha256": "06dd6b44ef4c59824c57db9465627151a4e65d9a85e32b006b80e71c9ffab15e",
+      "started_at_utc": "2026-10-15T18:42:05.163751+00:00",
+      "finished_at_utc": "2026-10-15T18:42:08.531529+00:00",
+      "elapsed_seconds": 3.375,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 9,
+            "actual_class_id": 9,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.387279868,
+            "actual_score": 0.387279868,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "actual_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 15,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:42:08.540463+00:00",
+      "finished_at_utc": "2026-10-15T18:42:11.934346+00:00",
+      "elapsed_seconds": 3.406,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 3,
+            "actual_class_id": 3,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.360646933,
+            "actual_score": 0.360646933,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "actual_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 16,
+      "task": "pin",
+      "image_sha256": "6c5cd9028553a0691700392bdc3223f474f9686cad7e423d2a240ac3e54a8b8f",
+      "tensor_sha256": "06dd6b44ef4c59824c57db9465627151a4e65d9a85e32b006b80e71c9ffab15e",
+      "started_at_utc": "2026-10-15T18:42:11.940361+00:00",
+      "finished_at_utc": "2026-10-15T18:42:15.329466+00:00",
+      "elapsed_seconds": 3.39,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 9,
+            "actual_class_id": 9,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.387279868,
+            "actual_score": 0.387279868,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "actual_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 17,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:42:15.337991+00:00",
+      "finished_at_utc": "2026-10-15T18:42:18.716345+00:00",
+      "elapsed_seconds": 3.391,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 3,
+            "actual_class_id": 3,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.360646933,
+            "actual_score": 0.360646933,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "actual_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 18,
+      "task": "pin",
+      "image_sha256": "6c5cd9028553a0691700392bdc3223f474f9686cad7e423d2a240ac3e54a8b8f",
+      "tensor_sha256": "06dd6b44ef4c59824c57db9465627151a4e65d9a85e32b006b80e71c9ffab15e",
+      "started_at_utc": "2026-10-15T18:42:18.723327+00:00",
+      "finished_at_utc": "2026-10-15T18:42:22.094042+00:00",
+      "elapsed_seconds": 3.375,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 9,
+            "actual_class_id": 9,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.387279868,
+            "actual_score": 0.387279868,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "actual_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 19,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:42:22.100860+00:00",
+      "finished_at_utc": "2026-10-15T18:42:25.492389+00:00",
+      "elapsed_seconds": 3.391,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 3,
+            "actual_class_id": 3,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.360646933,
+            "actual_score": 0.360646933,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "actual_xyxy": [
+              112.27323824,
+              108.605395874,
+              123.00174187,
+              118.995718754
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    },
+    {
+      "sequence": 20,
+      "task": "pin",
+      "image_sha256": "6c5cd9028553a0691700392bdc3223f474f9686cad7e423d2a240ac3e54a8b8f",
+      "tensor_sha256": "06dd6b44ef4c59824c57db9465627151a4e65d9a85e32b006b80e71c9ffab15e",
+      "started_at_utc": "2026-10-15T18:42:25.501525+00:00",
+      "finished_at_utc": "2026-10-15T18:42:28.891117+00:00",
+      "elapsed_seconds": 3.391,
+      "status": "pass",
+      "expected_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "actual_rows": [
+        {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "score": 0.387279868,
+          "xyxy": [
+            17.209385039930766,
+            143.33939103399996,
+            35.175350524230765,
+            211.40767203099998
+          ]
+        }
+      ],
+      "comparison": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "count_matches": true,
+        "row_differences": [
+          {
+            "index": 0,
+            "expected_class_id": 9,
+            "actual_class_id": 9,
+            "class_id_matches": true,
+            "class_name_matches": true,
+            "expected_score": 0.387279868,
+            "actual_score": 0.387279868,
+            "score_abs_error": 0.0,
+            "expected_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "actual_xyxy": [
+              17.209385039930766,
+              143.33939103399996,
+              35.175350524230765,
+              211.40767203099998
+            ],
+            "max_coordinate_abs_error": 0.0,
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      "error": null
+    }
+  ],
+  "first_error": null,
+  "updated_at_utc": "2026-10-15T18:42:28.899138+00:00",
+  "identity_probe_at_utc": "2026-10-15T18:41:21.165926+00:00",
+  "finished_at_utc": "2026-10-15T18:42:28.899138+00:00",
+  "overall_elapsed_seconds": 67.781,
+  "requests_completed": 20,
+  "elapsed_distribution_seconds": {
+    "successful_requests": 20,
+    "total_seconds": 67.578,
+    "median_seconds": 3.375,
+    "min_seconds": 3.359,
+    "max_seconds": 3.406
+  }
+}

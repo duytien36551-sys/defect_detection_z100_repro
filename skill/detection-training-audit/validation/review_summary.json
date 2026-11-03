@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "status": "accepted_engineering_evidence_workflow",
+  "local_cases": [
+    {
+      "case": "09_training_finish200",
+      "status": "pass_after_independent_execution_and_primary_review",
+      "report": "independent/09_training_finish200/report.json",
+      "note": "CSV1—200连续且既定AP50:95最大值在200轮；断点与最佳权重身份分开；两集合全部9类、微平均计数、损失序列和来源组限制齐全；无重新选模。"
+    },
+    {
+      "case": "10_training_gate_limits",
+      "status": "pass_after_independent_execution_and_primary_review",
+      "report": "independent/10_training_gate_limits/report.json",
+      "note": "训练截止完成与业务门槛分开；正常图0张为不可评估；测试/INT8/板卡保持未评估，增强图非独立器件；全部9类保留。"
+    }
+  ],
+  "independent_local_behavioral_validation": "pass_two_cases",
+  "external_static_reuse": {
+    "id": "detector",
+    "skills": [
+      "zynq-inference-parity",
+      "detection-training-audit"
+    ],
+    "manifest": "cases/external_detector/source_manifest.json",
+    "report": "cases/external_detector/report.json",
+    "status": "independent_static_reuse_pass",
+    "hardware_execution": false
+  },
+  "external_report": "external_report.json",
+  "external_manifest": "external_source_manifest.json",
+  "pynq_cross_board_validation": "not_evaluated",
+  "unfamiliar_human_team_usage": "not_evaluated",
+  "multiple_prompt_runs_stability": "not_evaluated",
+  "release_scope": "Engineering evidence audit, not a portable board runtime",
+  "instruction_promotion": "Only version and evidence-status paragraph changed from tested rc1. Workflow and all decision instructions byte/content unchanged."
+}

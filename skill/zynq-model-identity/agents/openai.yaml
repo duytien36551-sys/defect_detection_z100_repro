@@ -1,0 +1,4 @@
+interface:
+  display_name: "模型与平台身份核对"
+  short_description: "自动查找并核对模型、固件与硬件版本，定位换板和换模时的身份冲突"
+  default_prompt: "使用 $zynq-model-identity，自动查找当前工程材料，按对应工作流执行并说明证据与缺项。"

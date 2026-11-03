@@ -1,0 +1,135 @@
+{
+  "schema": "z100-selected-model-delivery/1",
+  "created": "2026-11-02T13:23:11.328214+08:00",
+  "model": "yolov8n",
+  "domain": "pin",
+  "class_count": 9,
+  "selected_epoch": 200,
+  "input_size": 640,
+  "protocol": "pin9-v8/2-input640",
+  "files": [
+    {
+      "path": "data/pin_epoch200.pt",
+      "source": "source_project\\deployment\\candidates\\pin640\\completed_models\\epoch200_20261024T083031.921745Z\\source.pt",
+      "sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+      "bytes": 12367939,
+      "action": "existing_identical_verified",
+      "original_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6"
+    },
+    {
+      "path": "data/pin_epoch200_int8.v8p",
+      "source": "source_project\\deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\package\\MODEL.V8P",
+      "sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+      "bytes": 3081632,
+      "action": "existing_identical_verified",
+      "original_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+    },
+    {
+      "path": "data/model/classes.json",
+      "source": "source_project\\deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\package\\classes.json",
+      "sha256": "c4be99901ddf513cd79ad3000a53f9cb3e01f602ad1f46cb6ff1b3e6df70594a",
+      "bytes": 366,
+      "action": "copied",
+      "original_sha256": "c4be99901ddf513cd79ad3000a53f9cb3e01f602ad1f46cb6ff1b3e6df70594a"
+    },
+    {
+      "path": "data/model/package.json",
+      "source": "source_project\\deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\package\\package.json",
+      "sha256": "98222b4db5ec1dfe919dc5e32ac40c5c55d43c4e64b22b2e5ede1db81285c2d6",
+      "bytes": 1123,
+      "action": "copied",
+      "original_sha256": "98222b4db5ec1dfe919dc5e32ac40c5c55d43c4e64b22b2e5ede1db81285c2d6"
+    },
+    {
+      "path": "data/model/quantization.json",
+      "source": "source_project\\deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\quantization\\quantization.json",
+      "sha256": "b325427b14e967e1f2d6727e3fd4ad6e816162f35211bcc99831c2dfa200a5a5",
+      "bytes": 46493,
+      "action": "copied",
+      "original_sha256": "6e65833620c0cfde807e88e00f0d31e34add43139012974b4eccd2fe8a4b0321"
+    },
+    {
+      "path": "data/quantization/weights_int8.npz",
+      "source": "source_project\\deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\quantization\\weights_int8.npz",
+      "sha256": "09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d",
+      "bytes": 3142200,
+      "action": "deduplicated_identical_bytes",
+      "original_sha256": "09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d",
+      "original_packaged_path": "data/model/weights_int8.npz"
+    },
+    {
+      "path": "src/model/v8_generated_model.h",
+      "source": "source_project\\deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\package\\v8_generated_model.h",
+      "sha256": "83d3a64b6deccd8ef3f54680ea5714d1ada9c2faff5c105974d0a47c338e5e2c",
+      "bytes": 35126,
+      "action": "copied",
+      "original_sha256": "83d3a64b6deccd8ef3f54680ea5714d1ada9c2faff5c105974d0a47c338e5e2c"
+    },
+    {
+      "path": "src/model/v8_runtime.h",
+      "source": "source_project\\deployment\\candidates\\pin640\\firmware\\v8_runtime.h",
+      "sha256": "75884963030018375fd604e9976096433ba857b3916a0d63636bda8940873533",
+      "bytes": 1680,
+      "action": "copied",
+      "original_sha256": "75884963030018375fd604e9976096433ba857b3916a0d63636bda8940873533"
+    },
+    {
+      "path": "report/model_selection.json",
+      "source": "source_project\\deployment\\candidates\\pin640\\completed_models\\epoch200_20261024T083031.921745Z\\selection.json",
+      "sha256": "5fa0efa09eb82d64da22be270e234b1edb83b1f505aa9ec03b2b56b9ebbbe7eb",
+      "bytes": 30020,
+      "action": "copied",
+      "original_sha256": "5e91a466136f9e7163b6e9bcf4bfd8a9b880e98bca85d8963de6e2f8d40c60aa"
+    },
+    {
+      "path": "report/model_validation.json",
+      "source": "source_project\\deployment\\candidates\\pin640\\completed_models\\epoch200_20261024T083031.921745Z\\validation.json",
+      "sha256": "52085f4c772baf171fe0b57d20f15b1995253adb11379fbf835b5b70d7cb65e7",
+      "bytes": 5835,
+      "action": "copied",
+      "original_sha256": "52085f4c772baf171fe0b57d20f15b1995253adb11379fbf835b5b70d7cb65e7"
+    },
+    {
+      "path": "board/evidence/final_performance.json",
+      "source": "final_version_performance_extract",
+      "sha256": "a482afc74998e49dd971a5aad7833885e59d451def1b17db22db00707ab6370f",
+      "bytes": 1455,
+      "action": "derived_from_existing_measurement_not_new_board_test",
+      "original_sha256": "8283632614e0a168ac421503f2f0e3f0f69251b2a94f9a168bc656c89e2c9d2b"
+    },
+    {
+      "path": "board/evidence/desktop_board_integration.json",
+      "source": "source_project\\validation\\desktop_z100_20261102\\board_ui01\\result.json",
+      "sha256": "b41fb78953733ed4a4a53d77d71804df1ae4de0a9f03fe181c7f8bfdd7d3943b",
+      "bytes": 7930,
+      "action": "copied",
+      "original_sha256": "6303cbc65803d208605e90156d9758f033454e0fd8286af26c162948481edd9f"
+    },
+    {
+      "path": "data/reference/input_rgb.bin",
+      "source": "source_project\\validation\\board_z100\\pin640_epoch200_headconcat_host\\20261024T104121.305479Z\\input_rgb.bin",
+      "sha256": "f82d6ce4ad170ec4859a49f405d6a0b7ca2cdbd93b5e57142a556a92ccd750e0",
+      "bytes": 1228800,
+      "action": "copied",
+      "original_sha256": "f82d6ce4ad170ec4859a49f405d6a0b7ca2cdbd93b5e57142a556a92ccd750e0"
+    },
+    {
+      "path": "data/reference/expected_heads_int8.bin",
+      "source": "source_project\\validation\\board_z100\\pin640_epoch200_headconcat_host\\20261024T104121.305479Z\\expected_heads_int8.bin",
+      "sha256": "6ca6c5f8f9fc0729045efdf95cc368959a6c49803e90e2c3cd09ee48dbaab0c9",
+      "bytes": 613200,
+      "action": "copied",
+      "original_sha256": "6ca6c5f8f9fc0729045efdf95cc368959a6c49803e90e2c3cd09ee48dbaab0c9"
+    }
+  ],
+  "scope": "Selected checkpoint and INT8 deployment model, metadata, model headers, reference and historical board evidence",
+  "model_changed_since_previous_delivery": false,
+  "limitations": [
+    "Not a complete standalone RTL/firmware build or board boot package",
+    "No new training, quality evaluation, board programming or inference performed",
+    "Existing report/*.docx and *.pdf retain their historical dates",
+    "Evidence JSON absolute paths are original provenance, not portable execution paths"
+  ],
+  "path_normalization": "Historical absolute paths replaced by logical source IDs; original_sha256 records source snapshot, sha256 verifies delivered file.",
+  "data_layout_manifest": "data/deduplication_manifest.json"
+}

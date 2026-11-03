@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "status": "accepted_engineering_evidence_workflow",
+  "local_cases": [
+    {
+      "case": "05_pspl_profile",
+      "status": "pass_after_independent_execution_and_primary_review",
+      "report": "independent/05_pspl_profile/report.json",
+      "note": "核对6497.634ms总计、6345.578ms图执行、6413次DMA和收发字节；不累加嵌套counter，提出有可测验收条件的实验。"
+    },
+    {
+      "case": "06_pspl_single_frame_limit",
+      "status": "pass_after_independent_execution_and_primary_review",
+      "report": "independent/06_pspl_single_frame_limit/report.json",
+      "note": "两个单样本分别归源；未推导P95、稳定FPS或提速；发现引用历史result哈希与所给文件不一致，未强行绑定执行。"
+    }
+  ],
+  "independent_local_behavioral_validation": "pass_two_cases",
+  "external_static_reuse": {
+    "id": "pynq",
+    "skills": [
+      "zynq-model-identity",
+      "zynq-ps-pl-performance",
+      "zynq-dma-debugging"
+    ],
+    "manifest": "cases/external_pynq/source_manifest.json",
+    "report": "cases/external_pynq/report.json",
+    "status": "independent_static_reuse_pass",
+    "hardware_execution": false
+  },
+  "external_report": "external_report.json",
+  "external_manifest": "external_source_manifest.json",
+  "pynq_cross_board_validation": "not_evaluated",
+  "unfamiliar_human_team_usage": "not_evaluated",
+  "multiple_prompt_runs_stability": "not_evaluated",
+  "release_scope": "Engineering evidence audit, not a portable board runtime",
+  "instruction_promotion": "Only version and evidence-status paragraph changed from tested rc1. Workflow and all decision instructions byte/content unchanged."
+}

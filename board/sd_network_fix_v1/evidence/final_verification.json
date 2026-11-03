@@ -1,0 +1,184 @@
+{
+  "status": "PASS_HOST_BUILD_BOOT_HEADERS_AND_JTAG_BOARD_REGRESSION",
+  "created_local": "2026-11-03",
+  "boot_bytes": 21601540,
+  "boot_sha256": "29c6d422cffd9e98694586312c7b8a4548ed8429b9f563498089ad636a42f5ac",
+  "elf_sha256": "24ace23496c9e44500b83c35a59a8a6a8ca4fb0fa0c5dda7b76b9855a642cf10",
+  "fsbl_sha256": "7cbeb8a07d3c6da4d272c96f7266e3348d60d977aa3e2411274932a105a1e06e",
+  "bit_sha256": "9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f",
+  "partitions": [
+    {
+      "load_address": "0x0",
+      "entry_address": "0x0",
+      "offset_bytes": 5888,
+      "bytes": 108164
+    },
+    {
+      "load_address": "0x0",
+      "entry_address": "0x0",
+      "offset_bytes": 114112,
+      "bytes": 17416352
+    },
+    {
+      "load_address": "0x100000",
+      "entry_address": "0x100000",
+      "offset_bytes": 17530496,
+      "bytes": 4052952
+    },
+    {
+      "load_address": "0x4e0000",
+      "entry_address": "0x0",
+      "offset_bytes": 21583488,
+      "bytes": 18052
+    }
+  ],
+  "boot_header_and_partition_checksums": "PASS",
+  "boot_app_segments_match_tested_elf": "PASS",
+  "original_baseline_relink_byte_identical": true,
+  "changed_objects": [
+    "29_v8_service.o",
+    "30_native_graph_service_v2.o",
+    "36_native_graph_lwip_v2.o",
+    "69_xemacpsif_physpeed.o"
+  ],
+  "clock_host_tests": "12 cases PASS",
+  "protocol_host_tests": "5 cases PASS",
+  "jtag_hello_regression": {
+    "status": "PASS_6_HELLO_PLUS_TCP_ONLY_CLOSE",
+    "results": [
+      {
+        "index": 1,
+        "status": "HELLO_OK",
+        "local": [
+          "192.168.10.1",
+          64548
+        ],
+        "peer": [
+          "192.168.10.2",
+          5001
+        ],
+        "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+      },
+      {
+        "index": 2,
+        "status": "HELLO_OK",
+        "local": [
+          "192.168.10.1",
+          64549
+        ],
+        "peer": [
+          "192.168.10.2",
+          5001
+        ],
+        "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+      },
+      {
+        "index": 3,
+        "status": "HELLO_OK",
+        "local": [
+          "192.168.10.1",
+          64550
+        ],
+        "peer": [
+          "192.168.10.2",
+          5001
+        ],
+        "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+      },
+      {
+        "index": 4,
+        "status": "HELLO_OK",
+        "local": [
+          "192.168.10.1",
+          64551
+        ],
+        "peer": [
+          "192.168.10.2",
+          5001
+        ],
+        "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+      },
+      {
+        "index": 5,
+        "status": "HELLO_OK",
+        "local": [
+          "192.168.10.1",
+          64552
+        ],
+        "peer": [
+          "192.168.10.2",
+          5001
+        ],
+        "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c"
+      },
+      {
+        "index": 6,
+        "status": "HELLO_OK_AFTER_TCP_ONLY_CLOSE"
+      }
+    ],
+    "method": "JTAG matched ps7_init, original bit, default FULL cache policy; not a new SD cold-boot test"
+  },
+  "jtag_one_frame": {
+    "status": "PASS_BOARD_INFERENCE_REFERENCE_EQUAL",
+    "retries": 0,
+    "cache_policy": "FULL (no scoped JTAG receipt)",
+    "scope": "one frozen image, no dataset accuracy/FPS acceptance",
+    "transaction_seconds": 0.5244989999919198,
+    "detections": [
+      {
+        "class_id": 6,
+        "class_name": "PIN_有机物污染",
+        "score": 0.87188375,
+        "xyxy": [
+          86.82688704,
+          356.07326528,
+          200.00102976,
+          423.55358144
+        ]
+      },
+      {
+        "class_id": 0,
+        "class_name": "PIN_破损",
+        "score": 0.866531312,
+        "xyxy": [
+          373.51764672,
+          545.34271232,
+          477.5776288,
+          587.81616192
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "class_id": 6,
+        "class_name": "PIN_有机物污染",
+        "score": 0.87188375,
+        "xyxy": [
+          86.82688704,
+          356.07326528,
+          200.00102976,
+          423.55358144
+        ]
+      },
+      {
+        "class_id": 0,
+        "class_name": "PIN_破损",
+        "score": 0.866531312,
+        "xyxy": [
+          373.51764672,
+          545.34271232,
+          477.5776288,
+          587.81616192
+        ]
+      }
+    ],
+    "reference_equal": true,
+    "post_inference_hello": "PASS"
+  },
+  "new_boot_sd_cold_start_tested": false,
+  "notes": [
+    "Initial SD warm reset stalled while FSBL waited for PCAP; retained launch_validation.log. Subsequent JTAG matched ps7_init and original bit launch passed.",
+    "The real-board tests used default FULL cache maintenance, no scoped receipt. New BOOT.BIN still needs physical SD replacement and cold power-on test.",
+    "Original source and archived deployment bundle remain frozen; candidate sources and rebuild closure are kept separately."
+  ]
+}

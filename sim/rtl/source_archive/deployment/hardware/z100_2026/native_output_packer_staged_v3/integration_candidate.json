@@ -1,0 +1,161 @@
+{
+  "schema": "z100-staged-packer-integration-candidate/1",
+  "created_utc": "2026-10-27T09:05:54.438855+00:00",
+  "status": "COMPONENT_VERIFIED_READY_FOR_FULL_CORE_INTEGRATION_ONLY",
+  "part": "xc7z100ffg900-2",
+  "clock_period_ns": 10,
+  "spatial_sites": 20,
+  "source_identity": {
+    "path": "validation/board_z100/v12_locality_screen_20261027_20261027T035950Z/identity.json",
+    "sha256": "3ffac55ee8537beaf6fa64685c7e41f678314a8f9258ead87fb066c96de53924"
+  },
+  "original_source_closure": [
+    {
+      "path": "build/v12p_d46da432/rtl/z100_accum33_dsp.sv",
+      "sha256": "0b046f32b223a2c9055e27773def8e66a0e5755fd66fa9611dde6a6575e60d51"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_feature_banks_4read_writepipe_4k_v5.sv",
+      "sha256": "e0f2dc3c9dfe57f5f581f07bfc10460840f9c11a91316b133dc5cfcc5bc2f652"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_feature_banks_pingpong_writepipe_v7.sv",
+      "sha256": "70719780ff5428755dc562684fedd9c793a9375eeebd93959df11aafb9232662"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_feature_banks_writepipe_4k_v5.sv",
+      "sha256": "e53e3a0db7dd39b724005fbd946647a1c4d44977c5b0e961a91726e228837913"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_feature_window20_address_shared_v10.sv",
+      "sha256": "622658ef6ce0887c6c20f370cdc582aaca4d90f0eeed3ab9260214dd0212bcda"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_int8_pair_packing.sv",
+      "sha256": "ee927bfd9e937855fd75f17b82b078f23532d5159d395aebc3b71063160067ad"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_maxpool_collect32.sv",
+      "sha256": "f6827c975b5b2f9a17f8b95c1a7a93a97ba7b7b2b162908d4e9c10591a854b85"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_maxpool_vector.sv",
+      "sha256": "184b08ad160edd30b0520e1d8b6427c1ffb089a0c31808d3fd92dcbf2c8aaee3"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_maxpool_window20_tapxy_v3.sv",
+      "sha256": "368519bb4b90f36005f55fd4a3f9de4c4606bab3b063a5a148da451bb97dedf4"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_axi_read_arbiter.sv",
+      "sha256": "f6f1f32c5d3829ba7f2ae016d9d4ddbc6358ea4a0e529274d0de0a236a8dbf16"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_axi64_reader.sv",
+      "sha256": "d63bb0e8d28b334b8557c5675c68a8b10342776e09b27968d626410cfcbff4fa"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_axi64_writer.sv",
+      "sha256": "7711550bc3f1d52616929ad74cfb7e7ed05e1b0da8fcebec000d2a7497fa4bab"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_ingress_reader_v2.sv",
+      "sha256": "a456b57d4205eb6b5b3cf0548dc71227450f76d0ad5600d1eae58f14812178de"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_materialized_load_control.sv",
+      "sha256": "15e7d3a54e0d24290533a7c5ceec12b7d0363af00b85d347b431206ff4e5d1d4"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_materialized_write_control.sv",
+      "sha256": "efd90b86cc6debe68e1ed8761647d69f5da79eb8bd0407ebc6997f8260f0b0ac"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_output_packer.sv",
+      "sha256": "f13d0686e94480e78f967ebb5242ef5686728440bd527b640c26541d54c25c31"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_parameter_bridge.sv",
+      "sha256": "8ad3b892db0517e093a6db5890694d16ca597ca8e0c53fc6985e21d5f2ce267a"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_parameter_reader.sv",
+      "sha256": "bf6779eded3740c57140526681f0f403964b6c54836076d469a25499bc1914a4"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_raw_buffer.sv",
+      "sha256": "81e3fb0b5558eabdce237d4e9fa0470a5ca38126b423b4d460291919624274b1"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_row20_shared_pool_address_shared_v10.sv",
+      "sha256": "0eea5de5f69eb32e2eadddaf7e5bf4affb9d8382bf37bf5f23f85390b915df27"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_stream_order.sv",
+      "sha256": "fc789b1f1a8e2edd5eb15007fe504328b14b36f1c6bc98a0343d3dedd86db8e0"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_view_context4.sv",
+      "sha256": "9b70cd7aa2ce89e3e05c301bae47dedb2e2605e913fe43a4107ec943fcff3a01"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_view_gather.sv",
+      "sha256": "c743f9b15586d9bdcca385667205ee048e5096d22b83f322666ff08531c45f79"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_native_word_cache.sv",
+      "sha256": "4646bd1d527ef8e0712fcd9a0ab733c8154258f6672796781b2e577d3ba8d3a5"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_requant_factor.sv",
+      "sha256": "1b33e21a589638bc14e6d3b46485527ac6432ba7ba6907aca7514651edd9c5d0"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_requant_factor32.sv",
+      "sha256": "8531ed5039df37b551649e6227b4d6ff7ba15366beea7e4adf002dde8fb3c48d"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_unary32.sv",
+      "sha256": "847163d56b6e52cf25846d10cd8761bdb4a5058bec1a2d65b9c3743a4e14ed3d"
+    },
+    {
+      "path": "build/v12p_d46da432/rtl/z100_window_mac.sv",
+      "sha256": "f573c82fab313161d4097eedafcb7669026dbf6e4c29efa313f0a575fe29e474"
+    }
+  ],
+  "source_overrides": [
+    {
+      "original": "build/v12p_d46da432/rtl/z100_native_output_packer.sv",
+      "replacement": "deployment/hardware/z100_2026/native_output_packer_staged_v3/z100_native_output_packer.sv",
+      "replacement_sha256": "3be946a4020dddbabbf179d1921990f4f884e2826c7e3c9575730edb3f979a87"
+    }
+  ],
+  "compile_rule": "Exactly28 core files, one packer source override, no duplicated same-name module; preserve original others and10ns; no B Pblock",
+  "configuration_contract": {
+    "accept_edge": "E0",
+    "commit_or_error_edge": "E4",
+    "earliest_input_edge": "E5",
+    "extra_configuration_cycles": 4,
+    "errors_emit_done": false,
+    "owner_after_error": "held until cancel/reset",
+    "runtime_stream_format": "unchanged"
+  },
+  "intended_model": "Selected epoch200 PIN640 INT8 nine classes; synthetic component vectors do not establish model accuracy/parity",
+  "evidence": [
+    {
+      "path": "validation/board_z100/packer_staged_v3/20261027T084517.718720Z/result.json",
+      "sha256": "141e0ec45699215ac2d0a00509b740749e4a3c4bc2df5a154577079447a0b9f9"
+    },
+    {
+      "path": "validation/board_z100/packer_staged_v3/20261027T084517.718720Z/primary_review.json",
+      "sha256": "6c1cb6022f8359c0b294d10f7cf340879679f311766fb8e9e6580cad90428813"
+    },
+    {
+      "path": "validation/board_z100/pool_packer_staged_v3/20261027T085342.339676Z/result.json",
+      "sha256": "02bb62d700b05ff02237ace9c219182447dae19e1e183ceebe8f25bf8f61782f"
+    }
+  ],
+  "full_core_rtl_integration_accepted": false,
+  "full_core_timing_accepted": false,
+  "physical_fps": null
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "z100-final-version-performance-extract/1",
+  "status": "EXTRACTED_FROM_EXISTING_BOARD_EVIDENCE",
+  "original_report_sha256": "402f09c78769b4a8b8ce3bdf551667f54c65ea8074ef989b2bf0c7d44cdac66f",
+  "extraction": "Only final softpack49000 B2 results retained; no new measurement or A/B gain claim.",
+  "bit_sha256": "9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f",
+  "measurement": {
+    "tag": "B2",
+    "root": "hardware_workspace\\gpt_softpack_launch02",
+    "elf_sha256": "a1fb69729ac1dd2f4ec142819b0ec703fe1c8b8a548c84f9b1415a4683a9cdae",
+    "epoch": 49000,
+    "next_epoch": 49044,
+    "frames": 44,
+    "full_heads_irq_captures": 6,
+    "batch_fps": 2.676366938578474,
+    "request_p50_ms": 362.64410000876524,
+    "request_p95_ms": 367.80950500105973,
+    "batch_nonrequest_overhead_ms": 420.55550002260134,
+    "observed_infer_range_ms": [
+      265.2502903077416,
+      265.69364829488416
+    ],
+    "observed_median_ms": {
+      "preprocess": 5.647238836230073,
+      "graph": 257.6092185293327,
+      "decode": 2.216525935720748,
+      "infer": 265.47884980111337,
+      "connection": 341.48757059686045
+    }
+  },
+  "raw_evidence_directory": "board/final_run",
+  "model_epoch": 200,
+  "timing_scope": "30 consecutive host requests of the same frozen RGB; batch FPS includes batch overhead; request P50/P95 excludes batch-only overhead. Observed infer timing is a separate scope.",
+  "board_test_rerun": false
+}

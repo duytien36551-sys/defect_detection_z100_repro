@@ -1,0 +1,18 @@
+--- C:\z100v13\gpt_softpack_build_plan01\build_output\native_sources\native_graph_service_v2.c
++++ src/native_graph_service_v2.c
+@@ -152,6 +152,15 @@
+     code=v8_service_one(a->wire); a->timing.wire_code=code;
+     if (sample(a,&a->timing.connection_end)) return fail(a);
+     a->timing.connection_ticks=a->timing.connection_end-a->timing.connection_start;
++    if (code == V8_SERVICE_PROBE_ONLY && a->state == ZN_NATIVE_SERVICE_V2_SERVING &&
++        !a->timing.inference_completed && a->session->frame.state == ZN_NATIVE_FRAME_V1_READY) {
++        /* Probe-only completion leaves the unused graph epoch READY. */
++        memset(&a->timing,0,sizeof a->timing);
++        a->timing.epoch=a->session->frame.config.epoch;
++        a->timing.ticks_per_second=a->session->frame.config.ticks_per_second;
++        a->state=ZN_NATIVE_SERVICE_V2_READY;
++        return ZN_NATIVE_SERVICE_V2_READY;
++    }
+     if (code || a->state != ZN_NATIVE_SERVICE_V2_RESULT_PENDING || !a->timing.inference_completed) return fail(a);
+     a->timing.result_delivered=1; a->state=ZN_NATIVE_SERVICE_V2_DELIVERED;
+     return ZN_NATIVE_SERVICE_V2_DELIVERED;

@@ -1,0 +1,296 @@
+{
+  "package_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+  "graph_sha256": "9d6064e37e92e61c687608d2c5e216cccb31e0b1fc9603de0c8b21eb3acbae9f",
+  "events": [
+    {
+      "index": 5,
+      "event": 12,
+      "operator": "add",
+      "input_nodes": [
+        7,
+        11
+      ],
+      "reads": [
+        {
+          "node": 5,
+          "slot": 1,
+          "generation": 4
+        },
+        {
+          "node": 11,
+          "slot": 2,
+          "generation": 6
+        }
+      ],
+      "bytes": 409600,
+      "shape": [
+        16,
+        160,
+        160
+      ],
+      "mode": 2,
+      "output_node": 12
+    },
+    {
+      "index": 11,
+      "event": 26,
+      "operator": "add",
+      "input_nodes": [
+        21,
+        25
+      ],
+      "reads": [
+        {
+          "node": 19,
+          "slot": 1,
+          "generation": 10
+        },
+        {
+          "node": 25,
+          "slot": 2,
+          "generation": 12
+        }
+      ],
+      "bytes": 204800,
+      "shape": [
+        32,
+        80,
+        80
+      ],
+      "mode": 2,
+      "output_node": 26
+    },
+    {
+      "index": 14,
+      "event": 31,
+      "operator": "add",
+      "input_nodes": [
+        26,
+        30
+      ],
+      "reads": [
+        {
+          "node": 26,
+          "slot": 0,
+          "generation": 13
+        },
+        {
+          "node": 30,
+          "slot": 3,
+          "generation": 15
+        }
+      ],
+      "bytes": 204800,
+      "shape": [
+        32,
+        80,
+        80
+      ],
+      "mode": 2,
+      "output_node": 31
+    },
+    {
+      "index": 20,
+      "event": 45,
+      "operator": "add",
+      "input_nodes": [
+        40,
+        44
+      ],
+      "reads": [
+        {
+          "node": 38,
+          "slot": 1,
+          "generation": 19
+        },
+        {
+          "node": 44,
+          "slot": 2,
+          "generation": 21
+        }
+      ],
+      "bytes": 122880,
+      "shape": [
+        64,
+        40,
+        40
+      ],
+      "mode": 2,
+      "output_node": 45
+    },
+    {
+      "index": 23,
+      "event": 50,
+      "operator": "add",
+      "input_nodes": [
+        45,
+        49
+      ],
+      "reads": [
+        {
+          "node": 45,
+          "slot": 0,
+          "generation": 22
+        },
+        {
+          "node": 49,
+          "slot": 4,
+          "generation": 24
+        }
+      ],
+      "bytes": 122880,
+      "shape": [
+        64,
+        40,
+        40
+      ],
+      "mode": 2,
+      "output_node": 50
+    },
+    {
+      "index": 29,
+      "event": 64,
+      "operator": "add",
+      "input_nodes": [
+        59,
+        63
+      ],
+      "reads": [
+        {
+          "node": 57,
+          "slot": 1,
+          "generation": 28
+        },
+        {
+          "node": 63,
+          "slot": 2,
+          "generation": 30
+        }
+      ],
+      "bytes": 81920,
+      "shape": [
+        128,
+        20,
+        20
+      ],
+      "mode": 2,
+      "output_node": 64
+    },
+    {
+      "index": 32,
+      "event": 70,
+      "operator": "maxpool",
+      "input_nodes": [
+        69
+      ],
+      "reads": [
+        {
+          "node": 69,
+          "slot": 0,
+          "generation": 33
+        }
+      ],
+      "bytes": 81920,
+      "shape": [
+        128,
+        20,
+        20
+      ],
+      "mode": 3,
+      "output_node": 70
+    },
+    {
+      "index": 33,
+      "event": 71,
+      "operator": "maxpool",
+      "input_nodes": [
+        70
+      ],
+      "reads": [
+        {
+          "node": 70,
+          "slot": 1,
+          "generation": 34
+        }
+      ],
+      "bytes": 81920,
+      "shape": [
+        128,
+        20,
+        20
+      ],
+      "mode": 3,
+      "output_node": 71
+    },
+    {
+      "index": 34,
+      "event": 72,
+      "operator": "maxpool",
+      "input_nodes": [
+        71
+      ],
+      "reads": [
+        {
+          "node": 71,
+          "slot": 2,
+          "generation": 35
+        }
+      ],
+      "bytes": 81920,
+      "shape": [
+        128,
+        20,
+        20
+      ],
+      "mode": 3,
+      "output_node": 72
+    },
+    {
+      "index": 72,
+      "event": 163,
+      "operator": "assemble_three_heads",
+      "input_nodes": [
+        140,
+        151,
+        162
+      ],
+      "reads": [
+        {
+          "node": 134,
+          "slot": 3,
+          "generation": 58
+        },
+        {
+          "node": 139,
+          "slot": 4,
+          "generation": 61
+        },
+        {
+          "node": 145,
+          "slot": 2,
+          "generation": 64
+        },
+        {
+          "node": 150,
+          "slot": 5,
+          "generation": 67
+        },
+        {
+          "node": 156,
+          "slot": 0,
+          "generation": 70
+        },
+        {
+          "node": 161,
+          "slot": 6,
+          "generation": 73
+        }
+      ],
+      "bytes": 613200,
+      "shape": null,
+      "mode": 4,
+      "output_node": null
+    }
+  ],
+  "scope": "CPU bringup, no graph ACK or hardware"
+}

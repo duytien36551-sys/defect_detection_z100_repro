@@ -1,0 +1,1284 @@
+{
+  "status": "PASS_ONE_FRAME_INTEGER_PARITY_WITH_MEASURED_PHASE_TIMES",
+  "input_size": 640,
+  "domain": "pin",
+  "validation_images": 1,
+  "graph_nodes": 163,
+  "raw_head_bytes": 613200,
+  "raw_head_mismatch_count": 0,
+  "detections": 2,
+  "tile_loads": 94,
+  "tile_runs": 6319,
+  "timer_hz_from_matched_bsp": 333333343,
+  "timer_frequency_scope": "Generated CPU clock/2, oscillator frequency not independently measured",
+  "phase_milliseconds": {
+    "preprocess_ticks": 27.65933619787925,
+    "graph_ticks": 6403.554000296934,
+    "dequantization_ticks": 16.235102529182026,
+    "decode_ticks": 131.64308318235058,
+    "total_ticks": 6579.094519206259
+  },
+  "node_milliseconds_sum": 6389.339097709166,
+  "top_nodes": [
+    {
+      "node_id": 0,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 165738606,
+      "milliseconds": 497.2158035807417
+    },
+    {
+      "node_id": 2,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 113004942,
+      "milliseconds": 339.01481616857035
+    },
+    {
+      "node_id": 14,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 73132252,
+      "milliseconds": 219.39674963749425
+    },
+    {
+      "node_id": 10,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 71580917,
+      "milliseconds": 214.7427447724604
+    },
+    {
+      "node_id": 130,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 70668364,
+      "milliseconds": 212.0050858518525
+    },
+    {
+      "node_id": 137,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 70583623,
+      "milliseconds": 211.75086285922498
+    },
+    {
+      "node_id": 4,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 68002634,
+      "milliseconds": 204.00789608377102
+    },
+    {
+      "node_id": 135,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 64694996,
+      "milliseconds": 194.08498237153552
+    },
+    {
+      "node_id": 8,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 64087229,
+      "milliseconds": 192.26168142441125
+    },
+    {
+      "node_id": 132,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 61584422,
+      "milliseconds": 184.75326064215545
+    },
+    {
+      "node_id": 16,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 46610717,
+      "milliseconds": 139.83214694486773
+    },
+    {
+      "node_id": 91,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 42207961,
+      "milliseconds": 126.6238793279075
+    },
+    {
+      "node_id": 100,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 37582981,
+      "milliseconds": 112.74893973028075
+    },
+    {
+      "node_id": 97,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 37290692,
+      "milliseconds": 111.8720727557099
+    },
+    {
+      "node_id": 24,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 37273092,
+      "milliseconds": 111.8192727572411
+    }
+  ],
+  "all_nodes": [
+    {
+      "node_id": 0,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 165738606,
+      "milliseconds": 497.2158035807417
+    },
+    {
+      "node_id": 1,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 8136165,
+      "milliseconds": 24.408494292153666
+    },
+    {
+      "node_id": 2,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 113004942,
+      "milliseconds": 339.01481616857035
+    },
+    {
+      "node_id": 3,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 4823177,
+      "milliseconds": 14.469530580383614
+    },
+    {
+      "node_id": 4,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 68002634,
+      "milliseconds": 204.00789608377102
+    },
+    {
+      "node_id": 5,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 4042810,
+      "milliseconds": 12.12842964827554
+    },
+    {
+      "node_id": 6,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 5534414,
+      "milliseconds": 16.603241518505996
+    },
+    {
+      "node_id": 7,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 5535032,
+      "milliseconds": 16.60509551845223
+    },
+    {
+      "node_id": 8,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 64087229,
+      "milliseconds": 192.26168142441125
+    },
+    {
+      "node_id": 9,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2032665,
+      "milliseconds": 6.0979948231581504
+    },
+    {
+      "node_id": 10,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 71580917,
+      "milliseconds": 214.7427447724604
+    },
+    {
+      "node_id": 11,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 3723023,
+      "milliseconds": 11.169068676097009
+    },
+    {
+      "node_id": 12,
+      "op": "add",
+      "op_code": 4,
+      "ticks": 26761481,
+      "milliseconds": 80.28444067175123
+    },
+    {
+      "node_id": 13,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 6106072,
+      "milliseconds": 18.31821546877175
+    },
+    {
+      "node_id": 14,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 73132252,
+      "milliseconds": 219.39674963749425
+    },
+    {
+      "node_id": 15,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 4056600,
+      "milliseconds": 12.169799647075811
+    },
+    {
+      "node_id": 16,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 46610717,
+      "milliseconds": 139.83214694486773
+    },
+    {
+      "node_id": 17,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2042028,
+      "milliseconds": 6.126083822343569
+    },
+    {
+      "node_id": 18,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 32302482,
+      "milliseconds": 96.90744318968414
+    },
+    {
+      "node_id": 19,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2029098,
+      "milliseconds": 6.087293823468479
+    },
+    {
+      "node_id": 20,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 2771827,
+      "milliseconds": 8.315480758851058
+    },
+    {
+      "node_id": 21,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 2772146,
+      "milliseconds": 8.316437758823305
+    },
+    {
+      "node_id": 22,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 37073315,
+      "milliseconds": 111.21994177462169
+    },
+    {
+      "node_id": 23,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1007820,
+      "milliseconds": 3.0234599123196624
+    },
+    {
+      "node_id": 24,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 37273092,
+      "milliseconds": 111.8192727572411
+    },
+    {
+      "node_id": 25,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1011658,
+      "milliseconds": 3.0349739119857566
+    },
+    {
+      "node_id": 26,
+      "op": "add",
+      "op_code": 4,
+      "ticks": 11813380,
+      "milliseconds": 35.44013897223597
+    },
+    {
+      "node_id": 27,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 31087426,
+      "milliseconds": 93.26227529539402
+    },
+    {
+      "node_id": 28,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1020430,
+      "milliseconds": 3.0612899112225924
+    },
+    {
+      "node_id": 29,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 31065373,
+      "milliseconds": 93.19611629731263
+    },
+    {
+      "node_id": 30,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1019564,
+      "milliseconds": 3.0586919112979345
+    },
+    {
+      "node_id": 31,
+      "op": "add",
+      "op_code": 4,
+      "ticks": 11851626,
+      "milliseconds": 35.554876968908566
+    },
+    {
+      "node_id": 32,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 3370681,
+      "milliseconds": 10.112042706750762
+    },
+    {
+      "node_id": 33,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 35647229,
+      "milliseconds": 106.94168389869117
+    },
+    {
+      "node_id": 34,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2041345,
+      "milliseconds": 6.12403482240299
+    },
+    {
+      "node_id": 35,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 31776894,
+      "milliseconds": 95.3306792354103
+    },
+    {
+      "node_id": 36,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1019664,
+      "milliseconds": 3.0589919112892345
+    },
+    {
+      "node_id": 37,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 20725900,
+      "milliseconds": 62.177698196846755
+    },
+    {
+      "node_id": 38,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1019881,
+      "milliseconds": 3.0596429112703554
+    },
+    {
+      "node_id": 39,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 1389640,
+      "milliseconds": 4.168919879101323
+    },
+    {
+      "node_id": 40,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 2707108,
+      "milliseconds": 8.12132376448161
+    },
+    {
+      "node_id": 41,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 19358838,
+      "milliseconds": 58.076512315781144
+    },
+    {
+      "node_id": 42,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500957,
+      "milliseconds": 1.5028709564167422
+    },
+    {
+      "node_id": 43,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 19432611,
+      "milliseconds": 58.29783130936289
+    },
+    {
+      "node_id": 44,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 501039,
+      "milliseconds": 1.5031169564096083
+    },
+    {
+      "node_id": 45,
+      "op": "add",
+      "op_code": 4,
+      "ticks": 6558437,
+      "milliseconds": 19.675310429415998
+    },
+    {
+      "node_id": 46,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 15546635,
+      "milliseconds": 46.63990364744279
+    },
+    {
+      "node_id": 47,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500914,
+      "milliseconds": 1.5027419564204834
+    },
+    {
+      "node_id": 48,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 15573048,
+      "milliseconds": 46.71914264514486
+    },
+    {
+      "node_id": 49,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500398,
+      "milliseconds": 1.5011939564653753
+    },
+    {
+      "node_id": 50,
+      "op": "add",
+      "op_code": 4,
+      "ticks": 5908775,
+      "milliseconds": 17.72632448593659
+    },
+    {
+      "node_id": 51,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 1708655,
+      "milliseconds": 5.125964851347019
+    },
+    {
+      "node_id": 52,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 21173298,
+      "milliseconds": 63.519892157923124
+    },
+    {
+      "node_id": 53,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1020086,
+      "milliseconds": 3.0602579112525206
+    },
+    {
+      "node_id": 54,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 26382735,
+      "milliseconds": 79.14820270470211
+    },
+    {
+      "node_id": 55,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 501325,
+      "milliseconds": 1.5039749563847262
+    },
+    {
+      "node_id": 56,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 11014825,
+      "milliseconds": 33.04447404171025
+    },
+    {
+      "node_id": 57,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500930,
+      "milliseconds": 1.5027899564190912
+    },
+    {
+      "node_id": 58,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 696559,
+      "milliseconds": 2.089676939399369
+    },
+    {
+      "node_id": 59,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 696663,
+      "milliseconds": 2.0899889393903206
+    },
+    {
+      "node_id": 60,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 12970485,
+      "milliseconds": 38.911453871567836
+    },
+    {
+      "node_id": 61,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 250008,
+      "milliseconds": 0.7500239782493047
+    },
+    {
+      "node_id": 62,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 12956194,
+      "milliseconds": 38.86858087281116
+    },
+    {
+      "node_id": 63,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 250028,
+      "milliseconds": 0.7500839782475647
+    },
+    {
+      "node_id": 64,
+      "op": "add",
+      "op_code": 4,
+      "ticks": 2944855,
+      "milliseconds": 8.834564743797623
+    },
+    {
+      "node_id": 65,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 656688,
+      "milliseconds": 1.9700639428681457
+    },
+    {
+      "node_id": 66,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 12909643,
+      "milliseconds": 38.72892787686109
+    },
+    {
+      "node_id": 67,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500887,
+      "milliseconds": 1.5026609564228324
+    },
+    {
+      "node_id": 68,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 5498989,
+      "milliseconds": 16.49696652158797
+    },
+    {
+      "node_id": 69,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 249921,
+      "milliseconds": 0.7497629782568737
+    },
+    {
+      "node_id": 70,
+      "op": "maxpool",
+      "op_code": 5,
+      "ticks": 13770584,
+      "milliseconds": 41.31175080195923
+    },
+    {
+      "node_id": 71,
+      "op": "maxpool",
+      "op_code": 5,
+      "ticks": 16191744,
+      "milliseconds": 48.57523059131831
+    },
+    {
+      "node_id": 72,
+      "op": "maxpool",
+      "op_code": 5,
+      "ticks": 16658309,
+      "milliseconds": 49.97492555072716
+    },
+    {
+      "node_id": 73,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 861709,
+      "milliseconds": 2.5851269250313194
+    },
+    {
+      "node_id": 74,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 18436282,
+      "milliseconds": 55.30884439604351
+    },
+    {
+      "node_id": 75,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500723,
+      "milliseconds": 1.5021689564371004
+    },
+    {
+      "node_id": 76,
+      "op": "upsample",
+      "op_code": 6,
+      "ticks": 7479065,
+      "milliseconds": 22.437194349321363
+    },
+    {
+      "node_id": 77,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 2517911,
+      "milliseconds": 7.55373278094175
+    },
+    {
+      "node_id": 78,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 26752074,
+      "milliseconds": 80.25621967256963
+    },
+    {
+      "node_id": 79,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1018212,
+      "milliseconds": 3.0546359114155583
+    },
+    {
+      "node_id": 80,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 1392124,
+      "milliseconds": 4.176371878885216
+    },
+    {
+      "node_id": 81,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 1381792,
+      "milliseconds": 4.145375879784099
+    },
+    {
+      "node_id": 82,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 15609357,
+      "milliseconds": 46.828069641985984
+    },
+    {
+      "node_id": 83,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500903,
+      "milliseconds": 1.5027089564214402
+    },
+    {
+      "node_id": 84,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 15541156,
+      "milliseconds": 46.623466647919464
+    },
+    {
+      "node_id": 85,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500825,
+      "milliseconds": 1.5024749564282263
+    },
+    {
+      "node_id": 86,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 1266932,
+      "milliseconds": 3.800795889776919
+    },
+    {
+      "node_id": 87,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 19485981,
+      "milliseconds": 58.457941304719704
+    },
+    {
+      "node_id": 88,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1020178,
+      "milliseconds": 3.0605339112445167
+    },
+    {
+      "node_id": 89,
+      "op": "upsample",
+      "op_code": 6,
+      "ticks": 12059691,
+      "milliseconds": 36.179071950806915
+    },
+    {
+      "node_id": 90,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 5014011,
+      "milliseconds": 15.042032563781056
+    },
+    {
+      "node_id": 91,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 42207961,
+      "milliseconds": 126.6238793279075
+    },
+    {
+      "node_id": 92,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2034269,
+      "milliseconds": 6.102806823018602
+    },
+    {
+      "node_id": 93,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 2771434,
+      "milliseconds": 8.314301758885248
+    },
+    {
+      "node_id": 94,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 2772052,
+      "milliseconds": 8.316155758831483
+    },
+    {
+      "node_id": 95,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 32610381,
+      "milliseconds": 97.83114016289693
+    },
+    {
+      "node_id": 96,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1014604,
+      "milliseconds": 3.0438119117294544
+    },
+    {
+      "node_id": 97,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 37290692,
+      "milliseconds": 111.8720727557099
+    },
+    {
+      "node_id": 98,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2019394,
+      "milliseconds": 6.058181824312727
+    },
+    {
+      "node_id": 99,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 2533602,
+      "milliseconds": 7.600805779576632
+    },
+    {
+      "node_id": 100,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 37582981,
+      "milliseconds": 112.74893973028075
+    },
+    {
+      "node_id": 101,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2038376,
+      "milliseconds": 6.115127822661293
+    },
+    {
+      "node_id": 102,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 15909925,
+      "milliseconds": 47.729773615836564
+    },
+    {
+      "node_id": 103,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 510564,
+      "milliseconds": 1.5316919555809332
+    },
+    {
+      "node_id": 104,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 1259828,
+      "milliseconds": 3.779483890394967
+    },
+    {
+      "node_id": 105,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 19562560,
+      "milliseconds": 58.68767829805733
+    },
+    {
+      "node_id": 106,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1016093,
+      "milliseconds": 3.0482789115999114
+    },
+    {
+      "node_id": 107,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 1392028,
+      "milliseconds": 4.176083878893568
+    },
+    {
+      "node_id": 108,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 1381594,
+      "milliseconds": 4.144781879801325
+    },
+    {
+      "node_id": 109,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 15659593,
+      "milliseconds": 46.97877763761545
+    },
+    {
+      "node_id": 110,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500732,
+      "milliseconds": 1.5021959564363172
+    },
+    {
+      "node_id": 111,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 15622769,
+      "milliseconds": 46.86830564081914
+    },
+    {
+      "node_id": 112,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500680,
+      "milliseconds": 1.5020399564408413
+    },
+    {
+      "node_id": 113,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 1273689,
+      "milliseconds": 3.8210668891890602
+    },
+    {
+      "node_id": 114,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 19755101,
+      "milliseconds": 59.265301281306265
+    },
+    {
+      "node_id": 115,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 1019605,
+      "milliseconds": 3.0588149112943674
+    },
+    {
+      "node_id": 116,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 13205777,
+      "milliseconds": 39.61732985109744
+    },
+    {
+      "node_id": 117,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 250354,
+      "milliseconds": 0.7510619782192026
+    },
+    {
+      "node_id": 118,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 632986,
+      "milliseconds": 1.8989579449302196
+    },
+    {
+      "node_id": 119,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 12906042,
+      "milliseconds": 38.718124877174375
+    },
+    {
+      "node_id": 120,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500982,
+      "milliseconds": 1.5029459564145673
+    },
+    {
+      "node_id": 121,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 697408,
+      "milliseconds": 2.0922239393255055
+    },
+    {
+      "node_id": 122,
+      "op": "slice",
+      "op_code": 2,
+      "ticks": 695546,
+      "milliseconds": 2.0866379394875
+    },
+    {
+      "node_id": 123,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 12970635,
+      "milliseconds": 38.911903871554784
+    },
+    {
+      "node_id": 124,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 250213,
+      "milliseconds": 0.7506389782314696
+    },
+    {
+      "node_id": 125,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 13645052,
+      "milliseconds": 40.93515481288051
+    },
+    {
+      "node_id": 126,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 250201,
+      "milliseconds": 0.7506029782325137
+    },
+    {
+      "node_id": 127,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 653552,
+      "milliseconds": 1.9606559431409776
+    },
+    {
+      "node_id": 128,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 15088009,
+      "milliseconds": 45.264025687343256
+    },
+    {
+      "node_id": 129,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500850,
+      "milliseconds": 1.5025499564260512
+    },
+    {
+      "node_id": 130,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 70668364,
+      "milliseconds": 212.0050858518525
+    },
+    {
+      "node_id": 131,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2030321,
+      "milliseconds": 6.090962823362078
+    },
+    {
+      "node_id": 132,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 61584422,
+      "milliseconds": 184.75326064215545
+    },
+    {
+      "node_id": 133,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2018344,
+      "milliseconds": 6.055031824404077
+    },
+    {
+      "node_id": 134,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 32265208,
+      "milliseconds": 96.79562119292699
+    },
+    {
+      "node_id": 135,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 64694996,
+      "milliseconds": 194.08498237153552
+    },
+    {
+      "node_id": 136,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2028373,
+      "milliseconds": 6.0851188235315545
+    },
+    {
+      "node_id": 137,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 70583623,
+      "milliseconds": 211.75086285922498
+    },
+    {
+      "node_id": 138,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 2041100,
+      "milliseconds": 6.123299822424305
+    },
+    {
+      "node_id": 139,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 7499326,
+      "milliseconds": 22.497977347558656
+    },
+    {
+      "node_id": 140,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 1922366,
+      "milliseconds": 5.767097832754163
+    },
+    {
+      "node_id": 141,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 24006770,
+      "milliseconds": 72.02030791141107
+    },
+    {
+      "node_id": 142,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 509942,
+      "milliseconds": 1.5298259556350473
+    },
+    {
+      "node_id": 143,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 15593866,
+      "milliseconds": 46.7815966433337
+    },
+    {
+      "node_id": 144,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 509201,
+      "milliseconds": 1.5276029556995143
+    },
+    {
+      "node_id": 145,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 8073391,
+      "milliseconds": 24.220172297615004
+    },
+    {
+      "node_id": 146,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 24005070,
+      "milliseconds": 72.01520791155897
+    },
+    {
+      "node_id": 147,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500619,
+      "milliseconds": 1.5018569564461484
+    },
+    {
+      "node_id": 148,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 15667376,
+      "milliseconds": 47.00212663693833
+    },
+    {
+      "node_id": 149,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 500610,
+      "milliseconds": 1.5018299564469313
+    },
+    {
+      "node_id": 150,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 1867269,
+      "milliseconds": 5.601806837547602
+    },
+    {
+      "node_id": 151,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 487422,
+      "milliseconds": 1.4622659575942871
+    },
+    {
+      "node_id": 152,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 11437436,
+      "milliseconds": 34.312307004943094
+    },
+    {
+      "node_id": 153,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 124711,
+      "milliseconds": 0.3741329891501433
+    },
+    {
+      "node_id": 154,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 4136418,
+      "milliseconds": 12.409253640131645
+    },
+    {
+      "node_id": 155,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 124242,
+      "milliseconds": 0.3727259891909463
+    },
+    {
+      "node_id": 156,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 2032944,
+      "milliseconds": 6.098831823133877
+    },
+    {
+      "node_id": 157,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 11416130,
+      "milliseconds": 34.24838900679672
+    },
+    {
+      "node_id": 158,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 124589,
+      "milliseconds": 0.3737669891607573
+    },
+    {
+      "node_id": 159,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 4123633,
+      "milliseconds": 12.37089864124394
+    },
+    {
+      "node_id": 160,
+      "op": "silu",
+      "op_code": 1,
+      "ticks": 124523,
+      "milliseconds": 0.37356898916649933
+    },
+    {
+      "node_id": 161,
+      "op": "conv",
+      "op_code": 0,
+      "ticks": 478450,
+      "milliseconds": 1.4353499583748512
+    },
+    {
+      "node_id": 162,
+      "op": "concat",
+      "op_code": 3,
+      "ticks": 138260,
+      "milliseconds": 0.4147799879713803
+    }
+  ],
+  "full_pipeline_transport_measured": false,
+  "sustained_fps_measured": false,
+  "accuracy_accepted": false,
+  "release_eligible": false,
+  "current_board_state": "one-shot complete, both CPUs stopped, DMA idle/error-clear",
+  "inputs": {
+    "validation\\board_z100\\reference_assumed_jtag_466_v1\\full_model_execution\\completed_read_20261023T051220Z\\result.json": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c",
+    "validation\\board_z100\\reference_assumed_jtag_466_v1\\full_model_execution\\completed_read_20261023T051220Z\\raw_heads_padded.bin": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555",
+    "validation\\board_z100\\reference_assumed_jtag_466_v1\\full_model_execution\\completed_read_20261023T051220Z\\pipeline_diagnostics.bin": "595ddda7f61336125dee1950be289f6d21122e1990237f955d809b7d7119e158",
+    "deployment\\candidates\\pin640\\provisional_models\\20261022T131845Z_15a161\\pipeline\\model\\graph.json": "6ad39858999c9d7bc57b44887ad487f38a1a678d32e887a1c5c89fdcdd34e0b8",
+    "deployment\\build\\vitis2026_compat\\w\\12a0e527\\plt\\export\\plt\\sw\\dom\\include\\xparameters.h": "8e688340bce848458928e7b9e687c1e1721e8e3ddcf9216fbd46ad211e6a848c"
+  }
+}

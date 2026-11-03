@@ -1,0 +1,21 @@
+{
+  "object": "asm_vectors_hardfloat.o",
+  "source": "sources/ps/asm_vectors_hardfloat.s",
+  "argv": [
+    "$TOOLCHAIN$/bin/arm-none-eabi-gcc.exe",
+    "-mcpu=cortex-a9",
+    "-marm",
+    "-mfpu=neon",
+    "-mfloat-abi=hard",
+    "-DSDT",
+    "-DFPU_HARD_FLOAT_ABI_ENABLED=1",
+    "-I",
+    "$BUNDLE$/include/bsp",
+    "-x",
+    "assembler-with-cpp",
+    "-c",
+    "$BUNDLE$/sources/ps/asm_vectors_hardfloat.s",
+    "-o",
+    "$OUT$/obj/asm_vectors_hardfloat.o"
+  ]
+}

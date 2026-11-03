@@ -1,0 +1,9 @@
+{
+  "status": "PASS_13_MOCKS",
+  "launch_sha256": "d657fe6d8528df6a5a2d87e34d210ebd8fdf8007ba62e7b07d71df98ef4d62aa",
+  "mock_log_sha256": "063bfc958de91123a0d613e3df1a73d43d3902ab89cae4e49b9c52da3cc1fc2b",
+  "elf_sha256": "a1fb69729ac1dd2f4ec142819b0ec703fe1c8b8a548c84f9b1415a4683a9cdae",
+  "board": "0x5000c0",
+  "mmutable": "0x4e0000",
+  "board_access": false
+}

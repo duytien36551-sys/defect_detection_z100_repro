@@ -1,0 +1,85 @@
+{
+  "seed": 20261021,
+  "selection": "96 deterministic candidate assignments scored only on per-class label-count proportion; no model inference",
+  "selected_candidate": 63,
+  "balance_score": 0.022945793275645762,
+  "known_ancestry_groups": 1606,
+  "groups_after_exact_rotation_reflection_merge": 1606,
+  "split": {
+    "train": {
+      "images": 6400,
+      "source_groups": 1284,
+      "original_images": 1284,
+      "roles": {
+        "original": 1284,
+        "new_aug": 5011,
+        "prior_albu": 105
+      },
+      "targets": [
+        5871,
+        3161,
+        580,
+        3448,
+        1218,
+        769,
+        3156,
+        553,
+        1010
+      ],
+      "list_sha256": "07ad9e0be1550da4b91b0f39db7b654b805a6619842c694de82ea7b53d67eca6"
+    },
+    "val": {
+      "images": 800,
+      "source_groups": 160,
+      "original_images": 160,
+      "roles": {
+        "original": 160,
+        "new_aug": 625,
+        "prior_albu": 15
+      },
+      "targets": [
+        680,
+        392,
+        84,
+        361,
+        141,
+        100,
+        353,
+        78,
+        106
+      ],
+      "list_sha256": "68968b132487ca18f0faf8e7a3c408a0dfe9e46b46727f153f89aeff707680dd"
+    },
+    "test": {
+      "images": 800,
+      "source_groups": 162,
+      "original_images": 162,
+      "roles": {
+        "original": 162,
+        "new_aug": 628,
+        "prior_albu": 10
+      },
+      "targets": [
+        727,
+        403,
+        59,
+        475,
+        147,
+        93,
+        396,
+        58,
+        144
+      ],
+      "list_sha256": "4b74a554e0a260e85a74bde0fc671c38a45ef0f7b84b3345026b7eb8a16feabf"
+    }
+  },
+  "group_overlap": 0,
+  "exact_file_overlap": 0,
+  "sealed_test_read": false,
+  "caveats": [
+    "Known image ancestry, not verified physical chip identity",
+    "New internal holdout contains correlated variants within each split",
+    "All8000 pool had historical training exposure; not a new independent blind test",
+    "No direct AP comparison with previous validation partition"
+  ]
+}

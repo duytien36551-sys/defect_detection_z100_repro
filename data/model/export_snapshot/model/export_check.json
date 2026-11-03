@@ -1,0 +1,31 @@
+{
+  "nodes": 163,
+  "head_shapes": [
+    [
+      1,
+      73,
+      80,
+      80
+    ],
+    [
+      1,
+      73,
+      40,
+      40
+    ],
+    [
+      1,
+      73,
+      20,
+      20
+    ]
+  ],
+  "max_abs_raw_head_error": [
+    1.52587890625e-05,
+    1.52587890625e-05,
+    1.9073486328125e-06
+  ],
+  "float_tensor_check_pass": true,
+  "accuracy_evaluated": false,
+  "memory_fits": true
+}

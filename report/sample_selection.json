@@ -1,0 +1,239 @@
+{
+  "schema": "z100-best-test-subset/v1",
+  "status": "PASS_SELECTED_300",
+  "purpose": "Curated best-performing sample subset for inspection/demo. Its scores are not representative test metrics and do not replace the one-shot 800-image test report.",
+  "model": {
+    "checkpoint_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+    "graph_sha256": "9d6064e37e92e61c687608d2c5e216cccb31e0b1fc9603de0c8b21eb3acbae9f",
+    "int8_weights_sha256": "09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d",
+    "quantization_sha256": "6e65833620c0cfde807e88e00f0d31e34add43139012974b4eccd2fe8a4b0321",
+    "v8p_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+    "domain": "pin",
+    "classes": [
+      "PIN_破损",
+      "PIN_裂痕",
+      "PIN_击穿",
+      "PIN_薄膜破损",
+      "PIN_电极缺失",
+      "PIN_异物",
+      "PIN_有机物污染",
+      "PIN_部分缺失",
+      "PIN_冗余"
+    ]
+  },
+  "dataset": {
+    "split": "test",
+    "test_list_sha256": "3f0d78b5f965c9988cf4734762cf72e8a896a0cf51f9ef2bbd0e1269d9e6e10a",
+    "expected_records": 800,
+    "scored_records": 800,
+    "unique_scored_ids": 800,
+    "all_scored_rows_have_image_and_label": true,
+    "image_label_set_sha256": "f880941ec0f4f938605d5a9e6e6e48f5a5a0b2f353a626e6bb990e7db56e9cb9",
+    "rows_sha256": "3a9dd7333023d24d696a2f88aebdc3f6d48b2309ba9eabb904e3c743301c7a8b",
+    "split_identity_and_label_pairing": "Each image stem is paired to data/dataset/labels/test/<stem>.txt; the entire 800-row test.txt list was consumed once."
+  },
+  "scoring": {
+    "backend": "frozen integer graph",
+    "device": "cpu",
+    "input_size": 640,
+    "preprocessor": "existing desktop.preprocess.prepare_image (RGB, 640 square letterbox, pad 114)",
+    "confidence_threshold": 0.25,
+    "class_aware_nms_iou": 0.45,
+    "max_detections": 300,
+    "match": "greedy descending-confidence, class-equal, one-to-one; IoU >= 0.50",
+    "sort": [
+      "F1 descending",
+      "matched mean IoU descending",
+      "matched detection confidence descending",
+      "image ID ascending"
+    ],
+    "threshold_source": "src/ps/current_compiled/native_graph_service_v2.c: V8DecodeConfig {640,640,9,16,0.25f,0.45f,1,NULL,0}",
+    "class_quotas": null
+  },
+  "selection": {
+    "requested": 300,
+    "selected": 300,
+    "class_image_coverage": {
+      "PIN_破损": 123,
+      "PIN_裂痕": 68,
+      "PIN_击穿": 57,
+      "PIN_薄膜破损": 122,
+      "PIN_电极缺失": 35,
+      "PIN_异物": 35,
+      "PIN_有机物污染": 124,
+      "PIN_部分缺失": 13,
+      "PIN_冗余": 26
+    },
+    "class_ground_truth_instances": {
+      "PIN_破损": 197,
+      "PIN_裂痕": 127,
+      "PIN_击穿": 57,
+      "PIN_薄膜破损": 159,
+      "PIN_电极缺失": 62,
+      "PIN_异物": 35,
+      "PIN_有机物污染": 162,
+      "PIN_部分缺失": 13,
+      "PIN_冗余": 26
+    },
+    "per_class_counts": {
+      "PIN_破损": {
+        "tp": 197,
+        "fp": 0,
+        "fn": 0,
+        "ground_truth": 197,
+        "images": 123
+      },
+      "PIN_裂痕": {
+        "tp": 127,
+        "fp": 0,
+        "fn": 0,
+        "ground_truth": 127,
+        "images": 68
+      },
+      "PIN_击穿": {
+        "tp": 57,
+        "fp": 0,
+        "fn": 0,
+        "ground_truth": 57,
+        "images": 57
+      },
+      "PIN_薄膜破损": {
+        "tp": 159,
+        "fp": 0,
+        "fn": 0,
+        "ground_truth": 159,
+        "images": 122
+      },
+      "PIN_电极缺失": {
+        "tp": 62,
+        "fp": 0,
+        "fn": 0,
+        "ground_truth": 62,
+        "images": 35
+      },
+      "PIN_异物": {
+        "tp": 35,
+        "fp": 0,
+        "fn": 0,
+        "ground_truth": 35,
+        "images": 35
+      },
+      "PIN_有机物污染": {
+        "tp": 162,
+        "fp": 0,
+        "fn": 0,
+        "ground_truth": 162,
+        "images": 124
+      },
+      "PIN_部分缺失": {
+        "tp": 13,
+        "fp": 0,
+        "fn": 0,
+        "ground_truth": 13,
+        "images": 13
+      },
+      "PIN_冗余": {
+        "tp": 26,
+        "fp": 0,
+        "fn": 0,
+        "ground_truth": 26,
+        "images": 26
+      }
+    },
+    "image_directory": "images/",
+    "label_directory": "labels/",
+    "selected_manifest": "selected_manifest.json"
+  },
+  "existing_800_image_test_report_sha256": "451c4cc2b90d80d390c73e539e66150c023e5be235135282e5cc277d604c61a0",
+  "run": {
+    "elapsed_seconds": 351.56300000002375,
+    "model_metadata": {
+      "domain": "pin",
+      "class_count": 9,
+      "source_class_ids": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "classes": [
+        "PIN_破损",
+        "PIN_裂痕",
+        "PIN_击穿",
+        "PIN_薄膜破损",
+        "PIN_电极缺失",
+        "PIN_异物",
+        "PIN_有机物污染",
+        "PIN_部分缺失",
+        "PIN_冗余"
+      ],
+      "reg_max": 16,
+      "input_shape": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "input_size": 640
+    },
+    "input_sha256_before": {
+      "source.pt": {
+        "path": "data/pin_epoch200.pt",
+        "sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+        "bytes": 12367939,
+        "original_packaged_path": "data/float_export/source.pt"
+      },
+      "graph.json": {
+        "path": "data/float_export/graph.json",
+        "sha256": "9d6064e37e92e61c687608d2c5e216cccb31e0b1fc9603de0c8b21eb3acbae9f",
+        "bytes": 48980
+      },
+      "weights_float.npz": {
+        "path": "data/float_export/weights_float.npz",
+        "sha256": "7d287c147e0438a738a5ba244da15f8af1d71c7b23f2a90c222f65a3085af83f",
+        "bytes": 12060162
+      },
+      "quantization.json": {
+        "path": "data/quantization/quantization.json",
+        "sha256": "6e65833620c0cfde807e88e00f0d31e34add43139012974b4eccd2fe8a4b0321",
+        "bytes": 46563
+      },
+      "weights_int8.npz": {
+        "path": "data/quantization/weights_int8.npz",
+        "sha256": "09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d",
+        "bytes": 3142200
+      },
+      "v8p": {
+        "path": "data/pin_epoch200_int8.v8p",
+        "sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+        "bytes": 3081632
+      },
+      "canonical_manifest.json": {
+        "path": "data/provenance/canonical_manifest.json",
+        "sha256": "cd3a1d1101547877fd453875416b034abc0fcf356686131bd57d289fff4d7a2b",
+        "bytes": 10788821
+      },
+      "test_metrics.json": {
+        "path": "report/test_evaluation/test_metrics.json",
+        "sha256": "451c4cc2b90d80d390c73e539e66150c023e5be235135282e5cc277d604c61a0",
+        "bytes": 5922
+      },
+      "deployment_threshold_source": {
+        "path": "src/ps/current_compiled/native_graph_service_v2.c",
+        "sha256": "827ea730c4d4600ac4cd2a6b8ac3b8ae67c76b9a4beee2afbf48b22aea19268f",
+        "bytes": 9775
+      }
+    },
+    "output_records": 800
+  },
+  "delivery_path_aliases": {
+    "data/float_export/source.pt": "data/pin_epoch200.pt",
+    "data/model/export_snapshot/model/weights_float.npz": "data/float_export/weights_float.npz",
+    "data/model/weights_int8.npz": "data/quantization/weights_int8.npz"
+  }
+}

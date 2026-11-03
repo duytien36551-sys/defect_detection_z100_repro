@@ -1,0 +1,250 @@
+{
+  "status": "PASS_TWO_LIVE_BOARD_IMAGES_UI_RENDER_HISTORY",
+  "started_utc": "2026-11-02T04:31:45.025740+00:00",
+  "configuration": {
+    "model": "source_project\\deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\package\\MODEL.V8P",
+    "classes": "source_project\\deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\package\\classes.json",
+    "protocol": "pin9-v8/2-input640",
+    "class_count": 9,
+    "input_size": 640,
+    "class_names": [
+      "PIN_破损",
+      "PIN_裂痕",
+      "PIN_击穿",
+      "PIN_薄膜破损",
+      "PIN_电极缺失",
+      "PIN_异物",
+      "PIN_有机物污染",
+      "PIN_部分缺失",
+      "PIN_冗余"
+    ],
+    "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+    "classes_sha256": "d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754",
+    "host": "192.168.10.2",
+    "port": 5001,
+    "local_address": "192.168.10.1",
+    "timeout": 60.0,
+    "allow_host_reference": false
+  },
+  "network_used": true,
+  "retries": 0,
+  "submissions": [
+    {
+      "tensor_sha256": "f82d6ce4ad170ec4859a49f405d6a0b7ca2cdbd93b5e57142a556a92ccd750e0",
+      "task": "all",
+      "status": "VALIDATED_BOARD_RESULT",
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ],
+      "client_infer_seconds": 0.36270040000090376
+    },
+    {
+      "tensor_sha256": "958bda4aafd3a09c09cb6e9c9f51528dd34c6eb7b43b970c3bcbd35e0b584f59",
+      "task": "all",
+      "status": "VALIDATED_BOARD_RESULT",
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            440.50346368,
+            355.17238592,
+            553.17768128,
+            421.34063744
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            160.66349056,
+            545.03059392,
+            266.8761632,
+            587.9030611200001
+          ]
+        }
+      ],
+      "client_infer_seconds": 0.34659169998485595
+    }
+  ],
+  "scope": "Real Tk image loading, production BoardClient, live board results, box rendering and history persistence",
+  "limitations": [
+    "Two integration images only; not dataset accuracy or a throughput benchmark",
+    "HELLO verifies model and wire contract, not live ELF/bitstream hashes",
+    "No JTAG, programming, reset or persistent board writes"
+  ],
+  "hello_replies": [
+    {
+      "type": "HELLO_OK",
+      "protocol": "pin9-v8/2-input640",
+      "runtime": "board",
+      "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+      "classes_sha256": "d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754",
+      "class_count": 9,
+      "class_domain": "pin",
+      "input": "rgb-u8-640-letterbox114",
+      "box_space": "normalized-model-xyxy"
+    },
+    {
+      "type": "HELLO_OK",
+      "protocol": "pin9-v8/2-input640",
+      "runtime": "board",
+      "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+      "classes_sha256": "d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754",
+      "class_count": 9,
+      "class_domain": "pin",
+      "input": "rgb-u8-640-letterbox114",
+      "box_space": "normalized-model-xyxy"
+    }
+  ],
+  "records": [
+    {
+      "stage": "board_response_unverified",
+      "source": "source_project\\validation\\desktop_z100_20261102\\board_ui01\\integration_1.png",
+      "task": "all",
+      "task_label": "全部9类光电缺陷",
+      "elapsed_seconds": 0.37030459998641163,
+      "timing_scope": "image read, RGB640 preprocessing, connect/HELLO, board inference and response validation; excludes result display dwell and rendering",
+      "protocol": "pin9-v8/2-input640",
+      "classes_sha256": "d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754",
+      "result_message": "检测到 2 个缺陷",
+      "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+      "classes": [
+        "PIN_破损",
+        "PIN_裂痕",
+        "PIN_击穿",
+        "PIN_薄膜破损",
+        "PIN_电极缺失",
+        "PIN_异物",
+        "PIN_有机物污染",
+        "PIN_部分缺失",
+        "PIN_冗余"
+      ],
+      "display_classes": [
+        "破损",
+        "裂痕",
+        "击穿",
+        "薄膜破损",
+        "电极缺失",
+        "异物",
+        "有机物污染",
+        "部分缺失",
+        "冗余"
+      ],
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ],
+          "display_name": "有机物污染"
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ],
+          "display_name": "破损"
+        }
+      ]
+    },
+    {
+      "stage": "board_response_unverified",
+      "source": "source_project\\validation\\desktop_z100_20261102\\board_ui01\\integration_2.png",
+      "task": "all",
+      "task_label": "全部9类光电缺陷",
+      "elapsed_seconds": 0.35436870000557974,
+      "timing_scope": "image read, RGB640 preprocessing, connect/HELLO, board inference and response validation; excludes result display dwell and rendering",
+      "protocol": "pin9-v8/2-input640",
+      "classes_sha256": "d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754",
+      "result_message": "检测到 2 个缺陷",
+      "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+      "classes": [
+        "PIN_破损",
+        "PIN_裂痕",
+        "PIN_击穿",
+        "PIN_薄膜破损",
+        "PIN_电极缺失",
+        "PIN_异物",
+        "PIN_有机物污染",
+        "PIN_部分缺失",
+        "PIN_冗余"
+      ],
+      "display_classes": [
+        "破损",
+        "裂痕",
+        "击穿",
+        "薄膜破损",
+        "电极缺失",
+        "异物",
+        "有机物污染",
+        "部分缺失",
+        "冗余"
+      ],
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            440.50346368,
+            355.17238592,
+            553.17768128,
+            421.34063744
+          ],
+          "display_name": "有机物污染"
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            160.66349056,
+            545.03059392,
+            266.8761632,
+            587.9030611200001
+          ],
+          "display_name": "破损"
+        }
+      ]
+    }
+  ],
+  "tk_callback_errors": [],
+  "historical_detection_reference_equal": true,
+  "queued_images": 2,
+  "completed_images": 2,
+  "finished_utc": "2026-11-02T04:31:46.868263+00:00"
+}

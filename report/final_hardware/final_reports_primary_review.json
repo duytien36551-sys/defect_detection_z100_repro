@@ -1,0 +1,38 @@
+{
+  "status": "PASS_POST_PHYSOPT_REPORTS_EXPORT_PENDING_SCRIPT_TYPO",
+  "wns_ns": 0.005,
+  "tns_ns": 0,
+  "whs_ns": 0.045,
+  "wpws_ns": 4.232,
+  "setup_fail_endpoints": 0,
+  "hold_fail_endpoints": 0,
+  "pulse_fail_endpoints": 0,
+  "fully_routed_nets": 238792,
+  "route_errors": 0,
+  "critical_drc": 0,
+  "coverage": {
+    "no_clock": "0",
+    "constant_clock": "0",
+    "pulse_width_clock": "0",
+    "unconstrained_internal_endpoints": "0",
+    "no_input_delay": "0",
+    "no_output_delay": "0",
+    "multiple_clock": "0",
+    "generated_clocks": "0",
+    "loops": "0",
+    "partial_input_delay": "0",
+    "partial_output_delay": "0",
+    "latch_loops": "0"
+  },
+  "input_dcp_sha256": "10083f410bec116cb83b33b5d90294774ebe5b88346a7fc0754756d14ecc8940",
+  "script_failure": "Final puts referenced undefined tns after metrics were generated; catch replaced acceptance. Original failed evidence preserved. Resume only reports/export from saved DCP, no optimization repeat.",
+  "board_access": false,
+  "new_bitstream_exists": false,
+  "files": {
+    "timing_after.rpt": "e3000c9fa7e97ae1d561c943006809bf869771cd17419120c11d05fed419d7c2",
+    "route_status_after.rpt": "67552926d3e9b9b26c3f0ae49d95bef261fe10d4ec1e862a663718dc241ab7db",
+    "drc_after.rpt": "37f0185b44ed24a4ab3765888dd26600d50131a65e6f1d9484228e728c799ee0",
+    "check_timing_after.rpt": "5b2878ab8d2343953ac0844e4cc733fa1844cf5d2025cb9704d1b475a92bf588",
+    "post_physopt.dcp": "10083f410bec116cb83b33b5d90294774ebe5b88346a7fc0754756d14ecc8940"
+  }
+}

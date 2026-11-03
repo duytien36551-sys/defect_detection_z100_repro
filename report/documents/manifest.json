@@ -1,0 +1,25 @@
+{
+  "path": "report/documents/technical_document.docx",
+  "source_filename": "技术文档.docx",
+  "bytes": 2452536,
+  "sha256": "f615455edacedad79ddfa6f3b6438e6faf7a4c950cb955b733a6bf15dad76da9",
+  "source_modified_local": "2026-11-03T18:10:35",
+  "content_edited": false,
+  "schema": "z100-current-technical-documents-v2",
+  "role": "Latest technical document and matching PDF copied without changes.",
+  "pdf": {
+    "path": "report/documents/technical_document.pdf",
+    "source_filename": "技术文档.pdf",
+    "bytes": 2280589,
+    "sha256": "4b0edc1037953b6123ce5b50ae67439e3a5d34022321ac63f55bbc98a61bfc33",
+    "source_modified_local": "2026-11-03T18:05:38",
+    "content_edited": false
+  },
+  "pages": 28,
+  "abstract_revision": {
+    "date": "2026-11-03",
+    "scope": "Expanded abstract to one complete page, retained Songti 12 pt and 1.2 line spacing with italic Times New Roman for Latin/numerals; added verified JTAG scoped runtime conditions.",
+    "characters": 1153,
+    "other_pages_text_unchanged": true
+  }
+}

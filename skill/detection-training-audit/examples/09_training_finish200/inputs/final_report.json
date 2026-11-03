@@ -1,0 +1,359 @@
+{
+  "completion": {
+    "completed_epochs": 200,
+    "original_schedule_epochs": 300,
+    "finish_reason": "User requested epoch-200 cutoff; original LR and mosaic schedules preserved",
+    "best_epoch": 200,
+    "best_selection": "Maximum frozen validation AP50:95",
+    "seconds": 229836.46999999997,
+    "completed_at": "2026-10-24T00:34:32.473982+08:00",
+    "test_used": false
+  },
+  "checkpoint": {
+    "epoch0": 199,
+    "optimizer_states": 183,
+    "scheduler_last_epoch": 199,
+    "live_state_present": true,
+    "ema_present": true,
+    "rng_present": true,
+    "checkpoint_sha256": "5f18ce20c1d4a95029accd213bb90e27833af9cacc18aa49ea311f0de0fd8a92"
+  },
+  "best_weight": "<local-path>",
+  "best_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+  "validation": {
+    "domain": "pin",
+    "baseline_joint18": false,
+    "images": 800,
+    "normal_images": 0,
+    "targets": 2295,
+    "ap50": 0.9686362152053408,
+    "ap50_95": 0.7973330565091301,
+    "per_class": [
+      {
+        "class_id": 0,
+        "name": "PIN_破损",
+        "targets": 680,
+        "ap50": 0.9712787386202906,
+        "ap50_95": 0.8050604746772695,
+        "tp": 649,
+        "fp": 33,
+        "fn": 31,
+        "precision": 0.9516129032258065,
+        "recall": 0.9544117647058824
+      },
+      {
+        "class_id": 1,
+        "name": "PIN_裂痕",
+        "targets": 392,
+        "ap50": 0.9167687241304063,
+        "ap50_95": 0.7162696703718268,
+        "tp": 346,
+        "fp": 41,
+        "fn": 46,
+        "precision": 0.8940568475452196,
+        "recall": 0.8826530612244898
+      },
+      {
+        "class_id": 2,
+        "name": "PIN_击穿",
+        "targets": 84,
+        "ap50": 0.995,
+        "ap50_95": 0.9769073638389777,
+        "tp": 84,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "class_id": 3,
+        "name": "PIN_薄膜破损",
+        "targets": 361,
+        "ap50": 0.9704091966795285,
+        "ap50_95": 0.792194163519602,
+        "tp": 346,
+        "fp": 22,
+        "fn": 15,
+        "precision": 0.9402173913043478,
+        "recall": 0.9584487534626038
+      },
+      {
+        "class_id": 4,
+        "name": "PIN_电极缺失",
+        "targets": 141,
+        "ap50": 0.995,
+        "ap50_95": 0.8801648985316521,
+        "tp": 141,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "class_id": 5,
+        "name": "PIN_异物",
+        "targets": 100,
+        "ap50": 0.985,
+        "ap50_95": 0.8652986951988725,
+        "tp": 99,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.99
+      },
+      {
+        "class_id": 6,
+        "name": "PIN_有机物污染",
+        "targets": 353,
+        "ap50": 0.9043645155130791,
+        "ap50_95": 0.7533664270949664,
+        "tp": 309,
+        "fp": 26,
+        "fn": 44,
+        "precision": 0.9223880597014925,
+        "recall": 0.8753541076487252
+      },
+      {
+        "class_id": 7,
+        "name": "PIN_部分缺失",
+        "targets": 78,
+        "ap50": 0.995,
+        "ap50_95": 0.7336689129196448,
+        "tp": 78,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "class_id": 8,
+        "name": "PIN_冗余",
+        "targets": 106,
+        "ap50": 0.9849047619047618,
+        "ap50_95": 0.6530669024293592,
+        "tp": 104,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.9811320754716981,
+        "recall": 0.9811320754716981
+      }
+    ],
+    "fixed_point": {
+      "confidence": 0.25,
+      "nms_iou": 0.45,
+      "match_iou": 0.5,
+      "max_det": 300,
+      "matching": "Installed Ultralytics same-class IoU greedy one-to-one matching, recomputed after confidence filtering",
+      "classes_filtered": false,
+      "tp": 2156,
+      "fp": 124,
+      "fn": 139,
+      "precision": 0.9456140350877194,
+      "recall": 0.9394335511982571,
+      "f1": 0.9425136612021858,
+      "cross_domain_false_predictions": 0,
+      "normal_false_images": 0,
+      "normal_false_image_rate": null
+    },
+    "evaluation": {
+      "imgsz": 640,
+      "actual_input_shapes": [
+        [
+          3,
+          672,
+          672
+        ]
+      ],
+      "batch": 16,
+      "rect": true,
+      "conf": 0.001,
+      "nms_iou": 0.45,
+      "max_det": 300
+    },
+    "test_used": false,
+    "weight": "<local-path>",
+    "weight_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+    "evaluated_at": "2026-10-24T00:35:07.117363+08:00",
+    "operating_threshold_selected_on_test": false,
+    "training_quality_metrics_not_evaluated": true
+  },
+  "original_validation": {
+    "domain": "pin",
+    "baseline_joint18": false,
+    "images": 160,
+    "normal_images": 0,
+    "targets": 476,
+    "ap50": 0.9718569403792263,
+    "ap50_95": 0.812918224482882,
+    "per_class": [
+      {
+        "class_id": 0,
+        "name": "PIN_破损",
+        "targets": 143,
+        "ap50": 0.9711323483690933,
+        "ap50_95": 0.8232313660518503,
+        "tp": 139,
+        "fp": 6,
+        "fn": 4,
+        "precision": 0.9586206896551724,
+        "recall": 0.972027972027972
+      },
+      {
+        "class_id": 1,
+        "name": "PIN_裂痕",
+        "targets": 86,
+        "ap50": 0.9311730075200502,
+        "ap50_95": 0.7339762474761972,
+        "tp": 76,
+        "fp": 10,
+        "fn": 10,
+        "precision": 0.8837209302325582,
+        "recall": 0.8837209302325582
+      },
+      {
+        "class_id": 2,
+        "name": "PIN_击穿",
+        "targets": 3,
+        "ap50": 0.995,
+        "ap50_95": 0.9949999999999999,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "class_id": 3,
+        "name": "PIN_薄膜破损",
+        "targets": 79,
+        "ap50": 0.9720433654558932,
+        "ap50_95": 0.8110254201181931,
+        "tp": 77,
+        "fp": 5,
+        "fn": 2,
+        "precision": 0.9390243902439024,
+        "recall": 0.9746835443037974
+      },
+      {
+        "class_id": 4,
+        "name": "PIN_电极缺失",
+        "targets": 31,
+        "ap50": 0.995,
+        "ap50_95": 0.8849974747474747,
+        "tp": 31,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "class_id": 5,
+        "name": "PIN_异物",
+        "targets": 22,
+        "ap50": 0.995,
+        "ap50_95": 0.9173844696969697,
+        "tp": 22,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "class_id": 6,
+        "name": "PIN_有机物污染",
+        "targets": 72,
+        "ap50": 0.8973637420680005,
+        "ap50_95": 0.7422361773166137,
+        "tp": 62,
+        "fp": 6,
+        "fn": 10,
+        "precision": 0.9117647058823529,
+        "recall": 0.8611111111111112
+      },
+      {
+        "class_id": 7,
+        "name": "PIN_部分缺失",
+        "targets": 17,
+        "ap50": 0.995,
+        "ap50_95": 0.7374078431372549,
+        "tp": 17,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "class_id": 8,
+        "name": "PIN_冗余",
+        "targets": 23,
+        "ap50": 0.995,
+        "ap50_95": 0.671005021801384,
+        "tp": 23,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    ],
+    "fixed_point": {
+      "confidence": 0.25,
+      "nms_iou": 0.45,
+      "match_iou": 0.5,
+      "max_det": 300,
+      "matching": "Installed Ultralytics same-class IoU greedy one-to-one matching, recomputed after confidence filtering",
+      "classes_filtered": false,
+      "tp": 450,
+      "fp": 27,
+      "fn": 26,
+      "precision": 0.9433962264150944,
+      "recall": 0.9453781512605042,
+      "f1": 0.944386149003148,
+      "cross_domain_false_predictions": 0,
+      "normal_false_images": 0,
+      "normal_false_image_rate": null
+    },
+    "evaluation": {
+      "imgsz": 640,
+      "actual_input_shapes": [
+        [
+          3,
+          672,
+          672
+        ]
+      ],
+      "batch": 16,
+      "rect": true,
+      "conf": 0.001,
+      "nms_iou": 0.45,
+      "max_det": 300
+    },
+    "test_used": false,
+    "weight": "<local-path>",
+    "weight_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+    "evaluated_at": "2026-10-24T00:35:18.594743+08:00",
+    "operating_threshold_selected_on_test": false,
+    "training_quality_metrics_not_evaluated": true
+  },
+  "initialization": {
+    "initialization": "RANDOM_FROM_ARCHITECTURE_ONLY",
+    "pretrained": false,
+    "weights_argument_was_none": true,
+    "loaded_checkpoint_paths": [],
+    "seed": 20261021,
+    "nc": 9,
+    "created_at": "2026-10-21T08:32:06.055302+08:00",
+    "parameter_count": 3012603,
+    "initial_state_sha256": "557b35268a72813dc0289c821065a487e9b54053fee5be39bcc29b66f8361131",
+    "architecture_yaml": "<local-path>"
+  },
+  "test_used": false,
+  "int8_evaluated": false,
+  "board_evaluated": false,
+  "business_acceptance": "not_evaluated",
+  "caveats": [
+    "Augmented validation:800 images/160 source groups; original subset:160 images",
+    "No fair direct comparison to historical validation splits",
+    "No normal images:normal-image false-alarm rate not evaluable",
+    "Known image ancestry is not verified independent physical chips"
+  ]
+}

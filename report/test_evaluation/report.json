@@ -1,0 +1,46 @@
+{
+  "purpose": "one-shot post-freeze test-split evaluation for the report; not used for selection",
+  "split": "test",
+  "started_utc": "20261029T112305Z",
+  "frozen_before": {
+    "deployment\\candidates\\pin640\\completed_models\\epoch200_20261024T083031.921745Z\\pipeline\\model\\source.pt": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+    "deployment\\candidates\\pin640\\completed_models\\epoch200_20261024T083031.921745Z\\pipeline\\model\\graph.json": "9d6064e37e92e61c687608d2c5e216cccb31e0b1fc9603de0c8b21eb3acbae9f",
+    "deployment\\candidates\\pin640\\completed_models\\epoch200_20261024T083031.921745Z\\pipeline\\model\\weights_float.npz": "7d287c147e0438a738a5ba244da15f8af1d71c7b23f2a90c222f65a3085af83f",
+    "deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\quantization\\quantization.json": "6e65833620c0cfde807e88e00f0d31e34add43139012974b4eccd2fe8a4b0321",
+    "deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\quantization\\weights_int8.npz": "09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d",
+    "deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\package\\MODEL.V8P": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+    "validation\\board_z100\\model_readiness_completion\\pin_paperstyle_manifest_adapter\\canonical_manifest.json": "cd3a1d1101547877fd453875416b034abc0fcf356686131bd57d289fff4d7a2b"
+  },
+  "status": "PASS_EVALUATED",
+  "images": 800,
+  "test_rows_loaded": 800,
+  "official": {
+    "ap50": 0.9390077413024726,
+    "ap50_95": 0.761883247092213
+  },
+  "float": {
+    "ap50": 0.9390077413024726,
+    "ap50_95": 0.761883247092213
+  },
+  "int8": {
+    "ap50": 0.9360062374824568,
+    "ap50_95": 0.7468574936518187
+  },
+  "int8_loss_pp": {
+    "ap50": 0.30015038200157385,
+    "ap50_95": 1.5025753440394252
+  },
+  "test_metrics_sha256": "451c4cc2b90d80d390c73e539e66150c023e5be235135282e5cc277d604c61a0",
+  "elapsed_seconds": 619.7339999999967,
+  "free_mem_gb_at_start": 6.35137939453125,
+  "peak_working_set_gb": 0.0,
+  "frozen_after": {
+    "deployment\\candidates\\pin640\\completed_models\\epoch200_20261024T083031.921745Z\\pipeline\\model\\source.pt": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+    "deployment\\candidates\\pin640\\completed_models\\epoch200_20261024T083031.921745Z\\pipeline\\model\\graph.json": "9d6064e37e92e61c687608d2c5e216cccb31e0b1fc9603de0c8b21eb3acbae9f",
+    "deployment\\candidates\\pin640\\completed_models\\epoch200_20261024T083031.921745Z\\pipeline\\model\\weights_float.npz": "7d287c147e0438a738a5ba244da15f8af1d71c7b23f2a90c222f65a3085af83f",
+    "deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\quantization\\quantization.json": "6e65833620c0cfde807e88e00f0d31e34add43139012974b4eccd2fe8a4b0321",
+    "deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\quantization\\weights_int8.npz": "09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d",
+    "deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\package\\MODEL.V8P": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+    "validation\\board_z100\\model_readiness_completion\\pin_paperstyle_manifest_adapter\\canonical_manifest.json": "cd3a1d1101547877fd453875416b034abc0fcf356686131bd57d289fff4d7a2b"
+  }
+}

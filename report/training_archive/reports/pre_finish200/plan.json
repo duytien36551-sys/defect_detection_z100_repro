@@ -1,0 +1,142 @@
+{
+  "epochs_per_model": 300,
+  "architecture": "YOLOv8n",
+  "classes_per_model": 9,
+  "imgsz": 640,
+  "batch": 16,
+  "nbs": 32,
+  "nominal_effective_batch": 32,
+  "physical_batch_deviation": "Paper32 failed GPU and exceeded CPU memory guard; physical16, gradient accumulation target2 (warmup follows framework)",
+  "device": "cpu",
+  "threads": 6,
+  "python": "training_workspace\\.venv\\Scripts\\python.exe",
+  "seed": 20261021,
+  "optimizer": "SGD",
+  "lr0": 0.01,
+  "lrf": 0.01,
+  "cos_lr": false,
+  "warmup_bias_lr": 0.1,
+  "mosaic": 1.0,
+  "scale": 0.5,
+  "translate": 0.1,
+  "pretrained": false,
+  "trained_weights_loaded_for_initialization": false,
+  "initialization": "RANDOM_FROM_ARCHITECTURE_ONLY",
+  "paper_exact_reproduction": false,
+  "paper_disclosed": {
+    "epochs": 300,
+    "batch": 32,
+    "optimizer": "SGD",
+    "lr0": 0.01
+  },
+  "explicit_local_choices": {
+    "imgsz": 640,
+    "imgsz_user_confirmed": true,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3,
+    "linear_lr": true,
+    "close_mosaic": 10,
+    "loss_weights": {
+      "box": 7.5,
+      "cls": 0.5,
+      "dfl": 1.5
+    }
+  },
+  "selection": "Maximum new800-image validation AP50:95, no test evaluation during training",
+  "split_manifest_sha256": "cea60674b314b3d5ddf85d51f9d3b85cf563ded5fa29b85a2553aaef6aad189d",
+  "test_used": false,
+  "deployment_changed": false,
+  "baseline_source": "training_workspace\\relabel_training_trial\\runs\\relabel63\\weights\\best.pt",
+  "baseline_source_sha256": "7dceffa81bada9f4efa4e8faca9e054ab6064a3d5a03520f91797ad52c91d9d2",
+  "baseline_comparison_allowed": false,
+  "baseline_reason": "Historical model trained on this resplit pool; no fair old-model comparison",
+  "domains": {
+    "pin": {
+      "epochs": 300,
+      "data": "data/dataset\\data.yaml",
+      "data_sha256": "bd292275fdb9cffc7b1cd2746e2df62874a784180606ab2bd933725c78566cc9",
+      "architecture_yaml": "training_run\\yolov8n_scratch9.yaml",
+      "architecture_yaml_sha256": "eaa7d5c109142d6c5d3b78188e7d39db71c58e8012a0b5ac2c3631d904d1dd8c",
+      "names": [
+        "PIN_破损",
+        "PIN_裂痕",
+        "PIN_击穿",
+        "PIN_薄膜破损",
+        "PIN_电极缺失",
+        "PIN_异物",
+        "PIN_有机物污染",
+        "PIN_部分缺失",
+        "PIN_冗余"
+      ],
+      "statistics": {
+        "train": {
+          "images": 6400,
+          "source_groups": 1284,
+          "original_images": 1284,
+          "roles": {
+            "original": 1284,
+            "new_aug": 5011,
+            "prior_albu": 105
+          },
+          "targets": [
+            5871,
+            3161,
+            580,
+            3448,
+            1218,
+            769,
+            3156,
+            553,
+            1010
+          ],
+          "list_sha256": "07ad9e0be1550da4b91b0f39db7b654b805a6619842c694de82ea7b53d67eca6"
+        },
+        "val": {
+          "images": 800,
+          "source_groups": 160,
+          "original_images": 160,
+          "roles": {
+            "original": 160,
+            "new_aug": 625,
+            "prior_albu": 15
+          },
+          "targets": [
+            680,
+            392,
+            84,
+            361,
+            141,
+            100,
+            353,
+            78,
+            106
+          ],
+          "list_sha256": "68968b132487ca18f0faf8e7a3c408a0dfe9e46b46727f153f89aeff707680dd"
+        },
+        "test": {
+          "images": 800,
+          "source_groups": 162,
+          "original_images": 162,
+          "roles": {
+            "original": 162,
+            "new_aug": 628,
+            "prior_albu": 10
+          },
+          "targets": [
+            727,
+            403,
+            59,
+            475,
+            147,
+            93,
+            396,
+            58,
+            144
+          ],
+          "list_sha256": "4b74a554e0a260e85a74bde0fc671c38a45ef0f7b84b3345026b7eb8a16feabf"
+        }
+      }
+    }
+  }
+}

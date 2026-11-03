@@ -1,0 +1,1142 @@
+{
+  "schema": "z100-source-reproduction-cleanup-v2",
+  "date": "2026-11-03",
+  "images": 300,
+  "original_images": 8000,
+  "excluded_image_label_pairs": 7700,
+  "intermediate_and_log_suffixes": [
+    ".a",
+    ".d",
+    ".dcp",
+    ".dll",
+    ".exe",
+    ".html",
+    ".jou",
+    ".lib",
+    ".log",
+    ".map",
+    ".o",
+    ".obj",
+    ".pb",
+    ".rpt",
+    ".so",
+    ".str",
+    ".vcd",
+    ".vpd",
+    ".wdb",
+    ".wlf"
+  ],
+  "forbidden_artifacts_remaining": [],
+  "original_full_package_preserved": true,
+  "original_staging_exclusion_counts": {
+    "remove_audited_intermediate_or_nonfinal_binary": 1058,
+    "remove_build_simulation_intermediate_or_raw_log": 61,
+    "replace_stale_package_metadata_or_documentation": 36,
+    "remove_generated_run_archives_or_old_metadata": 101,
+    "replace_8000_images_with_300_curated_test_images": 16008,
+    "remove_training_validation_sample_montages": 15
+  },
+  "original_staging_exclusion_bytes": {
+    "remove_audited_intermediate_or_nonfinal_binary": 788314293,
+    "remove_build_simulation_intermediate_or_raw_log": 17718433,
+    "replace_stale_package_metadata_or_documentation": 25984608,
+    "remove_generated_run_archives_or_old_metadata": 42147872,
+    "replace_8000_images_with_300_curated_test_images": 600436694,
+    "remove_training_validation_sample_montages": 8434152
+  },
+  "final_board_artifacts": [
+    {
+      "path": "board/artifacts/fsbl.elf",
+      "bytes": 519484,
+      "sha256": "7cbeb8a07d3c6da4d272c96f7266e3348d60d977aa3e2411274932a105a1e06e"
+    },
+    {
+      "path": "board/artifacts/native_board_pool.elf",
+      "bytes": 4341664,
+      "sha256": "a1fb69729ac1dd2f4ec142819b0ec703fe1c8b8a548c84f9b1415a4683a9cdae"
+    },
+    {
+      "path": "board/artifacts/z100_platform.bit",
+      "bytes": 17416553,
+      "sha256": "9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f"
+    },
+    {
+      "path": "board/artifacts/z100_platform.xsa",
+      "bytes": 287275,
+      "sha256": "d314d650e12e36e4669f956e03f7388d95b4f3031a9da071dea7366495a57b5e"
+    },
+    {
+      "path": "board/sd_network_fix_v1/native_board_pool.elf",
+      "bytes": 4341720,
+      "sha256": "24ace23496c9e44500b83c35a59a8a6a8ca4fb0fa0c5dda7b76b9855a642cf10"
+    },
+    {
+      "path": "board/sd_network_fix_v1/boot.bin",
+      "bytes": 21601540,
+      "sha256": "29c6d422cffd9e98694586312c7b8a4548ed8429b9f563498089ad636a42f5ac"
+    }
+  ],
+  "rtl_rom_source_files_retained": 53,
+  "source_testbenches_indexed": 215,
+  "raw_tool_reports_included": false,
+  "generated_simulation_run_archives_included": false,
+  "whole_training_dataset_included": false,
+  "scope": "Source tree and final board artifacts retained; build and RTL simulation intermediates/logs intentionally omitted. Source-tree ROM inputs, trained model files and offline/board reference data are retained as inputs/evidence.",
+  "additional_cmake_generated_files_removed": [
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmake_install.cmake",
+      "bytes": 3089
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmakecache.txt",
+      "bytes": 28136
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmakefiles/4.0.1/cmakeasmcompiler.cmake",
+      "bytes": 1255
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmakefiles/4.0.1/cmakeccompiler.cmake",
+      "bytes": 4135
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmakefiles/4.0.1/cmakecxxcompiler.cmake",
+      "bytes": 7797
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmakefiles/4.0.1/cmakesystem.cmake",
+      "bytes": 492
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmakefiles/4.0.1/compileridc/cmakeccompilerid.c",
+      "bytes": 28653
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmakefiles/clean_additional.cmake",
+      "bytes": 620
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmakefiles/cmakeconfigurelog.yaml",
+      "bytes": 103909
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmakefiles/installscripts.json",
+      "bytes": 3873
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/cmakefiles/targetdirectories.txt",
+      "bytes": 25622
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/compile_commands.json",
+      "bytes": 162912
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/bspconfig.h",
+      "bytes": 1391
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/sleep.h",
+      "bytes": 2555
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/smc.h",
+      "bytes": 3565
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/vectors.h",
+      "bytes": 1796
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xadcps.h",
+      "bytes": 20266
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xadcps_hw.h",
+      "bytes": 20479
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xbasic_types.h",
+      "bytes": 2534
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xcommon_drv_config.h",
+      "bytes": 93
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xcoresightpsdcc.h",
+      "bytes": 2113
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xcortexa9.h",
+      "bytes": 781
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xcortexa9_config.h",
+      "bytes": 930
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xdebug.h",
+      "bytes": 3010
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xdevcfg.h",
+      "bytes": 13799
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xdevcfg_hw.h",
+      "bytes": 12769
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xdmaps.h",
+      "bytes": 11962
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xdmaps_hw.h",
+      "bytes": 8823
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xemacps.h",
+      "bytes": 36315
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xemacps_bd.h",
+      "bytes": 27322
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xemacps_bdring.h",
+      "bytes": 8159
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xemacps_hw.h",
+      "bytes": 38164
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xemacps_pcs.h",
+      "bytes": 1388
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xenv.h",
+      "bytes": 4332
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xenv_standalone.h",
+      "bytes": 10364
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_assert.h",
+      "bytes": 7095
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_cache.h",
+      "bytes": 3155
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_cache_l.h",
+      "bytes": 2206
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_cache_vxworks.h",
+      "bytes": 1719
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_cryptoalginfo.h",
+      "bytes": 1601
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_errata.h",
+      "bytes": 2568
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_exception.h",
+      "bytes": 21821
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_hal.h",
+      "bytes": 912
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_io.h",
+      "bytes": 15446
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_macroback.h",
+      "bytes": 25492
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_mem.h",
+      "bytes": 1461
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_misc_psreset_api.h",
+      "bytes": 9317
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_mmu.h",
+      "bytes": 2568
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_printf.h",
+      "bytes": 1818
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_spinlock.h",
+      "bytes": 2986
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_stdarg.h",
+      "bytes": 2475
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_sutil.h",
+      "bytes": 10862
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_testcache.h",
+      "bytes": 1229
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_testio.h",
+      "bytes": 2117
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_testmem.h",
+      "bytes": 6499
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_types.h",
+      "bytes": 6384
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xil_util.h",
+      "bytes": 6315
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xiltimer.h",
+      "bytes": 6913
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xinterrupt_wrap.h",
+      "bytes": 5494
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xl2cc.h",
+      "bytes": 7807
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xl2cc_counter.h",
+      "bytes": 2722
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xmem_config.h",
+      "bytes": 328
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xparameters_ps.h",
+      "bytes": 12463
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xplatform_info.h",
+      "bytes": 6371
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xpm_counter.h",
+      "bytes": 17471
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xpm_init.h",
+      "bytes": 1364
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xpseudo_asm.h",
+      "bytes": 1833
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xpseudo_asm_gcc.h",
+      "bytes": 6971
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xreg_cortexa9.h",
+      "bytes": 20585
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xscugic.h",
+      "bytes": 25447
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xscugic_hw.h",
+      "bytes": 30802
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xscutimer.h",
+      "bytes": 11847
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xscutimer_hw.h",
+      "bytes": 8585
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xscuwdt.h",
+      "bytes": 13439
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xscuwdt_hw.h",
+      "bytes": 5280
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xsdps.h",
+      "bytes": 15513
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xsdps_core.h",
+      "bytes": 5379
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xsdps_hw.h",
+      "bytes": 58374
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xstatus.h",
+      "bytes": 19742
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xtimer_config.h",
+      "bytes": 944
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xuartps.h",
+      "bytes": 19166
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/include/xuartps_hw.h",
+      "bytes": 18550
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/install_manifest.txt",
+      "bytes": 21863
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/cmake_install.cmake",
+      "bytes": 5374
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/common/src/cmake_install.cmake",
+      "bytes": 1663
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/coresightps_dcc/src/cmake_install.cmake",
+      "bytes": 1681
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/devcfg/src/cmake_install.cmake",
+      "bytes": 1663
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/dmaps/src/cmake_install.cmake",
+      "bytes": 1661
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/emacps/src/cmake_install.cmake",
+      "bytes": 1663
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/scugic/src/cmake_install.cmake",
+      "bytes": 1663
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/scutimer/src/cmake_install.cmake",
+      "bytes": 1667
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/scuwdt/src/cmake_install.cmake",
+      "bytes": 1663
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/sdps/src/cmake_install.cmake",
+      "bytes": 1659
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/cmake_install.cmake",
+      "bytes": 2233
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/common/cmake_install.cmake",
+      "bytes": 1973
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/common/gcc/cmake_install.cmake",
+      "bytes": 1701
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/cortexa9/cmake_install.cmake",
+      "bytes": 1979
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/cortexa9/gcc/cmake_install.cmake",
+      "bytes": 1705
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/cmake_install.cmake",
+      "bytes": 3967
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/common/cmake_install.cmake",
+      "bytes": 1962
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/common/intr/cmake_install.cmake",
+      "bytes": 1695
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/uartps/src/cmake_install.cmake",
+      "bytes": 1663
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/xadcps/src/cmake_install.cmake",
+      "bytes": 1663
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/cmake_install.cmake",
+      "bytes": 3678
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/core/cmake_install.cmake",
+      "bytes": 1959
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/core/default_timer/cmake_install.cmake",
+      "bytes": 1705
+    },
+    {
+      "path": "build/bsp_snapshot/ps7_cortexa9_0/dom/bsp/libsrc/compile_commands.json",
+      "bytes": 79688
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/cmake_install.cmake",
+      "bytes": 2227
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/cmakecache.txt",
+      "bytes": 18809
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/cmakefiles/4.0.1/cmakeasmcompiler.cmake",
+      "bytes": 1255
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/cmakefiles/4.0.1/cmakeccompiler.cmake",
+      "bytes": 4136
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/cmakefiles/4.0.1/cmakecxxcompiler.cmake",
+      "bytes": 7798
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/cmakefiles/4.0.1/cmakesystem.cmake",
+      "bytes": 493
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/cmakefiles/4.0.1/compileridc/cmakeccompilerid.c",
+      "bytes": 28653
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/cmakefiles/cmakeconfigurelog.yaml",
+      "bytes": 103571
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/cmakefiles/installscripts.json",
+      "bytes": 157
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/cmakefiles/targetdirectories.txt",
+      "bytes": 411
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/build/compile_commands.json",
+      "bytes": 15393
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/compile_commands.json",
+      "bytes": 15393
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmake_install.cmake",
+      "bytes": 3619
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmakecache.txt",
+      "bytes": 30916
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmakefiles/4.0.1/cmakeasmcompiler.cmake",
+      "bytes": 1255
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmakefiles/4.0.1/cmakeccompiler.cmake",
+      "bytes": 4136
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmakefiles/4.0.1/cmakecxxcompiler.cmake",
+      "bytes": 7798
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmakefiles/4.0.1/cmakesystem.cmake",
+      "bytes": 493
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmakefiles/4.0.1/compileridc/cmakeccompilerid.c",
+      "bytes": 28653
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmakefiles/clean_additional.cmake",
+      "bytes": 1525
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmakefiles/cmakeconfigurelog.yaml",
+      "bytes": 104015
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmakefiles/installscripts.json",
+      "bytes": 4370
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/cmakefiles/targetdirectories.txt",
+      "bytes": 28997
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/compile_commands.json",
+      "bytes": 170058
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/bspconfig.h",
+      "bytes": 1391
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/diskio.h",
+      "bytes": 2889
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/ff.h",
+      "bytes": 17784
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/ffconf.h",
+      "bytes": 15335
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/sleep.h",
+      "bytes": 2555
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/smc.h",
+      "bytes": 3565
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/vectors.h",
+      "bytes": 1796
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xadcps.h",
+      "bytes": 20266
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xadcps_hw.h",
+      "bytes": 20479
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xbasic_types.h",
+      "bytes": 2534
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xcommon_drv_config.h",
+      "bytes": 93
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xcoresightpsdcc.h",
+      "bytes": 2113
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xcortexa9.h",
+      "bytes": 781
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xcortexa9_config.h",
+      "bytes": 930
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xdebug.h",
+      "bytes": 3010
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xdevcfg.h",
+      "bytes": 13799
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xdevcfg_hw.h",
+      "bytes": 12769
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xdmaps.h",
+      "bytes": 11962
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xdmaps_hw.h",
+      "bytes": 8823
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xemacps.h",
+      "bytes": 36315
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xemacps_bd.h",
+      "bytes": 27322
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xemacps_bdring.h",
+      "bytes": 8159
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xemacps_hw.h",
+      "bytes": 38164
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xemacps_pcs.h",
+      "bytes": 1388
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xenv.h",
+      "bytes": 4332
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xenv_standalone.h",
+      "bytes": 10364
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_assert.h",
+      "bytes": 7095
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_cache.h",
+      "bytes": 3155
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_cache_l.h",
+      "bytes": 2206
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_cache_vxworks.h",
+      "bytes": 1719
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_cryptoalginfo.h",
+      "bytes": 1601
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_errata.h",
+      "bytes": 2568
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_exception.h",
+      "bytes": 21821
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_hal.h",
+      "bytes": 912
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_io.h",
+      "bytes": 15446
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_macroback.h",
+      "bytes": 25492
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_mem.h",
+      "bytes": 1461
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_misc_psreset_api.h",
+      "bytes": 9317
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_mmu.h",
+      "bytes": 2568
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_printf.h",
+      "bytes": 1818
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_spinlock.h",
+      "bytes": 2986
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_stdarg.h",
+      "bytes": 2475
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_sutil.h",
+      "bytes": 10862
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_testcache.h",
+      "bytes": 1229
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_testio.h",
+      "bytes": 2117
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_testmem.h",
+      "bytes": 6499
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_types.h",
+      "bytes": 6384
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xil_util.h",
+      "bytes": 6315
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xilffs.h",
+      "bytes": 1882
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xilffs_config.h",
+      "bytes": 1046
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xilrsa.h",
+      "bytes": 6734
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xiltimer.h",
+      "bytes": 6913
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xinterrupt_wrap.h",
+      "bytes": 5494
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xl2cc.h",
+      "bytes": 7807
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xl2cc_counter.h",
+      "bytes": 2722
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xmem_config.h",
+      "bytes": 328
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xparameters_ps.h",
+      "bytes": 12463
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xplatform_info.h",
+      "bytes": 6371
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xpm_counter.h",
+      "bytes": 17471
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xpm_init.h",
+      "bytes": 1364
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xpseudo_asm.h",
+      "bytes": 1833
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xpseudo_asm_gcc.h",
+      "bytes": 6971
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xreg_cortexa9.h",
+      "bytes": 20585
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xscugic.h",
+      "bytes": 25447
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xscugic_hw.h",
+      "bytes": 30802
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xscutimer.h",
+      "bytes": 11847
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xscutimer_hw.h",
+      "bytes": 8585
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xscuwdt.h",
+      "bytes": 13439
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xscuwdt_hw.h",
+      "bytes": 5280
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xsdps.h",
+      "bytes": 15513
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xsdps_core.h",
+      "bytes": 5379
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xsdps_hw.h",
+      "bytes": 58374
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xstatus.h",
+      "bytes": 19742
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xtimer_config.h",
+      "bytes": 944
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xuartps.h",
+      "bytes": 19166
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/include/xuartps_hw.h",
+      "bytes": 18550
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/install_manifest.txt",
+      "bytes": 31876
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/cmake_install.cmake",
+      "bytes": 5390
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/common/src/cmake_install.cmake",
+      "bytes": 1665
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/coresightps_dcc/src/cmake_install.cmake",
+      "bytes": 1683
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/devcfg/src/cmake_install.cmake",
+      "bytes": 1665
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/dmaps/src/cmake_install.cmake",
+      "bytes": 1663
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/emacps/src/cmake_install.cmake",
+      "bytes": 1665
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scugic/src/cmake_install.cmake",
+      "bytes": 1665
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scutimer/src/cmake_install.cmake",
+      "bytes": 1669
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scuwdt/src/cmake_install.cmake",
+      "bytes": 1665
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/sdps/src/cmake_install.cmake",
+      "bytes": 1661
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/cmake_install.cmake",
+      "bytes": 2237
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/common/cmake_install.cmake",
+      "bytes": 1976
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/common/gcc/cmake_install.cmake",
+      "bytes": 1703
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/cortexa9/cmake_install.cmake",
+      "bytes": 1982
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/cortexa9/gcc/cmake_install.cmake",
+      "bytes": 1707
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/cmake_install.cmake",
+      "bytes": 3977
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/common/cmake_install.cmake",
+      "bytes": 1965
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/common/intr/cmake_install.cmake",
+      "bytes": 1697
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/uartps/src/cmake_install.cmake",
+      "bytes": 1665
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xadcps/src/cmake_install.cmake",
+      "bytes": 1665
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xilffs/src/cmake_install.cmake",
+      "bytes": 3678
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xilffs/src/include/cmake_install.cmake",
+      "bytes": 1681
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xilrsa/src/cmake_install.cmake",
+      "bytes": 1665
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/cmake_install.cmake",
+      "bytes": 3687
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/core/cmake_install.cmake",
+      "bytes": 1962
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/core/default_timer/cmake_install.cmake",
+      "bytes": 1707
+    },
+    {
+      "path": "build/bsp_snapshot/zynq_fsbl/zynq_fsbl_bsp/libsrc/compile_commands.json",
+      "bytes": 86346
+    }
+  ],
+  "additional_cmake_generated_bytes_removed": 2708344,
+  "generated_bsp_stage_source_counterparts": "All 146 non-compiler-ID C/H/assembly source copies in removed gen_bsp stages were byte-identical to retained source-tree counterparts; CMake compiler-ID probe sources were removed.",
+  "data_deduplication_manifest": "data/deduplication_manifest.json",
+  "additional_data_files_removed": [
+    {
+      "path": "data/float_export/source.pt",
+      "bytes": 12367939,
+      "sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+      "retained_path": "data/pin_epoch200.pt",
+      "reason": "byte_identical_duplicate"
+    },
+    {
+      "path": "data/model/export_snapshot/model/weights_float.npz",
+      "bytes": 12060162,
+      "sha256": "7d287c147e0438a738a5ba244da15f8af1d71c7b23f2a90c222f65a3085af83f",
+      "retained_path": "data/float_export/weights_float.npz",
+      "reason": "byte_identical_duplicate"
+    },
+    {
+      "path": "data/model/weights_int8.npz",
+      "bytes": 3142200,
+      "sha256": "09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d",
+      "retained_path": "data/quantization/weights_int8.npz",
+      "reason": "byte_identical_duplicate"
+    },
+    {
+      "path": "data/baseline/classes.json",
+      "bytes": 366,
+      "sha256": "c4be99901ddf513cd79ad3000a53f9cb3e01f602ad1f46cb6ff1b3e6df70594a",
+      "reason": "legacy_epoch108_not_current_model"
+    },
+    {
+      "path": "data/baseline/epoch108.pt",
+      "bytes": 12356163,
+      "sha256": "603853a8ec851b32578d79d34ddaeb9487f1c7924dc815d557565725f275a034",
+      "reason": "legacy_epoch108_not_current_model"
+    },
+    {
+      "path": "data/baseline/epoch108_int8.v8p",
+      "bytes": 3081632,
+      "sha256": "96211aa416da6b23955a8b62cca594275daaa4db3e3954632960707c0ec0d44f",
+      "reason": "legacy_epoch108_not_current_model"
+    },
+    {
+      "path": "data/baseline/package.json",
+      "bytes": 1123,
+      "sha256": "04201476ab42c2e2a97e925c0788e3ca8cf1c029ffa17e894cfbf6a17816ce70",
+      "reason": "legacy_epoch108_not_current_model"
+    },
+    {
+      "path": "data/baseline/readme.md",
+      "bytes": 459,
+      "sha256": "a4d0de3c06d7b70a5d898c2c5474af6d163899aaecee5bb2e30f15ab401def4d",
+      "reason": "legacy_epoch108_not_current_model"
+    }
+  ],
+  "additional_data_bytes_removed": 43010044,
+  "source_rebuild_inputs_included": true,
+  "current_status": "report/reproduction_validation.json",
+  "technical_document": "report/documents/manifest.json",
+  "late_dependency_and_python_cache_files_removed": [
+    {
+      "path": "-.d",
+      "bytes": 108,
+      "sha256": "5661bdb25bee56f203193ebb1f7a5120bf447c832863d805ce372890cb712b30"
+    },
+    {
+      "path": "build/__pycache__/rebuild_hardware_runtime.cpython-312.pyc",
+      "bytes": 6452,
+      "sha256": "3626b41af2ec927f933efe8bff31dc367df1871caab73062d46e7469d4d67bb9"
+    },
+    {
+      "path": "build/__pycache__/rebuild_hardware_runtime.cpython-314.pyc",
+      "bytes": 7219,
+      "sha256": "71871bcb54a4bfbcd194c5f2915839377aad09904d3ce512c6693db5a27a4121"
+    },
+    {
+      "path": "build/__pycache__/rebuild_hardware_source.cpython-314.pyc",
+      "bytes": 38657,
+      "sha256": "65242fd36e46d16a2277bae96bd1f31c960b97852b0954805e7b3d392da5a14c"
+    }
+  ],
+  "raw_reports_replaced_by_summary": [
+    {
+      "path": "report/final_hardware/check_timing_export.rpt",
+      "bytes": 3217,
+      "sha256": "aec30fa302e8dc981373cd8dd551d7072ece1a9e0f8749a1a232208141ef1490"
+    },
+    {
+      "path": "report/final_hardware/drc_export.rpt",
+      "bytes": 2625086,
+      "sha256": "b99ae19e2cc833e88782b14cf928abbb3866fc3242bf3b4425c2e5366099d11d"
+    },
+    {
+      "path": "report/final_hardware/pulse_width_export.rpt",
+      "bytes": 1842,
+      "sha256": "9d859810cbacab25a909eb384e3f8e1cfbabc89e746c2c9d53f52d4c76ff2636"
+    },
+    {
+      "path": "report/final_hardware/route_status_export.rpt",
+      "bytes": 663,
+      "sha256": "71118efb693e83685a90fbcb4a77d46c8d091a6b2d0828d4fa208b6785989d33"
+    },
+    {
+      "path": "report/final_hardware/timing_export.rpt",
+      "bytes": 37442,
+      "sha256": "171ae4ea4c31b85ba49db444b5e2867cf79b81ed744e06ed729456cea3378050"
+    },
+    {
+      "path": "report/final_hardware/utilization_export.rpt",
+      "bytes": 12641,
+      "sha256": "3e4d0fa9bc6000a396044f2c140299e2410f80d6a82869a81bdf1a8c9bc83631"
+    }
+  ],
+  "source_build_output_policy": "Only source/configuration/model inputs, compact report summaries and original final board deliverables are included. Objects, static libraries, checkpoints, raw reports/logs/waveforms and run snapshots are outside the submission."
+}

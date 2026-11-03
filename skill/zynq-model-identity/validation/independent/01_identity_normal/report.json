@@ -1,0 +1,506 @@
+{
+  "report_id": "independent_identity_20261025/01_identity_normal",
+  "generated_at_local": "2026-10-25T15:47:40.279+08:00",
+  "overall_conclusion": "The supplied record reports a board runtime identity whose model digest matches the later candidate package digest. Protocol, model digest, classes digest, and input/box strings are runtime-recorded. The actual runtime ELF and PL identity are unconfirmed; full deployed build identity is not established.",
+  "scope": {
+    "task": "Prepare a deployment identity comparison from only the supplied build manifest, build report, and board batch record.",
+    "actions": [
+      "Read-only review",
+      "No board or network access",
+      "No artifact rebuild"
+    ],
+    "target_configuration": "No distinct target configuration is defined in supplied materials."
+  },
+  "skill_loaded": [
+    {
+      "name": "zynq-model-identity",
+      "version": "1.0.0-rc1",
+      "path": "<project-root>\\skill\\installed_sources\\zynq-model-identity",
+      "loaded_files": [
+        {
+          "path": "<project-root>\\skill\\installed_sources\\zynq-model-identity\\skill.md",
+          "role": "loaded skill",
+          "bytes_computed": 2658,
+          "sha256_computed": "b9cc1d0c174832ec456d6b3a6261fa3418049fca48f297c7f05129f440adaca0"
+        },
+        {
+          "path": "<project-root>\\skill\\installed_sources\\zynq-model-identity\\references\\workflow.md",
+          "role": "loaded workflow",
+          "bytes_computed": 2387,
+          "sha256_computed": "ec6fed552e1c548739884a1688a1fb36f5e1030fa70d70694ea7d1a4721b1ae3"
+        }
+      ]
+    }
+  ],
+  "computed_source_hashes": [
+    {
+      "path": "<project-root>\\skill\\validation\\cases_20261025\\01_identity_normal\\task.md",
+      "role": "raw task",
+      "bytes_computed": 324,
+      "sha256_computed": "bc43b30bda2e4804d45ee69085b01c2f38eb58402b1768813948eb8dff0c52f4"
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\cases_20261025\\01_identity_normal\\inputs\\build_manifest.json",
+      "role": "raw input",
+      "bytes_computed": 3880,
+      "sha256_computed": "3ead1956a3e49b2821583793094a9aa5f2503d0b9f2dc50beb027f8a1082b3d7"
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\cases_20261025\\01_identity_normal\\inputs\\build_report.json",
+      "role": "raw input",
+      "bytes_computed": 7890,
+      "sha256_computed": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9"
+    },
+    {
+      "path": "<project-root>\\skill\\validation\\cases_20261025\\01_identity_normal\\inputs\\board_batch_acceptance.json",
+      "role": "raw input",
+      "bytes_computed": 40467,
+      "sha256_computed": "d1b566a36adaff79bd12fe09f8bff343214f2ecf2d9434d58837aca741135452"
+    }
+  ],
+  "source_hash_check": {
+    "post_write_recheck": "unchanged",
+    "files": [
+      {
+        "path": "<project-root>\\skill\\validation\\cases_20261025\\01_identity_normal\\task.md",
+        "sha256_initial": "bc43b30bda2e4804d45ee69085b01c2f38eb58402b1768813948eb8dff0c52f4",
+        "sha256_post_write": "bc43b30bda2e4804d45ee69085b01c2f38eb58402b1768813948eb8dff0c52f4",
+        "unchanged": true
+      },
+      {
+        "path": "<project-root>\\skill\\validation\\cases_20261025\\01_identity_normal\\inputs\\build_manifest.json",
+        "sha256_initial": "3ead1956a3e49b2821583793094a9aa5f2503d0b9f2dc50beb027f8a1082b3d7",
+        "sha256_post_write": "3ead1956a3e49b2821583793094a9aa5f2503d0b9f2dc50beb027f8a1082b3d7",
+        "unchanged": true
+      },
+      {
+        "path": "<project-root>\\skill\\validation\\cases_20261025\\01_identity_normal\\inputs\\build_report.json",
+        "sha256_initial": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9",
+        "sha256_post_write": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9",
+        "unchanged": true
+      },
+      {
+        "path": "<project-root>\\skill\\validation\\cases_20261025\\01_identity_normal\\inputs\\board_batch_acceptance.json",
+        "sha256_initial": "d1b566a36adaff79bd12fe09f8bff343214f2ecf2d9434d58837aca741135452",
+        "sha256_post_write": "d1b566a36adaff79bd12fe09f8bff343214f2ecf2d9434d58837aca741135452",
+        "unchanged": true
+      }
+    ]
+  },
+  "recorded_build_artifact_hashes": [
+    {
+      "artifact_path": "programming/boot_headers.txt",
+      "sha256_recorded": "a05d52e9d7717b353c15b55e3bd4d3036a29590bbc1f619ea90e343f5e68a981",
+      "bytes_recorded": 5445,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/bootgen.log",
+      "sha256_recorded": "105d313326c554fa5121b3dc056869e7bdae9d8b342dbf944137398750a2f2bd",
+      "bytes_recorded": 190,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/build_report.json",
+      "sha256_recorded": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9",
+      "bytes_recorded": 7890,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/fsbl.elf",
+      "sha256_recorded": "2a1223d0a7fd50b5cb31cb48ce90ebb9688a3def7893051fcd1410fe1a2d1037",
+      "bytes_recorded": 669272,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/jtag_launch_tile64.tcl",
+      "sha256_recorded": "5c5c7898be63df2b86cdcedac256e7b2fecb0ec05add306a6f1eba73664b707f",
+      "bytes_recorded": 3519,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/ps7_init.tcl",
+      "sha256_recorded": "3260f3a4e2ce0c604508caabc2a3732748919904950bb5c803f22074812fd4b4",
+      "bytes_recorded": 30248,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/startup_symbols.tcl",
+      "sha256_recorded": "30ea15ac5985e014cdf9cefb4a7c79f09084f486468a3b44c7de82a4e2bbe9c9",
+      "bytes_recorded": 98,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/tile64.bif",
+      "sha256_recorded": "0e5c5bf065728407a7e8e3f8189b40c9172e8997ae96e534d7acff0ab4431fd8",
+      "bytes_recorded": 81,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/tile64.bit",
+      "sha256_recorded": "03f73ed59fc7f8bc398995cbf4dc0cdf74d1fcf86f914073c188c365ef523f23",
+      "bytes_recorded": 4045674,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/tile64.xsa",
+      "sha256_recorded": "66669f87ef9a4ff2c3aa6fecc09adaee78beb0b0c6fa11a96b9e3ecf4db52f50",
+      "bytes_recorded": 339755,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/v8_tile64_board.elf",
+      "sha256_recorded": "198d962566ff42302f60e6f491aca9f155f508e4b62a752f095233d29d7a88e4",
+      "bytes_recorded": 1209040,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "programming/v8_tile64_dma_config.h",
+      "sha256_recorded": "185fc45d052ae84a59c341f969683d5411dc59986640a78e9572a8032bafea50",
+      "bytes_recorded": 478,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "sd_root/BOOT.BIN",
+      "sha256_recorded": "31c806718163b938968661e6c9d703befbce32c095c7529c2044cccd2528890d",
+      "bytes_recorded": 4379208,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "sd_root/MODEL.V8P",
+      "sha256_recorded": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+      "bytes_recorded": 3212408,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    },
+    {
+      "artifact_path": "v8_generated_model.h",
+      "sha256_recorded": "2bc16fc68de38367b3154b59e609da6d24310719ff7cd9c7e642442eda6c81d4",
+      "bytes_recorded": 34885,
+      "evidence": "build_manifest.json#/files",
+      "recomputed_from_artifact_file": false
+    }
+  ],
+  "recorded_build_source_sha256_claims": {
+    "build_manifest": {
+      "candidates/tile64/rtl/v8_tile64_mac.v": "24df207592f34c9a2f76d69e05d0dc50f1fb0fac2c29498bb9060aa4518fc285",
+      "candidates/tile64/rtl/v8_tile64_axis.v": "77bd692be3d887dbd3486c5240ec4a06ba5347f576256ca8a441c6e2f366f6c6",
+      "hardware/tile64_candidate/yolo_accel_top.v": "df960f52b9a80b95d9802c84a2e67158c8ab17e84254c4500e27a23bf0c69fe7",
+      "candidates/tile64/build_firmware_tile64.py": "bab9d6ba74a693c295e6598a44e204f42973916dcbd7f20e90cb747a741eb67a",
+      "candidates/tile64/firmware/v8_tile_abi.c": "c21a7731c868a81e8f42e8caac4f056d108b5fbff90fc8a14009966877be5b41",
+      "candidates/tile64/firmware/v8_tile_executor.c": "1dfbfb2f611371fe8b02b09e7018270b6be576a1e931e824bdea0458edfb517a",
+      "candidates/tile64/firmware/v8_tile_board_dma.c": "3630e62cd65ce6811194281c475c3fad94474aaca3b500902df1cb1b98622ad8",
+      "candidates/tile64/firmware/v8_board_tile_main.c": "3183d9255afed61ef9668fa4cc0a60df6ba774aa304baca6d93422db4487d1f3",
+      "candidates/tile64/firmware/v8_lwip.c": "b7710839fd40caa161ed62d6d463e628ed0b6b1c5415a837f2c057fee881a669"
+    },
+    "build_report": {
+      "candidates/tile64/firmware/v8_board_tile_main.c": "3183d9255afed61ef9668fa4cc0a60df6ba774aa304baca6d93422db4487d1f3",
+      "candidates/tile64/firmware/v8_lwip.c": "b7710839fd40caa161ed62d6d463e628ed0b6b1c5415a837f2c057fee881a669",
+      "candidates/tile64/firmware/v8_tile_abi.c": "c21a7731c868a81e8f42e8caac4f056d108b5fbff90fc8a14009966877be5b41",
+      "candidates/tile64/firmware/v8_tile_executor.c": "1dfbfb2f611371fe8b02b09e7018270b6be576a1e931e824bdea0458edfb517a",
+      "candidates/tile64/firmware/v8_tile_board_dma.c": "3630e62cd65ce6811194281c475c3fad94474aaca3b500902df1cb1b98622ad8",
+      "candidates/tile64/firmware/v8_runtime.c": "17f9e00d0e09e2374104f03e6e09b78a4af60eed73d08df309b4403706090b7c",
+      "candidates/tile64/firmware/v8_pipeline.c": "0585678aefa9b041c6658c00cfde86eec23da4c825341d51f38a902290bc3479",
+      "candidates/tile64/firmware/v8_decode.c": "b56c1363bb87c35289f5963bf59fbf69f3871dfb00180273c1706f9cb20ddf80",
+      "candidates/tile64/firmware/v8_service.c": "3b1a4e5c2a611ed48dd2f8e66d968ec0ba8c3f1bbf40df3dff0881b4aec31581",
+      "candidates/tile64/firmware/v8_sha256.c": "b97753a081eacce20cbf58d1f7de49280d24073f0b51f63742555b7dc3641c54",
+      "candidates/tile64/firmware/v8_vfp_selftest.c": "343fa6ceb4c43fe6e307a2beec5acee310bb1398871f2d596cd49cc167043701",
+      "candidates/tile64/firmware/v8_accel.h": "18ef56d8f714f0ad904eac2f613e434ce3e6a0748ba017d21e363515ce62912b",
+      "candidates/tile64/firmware/v8_decode.h": "343b267d055b20f6c56760f16035119f2bad84b6a27226d8690e5fe134605a16",
+      "candidates/tile64/firmware/v8_dma.h": "33e1200233ea5f402a6c88b5a2b803bbe8a3c43cf9f2835231bb49e20a468571",
+      "candidates/tile64/firmware/v8_lwip.h": "475f1ba5c2dcbf7ce5aa8e8f8b2b7c8a679226e94b56d58a91121962b93a0657",
+      "candidates/tile64/firmware/v8_pipeline.h": "1d79c3f664ae17d58077f72896762de11329979a26787afd1e385d2444b87fd1",
+      "candidates/tile64/firmware/v8_runtime.h": "e27fbc5f02f55509d7a17cdd042640419d029dc8d3bb503e75ef4dfca160a66e",
+      "candidates/tile64/firmware/v8_service.h": "f6b46d6fab58dbe439af60b072108a04712ed833a9de330e56c07b29a70e44f3",
+      "candidates/tile64/firmware/v8_sha256.h": "e2ca14ebf7fe5706003cee7554ee70a1a105efc3dae6fe823508848a3cc6f874",
+      "candidates/tile64/firmware/v8_startup_diagnostics.h": "77f5217366f6e21402af0d41a093e019e3f85772d5197d43f084dc6debd5364b",
+      "candidates/tile64/firmware/v8_tile_abi.h": "c60371a9e97a5e3b69c4ae47122a9414090290a0dfe44126f5ae969373eccf43",
+      "candidates/tile64/firmware/v8_tile_board_dma.h": "2bf906f95af20a11fabdac01e53b4b79314af9e3a420d5fd42f2f1b545ddeca2",
+      "candidates/tile64/firmware/v8_tile_executor.h": "1f3003fdc5e3998d2c14d08f40c2a2af1979f402c7d5769c700dab33c0295cf3",
+      "candidates/tile64/firmware/v8_tile_profile.h": "bd611f514dfadf210381f9d63ab5f57bae78ca1e0e76d56db990d64a11b39e8e",
+      "candidates/tile64/firmware/v8_vfp_requant.h": "8b2eca464cd2ab2b3d3ad5dfc845f593eed09bd72dea2d18574a9a6ead614cb6",
+      "candidates/tile64/firmware/lscript_v8.ld": "1d51ee397aa9c66208b92a377c7f9488170872ec2132ab4517dfe0d851c085fb",
+      "packages/stage28_p9995_integrated/v8_generated_model.h": "2bc16fc68de38367b3154b59e609da6d24310719ff7cd9c7e642442eda6c81d4",
+      "build/arm_tile64_run_cache_20261018/v8_tile64_dma_config.h": "185fc45d052ae84a59c341f969683d5411dc59986640a78e9572a8032bafea50"
+    },
+    "note": "These are claims inside the supplied JSON; corresponding source files were not supplied for recomputation."
+  },
+  "candidate_build": {
+    "manifest_generated_at_local_raw": "2026-10-18T13:16:26.190455+08:00",
+    "schema": "stage28-v8-tile64-candidate/1",
+    "model_sha256_recorded": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "model_file_sha256_recorded": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "model_file_bytes_recorded": 3212408,
+    "route_status_recorded": "route_design Complete!",
+    "setup_slack_ns_recorded": "0.071",
+    "hold_slack_ns_recorded": "0.023",
+    "arm_link_recorded": "PASS",
+    "arm_xsa_interface_recorded": "PASS",
+    "bootgen_readback_recorded": "PASS; 3 partitions",
+    "physical_latency_seconds_recorded": null,
+    "build_report_input_hash_matches_manifest_programming_build_report": true,
+    "recorded_artifacts": [
+      {
+        "artifact_path": "programming/boot_headers.txt",
+        "sha256_recorded": "a05d52e9d7717b353c15b55e3bd4d3036a29590bbc1f619ea90e343f5e68a981",
+        "bytes_recorded": 5445,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/bootgen.log",
+        "sha256_recorded": "105d313326c554fa5121b3dc056869e7bdae9d8b342dbf944137398750a2f2bd",
+        "bytes_recorded": 190,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/build_report.json",
+        "sha256_recorded": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9",
+        "bytes_recorded": 7890,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/fsbl.elf",
+        "sha256_recorded": "2a1223d0a7fd50b5cb31cb48ce90ebb9688a3def7893051fcd1410fe1a2d1037",
+        "bytes_recorded": 669272,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/jtag_launch_tile64.tcl",
+        "sha256_recorded": "5c5c7898be63df2b86cdcedac256e7b2fecb0ec05add306a6f1eba73664b707f",
+        "bytes_recorded": 3519,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/ps7_init.tcl",
+        "sha256_recorded": "3260f3a4e2ce0c604508caabc2a3732748919904950bb5c803f22074812fd4b4",
+        "bytes_recorded": 30248,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/startup_symbols.tcl",
+        "sha256_recorded": "30ea15ac5985e014cdf9cefb4a7c79f09084f486468a3b44c7de82a4e2bbe9c9",
+        "bytes_recorded": 98,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/tile64.bif",
+        "sha256_recorded": "0e5c5bf065728407a7e8e3f8189b40c9172e8997ae96e534d7acff0ab4431fd8",
+        "bytes_recorded": 81,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/tile64.bit",
+        "sha256_recorded": "03f73ed59fc7f8bc398995cbf4dc0cdf74d1fcf86f914073c188c365ef523f23",
+        "bytes_recorded": 4045674,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/tile64.xsa",
+        "sha256_recorded": "66669f87ef9a4ff2c3aa6fecc09adaee78beb0b0c6fa11a96b9e3ecf4db52f50",
+        "bytes_recorded": 339755,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/v8_tile64_board.elf",
+        "sha256_recorded": "198d962566ff42302f60e6f491aca9f155f508e4b62a752f095233d29d7a88e4",
+        "bytes_recorded": 1209040,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "programming/v8_tile64_dma_config.h",
+        "sha256_recorded": "185fc45d052ae84a59c341f969683d5411dc59986640a78e9572a8032bafea50",
+        "bytes_recorded": 478,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "sd_root/BOOT.BIN",
+        "sha256_recorded": "31c806718163b938968661e6c9d703befbce32c095c7529c2044cccd2528890d",
+        "bytes_recorded": 4379208,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "sd_root/MODEL.V8P",
+        "sha256_recorded": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+        "bytes_recorded": 3212408,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      },
+      {
+        "artifact_path": "v8_generated_model.h",
+        "sha256_recorded": "2bc16fc68de38367b3154b59e609da6d24310719ff7cd9c7e642442eda6c81d4",
+        "bytes_recorded": 34885,
+        "evidence": "build_manifest.json#/files",
+        "recomputed_from_artifact_file": false
+      }
+    ],
+    "manifest_source_sha256_claims": {
+      "candidates/tile64/rtl/v8_tile64_mac.v": "24df207592f34c9a2f76d69e05d0dc50f1fb0fac2c29498bb9060aa4518fc285",
+      "candidates/tile64/rtl/v8_tile64_axis.v": "77bd692be3d887dbd3486c5240ec4a06ba5347f576256ca8a441c6e2f366f6c6",
+      "hardware/tile64_candidate/yolo_accel_top.v": "df960f52b9a80b95d9802c84a2e67158c8ab17e84254c4500e27a23bf0c69fe7",
+      "candidates/tile64/build_firmware_tile64.py": "bab9d6ba74a693c295e6598a44e204f42973916dcbd7f20e90cb747a741eb67a",
+      "candidates/tile64/firmware/v8_tile_abi.c": "c21a7731c868a81e8f42e8caac4f056d108b5fbff90fc8a14009966877be5b41",
+      "candidates/tile64/firmware/v8_tile_executor.c": "1dfbfb2f611371fe8b02b09e7018270b6be576a1e931e824bdea0458edfb517a",
+      "candidates/tile64/firmware/v8_tile_board_dma.c": "3630e62cd65ce6811194281c475c3fad94474aaca3b500902df1cb1b98622ad8",
+      "candidates/tile64/firmware/v8_board_tile_main.c": "3183d9255afed61ef9668fa4cc0a60df6ba774aa304baca6d93422db4487d1f3",
+      "candidates/tile64/firmware/v8_lwip.c": "b7710839fd40caa161ed62d6d463e628ed0b6b1c5415a837f2c057fee881a669"
+    }
+  },
+  "hardware_interface": {
+    "accelerator_abi_recorded": "tile64-v1",
+    "lanes_recorded": 64,
+    "max_taps_recorded": 4091,
+    "max_sites_recorded": 64,
+    "magic_recorded": "0x564c0001",
+    "control_base_address_recorded": "0x43c10000",
+    "inherited_bsp_base_address_recorded": "0x43c10000",
+    "bsp_address_match_recorded": true,
+    "axi_dma_instance_recorded": "axi_dma_0",
+    "xsa_dma_length_width_bits_recorded": 20,
+    "bsp_length_width_bits_recorded": 16,
+    "effective_length_width_bits_recorded": 20,
+    "effective_width_source_recorded": "xsa",
+    "register_connections_recorded": {
+      "slave_reg0": "yolo_accel_top_0.slave_lite_reg0",
+      "slave_reg1": "yolo_accel_top_0.slave_lite_reg1",
+      "slave_reg2": "yolo_accel_top_0.slave_lite_reg2",
+      "slave_reg3": "yolo_accel_top_0.slave_lite_reg3"
+    },
+    "stream_ports_present_recorded": true,
+    "build_mode_recorded": "XSA metadata checked; physical board not verified",
+    "physical_board_dma_width_verified_recorded": false,
+    "pl_compatibility_recorded": "matching routed tile64 bitstream required; XSA metadata is not physical board proof",
+    "xsa_sha256_recorded": "66669f87ef9a4ff2c3aa6fecc09adaee78beb0b0c6fa11a96b9e3ecf4db52f50"
+  },
+  "runtime_batch_record": {
+    "record_status": "complete",
+    "dry_run": false,
+    "board_verified_note": "Cold boot and DMA recovery are separate acceptance stages.",
+    "started_at_utc_raw": "2026-10-15T19:15:59.749551+00:00",
+    "identity_probe": {
+      "runtime": "board",
+      "protocol": "joint18-v8/1",
+      "model_sha256_recorded": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+      "classes_sha256_recorded": "5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1",
+      "input": "rgb-u8-416-letterbox114",
+      "box_space": "normalized-model-xyxy"
+    },
+    "model_path_recorded": "<project-root>\\deployment\\artifacts\\stage28_tile64_candidate\\sd_root\\MODEL.V8P",
+    "model_exists_recorded": true,
+    "model_sha256_recorded": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "expected_baseline_sha256_recorded": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "model_matches_baselines_recorded": true,
+    "classes_sha256_top_level_recorded": "5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1",
+    "planned_count_recorded": 20,
+    "request_rows": 20,
+    "minimum_batch_roundtrips": 20,
+    "minimum_batch_met_recorded": true,
+    "case_parity_pass_recorded": true,
+    "batch_acceptance_pass_recorded": true,
+    "task_counts": {
+      "pcb": 10,
+      "pin": 10
+    },
+    "all_request_statuses_pass_in_record": true,
+    "all_comparisons_pass_in_record": true,
+    "elapsed_seconds_min_recorded": 3.359,
+    "elapsed_seconds_max_recorded": 3.406,
+    "runtime_elf_sha256_reported": false,
+    "runtime_bitstream_or_xsa_sha256_reported": false
+  },
+  "identity_assessment": [
+    {
+      "field": "target configuration",
+      "status": "not specified",
+      "evidence": "task.md and supplied records",
+      "conclusion": "No separate target requirement/configuration is supplied."
+    },
+    {
+      "field": "model/package",
+      "status": "recorded values agree",
+      "evidence": "board_batch_acceptance.json identity_probe and model; build_manifest.json model_sha256 and files.sd_root/MODEL.V8P; build_report.json package_sha256",
+      "conclusion": "All recorded model/package digests are f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3. Actual package bytes were not supplied for recomputation; the board record predates the manifest."
+    },
+    {
+      "field": "model architecture/graph",
+      "status": "unconfirmed",
+      "evidence": "build_manifest.json schema and named artifacts; no explicit model graph/architecture field",
+      "conclusion": "The package digest is identified, but architecture/graph identity is not established by these fields."
+    },
+    {
+      "field": "categories",
+      "status": "partially identified",
+      "evidence": "board_batch_acceptance.json classes_sha256 and identity_probe.classes_sha256",
+      "conclusion": "A classes digest is recorded as 5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1; the class list, IDs, order, and mapping are not supplied and cannot be compared to the build."
+    },
+    {
+      "field": "input and box convention",
+      "status": "runtime-recorded only",
+      "evidence": "board_batch_acceptance.json identity_probe",
+      "conclusion": "The recorded runtime reports rgb-u8-416-letterbox114 and normalized-model-xyxy. Build metadata does not declare or independently bind this input contract."
+    },
+    {
+      "field": "protocol",
+      "status": "runtime-recorded only",
+      "evidence": "board_batch_acceptance.json protocol and identity_probe.protocol",
+      "conclusion": "The recorded runtime reports joint18-v8/1; build metadata does not provide a protocol version or runtime firmware identity."
+    },
+    {
+      "field": "ELF/PL/XSA on board",
+      "status": "unconfirmed",
+      "evidence": "build_manifest.json and build_report.json contain candidate artifact hashes; board record has no runtime ELF/bit/XSA digest",
+      "conclusion": "No evidence binds the logged board run to the later candidate ELF, bitstream, XSA, or BOOT.BIN."
+    },
+    {
+      "field": "physical hardware contract",
+      "status": "build metadata only",
+      "evidence": "build_report.json xsa_interface_check, dma_driver_limits, build_mode, physical_board_dma_width_verified, pl_compatibility",
+      "conclusion": "XSA metadata is internally reported as matching the BSP; the report explicitly says the physical board is not verified and requires a matching routed tile64 bitstream."
+    }
+  ],
+  "required_evidence": [
+    "For a current target run, capture the board unique ID and a same-session runtime probe that includes protocol, model SHA-256, classes SHA-256, input/box convention, and runtime firmware identity.",
+    "Bind the executing ELF and loaded PL image to the run using runtime-reported hashes or a same-target, same-time programming/readback record with ELF, bitstream/XSA, and BOOT.BIN hashes.",
+    "Provide the ordered class definition whose SHA-256 is 5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1, and the authoritative preprocessing definition.",
+    "If claiming complete board acceptance, separately provide the cold-boot and DMA-recovery acceptance evidence identified as separate stages in the batch record."
+  ],
+  "limitations": [
+    "The board batch record is a serialized record; this review did not connect to or independently inspect the board.",
+    "Board session time is 2026-10-15, while the candidate manifest was generated 2026-10-18. Matching model digests support same recorded model content, not identity of the later software/PL build during the earlier run.",
+    "The batch model path stage28_tile64_candidate and build_report package path stage28_p9995_integrated differ; recorded package/model hashes match, but path provenance is not resolved.",
+    "Binary artifact files and class/preprocessing definitions were not included in the raw inputs, so their reported digests were not recomputed here.",
+    "No cold-boot or DMA-recovery result is included as a completed result; the batch record says these are separate acceptance stages."
+  ],
+  "editorial_correction": {
+    "by": "primary reviewer",
+    "kind": "raw timestamp spelling",
+    "reason": "Original independent JSON rendered the same instant at +08:00 under a field labelled UTC raw. Markdown already used the exact UTC source. No conclusion changed.",
+    "original_value": "2026-10-16T03:15:59.749551+08:00",
+    "original_report_sha256": "949dd6d90194cefa57a28f44314e46c53afe6f48e47d5be1dd05173ec6701882"
+  }
+}

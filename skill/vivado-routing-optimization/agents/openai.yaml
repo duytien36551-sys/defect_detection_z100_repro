@@ -1,0 +1,3 @@
+interface:
+  display_name: "Vivado Routing Optimization"
+  short_description: "Help with Vivado Routing Optimization tasks"

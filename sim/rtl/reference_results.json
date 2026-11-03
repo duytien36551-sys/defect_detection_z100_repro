@@ -1,0 +1,61 @@
+{
+  "historical": true,
+  "new_simulation_run": false,
+  "primary_review_status": "PASS_PRIMARY_COUNTER_RTL_AND_TEST_REVIEW",
+  "cases": [
+    {
+      "id": "control01",
+      "status": "PASS_COMPONENT_TEST_ONLY_PLATFORM_TIMING_BOARD_PENDING",
+      "pass_marker": "PLATFORM_V13C_CONTROL_PASS reads=8 writes=32 stalled_cycles=120 drained_beats=16 resets=2",
+      "original_result_sha256": "6956697e6c8248e897a743058b11736a6210e8f429d793a91cce8960a6b132c5"
+    },
+    {
+      "id": "fault_diagnostics01",
+      "status": "PASS_COMPONENT_TEST_ONLY_PLATFORM_TIMING_BOARD_PENDING",
+      "pass_marker": "COUNTER_PHYSICAL_FAULT_PASS cases=15 rid=7 bid=7 cancel=1",
+      "original_result_sha256": "e31c8f4047b7d2fc200919b794807dac93970132d683d13ac0d26b4f378ade70"
+    },
+    {
+      "id": "id_fault01",
+      "status": "PASS_COMPONENT_TEST_ONLY_PLATFORM_TIMING_BOARD_PENDING",
+      "pass_marker": "ACP_ID_FAULT_PASS cases=14 rid=7 bid=7 resets=14 ar_stalls=1372 aw_stalls=21 w_stalls=56",
+      "original_result_sha256": "96eac5e55660a85c9b481d3e649bebb94d40f0f53f53941659da2118d28c7d2a"
+    },
+    {
+      "id": "mixed01",
+      "status": "PASS_COMPONENT_TEST_ONLY_PLATFORM_TIMING_BOARD_PENDING",
+      "pass_marker": "PLATFORM_V13C_MIXED_PASS jobs=5 switches=3 pool=3 conv=2 one_reset=1",
+      "original_result_sha256": "2c6f068ce0cc4c30f1e6ae8da088c856b50212aea3173fc263ca7d1663db8003"
+    },
+    {
+      "id": "mixed_diagnostics01",
+      "status": "PASS_COMPONENT_TEST_ONLY_PLATFORM_TIMING_BOARD_PENDING",
+      "pass_marker": "COUNTER_PHYSICAL_MIXED_PASS jobs=5 switches=3 pool=3 conv=2 one_reset=1",
+      "original_result_sha256": "7590d40c4f6ad6d1d80166f6e4763ae4db5a689f9014dc463de0b2bf807bc3e3"
+    },
+    {
+      "id": "pool_control01",
+      "status": "PASS_COMPONENT_TEST_ONLY_PLATFORM_TIMING_BOARD_PENDING",
+      "pass_marker": "PLATFORM_V13C_CONTROL_PASS reads=8 writes=32 stalled_cycles=120 drained_beats=16 resets=2",
+      "original_result_sha256": "394ada0fa481689368c2a3fb021c5313b08c2604ab09e8c64a0fdbd875fe948b"
+    },
+    {
+      "id": "pool_fault01",
+      "status": "PASS_COMPONENT_TEST_ONLY_PLATFORM_TIMING_BOARD_PENDING",
+      "pass_marker": "PLATFORM_V13C_POOL_FAULT_PASS cases=15 cancelled_r_hold=20 cancelled_b_hold=20 ar_hold=20 aw_hold=20 lease_loss=1 replay=2 errors=2 timeouts=3 reset_retries=14",
+      "original_result_sha256": "4164d738a63e22b2a5b0b171a09e7bace0c73b728f68f6a9b9854e9b1fee908a"
+    },
+    {
+      "id": "tail01",
+      "status": "PASS_COMPONENT_TEST_ONLY_PLATFORM_TIMING_BOARD_PENDING",
+      "pass_marker": "PLATFORM_V13C_NUMERIC_PASS cases=3 logical_bytes=2079 padded_bytes=3456",
+      "original_result_sha256": "8ddc0f5dc67d3a12a902ca31d75754106ca6f3999071925ba3fa999f8b4c9471"
+    },
+    {
+      "id": "unit01",
+      "status": "PASS_COMPONENT_TEST_ONLY_PLATFORM_TIMING_BOARD_PENDING",
+      "pass_marker": "PASS: S12 counter and MMIO checks",
+      "original_result_sha256": "a7883f92b82ac2d8d704b7ae8b63d126533fcfef38ca5ea47c2309691ec24800"
+    }
+  ]
+}

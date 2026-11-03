@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "status": "accepted_engineering_evidence_workflow",
+  "local_cases": [
+    {
+      "case": "03_parity_physical_frame",
+      "status": "pass_after_independent_execution_and_primary_review",
+      "report": "independent/03_parity_physical_frame/report.json",
+      "note": "重算613200字节前缀哈希及48字节零填充；缺少主机参考时未冒称新完成双端逐字节比较；单帧与质量分开。"
+    },
+    {
+      "case": "04_parity_quality_gate",
+      "status": "pass_after_independent_execution_and_primary_review",
+      "report": "independent/04_parity_quality_gate/report.json",
+      "note": "800图9类浮点/INT8配对指标及全部逐类值齐全；量化损失0.4500/4.5313个百分点；记录中的质量拒绝未被执行一致性覆盖。"
+    }
+  ],
+  "independent_local_behavioral_validation": "pass_two_cases",
+  "external_static_reuse": {
+    "id": "detector",
+    "skills": [
+      "zynq-inference-parity",
+      "detection-training-audit"
+    ],
+    "manifest": "cases/external_detector/source_manifest.json",
+    "report": "cases/external_detector/report.json",
+    "status": "independent_static_reuse_pass",
+    "hardware_execution": false
+  },
+  "external_report": "external_report.json",
+  "external_manifest": "external_source_manifest.json",
+  "pynq_cross_board_validation": "not_evaluated",
+  "unfamiliar_human_team_usage": "not_evaluated",
+  "multiple_prompt_runs_stability": "not_evaluated",
+  "release_scope": "Engineering evidence audit, not a portable board runtime",
+  "instruction_promotion": "Only version and evidence-status paragraph changed from tested rc1. Workflow and all decision instructions byte/content unchanged."
+}

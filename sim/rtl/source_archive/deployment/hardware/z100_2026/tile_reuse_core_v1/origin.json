@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "path": "deployment/hardware/z100_2026/tile_reuse_core_v0/z100_tile_reuse_core.v",
+      "sha256": "03f3cc56e2e2c1fe91e57288890675b90ada5e3053448bfeddc0cb894ab682c9"
+    },
+    {
+      "path": "deployment/hardware/z100_2026/tile_reuse_core_v0/tb_z100_tile_reuse_core.sv",
+      "sha256": "216f3dae3d1b3540721209d2933f88ac8bd36a4c1214964ca97549171d02c903"
+    }
+  ],
+  "arithmetic": "signed INT8,33bit accumulation, final32bit clamp; one extra operand stage",
+  "release_eligible": false
+}

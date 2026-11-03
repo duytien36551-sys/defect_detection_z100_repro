@@ -1,0 +1,52 @@
+{
+  "schema": "z100_hardware_source_package_v2",
+  "part": "xc7z100ffg900-2",
+  "vivado_version": "2026.1",
+  "period_ns": 10,
+  "sites": 12,
+  "source_count": 53,
+  "upstream_manifest_path": "provenance/upstream_manifest.json",
+  "upstream_manifest_sha256": "9c678e7cf2b70b9167fe266890868419cab18b41180120d4f712d47b4bae4bf5",
+  "scripts": {
+    "impl.tcl": {
+      "path": "impl.tcl",
+      "sha256": "e47a93f1d9ae54b4665b25221274df99ba094916167425aea045bde0b7fa7fe5"
+    },
+    "system_bd.tcl": {
+      "path": "system_bd.tcl",
+      "sha256": "1c2cce6eec0f74be409f6e780d25a583b12a114a2a5f82bfddbead1b659896b8"
+    },
+    "s12_directives.tcl": {
+      "path": "rtl/s12_directives.tcl",
+      "sha256": "09f3c50bee150adfe6b80ead8af317d1332591930fc32ae0f9e965b1b4e5dbd0"
+    },
+    "physopt.tcl": {
+      "path": "tcl/physopt.tcl",
+      "sha256": "eaee194210208eacd1b8c0a4ea33b08cfd7be05ad79ae8483db614dfb72512d7"
+    },
+    "export.tcl": {
+      "path": "tcl/export.tcl",
+      "sha256": "f039141259583132b52f3d4e5aadf88022a851ad17d5bc4feee6a386740d8d61"
+    }
+  },
+  "historical_state": {
+    "place_status": "PASS_PLACE_ONLY_ROUTE_PENDING",
+    "pre_physopt_route_pass": false,
+    "pre_physopt_route_wns_ns": -0.095,
+    "pre_physopt_route_setup_fail_endpoints": 41,
+    "pre_physopt_route_error_nets": 0,
+    "incremental_reference_route_pass": true,
+    "new_source_build_executed": false,
+    "final_physopt_export_in_separate_bundle": true
+  },
+  "dsp48e1_count": 1252,
+  "incremental_checkpoint_required": false,
+  "build_mode": "fresh_synthesis_place_route",
+  "windows_path_preflight": {
+    "max_path_including_terminator": 260,
+    "run_id_sample": "run-20000101T000000.000000Z",
+    "longest_generated_path_from_run_directory": "place/project/platform.srcs/sources_1/bd/system/ip/system_native_conv_backend_local_control_0_0/system_native_conv_backend_local_control_0_0.xci",
+    "preserve_subst_drive_alias_for_writes": true
+  },
+  "readme_sha256": "823467f3ce2158e3823df41fac585dcba9205a7c08873f5d95acae87358c2828"
+}

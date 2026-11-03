@@ -1,0 +1,208 @@
+{
+  "domain": "pin",
+  "class_count": 9,
+  "classes": [
+    "PIN_破损",
+    "PIN_裂痕",
+    "PIN_击穿",
+    "PIN_薄膜破损",
+    "PIN_电极缺失",
+    "PIN_异物",
+    "PIN_有机物污染",
+    "PIN_部分缺失",
+    "PIN_冗余"
+  ],
+  "images": 800,
+  "full_validation": true,
+  "per_task_limit": null,
+  "elapsed_seconds": 618.2350000000442,
+  "checkpoint_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+  "accuracy_accepted": false,
+  "metrics": {
+    "official": {
+      "images": 800,
+      "ap50": 0.9723373922479609,
+      "ap50_95": 0.7967141492574393,
+      "per_class": {
+        "PIN_破损": {
+          "class_id": 0,
+          "ap50": 0.9862559377098902,
+          "ap50_95": 0.8110158479819883,
+          "ground_truth_count": 680
+        },
+        "PIN_裂痕": {
+          "class_id": 1,
+          "ap50": 0.926553459108627,
+          "ap50_95": 0.7184810258139416,
+          "ground_truth_count": 392
+        },
+        "PIN_击穿": {
+          "class_id": 2,
+          "ap50": 0.995,
+          "ap50_95": 0.9733938245248543,
+          "ground_truth_count": 84
+        },
+        "PIN_薄膜破损": {
+          "class_id": 3,
+          "ap50": 0.9796643941150484,
+          "ap50_95": 0.774853669724692,
+          "ground_truth_count": 361
+        },
+        "PIN_电极缺失": {
+          "class_id": 4,
+          "ap50": 0.995,
+          "ap50_95": 0.8653601900679655,
+          "ground_truth_count": 141
+        },
+        "PIN_异物": {
+          "class_id": 5,
+          "ap50": 0.985,
+          "ap50_95": 0.8811049565317471,
+          "ground_truth_count": 100
+        },
+        "PIN_有机物污染": {
+          "class_id": 6,
+          "ap50": 0.8937514185433659,
+          "ap50_95": 0.7471085113827773,
+          "ground_truth_count": 353
+        },
+        "PIN_部分缺失": {
+          "class_id": 7,
+          "ap50": 0.995,
+          "ap50_95": 0.731432363251531,
+          "ground_truth_count": 78
+        },
+        "PIN_冗余": {
+          "class_id": 8,
+          "ap50": 0.9948113207547169,
+          "ap50_95": 0.6676769540374572,
+          "ground_truth_count": 106
+        }
+      }
+    },
+    "float": {
+      "images": 800,
+      "ap50": 0.9723373922479609,
+      "ap50_95": 0.796714836036934,
+      "per_class": {
+        "PIN_破损": {
+          "class_id": 0,
+          "ap50": 0.9862559377098902,
+          "ap50_95": 0.8110158479819883,
+          "ground_truth_count": 680
+        },
+        "PIN_裂痕": {
+          "class_id": 1,
+          "ap50": 0.926553459108627,
+          "ap50_95": 0.7184810258139416,
+          "ground_truth_count": 392
+        },
+        "PIN_击穿": {
+          "class_id": 2,
+          "ap50": 0.995,
+          "ap50_95": 0.9733938245248543,
+          "ground_truth_count": 84
+        },
+        "PIN_薄膜破损": {
+          "class_id": 3,
+          "ap50": 0.9796643941150484,
+          "ap50_95": 0.7748598507401445,
+          "ground_truth_count": 361
+        },
+        "PIN_电极缺失": {
+          "class_id": 4,
+          "ap50": 0.995,
+          "ap50_95": 0.8653601900679655,
+          "ground_truth_count": 141
+        },
+        "PIN_异物": {
+          "class_id": 5,
+          "ap50": 0.985,
+          "ap50_95": 0.8811049565317471,
+          "ground_truth_count": 100
+        },
+        "PIN_有机物污染": {
+          "class_id": 6,
+          "ap50": 0.8937514185433659,
+          "ap50_95": 0.7471085113827773,
+          "ground_truth_count": 353
+        },
+        "PIN_部分缺失": {
+          "class_id": 7,
+          "ap50": 0.995,
+          "ap50_95": 0.731432363251531,
+          "ground_truth_count": 78
+        },
+        "PIN_冗余": {
+          "class_id": 8,
+          "ap50": 0.9948113207547169,
+          "ap50_95": 0.6676769540374572,
+          "ground_truth_count": 106
+        }
+      }
+    },
+    "int8": {
+      "images": 800,
+      "ap50": 0.9686166752521037,
+      "ap50_95": 0.7590691387454288,
+      "per_class": {
+        "PIN_破损": {
+          "class_id": 0,
+          "ap50": 0.9761689335293328,
+          "ap50_95": 0.7678957336446639,
+          "ground_truth_count": 680
+        },
+        "PIN_裂痕": {
+          "class_id": 1,
+          "ap50": 0.922726646530305,
+          "ap50_95": 0.6696025413056554,
+          "ground_truth_count": 392
+        },
+        "PIN_击穿": {
+          "class_id": 2,
+          "ap50": 0.995,
+          "ap50_95": 0.963267857142857,
+          "ground_truth_count": 84
+        },
+        "PIN_薄膜破损": {
+          "class_id": 3,
+          "ap50": 0.9735395208145382,
+          "ap50_95": 0.7283981051882525,
+          "ground_truth_count": 361
+        },
+        "PIN_电极缺失": {
+          "class_id": 4,
+          "ap50": 0.995,
+          "ap50_95": 0.8606011279509641,
+          "ground_truth_count": 141
+        },
+        "PIN_异物": {
+          "class_id": 5,
+          "ap50": 0.985,
+          "ap50_95": 0.8528547346667986,
+          "ground_truth_count": 100
+        },
+        "PIN_有机物污染": {
+          "class_id": 6,
+          "ap50": 0.889077240545701,
+          "ap50_95": 0.6906894385287847,
+          "ground_truth_count": 353
+        },
+        "PIN_部分缺失": {
+          "class_id": 7,
+          "ap50": 0.995,
+          "ap50_95": 0.6721007489006985,
+          "ground_truth_count": 78
+        },
+        "PIN_冗余": {
+          "class_id": 8,
+          "ap50": 0.9860377358490567,
+          "ap50_95": 0.6262119613801849,
+          "ground_truth_count": 106
+        }
+      }
+    }
+  },
+  "float_comparison_pass": true,
+  "int8_comparison_pass": false
+}

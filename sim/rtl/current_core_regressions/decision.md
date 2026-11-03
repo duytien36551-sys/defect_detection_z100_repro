@@ -1,0 +1,1 @@
+Diagnostic-only T+1 fault/cancel publication, following counter_fault_snapshot_advisor. Freeze counter_next, identity, outcome and overflow at original terminal T; close event at T. Publish valid/code at T+1. Success unchanged. Reset and event_start clear pending with priority. Legacy registers and backend logic unchanged.

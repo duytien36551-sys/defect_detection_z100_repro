@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "required_classes": ["scratch", "dent"],
+  "evaluations": [
+    {
+      "id": "float-val",
+      "split": "frozen-validation",
+      "backend": "float",
+      "model_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source_weight_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "dataset_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "protocol_id": "det-v1-conf050-iou050",
+      "images": 20,
+      "normal_images": 2,
+      "false_positive_normal_images": 1,
+      "aggregate_ap50_95": 0.72,
+      "classes": [
+        {"name": "scratch", "targets": 10, "tp": 8, "fp": 1, "fn": 2, "ap50": 0.91, "ap50_95": 0.70},
+        {"name": "dent", "targets": 5, "tp": 4, "fp": 1, "fn": 1, "ap50": 0.88, "ap50_95": 0.74}
+      ]
+    },
+    {
+      "id": "int8-val",
+      "split": "frozen-validation",
+      "backend": "int8-reference",
+      "model_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "source_weight_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "dataset_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "protocol_id": "det-v1-conf050-iou050",
+      "images": 20,
+      "normal_images": 2,
+      "false_positive_normal_images": 1,
+      "aggregate_ap50_95": 0.69,
+      "classes": [
+        {"name": "scratch", "targets": 10, "tp": 7, "fp": 2, "fn": 3, "ap50": 0.87, "ap50_95": 0.66},
+        {"name": "dent", "targets": 5, "tp": 4, "fp": 1, "fn": 1, "ap50": 0.87, "ap50_95": 0.72}
+      ]
+    }
+  ],
+  "quantization_comparison": {"float_evaluation_id": "float-val", "quantized_evaluation_id": "int8-val"}
+}

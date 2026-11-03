@@ -1,0 +1,64 @@
+{
+  "case": "07_dma_normal_batch",
+  "skill": "zynq-dma-debugging",
+  "review_method": "main-thread full-context deterministic evidence audit; NOT independent agent behavioral validation",
+  "status": "evidence_checks_pass",
+  "authenticity": "authentic_recorded_board_batch",
+  "facts": {
+    "completed": 20,
+    "passed": 20,
+    "median_seconds_recomputed_from_rounded_samples": 3.3825000000000003,
+    "median_seconds_recorded_3_decimals": 3.383,
+    "median_rounding_tolerance_seconds": 0.0005,
+    "min_seconds": 3.359,
+    "max_seconds": 3.406,
+    "recorded_identity": {
+      "runtime": "board",
+      "protocol": "joint18-v8/1",
+      "model_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+      "classes_sha256": "5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1",
+      "input": "rgb-u8-416-letterbox114",
+      "box_space": "normalized-model-xyxy",
+      "local_address": [
+        "192.168.10.1",
+        55901
+      ],
+      "peer_address": [
+        "192.168.10.2",
+        5001
+      ]
+    },
+    "scope_note": "Cold boot and DMA recovery are separate acceptance stages."
+  },
+  "findings": [
+    "All 20 recorded requests pass and their result comparisons match. This supports that batch only; it is not fault-recovery testing, a cold-boot series or a fresh board run. Next checks can reconcile saved log and identity without another request."
+  ],
+  "checks": [
+    "source snapshot SHA-256 intact",
+    "JSONL request counts, parity flags and median recomputed"
+  ],
+  "input_sha256": {
+    "batch_acceptance.json": "d1b566a36adaff79bd12fe09f8bff343214f2ecf2d9434d58837aca741135452",
+    "batch_log.log": "5a8816fc3215c0a589edba098f79c62edc1a3232018ae60ddd849776ef9df1a4",
+    "requests.jsonl": "85194fc32dc559899e8bca2aa02e6af97a4bcab23b300276a362cc36f0e83ac6"
+  },
+  "evidence_refs": [
+    {
+      "path": "cases_20261025/07_dma_normal_batch/inputs/batch_acceptance.json",
+      "sha256": "d1b566a36adaff79bd12fe09f8bff343214f2ecf2d9434d58837aca741135452"
+    },
+    {
+      "path": "cases_20261025/07_dma_normal_batch/inputs/batch_log.log",
+      "sha256": "5a8816fc3215c0a589edba098f79c62edc1a3232018ae60ddd849776ef9df1a4"
+    },
+    {
+      "path": "cases_20261025/07_dma_normal_batch/inputs/requests.jsonl",
+      "sha256": "85194fc32dc559899e8bca2aa02e6af97a4bcab23b300276a362cc36f0e83ac6"
+    }
+  ],
+  "not_performed": [
+    "new training/model evaluation or model selection",
+    "board operations",
+    "blind independent model execution"
+  ]
+}

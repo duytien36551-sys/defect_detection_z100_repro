@@ -1,0 +1,18 @@
+{
+  "schema": "z100-accum33-fabric32-failed-attempts/1",
+  "evidence_source": "Worker execution record from this task turn; no dedicated logs were persisted for these two shell attempts.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "method": "PowerShell full-block string Replace against frozen MAC",
+      "result": "failed_before_candidate_write",
+      "error": "Expected exactly one accumulator generate block; found 0. Frozen source was CRLF while constructed comparison text used a different newline form."
+    },
+    {
+      "attempt": 2,
+      "method": "PowerShell line-anchored regular-expression replacement",
+      "result": "failed_before_candidate_write",
+      "error": "Expected one site-feedback instance block; found 0. CRLF line endings prevented the line-end anchor from matching."
+    }
+  ]
+}

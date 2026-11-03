@@ -1,0 +1,66 @@
+{
+  "step": 0,
+  "input_name": "A",
+  "input": "source_project\\validation\\board_z100\\pin640_epoch200_headconcat_host\\20261024T104121.305479Z\\input_rgb.bin",
+  "expected_heads": "source_project\\validation\\board_z100\\pin640_epoch200_headconcat_host\\20261024T104121.305479Z\\expected_heads_int8.bin",
+  "network_used": true,
+  "retry_count": 0,
+  "status": "VALIDATED_BOARD_RESULT",
+  "raw_parity": "NOT_EVALUATED; capture heads before next step",
+  "detection_reference": "NOT_EVALUATED; result envelope and detection schema validated only",
+  "request_id": "5c1fe3f6388d4d09a8deb14324a6786b",
+  "detections_model_pixels": [
+    {
+      "class_id": 6,
+      "class_name": "PIN_\u6709\u673a\u7269\u6c61\u67d3",
+      "score": 0.87188375,
+      "xyxy": [
+        86.82688704,
+        356.07326528,
+        200.00102976,
+        423.55358144
+      ]
+    },
+    {
+      "class_id": 0,
+      "class_name": "PIN_\u7834\u635f",
+      "score": 0.866531312,
+      "xyxy": [
+        373.51764672,
+        545.34271232,
+        477.5776288,
+        587.81616192
+      ]
+    }
+  ],
+  "result": {
+    "type": "RESULT",
+    "protocol": "pin9-v8/2-input640",
+    "runtime": "board",
+    "request_id": "5c1fe3f6388d4d09a8deb14324a6786b",
+    "box_space": "normalized-model-xyxy",
+    "detections": [
+      {
+        "class_id": 6,
+        "score": 0.87188375,
+        "xyxy": [
+          0.135667011,
+          0.556364477,
+          0.312501609,
+          0.661802471
+        ]
+      },
+      {
+        "class_id": 0,
+        "score": 0.866531312,
+        "xyxy": [
+          0.583621323,
+          0.852097988,
+          0.746215045,
+          0.918462753
+        ]
+      }
+    ]
+  },
+  "transaction_seconds": 0.34299999999348074
+}

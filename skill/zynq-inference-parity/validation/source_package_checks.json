@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "script_sha256": "7b5f4feccdabd373bfbf563f466d339657c23f67e247233c1561c022b227fadd",
+  "comparison_cases": [
+    {
+      "case": "empty",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "case": "equal",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "case": "changed-byte",
+      "status": "pass",
+      "exit_code": 1
+    },
+    {
+      "case": "longer-observed",
+      "status": "pass",
+      "exit_code": 1
+    },
+    {
+      "case": "shorter-observed",
+      "status": "pass",
+      "exit_code": 1
+    },
+    {
+      "case": "mismatch-and-tail",
+      "status": "pass",
+      "exit_code": 1
+    },
+    {
+      "case": "chunk-boundary",
+      "status": "pass",
+      "exit_code": 1
+    },
+    {
+      "case": "multi-chunk-tail",
+      "status": "pass",
+      "exit_code": 1
+    },
+    {
+      "case": "missing-input",
+      "status": "pass",
+      "exit_code": 2
+    },
+    {
+      "case": "missing-arguments",
+      "status": "pass",
+      "exit_code": 2
+    }
+  ],
+  "evidence_snapshots_verified": 7,
+  "authored_markdown_links_verified": 13,
+  "new_board_runs": 0,
+  "new_training_runs": 0,
+  "independent_cross_project_reuse": "not_evaluated",
+  "limits": [
+    "Checks establish script behavior and package integrity, not hardware or model quality.",
+    "Historical source snapshots retain original-project links; raw experiment files are not bundled.",
+    "Skill behavioral effectiveness has not been independently tested by a second team."
+  ]
+}

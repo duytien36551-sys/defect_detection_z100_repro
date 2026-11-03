@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "scope": "Portable examples derived from authentic local records; author paths/serial redacted, JSON serialized anew. Text decoded UTF-8, falling back to GB18030 with replacement for legacy logs. Original and distributed hashes are separate; no new training/board run.",
+  "files": [
+    {
+      "snapshot_path": "examples/01_identity_normal/inputs/build_manifest.json",
+      "source_origin": "v8/deployment/artifacts/stage28_tile64_run_cache_20261018_candidate/manifest.json",
+      "source_sha256": "3ead1956a3e49b2821583793094a9aa5f2503d0b9f2dc50beb027f8a1082b3d7",
+      "snapshot_sha256": "046b13776f6085d5434034774551a778c9be0e475299246b68432f3c48a86544",
+      "bytes": 3792,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/01_identity_normal/inputs/build_report.json",
+      "source_origin": "v8/deployment/artifacts/stage28_tile64_run_cache_20261018_candidate/programming/build_report.json",
+      "source_sha256": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9",
+      "snapshot_sha256": "99457c81a9cd601f81a27609e924a99606daa698569258a93ca77b1e728e0f68",
+      "bytes": 7440,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/01_identity_normal/inputs/board_batch_acceptance.json",
+      "source_origin": "v8/deployment/validation/board_session/tile64_reset_fullinit2_batch20/batch_acceptance.json",
+      "source_sha256": "d1b566a36adaff79bd12fe09f8bff343214f2ecf2d9434d58837aca741135452",
+      "snapshot_sha256": "1df503c1b5ba05c2c963fde6dd481603b965e6ad8b3a5721f536bd4cd6bdb135",
+      "bytes": 40277,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/02_identity_missing_runtime_derived/inputs/build_manifest.json",
+      "source_origin": "v8/deployment/artifacts/stage28_tile64_run_cache_20261018_candidate/manifest.json",
+      "source_sha256": "3ead1956a3e49b2821583793094a9aa5f2503d0b9f2dc50beb027f8a1082b3d7",
+      "snapshot_sha256": "046b13776f6085d5434034774551a778c9be0e475299246b68432f3c48a86544",
+      "bytes": 3792,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/02_identity_missing_runtime_derived/inputs/build_report.json",
+      "source_origin": "v8/deployment/artifacts/stage28_tile64_run_cache_20261018_candidate/programming/build_report.json",
+      "source_sha256": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9",
+      "snapshot_sha256": "99457c81a9cd601f81a27609e924a99606daa698569258a93ca77b1e728e0f68",
+      "bytes": 7440,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "validation/independent/01_identity_normal/report.md",
+      "source_origin": "validation/independent_identity_20261025/01_identity_normal/report.md",
+      "source_sha256": "9d4e5475628f675b8b4013eb3eeb20efdd8683affce546d50289a5036dd173e3",
+      "snapshot_sha256": "4cd269c4655e19fc27b53a225cc1557841ccbea1b9e64383741f7d3efe35c9b4",
+      "bytes": 5961,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/01_identity_normal/report.json",
+      "source_origin": "validation/independent_identity_20261025/01_identity_normal/report.json",
+      "source_sha256": "949dd6d90194cefa57a28f44314e46c53afe6f48e47d5be1dd05173ec6701882",
+      "snapshot_sha256": "aac5b84fac940a64885e91d24c9e1bc1c2df56dbf198335169dc544f8a349b98",
+      "bytes": 27863,
+      "redacted_or_reserialized": true,
+      "editorial_correction": true
+    },
+    {
+      "snapshot_path": "validation/independent/02_identity_missing_runtime_derived/report.md",
+      "source_origin": "validation/behavior_run_b_20261025/02_identity_missing_runtime_derived/report.md",
+      "source_sha256": "8614f03dcf13d4c924e1fa6cf17041da77897c0a23a09fd1a9693b7427cb38d1",
+      "snapshot_sha256": "8614f03dcf13d4c924e1fa6cf17041da77897c0a23a09fd1a9693b7427cb38d1",
+      "bytes": 1684,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/02_identity_missing_runtime_derived/report.json",
+      "source_origin": "validation/behavior_run_b_20261025/02_identity_missing_runtime_derived/report.json",
+      "source_sha256": "ca1fcb3a30b11b8b95fa41159f1d800397bef1c76cae6d656659cae4d19ae425",
+      "snapshot_sha256": "24a1baac871bd5475fe01876d4b88f8b4cd48c6f04e24bec4f41605126a5beb4",
+      "bytes": 8078,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    }
+  ],
+  "submission_transform": "2026-10-31 standalone skill folder; Markdown navigation converted to readable text and workflow included in entry/readme. Original source hashes preserved."
+}

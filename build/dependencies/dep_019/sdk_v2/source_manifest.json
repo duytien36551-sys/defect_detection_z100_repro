@@ -1,0 +1,17 @@
+{
+  "status": "PREPARED_EXACT_ID_YT8531_LWIP_BRANCH_NOT_TESTED",
+  "sdk_original": "vendor_sdk\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip220_v1_4\\src\\lwip-2.2.0\\contrib\\ports\\xilinx\\netif\\xemacpsif_physpeed.c",
+  "sdk_original_sha256": "bb58d502d22544d34827c1262e15c2b5a6dc139c267dbb1ba29f110e8958b8d1",
+  "candidate_sha256": "94b074d1623a326729fb99ce2258623bb6477e3ebbf5d5605783f7c43d4bf187",
+  "sources": {
+    "source_project\\deployment\\hardware\\z100_2026\\platform_v13c\\firmware_v1\\phy_v1\\sdk_v2\\xemacpsif_physpeed.c": "94b074d1623a326729fb99ce2258623bb6477e3ebbf5d5605783f7c43d4bf187",
+    "source_project\\deployment\\hardware\\z100_2026\\platform_v13c\\firmware_v1\\phy_v1\\z100_yt8531_link_v1.c": "7ece9860b4f2a9695b03c500d26bf84ececa550dd038bce8ba29bacd357b4d7b",
+    "source_project\\deployment\\hardware\\z100_2026\\platform_v13c\\firmware_v1\\phy_v1\\z100_yt8531_link_v1.h": "96e6b17a5306bf30546a2875e1f65c9e50d9949396a9b15199a9973c38df35b1"
+  },
+  "register_reference": "https://github.com/torvalds/linux/blob/master/drivers/net/phy/motorcomm.c",
+  "limits": [
+    "Read-only strap-preserving link observation, not delay configuration.",
+    "PHY/RGMII timing and physical link must still be qualified.",
+    "Auto-detect only; forced-speed mode is not accepted."
+  ]
+}

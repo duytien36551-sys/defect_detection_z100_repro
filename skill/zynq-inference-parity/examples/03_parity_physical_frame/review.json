@@ -1,0 +1,62 @@
+{
+  "case": "03_parity_physical_frame",
+  "skill": "zynq-inference-parity",
+  "review_method": "main-thread full-context deterministic evidence audit; NOT independent agent behavioral validation",
+  "status": "evidence_checks_pass",
+  "authenticity": "authentic_physical_z100_single_frame_result_and_board_output",
+  "facts": {
+    "stored_bytes": 613248,
+    "logical_bytes": 613200,
+    "padding_bytes": 48,
+    "recomputed_logical_sha256": "719c01a206b9ceeef7ed9d8c5bfc82c8edc12fd6294c6d8a342ff24ab1fbd707",
+    "recorded_nodes": 163,
+    "recorded_counts": {
+      "v8_fullmodel_stage": 6,
+      "v8_fullmodel_error": 0,
+      "v8_fullmodel_detail": 0,
+      "v8_fullmodel_cpu_cpsr": 1610612959,
+      "v8_fullmodel_cpu_sctlr": 147134589,
+      "v8_fullmodel_cpu_cpacr": 15728640,
+      "v8_fullmodel_cpu_fpexc": 1073741824,
+      "v8_fullmodel_result": 0,
+      "v8_fullmodel_completed": 1,
+      "v8_fullmodel_count": 2,
+      "v8_fullmodel_loads": 94,
+      "v8_fullmodel_runs": 6319,
+      "v8_fullmodel_dma_stage": 6,
+      "v8_fullmodel_dma_error": 0
+    },
+    "scope": "one fixed validation image, current provisional baseline INT8 package"
+  },
+  "findings": [
+    "Recomputed logical board-output hash matches the prior record; the recorded expected hash is equal. Independent host-reference bytes are absent, so this does not reproduce the original byte comparison. One recorded frame cannot establish dataset accuracy, repeatability or P95."
+  ],
+  "checks": [
+    "source snapshot SHA-256 intact",
+    "logical extent distinguished from storage padding; prior assertion distinguished from new comparison"
+  ],
+  "input_sha256": {
+    "board_result.json": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c",
+    "first_frame_summary.json": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9",
+    "raw_heads_padded.bin": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555"
+  },
+  "evidence_refs": [
+    {
+      "path": "cases_20261025/03_parity_physical_frame/inputs/board_result.json",
+      "sha256": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c"
+    },
+    {
+      "path": "cases_20261025/03_parity_physical_frame/inputs/raw_heads_padded.bin",
+      "sha256": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555"
+    },
+    {
+      "path": "cases_20261025/03_parity_physical_frame/inputs/first_frame_summary.json",
+      "sha256": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9"
+    }
+  ],
+  "not_performed": [
+    "new training/model evaluation or model selection",
+    "board operations",
+    "blind independent model execution"
+  ]
+}

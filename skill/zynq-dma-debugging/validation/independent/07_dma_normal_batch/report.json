@@ -1,0 +1,146 @@
+{
+  "case": "07_dma_normal_batch",
+  "task": "Build a traceable timeline for the existing initialized request batch, identify run/request timing scope, state recovery evidence gaps and propose a safe read-only check.",
+  "review_type": "independent read-only evidence evaluation",
+  "skills_loaded": [
+    {
+      "name": "zynq-dma-debugging",
+      "version": "1.0.0-rc1",
+      "skill_path": "<project-root>\\skill\\installed_sources\\zynq-dma-debugging\\skill.md",
+      "workflow_path": "<project-root>\\skill\\installed_sources\\zynq-dma-debugging\\references\\workflow.md"
+    }
+  ],
+  "evidence": {
+    "acceptance": "<project-root>\\skill\\validation\\cases_20261025\\07_dma_normal_batch\\inputs\\batch_acceptance.json",
+    "log": "<project-root>\\skill\\validation\\cases_20261025\\07_dma_normal_batch\\inputs\\batch_log.log",
+    "requests": "<project-root>\\skill\\validation\\cases_20261025\\07_dma_normal_batch\\inputs\\requests.jsonl"
+  },
+  "findings": {
+    "acceptance": {
+      "status": "complete",
+      "dry_run": false,
+      "case_parity_pass": true,
+      "batch_acceptance_pass": true,
+      "planned_count": 20,
+      "requests_completed": 20,
+      "first_error": null,
+      "cold_boot_dma_recovery_note": "Cold boot and DMA recovery are separate acceptance stages."
+    },
+    "run_identity": {
+      "protocol": "joint18-v8/1",
+      "model_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+      "model_matches_declared_baseline": true,
+      "classes_sha256": "5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1",
+      "input": "rgb-u8-416-letterbox114",
+      "box_space": "normalized-model-xyxy",
+      "local_address": [
+        "192.168.10.1",
+        55901
+      ],
+      "peer_address": [
+        "192.168.10.2",
+        5001
+      ],
+      "interface_index": 23
+    },
+    "timeline": {
+      "started_at_utc": "2026-10-15T19:15:59.749551+00:00",
+      "identity_probe_at_utc": "2026-10-15T19:15:59.805269+00:00",
+      "first_request_started_at_utc": "2026-10-15T19:15:59.807276+00:00",
+      "last_request_finished_at_utc": "2026-10-15T19:17:07.597458+00:00",
+      "finished_at_utc": "2026-10-15T19:17:07.604033+00:00",
+      "start_to_finish_recomputed_seconds": 67.854482,
+      "reported_overall_seconds": 67.86,
+      "first_request_to_last_finish_seconds": 67.790182
+    },
+    "requests": {
+      "count": 20,
+      "pass_count": 20,
+      "pcb_count": 10,
+      "pin_count": 10,
+      "unique_image_hashes": 2,
+      "unique_tensor_hashes": 2,
+      "repeated_inputs": true,
+      "acceptance_jsonl_records_identical": true,
+      "log_embedded_json_matches_acceptance": true,
+      "all_row_comparisons_exact_pass": true,
+      "elapsed_seconds": {
+        "median_recomputed": 3.3825,
+        "reported_median": 3.383,
+        "min": 3.359,
+        "max": 3.406,
+        "sum": 67.671,
+        "timestamp_duration_median": 3.386718,
+        "timestamp_duration_min": 3.36299,
+        "timestamp_duration_max": 3.399187,
+        "median_paired_elapsed_minus_timestamp_seconds": -0.0005415,
+        "p95_supplied": false
+      },
+      "classes": {
+        "pcb": {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "requests": 10
+        },
+        "pin": {
+          "class_id": 9,
+          "class_name": "PIN_破损",
+          "requests": 10
+        }
+      }
+    },
+    "coordinate_contract": {
+      "reported": "normalized-model-xyxy",
+      "example_xyxy": [
+        [
+          112.27323824,
+          108.605395874,
+          123.00174187,
+          118.995718754
+        ],
+        [
+          17.209385039930766,
+          143.33939103399996,
+          35.175350524230765,
+          211.40767203099998
+        ]
+      ],
+      "example_values_within_0_to_1": false,
+      "semantics_resolved": false
+    },
+    "recovery": {
+      "failed_cases_present": false,
+      "cold_boot_or_dma_recovery_tested": false,
+      "dma_register_or_descriptor_capture_present": false,
+      "tlast_capture_present": false,
+      "cache_attributes_or_sync_source_present": false
+    },
+    "safe_read_only_next_check": "Review saved host-side artifacts and matching driver source for coordinate scaling, ownership and cache synchronization. If a past failure snapshot exists, inspect the saved sequence/status only; do not issue board commands. Not executed in this review."
+  },
+  "limitations": [
+    "Only two unique input/tensor pairs are repeated across 20 requests.",
+    "Coordinate declaration conflicts with observed coordinate magnitudes.",
+    "Elapsed fields differ from timestamp durations; timer boundaries are unspecified and no P95 is supplied.",
+    "No fault/recovery run, status snapshot, descriptor, TLAST record, buffer ownership trace, cache attribute, or driver synchronization code is included."
+  ],
+  "operation_log": [
+    "Read task.md and case inputs only, plus required skill and workflow.",
+    "Used standard-library JSON/JSONL parsing, timestamp arithmetic and SHA-256.",
+    "No hardware/network/reset/repeat request/training/process operation; no agents used.",
+    "Wrote reports only in assigned independent_normal_20261025 directory."
+  ],
+  "input_hash_check": {
+    "checkpoint": "pre-report-write and post-report-write",
+    "pre_report_write": {
+      "batch_acceptance.json": "d1b566a36adaff79bd12fe09f8bff343214f2ecf2d9434d58837aca741135452",
+      "batch_log.log": "5a8816fc3215c0a589edba098f79c62edc1a3232018ae60ddd849776ef9df1a4",
+      "requests.jsonl": "85194fc32dc559899e8bca2aa02e6af97a4bcab23b300276a362cc36f0e83ac6"
+    },
+    "post_report_write": {
+      "batch_acceptance.json": "d1b566a36adaff79bd12fe09f8bff343214f2ecf2d9434d58837aca741135452",
+      "batch_log.log": "5a8816fc3215c0a589edba098f79c62edc1a3232018ae60ddd849776ef9df1a4",
+      "requests.jsonl": "85194fc32dc559899e8bca2aa02e6af97a4bcab23b300276a362cc36f0e83ac6"
+    },
+    "all_unchanged": true
+  }
+}

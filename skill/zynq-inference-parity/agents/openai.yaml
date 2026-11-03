@@ -1,0 +1,4 @@
+interface:
+  display_name: "分层一致性与量化验证"
+  short_description: "逐层核对浮点、整数参考和实板输出，定位计算差异与量化精度损失"
+  default_prompt: "使用 $zynq-inference-parity，自动查找当前工程材料，按对应工作流执行并说明证据与缺项。"

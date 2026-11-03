@@ -1,0 +1,50 @@
+{
+  "format": "V8PK",
+  "version": 1,
+  "domain": "pin",
+  "class_count": 9,
+  "reg_max": 16,
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "input_size": 640,
+  "source_class_ids": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "model_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+  "parameter_bytes": 3081600,
+  "arena_bytes": 3276800,
+  "input_bytes": 1228800,
+  "scratch_bytes": 6553600,
+  "total_runtime_buffers": 14740800,
+  "rgb_input_bytes": 1228800,
+  "nchw_input_bytes": 1228800,
+  "float_head_bytes": 2452800,
+  "protocol": "pin9-v8/2-input640",
+  "classes": [
+    "PIN_破损",
+    "PIN_裂痕",
+    "PIN_击穿",
+    "PIN_薄膜破损",
+    "PIN_电极缺失",
+    "PIN_异物",
+    "PIN_有机物污染",
+    "PIN_部分缺失",
+    "PIN_冗余"
+  ],
+  "node_count": 163,
+  "parameter_crc32": 2213989717,
+  "accuracy_accepted": false,
+  "note": "Activation arena fits the PIN640 candidate budget. Total linked DDR including weights/scratch requires linker check; no board-ready claim."
+}

@@ -1,0 +1,32 @@
+{
+  "scope": "JTAG RGB input through complete board inference; excludes network and JTAG transfers",
+  "task": "pcb",
+  "checkpoint_sha256": "e53cc905a4e3f3b2749d29d6ac9cc6a651b6b2bce702d7e2bceab52add78f77b",
+  "model_package_sha256": "dbe8b874fce2e5740ed778b311eb2ad31f5648dc28b9d6e4da91b6636f045ea5",
+  "firmware_elf_sha256": "9a4868d8c1235264616557d2cb86a07a43d598c679d7aa3c3868e2d07badbab0",
+  "rc": 0,
+  "head_elements": 291018,
+  "heads_byte_exact": true,
+  "actual_heads_sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8",
+  "expected_heads_sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8",
+  "phase_seconds": {
+    "preprocess": 0.006278591817920837,
+    "graph": 1.405357483244633,
+    "dequantization": 0.007425788784652125,
+    "decode": 0.04785850661210331,
+    "total": 1.4669219124592645
+  },
+  "ticks_per_second": 333333343,
+  "vfp_selftest": {
+    "magic": 1446531665,
+    "safe": 1,
+    "mismatches": 0,
+    "error": 0,
+    "comparisons": 1233788
+  },
+  "passed": true,
+  "reference_dequantization": "INT8 multiplied by float64 scale, then cast to float32; matches board C",
+  "decoded_detections_match": true,
+  "reference_updated_after_capture": true,
+  "vfp_selftest_passed": true
+}

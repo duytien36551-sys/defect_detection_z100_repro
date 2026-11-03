@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "single_frame_profile_normalized",
+  "source": {
+    "path": "skill\\installed_sources\\zynq-ps-pl-performance\\examples\\06_pspl_single_frame_limit\\inputs\\profile_summary.json",
+    "sha256_recomputed": "d8b88491c82e753bc09a170849d3f04f96778fb3486cd1c0e4a18e555999b896"
+  },
+  "field_mapping": {
+    "phase_ms": "phase_milliseconds.{preprocess_ticks,graph_ticks,dequantization_ticks,decode_ticks,total_ticks} (unit from source schema)",
+    "nested_counters": "nested_counter_milliseconds; preserved individually, never summed",
+    "declared_input_hashes": "inputs mapping; declarations only, not rehashed unless source file is separately provided",
+    "unique_input_count": "single-frame scope; no distinct-request sequence is present"
+  },
+  "identity": {
+    "timer_hz": 333333343,
+    "input_hashes_declared": {
+      "validation\\board_z100\\reference_assumed_jtag_466_v1\\full_model_execution\\profile_frame_20261023T052327Z\\result.json": "dfb56c4ea355983dde9e18996db37b24fddc177a55d2a4d2851577eaa1677a74",
+      "validation\\board_z100\\reference_assumed_jtag_466_v1\\full_model_execution\\profile_frame_20261023T052327Z\\profile_block.bin": "e81752f1df9877560b5dec867702dea434acf2f2b8e3115ef8dd35fab9d9f9d0",
+      "validation\\board_z100\\reference_assumed_jtag_466_v1\\full_model_execution\\profile_frame_20261023T052327Z\\raw_heads_padded.bin": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555",
+      "validation\\board_z100\\reference_assumed_jtag_466_v1\\full_model_execution\\first_frame_summary.json": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9"
+    },
+    "runtime_identity": "not fully established by the profile summary alone"
+  },
+  "sample_count": 1,
+  "unique_input_count": null,
+  "phase_ms": {
+    "preprocess": 27.571154200436528,
+    "graph": 6345.577855978242,
+    "dequantization": 16.22797452938874,
+    "decode": 108.25404886063258,
+    "total": 6497.6336705686235
+  },
+  "phase_sum_ms": 6497.6310335687,
+  "total_minus_phase_sum_ms": 0.002636999923197436,
+  "single_observation_total_ms": 6497.6336705686235,
+  "p50_ms": null,
+  "p95_ms": null,
+  "nested_counters_ms": {
+    "load_pack_ticks": 69.25895199149039,
+    "run_pack_ticks": 940.585793723012,
+    "load_transfer_ticks": 18.924068451202015,
+    "run_transfer_ticks": 2009.720860718095,
+    "dma_prepare_ticks": 404.59825226665066,
+    "dma_poll_ticks": 1525.1683207701187,
+    "dma_finalize_ticks": 95.1387002409777,
+    "response_parse_ticks": 416.5058039213317,
+    "conv_requant_ticks": 2080.03000467913
+  },
+  "nested_counter_sum_ms": null,
+  "profiling_status": {
+    "sustained_fps_measured": false,
+    "release_eligible": false,
+    "instrumentation_overhead_established": false
+  },
+  "limitations": [
+    "One profile summary observation: no latency distribution or P95. Unique image count is reported only when explicitly present.",
+    "Nested counters overlap and must not be added to exclusive phases.",
+    "Source input paths and hashes are historical declarations; this tool hashes only the selected JSON file.",
+    "Single-frame timing does not establish sustained FPS or end-to-end behavior."
+  ]
+}

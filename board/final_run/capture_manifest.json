@@ -1,0 +1,11 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "files": {
+    "hardware_workspace\\gpt_softpack_launch02\\prepare_capture.py": "b730ff3223417196187a88c431eb921df24c23f2d1954690da52c233ac327dc7",
+    "hardware_workspace\\gpt_softpack_launch02\\capture_failure.tcl": "9efd29dd4dd8e8bcfcadb8dd140ab360ab55d10dd025baec84c85984924fb5bc",
+    "hardware_workspace\\gpt_softpack_build_plan01\\build_output\\native_board_pool.elf": "a1fb69729ac1dd2f4ec142819b0ec703fe1c8b8a548c84f9b1415a4683a9cdae",
+    "hardware_workspace\\gpt_softpack_launch02\\snapshot_scoped.bin": "ee8ee7458b9df147ab3858d97c953972f15ac07a45f1a0995661432c21e398f2",
+    "hardware_workspace\\gpt_acp_cpu_snapshot01\\snapshot.elf": "40370c8039d5ee57a7527c04a0a7e48149ac71295a8a09dcd40d4cde0edb1ed3",
+    "hardware_workspace\\gpt_mmio_fault_capture_build01\\capture.elf": "d5fecdac9b9341cd851f927808b23465ea90cacf62934af91b4eb97f8a424ea0"
+  }
+}

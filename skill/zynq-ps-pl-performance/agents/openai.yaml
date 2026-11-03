@@ -1,0 +1,4 @@
+interface:
+  display_name: "PS/PL 划分与性能优化"
+  short_description: "结合实测耗时、带宽和布线报告定位瓶颈，制定软硬件协同优化实验"
+  default_prompt: "使用 $zynq-ps-pl-performance，自动查找当前工程材料，按对应工作流执行并说明证据与缺项。"

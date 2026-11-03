@@ -1,0 +1,56 @@
+{
+  "case": "02_identity_missing_runtime_derived",
+  "skill": "zynq-model-identity",
+  "review_method": "main-thread full-context deterministic evidence audit; NOT independent agent behavioral validation",
+  "status": "evidence_checks_pass",
+  "authenticity": "derived_missing_evidence_case",
+  "facts": {
+    "candidate_model_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "candidate_elf_sha256": "198d962566ff42302f60e6f491aca9f155f508e4b62a752f095233d29d7a88e4",
+    "candidate_package_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "xsa_interface": {
+      "xsa": "<local-path>",
+      "xsa_sha256": "66669f87ef9a4ff2c3aa6fecc09adaee78beb0b0c6fa11a96b9e3ecf4db52f50",
+      "accelerator_instance": "yolo_accel_top_0",
+      "control_base_address": "0x43c10000",
+      "inherited_bsp_base_address": "0x43c10000",
+      "bsp_address_match": true,
+      "axi_dma_instance": "axi_dma_0",
+      "axi_dma_length_width_bits": 20,
+      "register_connections": {
+        "slave_reg0": "yolo_accel_top_0.slave_lite_reg0",
+        "slave_reg1": "yolo_accel_top_0.slave_lite_reg1",
+        "slave_reg2": "yolo_accel_top_0.slave_lite_reg2",
+        "slave_reg3": "yolo_accel_top_0.slave_lite_reg3"
+      },
+      "stream_ports_present": true
+    },
+    "candidate_time": "2026-10-18T13:16:26.190455+08:00"
+  },
+  "findings": [
+    "Only build evidence is present. Actual runtime identity and successful deployment cannot be established. This is a deliberately withheld-evidence fixture, not a new hardware failure."
+  ],
+  "checks": [
+    "source snapshot SHA-256 intact",
+    "missing runtime not inferred from build"
+  ],
+  "input_sha256": {
+    "build_manifest.json": "3ead1956a3e49b2821583793094a9aa5f2503d0b9f2dc50beb027f8a1082b3d7",
+    "build_report.json": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9"
+  },
+  "evidence_refs": [
+    {
+      "path": "cases_20261025/02_identity_missing_runtime_derived/inputs/build_manifest.json",
+      "sha256": "3ead1956a3e49b2821583793094a9aa5f2503d0b9f2dc50beb027f8a1082b3d7"
+    },
+    {
+      "path": "cases_20261025/02_identity_missing_runtime_derived/inputs/build_report.json",
+      "sha256": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9"
+    }
+  ],
+  "not_performed": [
+    "new training/model evaluation or model selection",
+    "board operations",
+    "blind independent model execution"
+  ]
+}

@@ -1,0 +1,3367 @@
+{
+  "format": "V8GRAPH",
+  "version": 1,
+  "domain": "pin",
+  "class_count": 9,
+  "input_size": 640,
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "classes": [
+    "PIN_破损",
+    "PIN_裂痕",
+    "PIN_击穿",
+    "PIN_薄膜破损",
+    "PIN_电极缺失",
+    "PIN_异物",
+    "PIN_有机物污染",
+    "PIN_部分缺失",
+    "PIN_冗余"
+  ],
+  "source_class_ids": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "nodes": [
+    {
+      "id": 0,
+      "op": "conv",
+      "inputs": [
+        -1
+      ],
+      "weight": "n0_w",
+      "bias": "n0_b",
+      "params": {
+        "stride": [
+          2,
+          2
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        16,
+        320,
+        320
+      ]
+    },
+    {
+      "id": 1,
+      "op": "silu",
+      "inputs": [
+        0
+      ],
+      "shape": [
+        1,
+        16,
+        320,
+        320
+      ]
+    },
+    {
+      "id": 2,
+      "op": "conv",
+      "inputs": [
+        1
+      ],
+      "weight": "n2_w",
+      "bias": "n2_b",
+      "params": {
+        "stride": [
+          2,
+          2
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        32,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 3,
+      "op": "silu",
+      "inputs": [
+        2
+      ],
+      "shape": [
+        1,
+        32,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 4,
+      "op": "conv",
+      "inputs": [
+        3
+      ],
+      "weight": "n4_w",
+      "bias": "n4_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        32,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 5,
+      "op": "silu",
+      "inputs": [
+        4
+      ],
+      "shape": [
+        1,
+        32,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 6,
+      "op": "slice",
+      "inputs": [
+        5
+      ],
+      "params": {
+        "start": 0,
+        "end": 16
+      },
+      "shape": [
+        1,
+        16,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 7,
+      "op": "slice",
+      "inputs": [
+        5
+      ],
+      "params": {
+        "start": 16,
+        "end": 32
+      },
+      "shape": [
+        1,
+        16,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 8,
+      "op": "conv",
+      "inputs": [
+        7
+      ],
+      "weight": "n8_w",
+      "bias": "n8_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        16,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 9,
+      "op": "silu",
+      "inputs": [
+        8
+      ],
+      "shape": [
+        1,
+        16,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 10,
+      "op": "conv",
+      "inputs": [
+        9
+      ],
+      "weight": "n10_w",
+      "bias": "n10_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        16,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 11,
+      "op": "silu",
+      "inputs": [
+        10
+      ],
+      "shape": [
+        1,
+        16,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 12,
+      "op": "add",
+      "inputs": [
+        7,
+        11
+      ],
+      "shape": [
+        1,
+        16,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 13,
+      "op": "concat",
+      "inputs": [
+        6,
+        7,
+        12
+      ],
+      "shape": [
+        1,
+        48,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 14,
+      "op": "conv",
+      "inputs": [
+        13
+      ],
+      "weight": "n14_w",
+      "bias": "n14_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        32,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 15,
+      "op": "silu",
+      "inputs": [
+        14
+      ],
+      "shape": [
+        1,
+        32,
+        160,
+        160
+      ]
+    },
+    {
+      "id": 16,
+      "op": "conv",
+      "inputs": [
+        15
+      ],
+      "weight": "n16_w",
+      "bias": "n16_b",
+      "params": {
+        "stride": [
+          2,
+          2
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 17,
+      "op": "silu",
+      "inputs": [
+        16
+      ],
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 18,
+      "op": "conv",
+      "inputs": [
+        17
+      ],
+      "weight": "n18_w",
+      "bias": "n18_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 19,
+      "op": "silu",
+      "inputs": [
+        18
+      ],
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 20,
+      "op": "slice",
+      "inputs": [
+        19
+      ],
+      "params": {
+        "start": 0,
+        "end": 32
+      },
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 21,
+      "op": "slice",
+      "inputs": [
+        19
+      ],
+      "params": {
+        "start": 32,
+        "end": 64
+      },
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 22,
+      "op": "conv",
+      "inputs": [
+        21
+      ],
+      "weight": "n22_w",
+      "bias": "n22_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 23,
+      "op": "silu",
+      "inputs": [
+        22
+      ],
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 24,
+      "op": "conv",
+      "inputs": [
+        23
+      ],
+      "weight": "n24_w",
+      "bias": "n24_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 25,
+      "op": "silu",
+      "inputs": [
+        24
+      ],
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 26,
+      "op": "add",
+      "inputs": [
+        21,
+        25
+      ],
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 27,
+      "op": "conv",
+      "inputs": [
+        26
+      ],
+      "weight": "n27_w",
+      "bias": "n27_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 28,
+      "op": "silu",
+      "inputs": [
+        27
+      ],
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 29,
+      "op": "conv",
+      "inputs": [
+        28
+      ],
+      "weight": "n29_w",
+      "bias": "n29_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 30,
+      "op": "silu",
+      "inputs": [
+        29
+      ],
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 31,
+      "op": "add",
+      "inputs": [
+        26,
+        30
+      ],
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 32,
+      "op": "concat",
+      "inputs": [
+        20,
+        21,
+        26,
+        31
+      ],
+      "shape": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 33,
+      "op": "conv",
+      "inputs": [
+        32
+      ],
+      "weight": "n33_w",
+      "bias": "n33_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 34,
+      "op": "silu",
+      "inputs": [
+        33
+      ],
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 35,
+      "op": "conv",
+      "inputs": [
+        34
+      ],
+      "weight": "n35_w",
+      "bias": "n35_b",
+      "params": {
+        "stride": [
+          2,
+          2
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 36,
+      "op": "silu",
+      "inputs": [
+        35
+      ],
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 37,
+      "op": "conv",
+      "inputs": [
+        36
+      ],
+      "weight": "n37_w",
+      "bias": "n37_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 38,
+      "op": "silu",
+      "inputs": [
+        37
+      ],
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 39,
+      "op": "slice",
+      "inputs": [
+        38
+      ],
+      "params": {
+        "start": 0,
+        "end": 64
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 40,
+      "op": "slice",
+      "inputs": [
+        38
+      ],
+      "params": {
+        "start": 64,
+        "end": 128
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 41,
+      "op": "conv",
+      "inputs": [
+        40
+      ],
+      "weight": "n41_w",
+      "bias": "n41_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 42,
+      "op": "silu",
+      "inputs": [
+        41
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 43,
+      "op": "conv",
+      "inputs": [
+        42
+      ],
+      "weight": "n43_w",
+      "bias": "n43_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 44,
+      "op": "silu",
+      "inputs": [
+        43
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 45,
+      "op": "add",
+      "inputs": [
+        40,
+        44
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 46,
+      "op": "conv",
+      "inputs": [
+        45
+      ],
+      "weight": "n46_w",
+      "bias": "n46_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 47,
+      "op": "silu",
+      "inputs": [
+        46
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 48,
+      "op": "conv",
+      "inputs": [
+        47
+      ],
+      "weight": "n48_w",
+      "bias": "n48_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 49,
+      "op": "silu",
+      "inputs": [
+        48
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 50,
+      "op": "add",
+      "inputs": [
+        45,
+        49
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 51,
+      "op": "concat",
+      "inputs": [
+        39,
+        40,
+        45,
+        50
+      ],
+      "shape": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 52,
+      "op": "conv",
+      "inputs": [
+        51
+      ],
+      "weight": "n52_w",
+      "bias": "n52_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 53,
+      "op": "silu",
+      "inputs": [
+        52
+      ],
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 54,
+      "op": "conv",
+      "inputs": [
+        53
+      ],
+      "weight": "n54_w",
+      "bias": "n54_b",
+      "params": {
+        "stride": [
+          2,
+          2
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 55,
+      "op": "silu",
+      "inputs": [
+        54
+      ],
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 56,
+      "op": "conv",
+      "inputs": [
+        55
+      ],
+      "weight": "n56_w",
+      "bias": "n56_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 57,
+      "op": "silu",
+      "inputs": [
+        56
+      ],
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 58,
+      "op": "slice",
+      "inputs": [
+        57
+      ],
+      "params": {
+        "start": 0,
+        "end": 128
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 59,
+      "op": "slice",
+      "inputs": [
+        57
+      ],
+      "params": {
+        "start": 128,
+        "end": 256
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 60,
+      "op": "conv",
+      "inputs": [
+        59
+      ],
+      "weight": "n60_w",
+      "bias": "n60_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 61,
+      "op": "silu",
+      "inputs": [
+        60
+      ],
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 62,
+      "op": "conv",
+      "inputs": [
+        61
+      ],
+      "weight": "n62_w",
+      "bias": "n62_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 63,
+      "op": "silu",
+      "inputs": [
+        62
+      ],
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 64,
+      "op": "add",
+      "inputs": [
+        59,
+        63
+      ],
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 65,
+      "op": "concat",
+      "inputs": [
+        58,
+        59,
+        64
+      ],
+      "shape": [
+        1,
+        384,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 66,
+      "op": "conv",
+      "inputs": [
+        65
+      ],
+      "weight": "n66_w",
+      "bias": "n66_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 67,
+      "op": "silu",
+      "inputs": [
+        66
+      ],
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 68,
+      "op": "conv",
+      "inputs": [
+        67
+      ],
+      "weight": "n68_w",
+      "bias": "n68_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 69,
+      "op": "silu",
+      "inputs": [
+        68
+      ],
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 70,
+      "op": "maxpool",
+      "inputs": [
+        69
+      ],
+      "params": {
+        "kernel_size": 5,
+        "stride": 1,
+        "padding": 2
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 71,
+      "op": "maxpool",
+      "inputs": [
+        70
+      ],
+      "params": {
+        "kernel_size": 5,
+        "stride": 1,
+        "padding": 2
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 72,
+      "op": "maxpool",
+      "inputs": [
+        71
+      ],
+      "params": {
+        "kernel_size": 5,
+        "stride": 1,
+        "padding": 2
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 73,
+      "op": "concat",
+      "inputs": [
+        69,
+        70,
+        71,
+        72
+      ],
+      "shape": [
+        1,
+        512,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 74,
+      "op": "conv",
+      "inputs": [
+        73
+      ],
+      "weight": "n74_w",
+      "bias": "n74_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 75,
+      "op": "silu",
+      "inputs": [
+        74
+      ],
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 76,
+      "op": "upsample",
+      "inputs": [
+        75
+      ],
+      "params": {
+        "scale_factor": 2.0,
+        "mode": "nearest"
+      },
+      "shape": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 77,
+      "op": "concat",
+      "inputs": [
+        76,
+        53
+      ],
+      "shape": [
+        1,
+        384,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 78,
+      "op": "conv",
+      "inputs": [
+        77
+      ],
+      "weight": "n78_w",
+      "bias": "n78_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 79,
+      "op": "silu",
+      "inputs": [
+        78
+      ],
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 80,
+      "op": "slice",
+      "inputs": [
+        79
+      ],
+      "params": {
+        "start": 0,
+        "end": 64
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 81,
+      "op": "slice",
+      "inputs": [
+        79
+      ],
+      "params": {
+        "start": 64,
+        "end": 128
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 82,
+      "op": "conv",
+      "inputs": [
+        81
+      ],
+      "weight": "n82_w",
+      "bias": "n82_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 83,
+      "op": "silu",
+      "inputs": [
+        82
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 84,
+      "op": "conv",
+      "inputs": [
+        83
+      ],
+      "weight": "n84_w",
+      "bias": "n84_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 85,
+      "op": "silu",
+      "inputs": [
+        84
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 86,
+      "op": "concat",
+      "inputs": [
+        80,
+        81,
+        85
+      ],
+      "shape": [
+        1,
+        192,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 87,
+      "op": "conv",
+      "inputs": [
+        86
+      ],
+      "weight": "n87_w",
+      "bias": "n87_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 88,
+      "op": "silu",
+      "inputs": [
+        87
+      ],
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 89,
+      "op": "upsample",
+      "inputs": [
+        88
+      ],
+      "params": {
+        "scale_factor": 2.0,
+        "mode": "nearest"
+      },
+      "shape": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 90,
+      "op": "concat",
+      "inputs": [
+        89,
+        34
+      ],
+      "shape": [
+        1,
+        192,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 91,
+      "op": "conv",
+      "inputs": [
+        90
+      ],
+      "weight": "n91_w",
+      "bias": "n91_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 92,
+      "op": "silu",
+      "inputs": [
+        91
+      ],
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 93,
+      "op": "slice",
+      "inputs": [
+        92
+      ],
+      "params": {
+        "start": 0,
+        "end": 32
+      },
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 94,
+      "op": "slice",
+      "inputs": [
+        92
+      ],
+      "params": {
+        "start": 32,
+        "end": 64
+      },
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 95,
+      "op": "conv",
+      "inputs": [
+        94
+      ],
+      "weight": "n95_w",
+      "bias": "n95_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 96,
+      "op": "silu",
+      "inputs": [
+        95
+      ],
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 97,
+      "op": "conv",
+      "inputs": [
+        96
+      ],
+      "weight": "n97_w",
+      "bias": "n97_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 98,
+      "op": "silu",
+      "inputs": [
+        97
+      ],
+      "shape": [
+        1,
+        32,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 99,
+      "op": "concat",
+      "inputs": [
+        93,
+        94,
+        98
+      ],
+      "shape": [
+        1,
+        96,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 100,
+      "op": "conv",
+      "inputs": [
+        99
+      ],
+      "weight": "n100_w",
+      "bias": "n100_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 101,
+      "op": "silu",
+      "inputs": [
+        100
+      ],
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 102,
+      "op": "conv",
+      "inputs": [
+        101
+      ],
+      "weight": "n102_w",
+      "bias": "n102_b",
+      "params": {
+        "stride": [
+          2,
+          2
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 103,
+      "op": "silu",
+      "inputs": [
+        102
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 104,
+      "op": "concat",
+      "inputs": [
+        103,
+        88
+      ],
+      "shape": [
+        1,
+        192,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 105,
+      "op": "conv",
+      "inputs": [
+        104
+      ],
+      "weight": "n105_w",
+      "bias": "n105_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 106,
+      "op": "silu",
+      "inputs": [
+        105
+      ],
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 107,
+      "op": "slice",
+      "inputs": [
+        106
+      ],
+      "params": {
+        "start": 0,
+        "end": 64
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 108,
+      "op": "slice",
+      "inputs": [
+        106
+      ],
+      "params": {
+        "start": 64,
+        "end": 128
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 109,
+      "op": "conv",
+      "inputs": [
+        108
+      ],
+      "weight": "n109_w",
+      "bias": "n109_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 110,
+      "op": "silu",
+      "inputs": [
+        109
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 111,
+      "op": "conv",
+      "inputs": [
+        110
+      ],
+      "weight": "n111_w",
+      "bias": "n111_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 112,
+      "op": "silu",
+      "inputs": [
+        111
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 113,
+      "op": "concat",
+      "inputs": [
+        107,
+        108,
+        112
+      ],
+      "shape": [
+        1,
+        192,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 114,
+      "op": "conv",
+      "inputs": [
+        113
+      ],
+      "weight": "n114_w",
+      "bias": "n114_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 115,
+      "op": "silu",
+      "inputs": [
+        114
+      ],
+      "shape": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 116,
+      "op": "conv",
+      "inputs": [
+        115
+      ],
+      "weight": "n116_w",
+      "bias": "n116_b",
+      "params": {
+        "stride": [
+          2,
+          2
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 117,
+      "op": "silu",
+      "inputs": [
+        116
+      ],
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 118,
+      "op": "concat",
+      "inputs": [
+        117,
+        75
+      ],
+      "shape": [
+        1,
+        384,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 119,
+      "op": "conv",
+      "inputs": [
+        118
+      ],
+      "weight": "n119_w",
+      "bias": "n119_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 120,
+      "op": "silu",
+      "inputs": [
+        119
+      ],
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 121,
+      "op": "slice",
+      "inputs": [
+        120
+      ],
+      "params": {
+        "start": 0,
+        "end": 128
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 122,
+      "op": "slice",
+      "inputs": [
+        120
+      ],
+      "params": {
+        "start": 128,
+        "end": 256
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 123,
+      "op": "conv",
+      "inputs": [
+        122
+      ],
+      "weight": "n123_w",
+      "bias": "n123_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 124,
+      "op": "silu",
+      "inputs": [
+        123
+      ],
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 125,
+      "op": "conv",
+      "inputs": [
+        124
+      ],
+      "weight": "n125_w",
+      "bias": "n125_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 126,
+      "op": "silu",
+      "inputs": [
+        125
+      ],
+      "shape": [
+        1,
+        128,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 127,
+      "op": "concat",
+      "inputs": [
+        121,
+        122,
+        126
+      ],
+      "shape": [
+        1,
+        384,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 128,
+      "op": "conv",
+      "inputs": [
+        127
+      ],
+      "weight": "n128_w",
+      "bias": "n128_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 129,
+      "op": "silu",
+      "inputs": [
+        128
+      ],
+      "shape": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 130,
+      "op": "conv",
+      "inputs": [
+        101
+      ],
+      "weight": "n130_w",
+      "bias": "n130_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 131,
+      "op": "silu",
+      "inputs": [
+        130
+      ],
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 132,
+      "op": "conv",
+      "inputs": [
+        131
+      ],
+      "weight": "n132_w",
+      "bias": "n132_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 133,
+      "op": "silu",
+      "inputs": [
+        132
+      ],
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 134,
+      "op": "conv",
+      "inputs": [
+        133
+      ],
+      "weight": "n134_w",
+      "bias": "n134_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 135,
+      "op": "conv",
+      "inputs": [
+        101
+      ],
+      "weight": "n135_w",
+      "bias": "n135_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 136,
+      "op": "silu",
+      "inputs": [
+        135
+      ],
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 137,
+      "op": "conv",
+      "inputs": [
+        136
+      ],
+      "weight": "n137_w",
+      "bias": "n137_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 138,
+      "op": "silu",
+      "inputs": [
+        137
+      ],
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 139,
+      "op": "conv",
+      "inputs": [
+        138
+      ],
+      "weight": "n139_w",
+      "bias": "n139_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        9,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 140,
+      "op": "concat",
+      "inputs": [
+        134,
+        139
+      ],
+      "shape": [
+        1,
+        73,
+        80,
+        80
+      ]
+    },
+    {
+      "id": 141,
+      "op": "conv",
+      "inputs": [
+        115
+      ],
+      "weight": "n141_w",
+      "bias": "n141_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 142,
+      "op": "silu",
+      "inputs": [
+        141
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 143,
+      "op": "conv",
+      "inputs": [
+        142
+      ],
+      "weight": "n143_w",
+      "bias": "n143_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 144,
+      "op": "silu",
+      "inputs": [
+        143
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 145,
+      "op": "conv",
+      "inputs": [
+        144
+      ],
+      "weight": "n145_w",
+      "bias": "n145_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 146,
+      "op": "conv",
+      "inputs": [
+        115
+      ],
+      "weight": "n146_w",
+      "bias": "n146_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 147,
+      "op": "silu",
+      "inputs": [
+        146
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 148,
+      "op": "conv",
+      "inputs": [
+        147
+      ],
+      "weight": "n148_w",
+      "bias": "n148_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 149,
+      "op": "silu",
+      "inputs": [
+        148
+      ],
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 150,
+      "op": "conv",
+      "inputs": [
+        149
+      ],
+      "weight": "n150_w",
+      "bias": "n150_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        9,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 151,
+      "op": "concat",
+      "inputs": [
+        145,
+        150
+      ],
+      "shape": [
+        1,
+        73,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 152,
+      "op": "conv",
+      "inputs": [
+        129
+      ],
+      "weight": "n152_w",
+      "bias": "n152_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 153,
+      "op": "silu",
+      "inputs": [
+        152
+      ],
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 154,
+      "op": "conv",
+      "inputs": [
+        153
+      ],
+      "weight": "n154_w",
+      "bias": "n154_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 155,
+      "op": "silu",
+      "inputs": [
+        154
+      ],
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 156,
+      "op": "conv",
+      "inputs": [
+        155
+      ],
+      "weight": "n156_w",
+      "bias": "n156_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 157,
+      "op": "conv",
+      "inputs": [
+        129
+      ],
+      "weight": "n157_w",
+      "bias": "n157_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 158,
+      "op": "silu",
+      "inputs": [
+        157
+      ],
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 159,
+      "op": "conv",
+      "inputs": [
+        158
+      ],
+      "weight": "n159_w",
+      "bias": "n159_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 160,
+      "op": "silu",
+      "inputs": [
+        159
+      ],
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 161,
+      "op": "conv",
+      "inputs": [
+        160
+      ],
+      "weight": "n161_w",
+      "bias": "n161_b",
+      "params": {
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "dilation": [
+          1,
+          1
+        ],
+        "groups": 1
+      },
+      "shape": [
+        1,
+        9,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 162,
+      "op": "concat",
+      "inputs": [
+        156,
+        161
+      ],
+      "shape": [
+        1,
+        73,
+        20,
+        20
+      ]
+    }
+  ],
+  "outputs": [
+    140,
+    151,
+    162
+  ],
+  "reg_max": 16,
+  "strides": [
+    8.0,
+    16.0,
+    32.0
+  ],
+  "decode": "ARM DFL; raw regression then class logits",
+  "preprocessing": {
+    "rgb": true,
+    "padding": 114,
+    "normalization": "pixel/255",
+    "resize": "opencv INTER_LINEAR letterbox"
+  },
+  "checkpoint_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6"
+}

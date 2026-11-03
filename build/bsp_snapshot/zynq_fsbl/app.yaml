@@ -1,0 +1,4 @@
+domain_path: hardware_workspace/gpt_acp01/compat_epoch30000/ws/bsp/plt/zynq_fsbl/zynq_fsbl_bsp
+app_src_dir: vendor_sdk\Vitis\data\embeddedsw\lib\sw_apps\zynq_fsbl
+template: zynq_fsbl
+lang: c

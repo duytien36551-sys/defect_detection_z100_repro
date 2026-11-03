@@ -1,0 +1,17 @@
+{
+  "status": "PASS_PRIMARY_BUILD_LAUNCH_REVIEW",
+  "elf_sha256": "a1fb69729ac1dd2f4ec142819b0ec703fe1c8b8a548c84f9b1415a4683a9cdae",
+  "launch_sha256": "d657fe6d8528df6a5a2d87e34d210ebd8fdf8007ba62e7b07d71df98ef4d62aa",
+  "initial_epoch": 49000,
+  "source_initial": 42000,
+  "source_next": 42044,
+  "source_delivered": 44,
+  "board_access": false,
+  "review": [
+    "Exact PS/FSBL/bit pairing retained; same counter bit for baseline/candidate comparison",
+    "13 pre-reset gates passed; ELF symbols and SHA bound",
+    "Full qualification ELF path corrected for nested build; target enumeration delay added",
+    "One volatile transition; no persistent writes or automatic retry"
+  ],
+  "qualification_sha256": "6c41f8fd3512e832a39cc179be60c7b54b3e18d6f49b1c1372a1f2a810ff1130"
+}

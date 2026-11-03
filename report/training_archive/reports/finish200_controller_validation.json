@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": [
+    "exact experiment process isolation; deployment/viewer/controller excluded",
+    "199 completed epochs cannot stop training",
+    "gapped or overrun history rejected before any termination",
+    "checkpoint must be epoch0=199",
+    "optimizer/scheduler/live/EMA/RNG completeness gate verified"
+  ],
+  "script_sha256": "d25528062825c8aaa95e5884e555115f77a67eb3e02700aa320a43ec2e24282a",
+  "real_training_terminated": false,
+  "test_set_used": false,
+  "final_report_layout_syntax_checked": true
+}

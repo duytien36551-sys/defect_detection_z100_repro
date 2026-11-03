@@ -1,0 +1,89 @@
+{
+  "status": "failed",
+  "dry_run": false,
+  "case_parity_pass": false,
+  "batch_acceptance_pass": false,
+  "board_verified_note": "Cold boot and DMA recovery are separate acceptance stages.",
+  "protocol": "joint18-v8/1",
+  "model": {
+    "path": "<local-path>",
+    "exists": true,
+    "sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "expected_baseline_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "matches_baselines": true
+  },
+  "classes_sha256": "5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1",
+  "timeout_seconds": 30.0,
+  "local_address": "192.168.10.1",
+  "interface_index": 23,
+  "planned_count": 2,
+  "minimum_batch_roundtrips": 20,
+  "minimum_batch_met": false,
+  "started_at_utc": "2026-10-15T18:44:38.001238+00:00",
+  "output_directory": "<local-path>",
+  "identity_probe": {
+    "runtime": "board",
+    "protocol": "joint18-v8/1",
+    "model_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+    "classes_sha256": "5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1",
+    "input": "rgb-u8-416-letterbox114",
+    "box_space": "normalized-model-xyxy",
+    "local_address": [
+      "192.168.10.1",
+      61592
+    ],
+    "peer_address": [
+      "192.168.10.2",
+      5001
+    ]
+  },
+  "requests": [
+    {
+      "sequence": 1,
+      "task": "pcb",
+      "image_sha256": "b176fb62d84b36b5faa3b18d6ed160f0bd21a15a7a9742b7fb17d5f67992b8d2",
+      "tensor_sha256": "0e390be7b8eeb55d7b2a9020bb3c680b4024cf90bdc3188e47c831272987d6e2",
+      "started_at_utc": "2026-10-15T18:44:38.053499+00:00",
+      "finished_at_utc": "2026-10-15T18:44:39.893878+00:00",
+      "elapsed_seconds": 1.844,
+      "status": "error",
+      "expected_rows": [
+        {
+          "class_id": 3,
+          "class_name": "PCB_OP",
+          "score": 0.360646933,
+          "xyxy": [
+            112.27323824,
+            108.605395874,
+            123.00174187,
+            118.995718754
+          ]
+        }
+      ],
+      "actual_rows": null,
+      "comparison": null,
+      "error": {
+        "type": "BoardProtocolError",
+        "message": "board rejected inference: board inference failed"
+      }
+    }
+  ],
+  "first_error": {
+    "sequence": 1,
+    "task": "pcb",
+    "type": "BoardProtocolError",
+    "message": "board rejected inference: board inference failed"
+  },
+  "updated_at_utc": "2026-10-15T18:44:39.902043+00:00",
+  "identity_probe_at_utc": "2026-10-15T18:44:38.050418+00:00",
+  "finished_at_utc": "2026-10-15T18:44:39.902043+00:00",
+  "overall_elapsed_seconds": 1.907,
+  "requests_completed": 1,
+  "elapsed_distribution_seconds": {
+    "successful_requests": 0,
+    "total_seconds": 0.0,
+    "median_seconds": null,
+    "min_seconds": null,
+    "max_seconds": null
+  }
+}

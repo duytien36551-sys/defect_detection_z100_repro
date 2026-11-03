@@ -1,0 +1,63 @@
+--- counter01
+
++++ counter_fault_publish02
+
+@@ -87,6 +87,7 @@
+
+     localparam integer COUNTER_COUNT=32;
+ 
+     reg event_open_q;
++    reg fault_publish_pending_q;
+     reg cancel_seen_q;
+     reg [31:0] event_epoch_q;
+     reg [7:0] event_id_q;
+@@ -213,6 +214,7 @@
+
+     always @(posedge clk) begin
+         if (!rst_n) begin
+             event_open_q<=1'b0;
++            fault_publish_pending_q<=1'b0;
+             cancel_seen_q<=1'b0;
+             event_epoch_q<=32'd0;
+             event_id_q<=8'd0;
+@@ -232,6 +234,7 @@
+
+             end
+         end else if (event_start) begin
+             event_open_q<=1'b1;
++            fault_publish_pending_q<=1'b0;
+             cancel_seen_q<=cancel;
+             event_epoch_q<=event_epoch;
+             event_id_q<=event_id;
+@@ -249,6 +252,12 @@
+
+                 counters_q[k]<=32'd0;
+                 snapshot_q[k]<=32'd0;
+             end
++        end else if (fault_publish_pending_q) begin
++            // Counters and identity froze on the original terminal edge T.
++            // Sample only the backend code at T+1; never count this extra edge.
++            snapshot_fault_code<=fault_code;
++            snapshot_valid<=1'b1;
++            fault_publish_pending_q<=1'b0;
+         end else if (event_open_q) begin
+             if (cancel) cancel_seen_q<=1'b1;
+             if (ar_fire) begin
+@@ -268,13 +277,14 @@
+
+ 
+             if (terminal) begin
+                 event_open_q<=1'b0;
+-                snapshot_valid<=1'b1;
++                snapshot_valid<=success_terminal;
++                fault_publish_pending_q<=!success_terminal;
+                 snapshot_outcome<=success_terminal ? OUTCOME_SUCCESS :
+                     ((cancel_seen_q || cancel) ? OUTCOME_CANCEL : OUTCOME_FAULT);
+                 snapshot_overflow<=overflow_q || overflow_now;
+                 snapshot_epoch<=event_epoch_q;
+                 snapshot_event<=event_id_q;
+-                snapshot_fault_code<=(success_terminal ? 4'd0 : fault_code);
++                snapshot_fault_code<=4'd0;
+                 for (k=0;k<COUNTER_COUNT;k=k+1)
+                     snapshot_q[k]<=counter_next[k];
+             end

@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-10-24T16:25:53.901151+08:00",
+  "status": "passed",
+  "continuous_epochs_1_to_200": true,
+  "no_epoch_201_completed": true,
+  "best_epoch": 200,
+  "best_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+  "checkpoint_epoch0": 199,
+  "optimizer_states": 183,
+  "scheduler_last_epoch": 199,
+  "live_state_ema_rng_present": true,
+  "split_manifest_unchanged": true,
+  "both_evaluations_same_frozen_weight": true,
+  "remaining_experiment_processes": [],
+  "test_used": false,
+  "final_report": "training_run\\final_report.json"
+}

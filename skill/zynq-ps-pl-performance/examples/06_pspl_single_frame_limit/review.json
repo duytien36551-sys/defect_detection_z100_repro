@@ -1,0 +1,53 @@
+{
+  "case": "06_pspl_single_frame_limit",
+  "skill": "zynq-ps-pl-performance",
+  "review_method": "main-thread full-context deterministic evidence audit; NOT independent agent behavioral validation",
+  "status": "evidence_checks_pass",
+  "authenticity": "authentic_one_shot_performance_evidence_with_unmeasured_sustained_metrics",
+  "facts": {
+    "baseline_total_ms": {
+      "preprocess_ticks": 27.65933619787925,
+      "graph_ticks": 6403.554000296934,
+      "dequantization_ticks": 16.235102529182026,
+      "decode_ticks": 131.64308318235058,
+      "total_ticks": 6579.094519206259
+    },
+    "profile_total_ms": 6497.6336705686235,
+    "separate_frame_delta_percent": -1.2381772050823714,
+    "sustained_fps_measured": false,
+    "p95": null,
+    "instrumentation_overhead_established": false,
+    "recorded_scope": "One run each; cache/sampling variability prevents measuring instrumentation overhead or claiming a speedup"
+  },
+  "findings": [
+    "Baseline and profile are distinct single-frame runs. Their difference cannot establish speedup or instrumentation overhead. Transport-inclusive end-to-end timing, repeated samples, warm-up and steady-state distribution remain missing; no P95, stable FPS or 30 FPS claim."
+  ],
+  "checks": [
+    "source snapshot SHA-256 intact",
+    "separate run scopes and unmeasured distribution preserved"
+  ],
+  "input_sha256": {
+    "board_result.json": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c",
+    "first_frame_summary.json": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9",
+    "profile_summary.json": "76f3e94a96a805f3893b9b1836ce87dafd66f9df12cc847c0901693b93b3e998"
+  },
+  "evidence_refs": [
+    {
+      "path": "cases_20261025/06_pspl_single_frame_limit/inputs/board_result.json",
+      "sha256": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c"
+    },
+    {
+      "path": "cases_20261025/06_pspl_single_frame_limit/inputs/profile_summary.json",
+      "sha256": "76f3e94a96a805f3893b9b1836ce87dafd66f9df12cc847c0901693b93b3e998"
+    },
+    {
+      "path": "cases_20261025/06_pspl_single_frame_limit/inputs/first_frame_summary.json",
+      "sha256": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9"
+    }
+  ],
+  "not_performed": [
+    "new training/model evaluation or model selection",
+    "board operations",
+    "blind independent model execution"
+  ]
+}

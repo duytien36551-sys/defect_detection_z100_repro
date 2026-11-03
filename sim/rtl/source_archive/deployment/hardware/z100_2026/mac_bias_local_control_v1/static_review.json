@@ -1,0 +1,50 @@
+{
+  "status": "PASS_STATIC_SOURCE_AND_FINITE_STATE_MODEL_ONLY",
+  "created_utc": "2026-10-27T22:59:25.325248+00:00",
+  "scope": "offline RTL source transformation and finite boolean config-FSM model only",
+  "source_sha256": {
+    "base_rtl": "f573c82fab313161d4097eedafcb7669026dbf6e4c29efa313f0a575fe29e474",
+    "candidate_rtl": "8290ed5a69549182aefb4994ccb4c511923f8e7cb6542a2fc20d16bfcfaa315c",
+    "directed_tb": "b9eeaea70c3ccec3f6b35f6ebc4659c0738d0934a812f5f47240eced0f0fccf0",
+    "route_report": "4c91200c5d2288fdef41a75e8b985db114b80d92cf038f06310b143b6e655c38",
+    "stage1_supplement": "5863e6bd43ce98e0cd3c4f7a96723bccb1876bd1177375ccd1e3bf196b09b2b5",
+    "checker": "8abb8eb8a71826f88b566492197252d0cdfe263db50d346a328800eb7b62b3a2"
+  },
+  "route_context": {
+    "setup_path_report": "validation/board_z100/v12_A_default_physopt_route/20261027t212850z_default_physopt/setup_paths_routed.rpt",
+    "stage1_result": "validation/board_z100/timing_first_stage1_supplement/20261027T143133.391619Z/result.json",
+    "reported_path": "native_mac/loading_reg -> native_mac/bias_reg[30][14]/CE",
+    "reported_data_delay_ns": 10.68,
+    "reported_wire_share_pct": 97.107,
+    "reported_enable_net_fanout": 1024,
+    "source_facts_supplied_by_primary": true
+  },
+  "candidate_geometry_intent": {
+    "groups": 4,
+    "lanes_per_group": 8,
+    "payload_bits_per_local_enable": 256,
+    "replica_state_bits_per_group": 2,
+    "multipliers_or_accumulators_changed": false
+  },
+  "finite_state_model": {
+    "status": "PASS_FINITE_BOOLEAN_TRANSITION_MODEL",
+    "transitions_checked": 4096,
+    "accepted_first_bias_capture_cases": 32,
+    "weight_overflow_and_first_bias_same_edge_cases": 8,
+    "meaning": "one-step lockstep over all 2-state inputs and four loading/bias_loaded states; not RTL formal"
+  },
+  "directed_tb": {
+    "status": "AUTHORED_NOT_RUN",
+    "baseline_module_alias_required": true,
+    "vendor_simulation_required": true
+  },
+  "vivado_synthesis_route": "NOT_RUN",
+  "board": "NOT_TESTED",
+  "limitations": [
+    "The finite-state checker compares an exhaustive two-state abstract model; it is not RTL formal or simulation.",
+    "The directed SystemVerilog miter has not been compiled or simulated.",
+    "The keep attributes express intent only; synthesis must prove four replicas survive and each local CE drives at most 256 payload bits.",
+    "No timing, placement, routing, resource, throughput, or hardware performance improvement is established.",
+    "The candidate is not promoted and is not combined with stage2 or other experiments."
+  ]
+}

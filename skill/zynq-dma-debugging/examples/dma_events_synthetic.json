@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "events": [
+    {"run_id": "synthetic-run-01", "timestamp": "2026-10-28T10:00:00+08:00", "event": "command_received", "sequence": 1},
+    {"run_id": "synthetic-run-01", "timestamp": "2026-10-28T10:00:00.010+08:00", "event": "dma_started", "sequence": 1},
+    {"run_id": "synthetic-run-01", "timestamp": "2026-10-28T10:00:00.020+08:00", "event": "completion_observed", "sequence": 1}
+  ]
+}

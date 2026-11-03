@@ -1,0 +1,34 @@
+{
+  "schema": "z100_hardware_template_v1",
+  "part": "xc7z100ffg900-2",
+  "clock_name": "clk_fpga_0",
+  "clock_period_ns": 10.0,
+  "dsp48e1_count": 1252,
+  "sites": 12,
+  "vivado_version": "2026.1",
+  "historical_checkpoint_sha256": "1d29a946c0d4add26a61cec761b10ad5b71a2ac107d6056c45677e1ee1ab8483",
+  "checkpoint_included": false,
+  "default_rebuild": false,
+  "files": [
+    {
+      "path": "provenance.json",
+      "bytes": 721,
+      "sha256": "a102e607049d9ffb3b5a97eca732f6a95592a278c2bb33e5c6cb405e19934906"
+    },
+    {
+      "path": "readme.md",
+      "bytes": 1211,
+      "sha256": "05321abbef846a2f05a6e9c6fa968f84ec36ab2c75815cb6b9d2ca4ca7cf57eb"
+    },
+    {
+      "path": "tcl/export.tcl",
+      "bytes": 11700,
+      "sha256": "f039141259583132b52f3d4e5aadf88022a851ad17d5bc4feee6a386740d8d61"
+    },
+    {
+      "path": "tcl/physopt.tcl",
+      "bytes": 10365,
+      "sha256": "eaee194210208eacd1b8c0a4ea33b08cfd7be05ad79ae8483db614dfb72512d7"
+    }
+  ]
+}

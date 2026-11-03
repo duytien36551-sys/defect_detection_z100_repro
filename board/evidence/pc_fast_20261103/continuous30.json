@@ -1,0 +1,937 @@
+{
+  "started_utc": "2026-11-02T23:47:40.543034+00:00",
+  "automatic_retries": 0,
+  "runtime": "board",
+  "frames": [
+    {
+      "index": 1,
+      "image": 1,
+      "duration_ms": 365.058500028681,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "image": 1,
+      "duration_ms": 357.42980003124103,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "image": 1,
+      "duration_ms": 361.9910000124946,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "image": 1,
+      "duration_ms": 364.4112999900244,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "image": 1,
+      "duration_ms": 361.64439999265596,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "image": 1,
+      "duration_ms": 362.6164000015706,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "image": 1,
+      "duration_ms": 362.69259999971837,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "image": 1,
+      "duration_ms": 364.4248000346124,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "image": 1,
+      "duration_ms": 360.545200004708,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "image": 1,
+      "duration_ms": 363.0043999874033,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "image": 1,
+      "duration_ms": 362.3698999872431,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "image": 1,
+      "duration_ms": 362.4871000065468,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "image": 1,
+      "duration_ms": 360.03450001589954,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "image": 1,
+      "duration_ms": 361.8556000292301,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "image": 1,
+      "duration_ms": 361.08509998302907,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "image": 1,
+      "duration_ms": 344.3134000408463,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "image": 1,
+      "duration_ms": 362.5430000247434,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "image": 1,
+      "duration_ms": 364.62779995054007,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "image": 1,
+      "duration_ms": 363.6248999973759,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "image": 1,
+      "duration_ms": 361.17220000596717,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "image": 1,
+      "duration_ms": 362.11240000557154,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "image": 1,
+      "duration_ms": 363.0223000072874,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "image": 1,
+      "duration_ms": 359.4527000095695,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "image": 1,
+      "duration_ms": 362.6516000367701,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "image": 1,
+      "duration_ms": 362.8325000172481,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "image": 1,
+      "duration_ms": 362.4714000034146,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "image": 1,
+      "duration_ms": 358.726900012698,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "image": 1,
+      "duration_ms": 363.7088999967091,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "image": 1,
+      "duration_ms": 359.1840000008233,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "image": 1,
+      "duration_ms": 358.03199996007606,
+      "reference_equal": true,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "PIN_有机物污染",
+          "score": 0.87188375,
+          "xyxy": [
+            86.82688704,
+            356.07326528,
+            200.00102976,
+            423.55358144
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "PIN_破损",
+          "score": 0.866531312,
+          "xyxy": [
+            373.51764672,
+            545.34271232,
+            477.5776288,
+            587.81616192
+          ]
+        }
+      ]
+    }
+  ],
+  "timing_scope": "BoardClient.infer: TCP/HELLO, RGB transfer, board inference, response validation; prepared input, no GUI dwell",
+  "hello_before": {
+    "type": "HELLO_OK",
+    "protocol": "pin9-v8/2-input640",
+    "runtime": "board",
+    "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+    "classes_sha256": "d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754",
+    "class_count": 9,
+    "class_domain": "pin",
+    "input": "rgb-u8-640-letterbox114",
+    "box_space": "normalized-model-xyxy"
+  },
+  "batch_seconds": 10.841576900042128,
+  "p50_ms": 362.42064999532886,
+  "p95_ms": 364.62779995054007,
+  "min_ms": 344.3134000408463,
+  "max_ms": 365.058500028681,
+  "batch_fps": 2.767125140244444,
+  "hello_after": {
+    "type": "HELLO_OK",
+    "protocol": "pin9-v8/2-input640",
+    "runtime": "board",
+    "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+    "classes_sha256": "d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754",
+    "class_count": 9,
+    "class_domain": "pin",
+    "input": "rgb-u8-640-letterbox114",
+    "box_space": "normalized-model-xyxy"
+  },
+  "status": "PASS_REAL_BOARD_REFERENCE_EQUAL"
+}

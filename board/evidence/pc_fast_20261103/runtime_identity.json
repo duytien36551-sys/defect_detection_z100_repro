@@ -1,0 +1,60 @@
+{
+  "schema": "z100-existing-runtime-evidence-v1",
+  "date": "2026-11-03",
+  "status": "EXISTING_JTAG_SCOPED_REAL_BOARD_RECORDS",
+  "copied_during_readme_refresh": true,
+  "new_board_run_during_readme_refresh": false,
+  "elf": {
+    "path": "board/sd_network_fix_v1/native_board_pool.elf",
+    "sha256": "24ace23496c9e44500b83c35a59a8a6a8ca4fb0fa0c5dda7b76b9855a642cf10"
+  },
+  "bit_sha256": "9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f",
+  "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+  "input": "rgb-u8-640-letterbox114",
+  "classes": 9,
+  "pl_clock_mhz": 100,
+  "startup": "JTAG with qualified SCOPED cache policy; audited external handoff transport",
+  "startup_delivery_limit": "The self-contained scoped JTAG cold launcher is not included. board/final_run/launch.tcl is historical and depends on an external hardware_workspace.",
+  "normal_startup": "Conservative FULL cache policy; same ELF alone does not guarantee scoped performance.",
+  "sd_cold_boot": "NOT_PASSED; autonomous SD scoped startup is not implemented/validated",
+  "network": {
+    "pc": "192.168.10.1/24",
+    "board": "192.168.10.2",
+    "port": 5001
+  },
+  "timing_scope": "Prepared input; TCP/HELLO, RGB transfer, board inference and response validation included; GUI dwell excluded.",
+  "repeated_requests": {
+    "count": 30,
+    "same_image": true,
+    "automatic_retries": 0,
+    "all_reference_equal": true,
+    "p50_ms": 362.42064999532886,
+    "p95_ms": 364.62779995054007,
+    "min_ms": 344.3134000408463,
+    "max_ms": 365.058500028681,
+    "batch_seconds": 10.841576900042128,
+    "batch_fps": 2.767125140244444
+  },
+  "raw_parity": "ABABA, two images, five 613200-byte heads, all byte-identical to their archived references; raw heads/logs remain outside this bundle.",
+  "limits": [
+    "Not full-dataset board precision validation",
+    "Not long-duration stability validation",
+    "Not independent device/production-batch generalization validation",
+    "Not a new source-built binary board acceptance",
+    "Not an SD cold-boot performance result"
+  ],
+  "files": [
+    {
+      "file": "continuous30.json",
+      "bytes": 22008,
+      "sha256": "85671460720e548b6b6270163dd3ff6887f8562b63339eba4519efb6c7abdb01",
+      "source_workspace_relative": ".codex/pc_fast_restore_20261103_073808/continuous30.json"
+    },
+    {
+      "file": "raw_parity_summary.json",
+      "bytes": 1501,
+      "sha256": "c8aa3892073f7c122085336ab799cae357ffe6ec73086ea6af4b8ac314498024",
+      "source_workspace_relative": ".codex/pc_fast_restore_20261103_073808/raw_parity_summary.json"
+    }
+  ]
+}

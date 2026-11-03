@@ -1,0 +1,325 @@
+{
+  "case_id": "08_dma_cross_run_failure",
+  "task": "Attribute and order failure/build/snapshot/separate run; classify evidence and propose one discriminating check.",
+  "skill_loaded": {
+    "name": "zynq-dma-debugging",
+    "version": "1.0.0-rc1",
+    "files": [
+      "skill/installed_sources/zynq-dma-debugging/skill.md",
+      "skill/installed_sources/zynq-dma-debugging/references/workflow.md"
+    ]
+  },
+  "execution": {
+    "mode": "read-only fixture review",
+    "actual_operations": [
+      "Read assigned task, frozen skill.md/workflow and fixture inputs only.",
+      "Parsed failed/diagnostic records separately and normalized ISO timestamps; checked 20 diagnostic statuses/comparisons and first 20 ASCII request headers from the mixed-encoding log bytes.",
+      "Parsed supplied 92-byte AXI register capture as little-endian u32 at manifest-declared offsets; matched failed-build ELF SHA to post-failure snapshot ELF SHA.",
+      "Did not decode undocumented driver/context structs, open absent firmware paths, run XSCT, reset, ABORT, replay, or reuse buffers."
+    ],
+    "prohibited_operations_performed": []
+  },
+  "input_integrity": {
+    "files": [
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failed_run.log",
+        "bytes": 3113,
+        "sha256_before": "14f01301f66b3654d3fd1f2600dc6ea3bf8ce0fddfd20053338cde0218b7ee91",
+        "sha256_after": "14f01301f66b3654d3fd1f2600dc6ea3bf8ce0fddfd20053338cde0218b7ee91",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failed_run_acceptance.json",
+        "bytes": 2994,
+        "sha256_before": "3b615322378d4605de05991eff9d90e53415fed6b67f42a59b824dd91325e8d6",
+        "sha256_after": "3b615322378d4605de05991eff9d90e53415fed6b67f42a59b824dd91325e8d6",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failed_run_build_report.json",
+        "bytes": 6794,
+        "sha256_before": "925bf7f8a2a82e6f370a706ef3aa18886f859715eb57442d33bd4eb652d6c198",
+        "sha256_after": "925bf7f8a2a82e6f370a706ef3aa18886f859715eb57442d33bd4eb652d6c198",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failure_axi_dma_registers.bin",
+        "bytes": 92,
+        "sha256_before": "07bad70df8676d51526a41216dcbf901772e62bc3c98c0bfed70c9717061deae",
+        "sha256_after": "07bad70df8676d51526a41216dcbf901772e62bc3c98c0bfed70c9717061deae",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failure_dma_context.bin",
+        "bytes": 72,
+        "sha256_before": "b7d47fec45c5784f7a3f2327b876e8502919a0e92b18acfe4b2274742de2f079",
+        "sha256_after": "b7d47fec45c5784f7a3f2327b876e8502919a0e92b18acfe4b2274742de2f079",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failure_dma_driver_state.bin",
+        "bytes": 1872,
+        "sha256_before": "b242d346d40cf8b4c1f1a7576107971514be219c78284c20f876c3d2aebfc3b8",
+        "sha256_after": "b242d346d40cf8b4c1f1a7576107971514be219c78284c20f876c3d2aebfc3b8",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failure_dma_rx_buffer.bin",
+        "bytes": 16448,
+        "sha256_before": "8aa5bd68982fa3d1475c9d366527c526ddd6eb389104f79fd2cc16a41c6b233b",
+        "sha256_after": "8aa5bd68982fa3d1475c9d366527c526ddd6eb389104f79fd2cc16a41c6b233b",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failure_dma_tx_buffer.bin",
+        "bytes": 262144,
+        "sha256_before": "09550fbe0067126719e75ac4414d4ddf7a19fec3951133d9c2e537200e02cd03",
+        "sha256_after": "09550fbe0067126719e75ac4414d4ddf7a19fec3951133d9c2e537200e02cd03",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failure_snapshot_manifest.json",
+        "bytes": 13935,
+        "sha256_before": "64ff0fe52bf8660c365420bdb6db019b98d7f22e931da441e193dafa5a37946c",
+        "sha256_after": "64ff0fe52bf8660c365420bdb6db019b98d7f22e931da441e193dafa5a37946c",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/later_diagnostic_acceptance.json",
+        "bytes": 40464,
+        "sha256_before": "96cbf9b8feb0fffa42151592e7a6549c5b60735ab4d74a3e27a13fe16c25cb81",
+        "sha256_after": "96cbf9b8feb0fffa42151592e7a6549c5b60735ab4d74a3e27a13fe16c25cb81",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/later_diagnostic_run.log",
+        "bytes": 42470,
+        "sha256_before": "473b1ae28af370ac51bf0b1dc61cf998e473946438ebe244612cb5885e8c8636",
+        "sha256_after": "473b1ae28af370ac51bf0b1dc61cf998e473946438ebe244612cb5885e8c8636",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/snapshot_xsct.log",
+        "bytes": 1180,
+        "sha256_before": "1fec3df39c81b84a99dcd6693fa10d97b522e0b4bbce67de93c118a8f7aabb3d",
+        "sha256_after": "1fec3df39c81b84a99dcd6693fa10d97b522e0b4bbce67de93c118a8f7aabb3d",
+        "unchanged": true
+      }
+    ],
+    "all_unchanged": true
+  },
+  "conclusion": {
+    "status": "FAILURE_OBSERVED_ROOT_CAUSE_UNCONFIRMED",
+    "failed_run": "one request error; acceptance false",
+    "diagnostic_run": "20 pass, chronologically earlier, full firmware identity missing",
+    "snapshot": "post-failure and ELF-linked, not event waveform"
+  },
+  "findings": [
+    {
+      "id": "chronology",
+      "status": "directly_observed",
+      "fact": "Diagnostic named later ran first (2026-10-15T18:41:21.113766+00:00 to 2026-10-15T18:42:28.899138+00:00); it ended 129.102s before failed retest began. Snapshot generated 2026-10-15T18:45:03.060841+00:00, 23.159s after failure ended."
+    },
+    {
+      "id": "failure",
+      "status": "directly_observed_failure",
+      "fact": "PCB request failed after 1.844s with BoardProtocolError 'board inference failed'; actual_rows and comparison are null. 1/2 requests completed; min 20 not met."
+    },
+    {
+      "id": "diagnostic",
+      "status": "separate_earlier_success",
+      "fact": "20/20 comparisons pass; PCB=10, PIN=10; reported rounded median/min/max 3.375/3.359/3.406s. Not recovery evidence."
+    },
+    {
+      "id": "identity",
+      "status": "partial_match",
+      "fact": "Runs agree on model SHA, class SHA, protocol and input declaration. Diagnostic ELF/XSA/bitstream/run-session ID is absent and path/port differ; full build identity is not established."
+    },
+    {
+      "id": "snapshot",
+      "status": "post_failure_same_elf",
+      "fact": "Build report and snapshot manifest ELF SHA match 2655c9fdbad33ac948c0c404117cc7d6210a38b56061d863e57b4d466a603e6b. Snapshot follows failure; physical DMA width remains unverified."
+    },
+    {
+      "id": "dma_words",
+      "status": "raw_words_observed_only",
+      "fact": "Post-failure snapshot: MM2S length=1984 B (0x7c0), S2MM length=20 B (0x14), status words MM2S=0x1002/S2MM=0x1001; manifest-declared PL R0-R3=0x2/0x0010001b/1/1 (its 16-byte raw capture is absent from inputs and was not independently checked). No status contract or TLAST trace supports root-cause interpretation."
+    },
+    {
+      "id": "snapshot_log",
+      "status": "record_inconsistency",
+      "fact": "XSCT log says HOST_FORCE_MEM_ACCESS_INITIAL=0 and HOST_FORCE_MEM_ACCESS_RESTORED=1, inconsistent with manifest save/restore/verify policy. CPU Running→Stopped→resumed describes supplied prior capture, not this review."
+    }
+  ],
+  "timeline": {
+    "diagnostic_start": "2026-10-15T18:41:21.113766+00:00",
+    "diagnostic_end": "2026-10-15T18:42:28.899138+00:00",
+    "failed_start": "2026-10-15T18:44:38.001238+00:00",
+    "failed_end": "2026-10-15T18:44:39.902043+00:00",
+    "snapshot_generated": "2026-10-15T18:45:03.060841+00:00",
+    "snapshot_complete": "2026-10-15T18:45:05.111888+00:00",
+    "seconds_diagnostic_end_before_failure": 129.1021,
+    "seconds_failure_end_before_snapshot": 23.158798
+  },
+  "diagnostic_counts": {
+    "requests": 20,
+    "pass": 20,
+    "fail": 0,
+    "tasks": {
+      "pcb": 10,
+      "pin": 10
+    },
+    "elapsed": {
+      "successful_requests": 20,
+      "total_seconds": 67.578,
+      "median_seconds": 3.375,
+      "min_seconds": 3.359,
+      "max_seconds": 3.406
+    }
+  },
+  "registers_little_endian_u32": {
+    "MM2S_DMACR": {
+      "byte_offset": 0,
+      "value_hex": "0x00010006"
+    },
+    "MM2S_DMASR": {
+      "byte_offset": 4,
+      "value_hex": "0x00001002"
+    },
+    "MM2S_SA": {
+      "byte_offset": 24,
+      "value_hex": "0x00205380"
+    },
+    "MM2S_SA_MSB": {
+      "byte_offset": 28,
+      "value_hex": "0x00000000"
+    },
+    "MM2S_LENGTH": {
+      "byte_offset": 40,
+      "value_hex": "0x000007c0"
+    },
+    "S2MM_DMACR": {
+      "byte_offset": 48,
+      "value_hex": "0x00010006"
+    },
+    "S2MM_DMASR": {
+      "byte_offset": 52,
+      "value_hex": "0x00001001"
+    },
+    "S2MM_DA": {
+      "byte_offset": 72,
+      "value_hex": "0x00201340"
+    },
+    "S2MM_DA_MSB": {
+      "byte_offset": 76,
+      "value_hex": "0x00000000"
+    },
+    "S2MM_LENGTH": {
+      "byte_offset": 88,
+      "value_hex": "0x00000014"
+    }
+  },
+  "limitations": [
+    "No same-run transaction/TLAST/cache/ownership trace.",
+    "Diagnostic ELF/XSA/bitstream/run-session identity missing.",
+    "Snapshot after failure; restore text values conflict.",
+    "Historical source/build paths not opened or assumed available.",
+    "The manifest references a separate PL_R0_R3 raw register file that is absent from the supplied inputs; PL values are manifest-declared only."
+  ],
+  "next_checks": [
+    "One authorized safe reproduction with sequence-correlated register/stream/response/cache-sync trace; do not reset or reuse buffers before ownership/channel state is established."
+  ],
+  "evidence_refs": [
+    {
+      "file": "later_diagnostic_acceptance.json",
+      "json_pointer": "/started_at_utc",
+      "line": 22
+    },
+    {
+      "file": "later_diagnostic_acceptance.json",
+      "json_pointer": "/finished_at_utc",
+      "line": 1425
+    },
+    {
+      "file": "failed_run_acceptance.json",
+      "json_pointer": "/started_at_utc",
+      "line": 22
+    },
+    {
+      "file": "failed_run_acceptance.json",
+      "json_pointer": "/finished_at_utc",
+      "line": 80
+    },
+    {
+      "file": "failure_snapshot_manifest.json",
+      "json_pointer": "/generated_utc",
+      "line": 4
+    },
+    {
+      "file": "failed_run_acceptance.json",
+      "json_pointer": "/requests/0",
+      "lines": "41-70"
+    },
+    {
+      "file": "failed_run_acceptance.json",
+      "json_pointer": "/minimum_batch_met",
+      "line": 21
+    },
+    {
+      "file": "failed_run_acceptance.json",
+      "json_pointer": "/identity_probe",
+      "lines": "25-40"
+    },
+    {
+      "file": "later_diagnostic_acceptance.json",
+      "json_pointer": "/identity_probe",
+      "lines": "25-40"
+    },
+    {
+      "file": "later_diagnostic_acceptance.json",
+      "json_pointer": "/requests",
+      "lines": "41-1421"
+    },
+    {
+      "file": "later_diagnostic_acceptance.json",
+      "json_pointer": "/elapsed_distribution_seconds",
+      "lines": "1428-1434"
+    },
+    {
+      "file": "failed_run_build_report.json",
+      "json_pointer": "/elf_sha256",
+      "line": 129
+    },
+    {
+      "file": "failure_snapshot_manifest.json",
+      "json_pointer": "/artifacts/elf_sha256",
+      "line": 10
+    },
+    {
+      "file": "failed_run_build_report.json",
+      "json_pointer": "/physical_board_dma_width_verified",
+      "line": 27
+    },
+    {
+      "file": "failure_snapshot_manifest.json",
+      "json_pointer": "/register_captures/0/decoded_registers"
+    },
+    {
+      "file": "failure_snapshot_manifest.json",
+      "json_pointer": "/register_captures/1/decoded_registers"
+    },
+    {
+      "file": "failure_axi_dma_registers.bin",
+      "byte_offsets": "0-91; LE u32 at 4,40,52,88"
+    },
+    {
+      "file": "snapshot_xsct.log",
+      "lines": "1-3, 24-26"
+    },
+    {
+      "file": "failure_snapshot_manifest.json",
+      "json_pointer": "/xsdb_host_access_policy",
+      "line": 7
+    }
+  ]
+}

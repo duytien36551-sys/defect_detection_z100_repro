@@ -1,0 +1,1015 @@
+{
+  "schema_version": 1,
+  "status": "review_required",
+  "run_count": 2,
+  "runs": [
+    {
+      "run_id": "failed_run_acceptance.json",
+      "source_sha256": "7d031098c9c062a9e5bf20d36ad13f12859ca2dc3205a7bf2c134c8f99f4cbe3",
+      "status": "failed",
+      "dry_run": false,
+      "batch_acceptance_pass": false,
+      "model_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+      "classes_sha256": "5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1",
+      "requests_declared": 2,
+      "requests_recorded": 1,
+      "requests_completed": 1,
+      "companion_materials": {
+        "failed_run.log": {
+          "path": "failed_run.log",
+          "sha256": "f9e0ffab41d0113239c8d4fc0942716dda29d3e01ebca70ed6a2b380ed36c5f5",
+          "bytes": 2922,
+          "line_count": 90,
+          "request_lines": [
+            {
+              "line": 1,
+              "text": "REQUEST 1/2 pcb error 1.844s"
+            }
+          ],
+          "timestamps_present": false
+        }
+      },
+      "events": [
+        {
+          "run_id": "failed_run_acceptance.json",
+          "timestamp": "2026-10-15T18:44:38.001238+00:00",
+          "event": "run_started",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "failed_run_acceptance.json",
+          "timestamp": "2026-10-15T18:44:38.050418+00:00",
+          "event": "identity_probe",
+          "source_field": "identity_probe_at_utc"
+        },
+        {
+          "run_id": "failed_run_acceptance.json",
+          "timestamp": "2026-10-15T18:44:38.053499+00:00",
+          "event": "request_started",
+          "sequence": 1,
+          "status": "error",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "failed_run_acceptance.json",
+          "timestamp": "2026-10-15T18:44:39.893878+00:00",
+          "event": "request_finished",
+          "sequence": 1,
+          "status": "error",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "failed_run_acceptance.json",
+          "timestamp": "2026-10-15T18:44:39.902043+00:00",
+          "event": "run_finished",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "failed_run_acceptance.json",
+          "timestamp": "2026-10-15T18:44:39.902043+00:00",
+          "event": "status_updated",
+          "source_field": "updated_at_utc"
+        }
+      ],
+      "missing_fields": []
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "source_sha256": "ae7d51738ef6f0ace7d947ad4f21d85782a5a7470f3ba2e290d5c59783c02d2c",
+      "status": "complete",
+      "dry_run": false,
+      "batch_acceptance_pass": true,
+      "model_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+      "classes_sha256": "5f6b28fea47fae5e78e5ab783049d5eb2c5b3a03ac255b94eb10ec95866807b1",
+      "requests_declared": 20,
+      "requests_recorded": 20,
+      "requests_completed": 20,
+      "companion_materials": {
+        "later_diagnostic_run.log": {
+          "path": "later_diagnostic_run.log",
+          "sha256": "d6bc3f96146588f3905cbc36be7e7544067d07f65930fa9372a2040e20741fd1",
+          "bytes": 42325,
+          "line_count": 1455,
+          "request_lines": [
+            {
+              "line": 1,
+              "text": "REQUEST 1/20 pcb pass 3.375s"
+            },
+            {
+              "line": 2,
+              "text": "REQUEST 2/20 pin pass 3.375s"
+            },
+            {
+              "line": 3,
+              "text": "REQUEST 3/20 pcb pass 3.390s"
+            },
+            {
+              "line": 4,
+              "text": "REQUEST 4/20 pin pass 3.360s"
+            },
+            {
+              "line": 5,
+              "text": "REQUEST 5/20 pcb pass 3.375s"
+            },
+            {
+              "line": 6,
+              "text": "REQUEST 6/20 pin pass 3.391s"
+            },
+            {
+              "line": 7,
+              "text": "REQUEST 7/20 pcb pass 3.359s"
+            },
+            {
+              "line": 8,
+              "text": "REQUEST 8/20 pin pass 3.375s"
+            },
+            {
+              "line": 9,
+              "text": "REQUEST 9/20 pcb pass 3.375s"
+            },
+            {
+              "line": 10,
+              "text": "REQUEST 10/20 pin pass 3.359s"
+            },
+            {
+              "line": 11,
+              "text": "REQUEST 11/20 pcb pass 3.375s"
+            },
+            {
+              "line": 12,
+              "text": "REQUEST 12/20 pin pass 3.359s"
+            },
+            {
+              "line": 13,
+              "text": "REQUEST 13/20 pcb pass 3.391s"
+            },
+            {
+              "line": 14,
+              "text": "REQUEST 14/20 pin pass 3.375s"
+            },
+            {
+              "line": 15,
+              "text": "REQUEST 15/20 pcb pass 3.406s"
+            },
+            {
+              "line": 16,
+              "text": "REQUEST 16/20 pin pass 3.390s"
+            },
+            {
+              "line": 17,
+              "text": "REQUEST 17/20 pcb pass 3.391s"
+            },
+            {
+              "line": 18,
+              "text": "REQUEST 18/20 pin pass 3.375s"
+            },
+            {
+              "line": 19,
+              "text": "REQUEST 19/20 pcb pass 3.391s"
+            },
+            {
+              "line": 20,
+              "text": "REQUEST 20/20 pin pass 3.391s"
+            }
+          ],
+          "timestamps_present": false
+        }
+      },
+      "events": [
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:21.113766+00:00",
+          "event": "run_started",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:21.165926+00:00",
+          "event": "identity_probe",
+          "source_field": "identity_probe_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:21.169506+00:00",
+          "event": "request_started",
+          "sequence": 1,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:24.555859+00:00",
+          "event": "request_finished",
+          "sequence": 1,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:24.563134+00:00",
+          "event": "request_started",
+          "sequence": 2,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:27.934395+00:00",
+          "event": "request_finished",
+          "sequence": 2,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:27.939386+00:00",
+          "event": "request_started",
+          "sequence": 3,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:31.325382+00:00",
+          "event": "request_finished",
+          "sequence": 3,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:31.330394+00:00",
+          "event": "request_started",
+          "sequence": 4,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:34.695276+00:00",
+          "event": "request_finished",
+          "sequence": 4,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:34.702848+00:00",
+          "event": "request_started",
+          "sequence": 5,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:38.078964+00:00",
+          "event": "request_finished",
+          "sequence": 5,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:38.084989+00:00",
+          "event": "request_started",
+          "sequence": 6,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:41.470641+00:00",
+          "event": "request_finished",
+          "sequence": 6,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:41.480626+00:00",
+          "event": "request_started",
+          "sequence": 7,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:44.853557+00:00",
+          "event": "request_finished",
+          "sequence": 7,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:44.861519+00:00",
+          "event": "request_started",
+          "sequence": 8,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:48.237068+00:00",
+          "event": "request_finished",
+          "sequence": 8,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:48.245861+00:00",
+          "event": "request_started",
+          "sequence": 9,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:51.628809+00:00",
+          "event": "request_finished",
+          "sequence": 9,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:51.635408+00:00",
+          "event": "request_started",
+          "sequence": 10,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:54.999840+00:00",
+          "event": "request_finished",
+          "sequence": 10,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:55.008041+00:00",
+          "event": "request_started",
+          "sequence": 11,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:58.382490+00:00",
+          "event": "request_finished",
+          "sequence": 11,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:41:58.388642+00:00",
+          "event": "request_started",
+          "sequence": 12,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:01.758450+00:00",
+          "event": "request_finished",
+          "sequence": 12,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:01.766470+00:00",
+          "event": "request_started",
+          "sequence": 13,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:05.155644+00:00",
+          "event": "request_finished",
+          "sequence": 13,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:05.163751+00:00",
+          "event": "request_started",
+          "sequence": 14,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:08.531529+00:00",
+          "event": "request_finished",
+          "sequence": 14,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:08.540463+00:00",
+          "event": "request_started",
+          "sequence": 15,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:11.934346+00:00",
+          "event": "request_finished",
+          "sequence": 15,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:11.940361+00:00",
+          "event": "request_started",
+          "sequence": 16,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:15.329466+00:00",
+          "event": "request_finished",
+          "sequence": 16,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:15.337991+00:00",
+          "event": "request_started",
+          "sequence": 17,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:18.716345+00:00",
+          "event": "request_finished",
+          "sequence": 17,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:18.723327+00:00",
+          "event": "request_started",
+          "sequence": 18,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:22.094042+00:00",
+          "event": "request_finished",
+          "sequence": 18,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:22.100860+00:00",
+          "event": "request_started",
+          "sequence": 19,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:25.492389+00:00",
+          "event": "request_finished",
+          "sequence": 19,
+          "status": "pass",
+          "task": "pcb",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:25.501525+00:00",
+          "event": "request_started",
+          "sequence": 20,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "started_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:28.891117+00:00",
+          "event": "request_finished",
+          "sequence": 20,
+          "status": "pass",
+          "task": "pin",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:28.899138+00:00",
+          "event": "run_finished",
+          "source_field": "finished_at_utc"
+        },
+        {
+          "run_id": "later_diagnostic_acceptance.json",
+          "timestamp": "2026-10-15T18:42:28.899138+00:00",
+          "event": "status_updated",
+          "source_field": "updated_at_utc"
+        }
+      ],
+      "missing_fields": []
+    }
+  ],
+  "chronological_recorded_events": [
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:21.113766+00:00",
+      "event": "run_started",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:21.165926+00:00",
+      "event": "identity_probe",
+      "source_field": "identity_probe_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:21.169506+00:00",
+      "event": "request_started",
+      "sequence": 1,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:24.555859+00:00",
+      "event": "request_finished",
+      "sequence": 1,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:24.563134+00:00",
+      "event": "request_started",
+      "sequence": 2,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:27.934395+00:00",
+      "event": "request_finished",
+      "sequence": 2,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:27.939386+00:00",
+      "event": "request_started",
+      "sequence": 3,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:31.325382+00:00",
+      "event": "request_finished",
+      "sequence": 3,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:31.330394+00:00",
+      "event": "request_started",
+      "sequence": 4,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:34.695276+00:00",
+      "event": "request_finished",
+      "sequence": 4,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:34.702848+00:00",
+      "event": "request_started",
+      "sequence": 5,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:38.078964+00:00",
+      "event": "request_finished",
+      "sequence": 5,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:38.084989+00:00",
+      "event": "request_started",
+      "sequence": 6,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:41.470641+00:00",
+      "event": "request_finished",
+      "sequence": 6,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:41.480626+00:00",
+      "event": "request_started",
+      "sequence": 7,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:44.853557+00:00",
+      "event": "request_finished",
+      "sequence": 7,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:44.861519+00:00",
+      "event": "request_started",
+      "sequence": 8,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:48.237068+00:00",
+      "event": "request_finished",
+      "sequence": 8,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:48.245861+00:00",
+      "event": "request_started",
+      "sequence": 9,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:51.628809+00:00",
+      "event": "request_finished",
+      "sequence": 9,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:51.635408+00:00",
+      "event": "request_started",
+      "sequence": 10,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:54.999840+00:00",
+      "event": "request_finished",
+      "sequence": 10,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:55.008041+00:00",
+      "event": "request_started",
+      "sequence": 11,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:58.382490+00:00",
+      "event": "request_finished",
+      "sequence": 11,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:41:58.388642+00:00",
+      "event": "request_started",
+      "sequence": 12,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:01.758450+00:00",
+      "event": "request_finished",
+      "sequence": 12,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:01.766470+00:00",
+      "event": "request_started",
+      "sequence": 13,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:05.155644+00:00",
+      "event": "request_finished",
+      "sequence": 13,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:05.163751+00:00",
+      "event": "request_started",
+      "sequence": 14,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:08.531529+00:00",
+      "event": "request_finished",
+      "sequence": 14,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:08.540463+00:00",
+      "event": "request_started",
+      "sequence": 15,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:11.934346+00:00",
+      "event": "request_finished",
+      "sequence": 15,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:11.940361+00:00",
+      "event": "request_started",
+      "sequence": 16,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:15.329466+00:00",
+      "event": "request_finished",
+      "sequence": 16,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:15.337991+00:00",
+      "event": "request_started",
+      "sequence": 17,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:18.716345+00:00",
+      "event": "request_finished",
+      "sequence": 17,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:18.723327+00:00",
+      "event": "request_started",
+      "sequence": 18,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:22.094042+00:00",
+      "event": "request_finished",
+      "sequence": 18,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:22.100860+00:00",
+      "event": "request_started",
+      "sequence": 19,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:25.492389+00:00",
+      "event": "request_finished",
+      "sequence": 19,
+      "status": "pass",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:25.501525+00:00",
+      "event": "request_started",
+      "sequence": 20,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:28.891117+00:00",
+      "event": "request_finished",
+      "sequence": 20,
+      "status": "pass",
+      "task": "pin",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:28.899138+00:00",
+      "event": "run_finished",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "later_diagnostic_acceptance.json",
+      "timestamp": "2026-10-15T18:42:28.899138+00:00",
+      "event": "status_updated",
+      "source_field": "updated_at_utc"
+    },
+    {
+      "run_id": "failed_run_acceptance.json",
+      "timestamp": "2026-10-15T18:44:38.001238+00:00",
+      "event": "run_started",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "failed_run_acceptance.json",
+      "timestamp": "2026-10-15T18:44:38.050418+00:00",
+      "event": "identity_probe",
+      "source_field": "identity_probe_at_utc"
+    },
+    {
+      "run_id": "failed_run_acceptance.json",
+      "timestamp": "2026-10-15T18:44:38.053499+00:00",
+      "event": "request_started",
+      "sequence": 1,
+      "status": "error",
+      "task": "pcb",
+      "source_field": "started_at_utc"
+    },
+    {
+      "run_id": "failed_run_acceptance.json",
+      "timestamp": "2026-10-15T18:44:39.893878+00:00",
+      "event": "request_finished",
+      "sequence": 1,
+      "status": "error",
+      "task": "pcb",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "failed_run_acceptance.json",
+      "timestamp": "2026-10-15T18:44:39.902043+00:00",
+      "event": "run_finished",
+      "source_field": "finished_at_utc"
+    },
+    {
+      "run_id": "failed_run_acceptance.json",
+      "timestamp": "2026-10-15T18:44:39.902043+00:00",
+      "event": "status_updated",
+      "source_field": "updated_at_utc"
+    }
+  ],
+  "unassociated_logs": [
+    {
+      "path": "snapshot_xsct.log",
+      "sha256": "1fec3df39c81b84a99dcd6693fa10d97b522e0b4bbce67de93c118a8f7aabb3d",
+      "bytes": 1180,
+      "line_count": 27,
+      "timestamp_events_added": false
+    }
+  ],
+  "problems": [
+    {
+      "run_id": "failed_run_acceptance.json",
+      "problem": "planned_count disagrees with recorded request count",
+      "planned_count": 2,
+      "recorded_count": 1
+    }
+  ],
+  "interpretation": "Events come only from saved acceptance JSON fields. Different files are separate recorded runs; chronological order does not establish causal relation or failure-time register state. This adapter does not interpret DMA register bits, infer TLAST, or identify root cause."
+}

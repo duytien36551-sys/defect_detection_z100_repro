@@ -1,0 +1,224 @@
+{
+  "schema": "z100-source-delivery-status-v2",
+  "date": "2026-11-03",
+  "status": "SOURCE_DELIVERY_WITH_EXISTING_RESULTS",
+  "scope": "Frozen epoch200 source reproduction package with 300 curated examples. Packaging and file checks only; no further build, simulation, inference, training or board work requested.",
+  "source_rebuild_inputs_included": true,
+  "additional_hardware_validation": "STOPPED_BY_USER",
+  "hardware_source_to_bit_final_acceptance": "NOT_COMPLETED_NOT_REQUIRED_FOR_THIS_PACKAGING_TASK",
+  "prior_firmware_source_build": "COMPLETE_USING_ORIGINAL_REFERENCE_BIT_BOARD_PENDING",
+  "prior_rtl_components_passed": 9,
+  "prior_rtl_tool_commands_passed": 27,
+  "prior_reference_images_passed": 300,
+  "prior_reference_max_absolute_error": 0,
+  "original_final_board_files_preserved": 6,
+  "selected_epoch": 200,
+  "selected_images": 300,
+  "representative_test_set": false,
+  "from_zero_training_required": false,
+  "compile_run_during_packaging": false,
+  "simulation_run_during_packaging": false,
+  "inference_run_during_packaging": false,
+  "board_access": false,
+  "sd_write": false,
+  "reports": {
+    "hardware": "report/reproduction_hardware.json",
+    "hardware_readable": "report/reproduction_hardware.md",
+    "firmware": "report/reproduction_firmware.json",
+    "rtl": "report/reproduction_rtl.json",
+    "detection": "report/reproduction_detection.json"
+  },
+  "technical_document": "report/documents/technical_document.docx",
+  "remaining": "report/missing_items.md",
+  "acceptance_limit": "No completed fresh source-to-bit export or new binary board validation is claimed. Existing historical results retain their own version and measurement scope.",
+  "prior_offline_input_checks": [
+    {
+      "command": [
+        "python",
+        "build/rebuild_hardware_source.py",
+        "--check"
+      ],
+      "interpreter": "C:\\cbian\\mingw64\\bin\\python.exe",
+      "returncode": 0,
+      "stdout": "PASS hardware source package: sources=53, tcl_scripts=5, incremental_checkpoint=not_required, windows_max_path=260, subst_alias_writes=preserved\nCheck only: Vivado, synthesis, place, route, and board access were not run.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "build/rebuild_hardware.py",
+        "--check"
+      ],
+      "interpreter": "C:\\cbian\\mingw64\\bin\\python.exe",
+      "returncode": 0,
+      "stdout": "PASS hardware source package: sources=53, tcl_scripts=5, incremental_checkpoint=not_required, windows_max_path=260, subst_alias_writes=preserved\nCheck only: Vivado, synthesis, place, route, and board access were not run.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "build/rebuild_bsp_sources.py",
+        "--check"
+      ],
+      "interpreter": "C:\\cbian\\mingw64\\bin\\python.exe",
+      "returncode": 0,
+      "stdout": "CHECK_PASS files=1493 bsp_fsbl_snapshot=z100_bsp_fsbl_source_snapshot_v1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "build/rebuild_firmware.py",
+        "--check"
+      ],
+      "interpreter": "C:\\cbian\\mingw64\\bin\\python.exe",
+      "returncode": 0,
+      "stdout": "CHECK_PASS sources=89 objects=90 bytes=15055911 reference_elf_sha256=a1fb69729ac1dd2f4ec142819b0ec703fe1c8b8a548c84f9b1415a4683a9cdae\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "build/rebuild_sd_boot.py",
+        "--check"
+      ],
+      "interpreter": "C:\\cbian\\mingw64\\bin\\python.exe",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_SD_BOOT_REBUILD_PACKAGE\",\n  \"fix_manifest_sha256\": \"0964b5923ded02115d8d8c3c8d4832a128dc658aa8a7709f433becd70d73fddb\",\n  \"historical_object_records\": 90,\n  \"baseline_source_commands_checked\": 90,\n  \"baseline_object_files_required\": false,\n  \"patched_sources_checked\": 5,\n  \"patched_argv_contract_checked\": true,\n  \"portable_source_objects_checked\": 90,\n  \"tested_elf_sha256\": \"24ace23496c9e44500b83c35a59a8a6a8ca4fb0fa0c5dda7b76b9855a642cf10\",\n  \"tested_boot_sha256\": \"29c6d422cffd9e98694586312c7b8a4548ed8429b9f563498089ad636a42f5ac\",\n  \"build_commands_executed\": false,\n  \"compiler_executed\": false,\n  \"bootgen_executed\": false,\n  \"board_access\": false,\n  \"sd_write\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "sim/run_rtl.py",
+        "--check"
+      ],
+      "interpreter": "C:\\cbian\\mingw64\\bin\\python.exe",
+      "returncode": 0,
+      "stdout": "PASS: 9 case manifests and package inputs validated; external Vivado glbl.v was not checked\nHistorical results remain historical; no simulation was run.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "sim/reproduce_detection.py",
+        "--check"
+      ],
+      "interpreter": "C:\\cbian\\mingw64\\bin\\python.exe",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_DETECTION_INPUTS\",\n  \"samples\": 300,\n  \"hashes\": {\n    \"board/evidence/desktop_board_integration.json\": \"b41fb78953733ed4a4a53d77d71804df1ae4de0a9f03fe181c7f8bfdd7d3943b\",\n    \"board/evidence/final_performance.json\": \"a482afc74998e49dd971a5aad7833885e59d451def1b17db22db00707ab6370f\",\n    \"data/dataset/selected_manifest.json\": \"ca11a8481c46e312158b3395663812335ac4395506866341480fe0b24ddfe1b0\",\n    \"data/float_export/graph.json\": \"9d6064e37e92e61c687608d2c5e216cccb31e0b1fc9603de0c8b21eb3acbae9f\",\n    \"data/model/classes.json\": \"c4be99901ddf513cd79ad3000a53f9cb3e01f602ad1f46cb6ff1b3e6df70594a\",\n    \"data/model/package.json\": \"98222b4db5ec1dfe919dc5e32ac40c5c55d43c4e64b22b2e5ede1db81285c2d6\",\n    \"data/model/quantization.json\": \"b325427b14e967e1f2d6727e3fd4ad6e816162f35211bcc99831c2dfa200a5a5\",\n    \"data/model/weights_int8.npz\": \"09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d\",\n    \"data/pin_epoch200.pt\": \"2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6\",\n    \"data/pin_epoch200_int8.v8p\": \"65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c\",\n    \"data/provenance/canonical_manifest.json\": \"cd3a1d1101547877fd453875416b034abc0fcf356686131bd57d289fff4d7a2b\",\n    \"data/quantization/quantization.json\": \"6e65833620c0cfde807e88e00f0d31e34add43139012974b4eccd2fe8a4b0321\",\n    \"data/quantization/weights_int8.npz\": \"09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d\",\n    \"data/reference/expected_heads_int8.bin\": \"6ca6c5f8f9fc0729045efdf95cc368959a6c49803e90e2c3cd09ee48dbaab0c9\",\n    \"data/reference/input_rgb.bin\": \"f82d6ce4ad170ec4859a49f405d6a0b7ca2cdbd93b5e57142a556a92ccd750e0\",\n    \"report/model_selection.json\": \"5fa0efa09eb82d64da22be270e234b1edb83b1f505aa9ec03b2b56b9ebbbe7eb\",\n    \"report/model_validation.json\": \"52085f4c772baf171fe0b57d20f15b1995253adb11379fbf835b5b70d7cb65e7\",\n    \"report/selected_sample_predictions.json\": \"e458122748700874a17f2bbed06f236e685cec043144e44938af9a982b651be9\",\n    \"src/model/v8_generated_model.h\": \"83d3a64b6deccd8ef3f54680ea5714d1ada9c2faff5c105974d0a47c338e5e2c\",\n    \"src/model/v8_runtime.h\": \"75884963030018375fd604e9976096433ba857b3916a0d63636bda8940873533\"\n  },\n  \"inference_run\": false,\n  \"board_access\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "sim/verify_model.py"
+      ],
+      "interpreter": "C:\\cbian\\mingw64\\bin\\python.exe",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_MODEL_FILES_AND_CONTRACT\",\n  \"verified_files\": 14,\n  \"selected_epoch\": 200,\n  \"class_count\": 9,\n  \"input_size\": 640,\n  \"board_access\": false,\n  \"inference_run\": false,\n  \"scope\": \"SHA256, byte lengths, V8PK CRC/header, package and ordered-class identity; not accuracy or hardware validation\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "build/prepare_dataset.py"
+      ],
+      "interpreter": "C:\\cbian\\mingw64\\bin\\python.exe",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_DATASET_PATHS_AND_LABELS\",\n  \"images_by_split\": {\n    \"test\": 300\n  },\n  \"curated_showcase\": true,\n  \"representative_test_set\": false,\n  \"generated_config\": false,\n  \"training_started\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "board/run_desktop.py",
+        "--check"
+      ],
+      "interpreter": "C:\\cbian\\mingw64\\bin\\python.exe",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_PORTABLE_DESKTOP_CONFIG\",\n  \"model\": \"data/pin_epoch200_int8.v8p\",\n  \"model_sha256\": \"65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c\",\n  \"classes_sha256\": \"d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754\",\n  \"class_count\": 9,\n  \"input_size\": 640,\n  \"network_used\": false\n}\n",
+      "stderr": ""
+    }
+  ],
+  "prior_desktop_gui_check": {
+    "command": [
+      "python",
+      "-B",
+      "sim/check_desktop.py"
+    ],
+    "interpreter": "C:/Users/Administrator/Desktop/yolov8n_z7z100/.venv/Scripts/python.exe",
+    "returncode": 0,
+    "stdout": "{\n  \"status\": \"PASS_PACKAGED_DESKTOP_UI\",\n  \"network_used\": false,\n  \"board_access\": false,\n  \"inference\": \"explicit_fake_for_ui_test\",\n  \"tk_callback_errors\": []\n}",
+    "stderr": "",
+    "evidence": "Primary actual exec caea92, exit_code 0, 2026-11-03; result transcribed from tool output."
+  },
+  "post_data_deduplication_file_checks": [
+    {
+      "command": [
+        "sim/verify_model.py"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "PASS_MODEL_FILES_AND_CONTRACT",
+        "verified_files": 14,
+        "selected_epoch": 200,
+        "class_count": 9,
+        "input_size": 640,
+        "board_access": false,
+        "inference_run": false,
+        "scope": "SHA256, byte lengths, V8PK CRC/header, package and ordered-class identity; not accuracy or hardware validation"
+      }
+    },
+    {
+      "command": [
+        "sim/reproduce_detection.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "PASS_DETECTION_INPUTS",
+        "samples": 300,
+        "hashes": {
+          "board/evidence/desktop_board_integration.json": "b41fb78953733ed4a4a53d77d71804df1ae4de0a9f03fe181c7f8bfdd7d3943b",
+          "board/evidence/final_performance.json": "a482afc74998e49dd971a5aad7833885e59d451def1b17db22db00707ab6370f",
+          "data/dataset/selected_manifest.json": "ca11a8481c46e312158b3395663812335ac4395506866341480fe0b24ddfe1b0",
+          "data/float_export/graph.json": "9d6064e37e92e61c687608d2c5e216cccb31e0b1fc9603de0c8b21eb3acbae9f",
+          "data/model/classes.json": "c4be99901ddf513cd79ad3000a53f9cb3e01f602ad1f46cb6ff1b3e6df70594a",
+          "data/model/package.json": "98222b4db5ec1dfe919dc5e32ac40c5c55d43c4e64b22b2e5ede1db81285c2d6",
+          "data/model/quantization.json": "b325427b14e967e1f2d6727e3fd4ad6e816162f35211bcc99831c2dfa200a5a5",
+          "data/pin_epoch200.pt": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+          "data/pin_epoch200_int8.v8p": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+          "data/provenance/canonical_manifest.json": "cd3a1d1101547877fd453875416b034abc0fcf356686131bd57d289fff4d7a2b",
+          "data/quantization/quantization.json": "6e65833620c0cfde807e88e00f0d31e34add43139012974b4eccd2fe8a4b0321",
+          "data/quantization/weights_int8.npz": "09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d",
+          "data/reference/expected_heads_int8.bin": "6ca6c5f8f9fc0729045efdf95cc368959a6c49803e90e2c3cd09ee48dbaab0c9",
+          "data/reference/input_rgb.bin": "f82d6ce4ad170ec4859a49f405d6a0b7ca2cdbd93b5e57142a556a92ccd750e0",
+          "report/model_selection.json": "5fa0efa09eb82d64da22be270e234b1edb83b1f505aa9ec03b2b56b9ebbbe7eb",
+          "report/model_validation.json": "52085f4c772baf171fe0b57d20f15b1995253adb11379fbf835b5b70d7cb65e7",
+          "report/selected_sample_predictions.json": "e458122748700874a17f2bbed06f236e685cec043144e44938af9a982b651be9",
+          "src/model/v8_generated_model.h": "83d3a64b6deccd8ef3f54680ea5714d1ada9c2faff5c105974d0a47c338e5e2c",
+          "src/model/v8_runtime.h": "75884963030018375fd604e9976096433ba857b3916a0d63636bda8940873533"
+        },
+        "inference_run": false,
+        "board_access": false
+      }
+    }
+  ],
+  "prior_compilation_run": true,
+  "prior_rtl_simulation_run": true,
+  "model_parameters_changed": false,
+  "selected_image_label_sha256": "UNCHANGED_300_PAIRS",
+  "final_board_artifact_sha256": "UNCHANGED_SIX_FILES",
+  "file_inventory": "report/file_inventory.tsv",
+  "final_submission_seal": "report/submission_sha256.json",
+  "integrity_note": "Final file inventory and seal are generated after all package edits; they cover the delivered bytes. Historical input checks are retained as evidence, not rerun during this packaging operation."
+}

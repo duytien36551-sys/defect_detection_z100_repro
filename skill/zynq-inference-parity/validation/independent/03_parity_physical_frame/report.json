@@ -1,0 +1,104 @@
+{
+  "case": "03_parity_physical_frame",
+  "task": "Reconstruct one physical-frame input/output contract and parity evidence, explain byte counts and hashes, and bound the capture scope.",
+  "review_type": "independent read-only evidence evaluation",
+  "skills_loaded": [
+    {
+      "name": "zynq-inference-parity",
+      "version": "1.0.0-rc1",
+      "skill_path": "<project-root>\\skill\\installed_sources\\zynq-inference-parity\\skill.md",
+      "workflow_path": "<project-root>\\skill\\installed_sources\\zynq-inference-parity\\references\\workflow.md"
+    }
+  ],
+  "evidence": {
+    "board_result": "<project-root>\\skill\\validation\\cases_20261025\\03_parity_physical_frame\\inputs\\board_result.json",
+    "frame_summary": "<project-root>\\skill\\validation\\cases_20261025\\03_parity_physical_frame\\inputs\\first_frame_summary.json",
+    "raw_capture": "<project-root>\\skill\\validation\\cases_20261025\\03_parity_physical_frame\\inputs\\raw_heads_padded.bin"
+  },
+  "findings": {
+    "reported_status": "PASS_ONE_PHYSICAL_FULL_MODEL_FRAME_613200_BYTES_EXACT",
+    "scope": "one fixed validation image, current provisional baseline INT8 package",
+    "release_eligible": false,
+    "accuracy_accepted": false,
+    "fps_accepted": false,
+    "input": {
+      "domain": "pin",
+      "input_size": 640,
+      "validation_images": 1,
+      "image_sha256": null,
+      "dtype_shape_channels_preprocessing": "not supplied"
+    },
+    "output": {
+      "logical_bytes": 613200,
+      "capture_bytes": 613248,
+      "padding_bytes": 48,
+      "padding_values": [
+        0
+      ],
+      "logical_sha256_recomputed": "719c01a206b9ceeef7ed9d8c5bfc82c8edc12fd6294c6d8a342ff24ab1fbd707",
+      "full_sha256_recomputed": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555",
+      "expected_sha256_reported": "719c01a206b9ceeef7ed9d8c5bfc82c8edc12fd6294c6d8a342ff24ab1fbd707",
+      "logical_hash_matches_expected_declaration": true,
+      "dtype_shape_layout_endianness_scales": "not supplied"
+    },
+    "comparison": {
+      "mismatch_count_reported": 0,
+      "direct_expected_reference_bytes_supplied": false,
+      "independent_result": "logical-prefix hash matches expected SHA declaration; cannot recompute a two-file byte mismatch count"
+    },
+    "execution": {
+      "elf_sha256_reported": "9f326aa8d74c47fc0dca860d359de1a5e37997ebf686c5d3dc1507cbc0ffb3df",
+      "graph_nodes": 163,
+      "detections": 2,
+      "tile_loads": 94,
+      "tile_runs": 6319,
+      "final_physical_registers": {
+        "txsr": 4098,
+        "rxsr": 4098,
+        "tile": 32
+      },
+      "board_state_reported": "one-shot complete, both CPUs stopped, DMA idle/error-clear"
+    },
+    "timer": {
+      "hz": 333333343,
+      "scope": "generated CPU clock/2; oscillator frequency not independently measured",
+      "phases_ms": {
+        "preprocess": 27.6593361979,
+        "graph": 6403.5540002969,
+        "dequantization": 16.2351025292,
+        "decode": 131.6430831824,
+        "total": 6579.0945192063
+      },
+      "node_interval_sum_ms": 6389.3390977092
+    },
+    "full_pipeline_transport_measured": false,
+    "sustained_fps_measured": false
+  },
+  "limitations": [
+    "Only one image is represented; no general accuracy, throughput distribution, or release conclusion follows.",
+    "Input image and expected output reference are absent; no new byte-for-byte comparison was possible.",
+    "Tensor dtype, shape, layout, endianness, scales, and exact preprocessing are not supplied.",
+    "Referenced graph, diagnostics, result, and header files were not supplied and were not checked.",
+    "Timer frequency was not independently measured."
+  ],
+  "operation_log": [
+    "Read task.md and case inputs only, plus the specified skill and workflow.",
+    "Used standard-library JSON parsing, arithmetic, binary slicing, zero-byte count, and SHA-256.",
+    "No board operation, network access, training action, weight loading, or model selection.",
+    "Wrote report.md and report.json only in the assigned output directory."
+  ],
+  "input_hash_check": {
+    "checkpoint": "Pre-report-write and post-report-write hashes compared; all values matched.",
+    "pre_report_write": {
+      "board_result.json": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c",
+      "first_frame_summary.json": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9",
+      "raw_heads_padded.bin": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555"
+    },
+    "post_report_write": {
+      "board_result.json": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c",
+      "first_frame_summary.json": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9",
+      "raw_heads_padded.bin": "8661127d8715c6cd4c3c17611581d4b02d1a7f9483aabcefe2576a7a226d3555"
+    },
+    "all_unchanged": true
+  }
+}

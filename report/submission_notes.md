@@ -1,0 +1,11 @@
+# 提交范围与版本
+
+本版为300张优选样例的工程复现包；按照已确认范围，提供从冻结epoch200模型出发的硬件/固件源码重建入口和检测复现材料，不要求从零训练。已有固件源码构建及BOOT生成、9项RTL组件回归和300张电脑整数参考检测分别归档；额外硬件源码构建在布线阶段按要求停止，没有新最终bit/XSA导出，新构建固件也尚未通过实板验收。目录、命令、实际验收和剩余缺项以根readme.md、reproduction_validation.json和missing_items.md为准。
+
+最终平台为epoch200、softpack49000、12路、100 MHz、ACP。原最终bit SHA256为9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f；性能归档版ELF为a1fb69729ac1dd2f4ec142819b0ec703fe1c8b8a548c84f9b1415a4683a9cdae。独立SD网络修复版ELF为24ace23496c9e44500b83c35a59a8a6a8ca4fb0fa0c5dda7b76b9855a642cf10，BOOT为29c6d422cffd9e98694586312c7b8a4548ed8429b9f563498089ad636a42f5ac。
+
+第一版epoch108仅保留历史摘要/参考，不附其旧bit/ELF/XSA。新构建输出留在包外，与以上保留的最终上板文件分别记录身份和验收；原二进制内嵌路径不修改。原始日志、中间产物和旧压缩包不随本版交付。
+
+全部文件清单为submission_sha256.json，冻结模型身份为current_model_manifest.json。历史训练/测试和板端报告沿用各自统计口径；电脑整数参考结果不计入FPGA性能或实板精度。
+
+网络修复版2026-11-03的已有JTAG + SCOPED记录见`../board/evidence/pc_fast_20261103/runtime_identity.json`：30次同图请求全部匹配参考，p50为362.421 ms、P95为364.628 ms，批次吞吐2.767125 FPS；两图ABABA原始头也与参考一致。该模式依赖未随包完整交付的外部启动/资格交接，不能解释为SD冷启动已通过、普通FULL启动达到相同性能或长期/批次泛化验收。

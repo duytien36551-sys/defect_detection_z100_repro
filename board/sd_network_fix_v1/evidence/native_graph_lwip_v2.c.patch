@@ -1,0 +1,35 @@
+--- C:\z100v13\gpt_softpack_build_plan01\build_output\native_sources\native_graph_lwip_v2.c
++++ src/native_graph_lwip_v2.c
+@@ -170,7 +170,8 @@
+     if (!n || n != binding || n->state != ZN_NATIVE_LWIP_V2_SERVING || !to || !capacity) return -1;
+     while (n->peer && !n->incoming_len && !n->peer_eof)
+         if (zn_native_graph_lwip_progress_v2(n)) return -1;
+-    if (zn_native_graph_lwip_progress_v2(n) || !n->peer || !n->incoming_len) return -1;
++    if (zn_native_graph_lwip_progress_v2(n) || !n->peer) return -1;
++    if (!n->incoming_len) return n->peer_eof ? 0 : -1;
+     while (count<capacity && n->incoming_len && count<INT_MAX) {
+         size_t at=n->incoming_head;
+         size_t run=sizeof n->incoming-at;
+@@ -277,13 +278,20 @@
+     }
+     if (n->state != ZN_NATIVE_LWIP_V2_LISTENING || !n->peer) return n->state;
+     if (!n->incoming_len) {
+-        if (n->peer_eof) { (void)fail(n); abort_peer(n); }
++        /* TCP-only connection checks may close before sending a HELLO. */
++        if (n->peer_eof && close_peer(n)) { (void)fail(n); abort_peer(n); }
+         return n->state;
+     }
+     n->dispatching=1; n->state=ZN_NATIVE_LWIP_V2_SERVING; ++n->requests;
+     code=zn_native_graph_service_one_v2(n->app);
+     n->last_service_code=code; n->last_timing=n->app->timing;
+-    if (code != ZN_NATIVE_SERVICE_V2_DELIVERED || n->transport_error || n->incoming_len || close_peer(n)) {
++    /* A validated HELLO followed by clean EOF has not started the graph.
++     * Keep the same READY epoch; do not rearm or touch accelerator buffers. */
++    if (code == ZN_NATIVE_SERVICE_V2_READY && n->app->state == ZN_NATIVE_SERVICE_V2_READY &&
++        n->peer_eof && !n->incoming_len && !n->transport_error) {
++        if (close_peer(n)) { (void)fail(n); abort_peer(n); }
++        else n->state=ZN_NATIVE_LWIP_V2_LISTENING;
++    } else if (code != ZN_NATIVE_SERVICE_V2_DELIVERED || n->transport_error || n->incoming_len || close_peer(n)) {
+         (void)fail(n); abort_peer(n);
+     } else n->state=ZN_NATIVE_LWIP_V2_DELIVERED;
+     n->dispatching=0;

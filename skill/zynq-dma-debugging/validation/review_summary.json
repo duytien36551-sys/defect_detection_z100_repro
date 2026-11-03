@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "status": "accepted_engineering_evidence_workflow",
+  "local_cases": [
+    {
+      "case": "07_dma_normal_batch",
+      "status": "pass_after_independent_execution_and_primary_review",
+      "report": "independent/07_dma_normal_batch/report.json",
+      "note": "20/20只限所存批次；重算已舍入请求中位数3.3825s，与汇总3.383s分列；发现仅2份输入重复、坐标契约未闭合；未推断恢复。"
+    },
+    {
+      "case": "08_dma_cross_run_failure",
+      "status": "pass_after_independent_execution_and_primary_review",
+      "report": "independent/08_dma_cross_run_failure/report.json",
+      "note": "按原始时间戳分开诊断、失败及事后快照；根因未定，未猜解无布局二进制；未操作板卡。初始oracle的“later”方向需以原始时间戳纠正，未要求迎合错误预期。"
+    }
+  ],
+  "independent_local_behavioral_validation": "pass_two_cases",
+  "external_static_reuse": {
+    "id": "pynq",
+    "skills": [
+      "zynq-model-identity",
+      "zynq-ps-pl-performance",
+      "zynq-dma-debugging"
+    ],
+    "manifest": "cases/external_pynq/source_manifest.json",
+    "report": "cases/external_pynq/report.json",
+    "status": "independent_static_reuse_pass",
+    "hardware_execution": false
+  },
+  "external_report": "external_report.json",
+  "external_manifest": "external_source_manifest.json",
+  "pynq_cross_board_validation": "not_evaluated",
+  "unfamiliar_human_team_usage": "not_evaluated",
+  "multiple_prompt_runs_stability": "not_evaluated",
+  "release_scope": "Engineering evidence audit, not a portable board runtime",
+  "instruction_promotion": "Only version and evidence-status paragraph changed from tested rc1. Workflow and all decision instructions byte/content unchanged."
+}

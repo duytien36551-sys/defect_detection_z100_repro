@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "status": "accepted_engineering_evidence_workflow",
+  "local_cases": [
+    {
+      "case": "01_identity_normal",
+      "status": "pass_after_independent_execution_and_primary_review",
+      "report": "independent/01_identity_normal/report.json",
+      "note": "运行模型/协议声明匹配；明确较晚构建清单不能绑定较早运行ELF/PL，区分声明哈希与重算文件哈希。"
+    },
+    {
+      "case": "02_identity_missing_runtime_derived",
+      "status": "pass_after_independent_execution_and_primary_review",
+      "report": "independent/02_identity_missing_runtime_derived/report.json",
+      "note": "只确认构建候选；运行身份缺失保持未确认，并指出最小闭环证据。"
+    }
+  ],
+  "independent_local_behavioral_validation": "pass_two_cases",
+  "external_static_reuse": {
+    "id": "pynq",
+    "skills": [
+      "zynq-model-identity",
+      "zynq-ps-pl-performance",
+      "zynq-dma-debugging"
+    ],
+    "manifest": "cases/external_pynq/source_manifest.json",
+    "report": "cases/external_pynq/report.json",
+    "status": "independent_static_reuse_pass",
+    "hardware_execution": false
+  },
+  "external_report": "external_report.json",
+  "external_manifest": "external_source_manifest.json",
+  "pynq_cross_board_validation": "not_evaluated",
+  "unfamiliar_human_team_usage": "not_evaluated",
+  "multiple_prompt_runs_stability": "not_evaluated",
+  "release_scope": "Engineering evidence audit, not a portable board runtime",
+  "instruction_promotion": "Only version and evidence-status paragraph changed from tested rc1. Workflow and all decision instructions byte/content unchanged."
+}

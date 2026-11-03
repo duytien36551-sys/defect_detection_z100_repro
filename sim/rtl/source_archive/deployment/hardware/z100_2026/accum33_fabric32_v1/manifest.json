@@ -1,0 +1,95 @@
+{
+  "schema": "z100-accum33-fabric32-candidate/1",
+  "status": "HOST_CHECK_PASS_RTL_SIM_AUTHORED_NOT_RUN",
+  "candidate": {
+    "name": "site0_32_lane_fabric_feedback_accumulator",
+    "frozen_mac_top": "z100_window_mac_local_control_v1",
+    "default_sites": 20,
+    "lanes_per_site": 32,
+    "replacement": "Only the accumulator generate instance is transformed: accum_site==0 selects the 33-bit fabric component; all other generated sites select the original DSP component.",
+    "expected_elaboration_counts": "32 fabric feedback cells at site0 and 608 original DSP feedback cells at sites1-19, conditional on default SITES=20 and successful elaboration.",
+    "mapping_and_timing_claims": false,
+    "production_integrated": false,
+    "fps_claim": false
+  },
+  "source_bindings": {
+    "original_accumulator": {
+      "path": "build/v12p_d46da432/rtl/z100_accum33_dsp.sv",
+      "sha256": "0b046f32b223a2c9055e27773def8e66a0e5755fd66fa9611dde6a6575e60d51"
+    },
+    "original_window_mac": {
+      "path": "build/v12p_d46da432/rtl/z100_window_mac.sv",
+      "sha256": "f573c82fab313161d4097eedafcb7669026dbf6e4c29efa313f0a575fe29e474"
+    },
+    "legacy_accumulator_vectors": {
+      "path": "validation/board_z100/accum33_dsp_v2/20261024T051501.085372Z/src/tb_z100_accum33_dsp.sv",
+      "sha256": "caca963201be0589150fc0f3f37e60933fe0ffe4bf2dc34089203ddf958036fb"
+    }
+  },
+  "candidate_artifacts": {
+    "fabric_accumulator": {
+      "path": "deployment/hardware/z100_2026/accum33_fabric32_v1/z100_accum33_fabric32_v1.sv",
+      "sha256": "7eceab1cf87329e7bfeddaeb7364b80f3331ed8cd8accb1df6c9ee330ad7b9da"
+    },
+    "site0_mac_candidate": {
+      "path": "deployment/hardware/z100_2026/accum33_fabric32_v1/z100_window_mac_fabric32_site0.sv",
+      "sha256": "0f400c4f5a1993ead25bd8bfb39e3bdbb6ed6608626f6bd77d41248408e4207b"
+    },
+    "miter_testbench": {
+      "path": "deployment/hardware/z100_2026/accum33_fabric32_v1/tb_z100_accum33_fabric32_miter.sv",
+      "sha256": "25a43665aacb871ee9df321ffde468cab76ffb7015affb55788204d14231a2c6"
+    },
+    "host_checker": {
+      "path": "tools/check_z100_accum33_fabric32_v1.py",
+      "sha256": "e0e455d382ef58114448aef56be46097785eee463fcb756d1ae127b4592989b1"
+    },
+    "failed_attempt_record": {
+      "path": "deployment/hardware/z100_2026/accum33_fabric32_v1/failed_attempts.json",
+      "sha256": "28fcb1cd14ab3dacfab49a69e416e39b5941c4c0d871e7e4b052cb6f4278ab80"
+    }
+  },
+  "semantic_contract": [
+    "signed 32-bit bias is sign-extended to 33 bits; load_bias takes priority over enable and ignores delta",
+    "signed 19-bit delta is sign-extended to 33 bits; feedback addition wraps modulo 2^33",
+    "state payload has no reset; initialized is cleared by synchronous reset or cancel and masks invalid payload",
+    "update occurs on rst_n && !cancel && (load_bias || (enable && initialized))",
+    "overflow is feedback[32] != feedback[31]; clamp affects output only and is never fed back",
+    "no added pipeline stage; one state-register update per enabled cycle"
+  ],
+  "simulation_gate": {
+    "status": "AUTHORED_NOT_RUN",
+    "top": "tb_z100_accum33_fabric32_miter",
+    "required_tools": "Vivado 2026.1 xvlog/xelab/xsim with vendor unisim library for DSP48E1 and glbl",
+    "source_closure": [
+      "original_accumulator",
+      "fabric_accumulator",
+      "miter_testbench",
+      "Vivado glbl.v"
+    ],
+    "required_marker": "ACCUM33_FABRIC32_MITER_PASS",
+    "required_cases": [
+      "load bias priority with enable asserted",
+      "enable before initialization",
+      "consecutive updates/II=1",
+      "positive and negative signed33 wrap",
+      "hold with changing operands",
+      "reset and cancel masking",
+      "reload with enable low"
+    ],
+    "not_run_reason": "This packet is explicitly offline-only; no simulator/vendor operation was started."
+  },
+  "host_check": {
+    "status": "PASS_SOURCE_IDENTITY_AND_INTEGER_MODEL_NOT_RTL_SIMULATION",
+    "command": "python -B tools/check_z100_accum33_fabric32_v1.py",
+    "scope": "read-only hashes, exact normalized MAC text transformation, and independent integer boundary vectors; not RTL simulation",
+    "result_summary": {
+      "source_binding": "PASS",
+      "exact_mac_diff": "PASS_SINGLE_SITE0_ACCUMULATOR_SUBSTITUTION",
+      "integer_vectors": "PASS",
+      "checked_update_and_hold_steps": 18434,
+      "continuous_updates": 1024,
+      "simulation": "AUTHORED_NOT_RUN"
+    }
+  },
+  "prior_failed_attempts": "deployment/hardware/z100_2026/accum33_fabric32_v1/failed_attempts.json"
+}

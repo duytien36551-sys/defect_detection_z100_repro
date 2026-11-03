@@ -1,0 +1,233 @@
+{
+  "case_id": "02_identity_missing_runtime_derived",
+  "task": "Review supplied build manifest/report for deployment identity; no hardware operation.",
+  "skill_loaded": {
+    "name": "zynq-model-identity",
+    "version": "1.0.0-rc1",
+    "files": [
+      "skill/installed_sources/zynq-model-identity/skill.md",
+      "skill/installed_sources/zynq-model-identity/references/workflow.md"
+    ]
+  },
+  "execution": {
+    "mode": "read-only fixture review",
+    "actual_operations": [
+      "Read only task.md, frozen skill.md/workflow.md, build_manifest.json and build_report.json.",
+      "Parsed JSON; cross-checked model/package, XSA and ELF declared hashes; recomputed SHA-256 for included build_report.json.",
+      "Listed artifact declarations; did not access historical absolute paths or missing binaries; no hardware/network/model operation."
+    ],
+    "prohibited_operations_performed": []
+  },
+  "input_integrity": {
+    "files": [
+      {
+        "path": "skill/validation/cases_20261025/02_identity_missing_runtime_derived/inputs/build_manifest.json",
+        "bytes": 3880,
+        "sha256_before": "3ead1956a3e49b2821583793094a9aa5f2503d0b9f2dc50beb027f8a1082b3d7",
+        "sha256_after": "3ead1956a3e49b2821583793094a9aa5f2503d0b9f2dc50beb027f8a1082b3d7",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/02_identity_missing_runtime_derived/inputs/build_report.json",
+        "bytes": 7890,
+        "sha256_before": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9",
+        "sha256_after": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9",
+        "unchanged": true
+      }
+    ],
+    "all_unchanged": true
+  },
+  "conclusion": {
+    "status": "NOT_CONFIRMED",
+    "summary": "Candidate package and XSA metadata are internally linked by declarations; actual target board and runtime identity remain unconfirmed."
+  },
+  "findings": [
+    {
+      "id": "candidate",
+      "status": "supported_as_build_declaration",
+      "fact": "Manifest model/package and declared MODEL.V8P hashes agree (f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3); the package binary is absent and was not rehashed."
+    },
+    {
+      "id": "artifacts",
+      "status": "declared_only",
+      "fact": "Manifest declares BOOT.BIN 4379208 B, tile64.bit 4045674 B, XSA 339755 B, and board ELF 1209040 B. The ELF/package/XSA/bitstream binaries are not provided. Included build_report SHA-256 recomputes to 137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9 and matches manifest."
+    },
+    {
+      "id": "interface",
+      "status": "partial_metadata_only",
+      "fact": "arm_link=PASS; XSA metadata reports DMA width 20 bits, control base 0x43c10000; physical DMA width verified=False; build mode says physical board not verified."
+    },
+    {
+      "id": "running_identity",
+      "status": "not_confirmed",
+      "fact": "No runtime handshake, board identity, loaded ELF hash, or physical PL/bitstream ID is supplied; build outputs cannot prove what a target board runs."
+    }
+  ],
+  "artifact_declarations": [
+    {
+      "path": "programming/boot_headers.txt",
+      "sha256": "a05d52e9d7717b353c15b55e3bd4d3036a29590bbc1f619ea90e343f5e68a981",
+      "bytes": 5445,
+      "provided": false
+    },
+    {
+      "path": "programming/bootgen.log",
+      "sha256": "105d313326c554fa5121b3dc056869e7bdae9d8b342dbf944137398750a2f2bd",
+      "bytes": 190,
+      "provided": false
+    },
+    {
+      "path": "programming/build_report.json",
+      "sha256": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9",
+      "bytes": 7890,
+      "provided": false
+    },
+    {
+      "path": "programming/fsbl.elf",
+      "sha256": "2a1223d0a7fd50b5cb31cb48ce90ebb9688a3def7893051fcd1410fe1a2d1037",
+      "bytes": 669272,
+      "provided": false
+    },
+    {
+      "path": "programming/jtag_launch_tile64.tcl",
+      "sha256": "5c5c7898be63df2b86cdcedac256e7b2fecb0ec05add306a6f1eba73664b707f",
+      "bytes": 3519,
+      "provided": false
+    },
+    {
+      "path": "programming/ps7_init.tcl",
+      "sha256": "3260f3a4e2ce0c604508caabc2a3732748919904950bb5c803f22074812fd4b4",
+      "bytes": 30248,
+      "provided": false
+    },
+    {
+      "path": "programming/startup_symbols.tcl",
+      "sha256": "30ea15ac5985e014cdf9cefb4a7c79f09084f486468a3b44c7de82a4e2bbe9c9",
+      "bytes": 98,
+      "provided": false
+    },
+    {
+      "path": "programming/tile64.bif",
+      "sha256": "0e5c5bf065728407a7e8e3f8189b40c9172e8997ae96e534d7acff0ab4431fd8",
+      "bytes": 81,
+      "provided": false
+    },
+    {
+      "path": "programming/tile64.bit",
+      "sha256": "03f73ed59fc7f8bc398995cbf4dc0cdf74d1fcf86f914073c188c365ef523f23",
+      "bytes": 4045674,
+      "provided": false
+    },
+    {
+      "path": "programming/tile64.xsa",
+      "sha256": "66669f87ef9a4ff2c3aa6fecc09adaee78beb0b0c6fa11a96b9e3ecf4db52f50",
+      "bytes": 339755,
+      "provided": false
+    },
+    {
+      "path": "programming/v8_tile64_board.elf",
+      "sha256": "198d962566ff42302f60e6f491aca9f155f508e4b62a752f095233d29d7a88e4",
+      "bytes": 1209040,
+      "provided": false
+    },
+    {
+      "path": "programming/v8_tile64_dma_config.h",
+      "sha256": "185fc45d052ae84a59c341f969683d5411dc59986640a78e9572a8032bafea50",
+      "bytes": 478,
+      "provided": false
+    },
+    {
+      "path": "sd_root/BOOT.BIN",
+      "sha256": "31c806718163b938968661e6c9d703befbce32c095c7529c2044cccd2528890d",
+      "bytes": 4379208,
+      "provided": false
+    },
+    {
+      "path": "sd_root/MODEL.V8P",
+      "sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+      "bytes": 3212408,
+      "provided": false
+    },
+    {
+      "path": "v8_generated_model.h",
+      "sha256": "2bc16fc68de38367b3154b59e609da6d24310719ff7cd9c7e642442eda6c81d4",
+      "bytes": 34885,
+      "provided": false
+    }
+  ],
+  "limitations": [
+    "Physical artifact bytes absent; hashes other than the included build_report are declarations.",
+    "No runtime board/model/ELF/PL identity or full input/classes contract.",
+    "Build metadata is not physical-board proof."
+  ],
+  "next_checks": [
+    "Authorized read-only runtime identity capture with loaded model, ELF and physical PL identifier, compared against available artifact bytes."
+  ],
+  "evidence_refs": [
+    {
+      "file": "build_manifest.json",
+      "json_pointer": "/generated_at_local",
+      "line": 3
+    },
+    {
+      "file": "build_manifest.json",
+      "json_pointer": "/model_sha256",
+      "line": 4
+    },
+    {
+      "file": "build_manifest.json",
+      "json_pointer": "/files/programming~1build_report.json",
+      "line": 34
+    },
+    {
+      "file": "build_manifest.json",
+      "json_pointer": "/files/programming~1tile64.bit",
+      "line": 59
+    },
+    {
+      "file": "build_manifest.json",
+      "json_pointer": "/files/programming~1tile64.xsa",
+      "line": 63
+    },
+    {
+      "file": "build_manifest.json",
+      "json_pointer": "/files/programming~1v8_tile64_board.elf",
+      "line": 67
+    },
+    {
+      "file": "build_manifest.json",
+      "json_pointer": "/files/sd_root~1BOOT.BIN",
+      "line": 75
+    },
+    {
+      "file": "build_report.json",
+      "json_pointer": "/arm_link",
+      "line": 44
+    },
+    {
+      "file": "build_report.json",
+      "json_pointer": "/build_mode",
+      "line": 45
+    },
+    {
+      "file": "build_report.json",
+      "json_pointer": "/physical_board_dma_width_verified",
+      "line": 46
+    },
+    {
+      "file": "build_report.json",
+      "json_pointer": "/xsa_interface_check",
+      "line": 111
+    },
+    {
+      "file": "build_report.json",
+      "json_pointer": "/elf_sha256",
+      "line": 158
+    },
+    {
+      "file": "build_report.json",
+      "json_pointer": "/package_sha256",
+      "line": 159
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "status": "PASS_CONSECUTIVE_BOARD_RESULTS_REFERENCE_EQUAL",
+  "input": "same frozen RGB repeated",
+  "requested_frames": 10,
+  "frames": [
+    {
+      "index": 1,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.34636259998660535,
+      "reference_equal": true
+    },
+    {
+      "index": 2,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.36935160000575706,
+      "reference_equal": true
+    },
+    {
+      "index": 3,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3631425999919884,
+      "reference_equal": true
+    },
+    {
+      "index": 4,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3468760999967344,
+      "reference_equal": true
+    },
+    {
+      "index": 5,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3553468000027351,
+      "reference_equal": true
+    },
+    {
+      "index": 6,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.34492110001156107,
+      "reference_equal": true
+    },
+    {
+      "index": 7,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.368706299981568,
+      "reference_equal": true
+    },
+    {
+      "index": 8,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3648683999781497,
+      "reference_equal": true
+    },
+    {
+      "index": 9,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.36762869998347014,
+      "reference_equal": true
+    },
+    {
+      "index": 10,
+      "returncode": 0,
+      "status": "VALIDATED_BOARD_RESULT",
+      "seconds": 0.3630669999984093,
+      "reference_equal": true
+    }
+  ],
+  "retries": 0,
+  "hashes_computed": false,
+  "clock": {
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-07
+  },
+  "limitation": "short same-image diagnostic; no dataset accuracy or sustained >10 FPS acceptance",
+  "batch_wall_seconds": 3.8100923000019975,
+  "offered_frames": 10,
+  "completed_verified_frames": 10,
+  "failed_or_unknown_frames": 0,
+  "unoffered_frames": 0,
+  "completed_verified_fps": 2.624608332977854,
+  "batch_scope": "sequential requests, including per-frame fixture preparation, input reads, connect/HELLO/upload/inference/validation and reporting; one outstanding request, no intentional request pause; excludes final aggregate JSON write",
+  "median_seconds": 0.36310479999519885,
+  "p95_seconds": 0.369061214994872,
+  "scope": "host transaction: connect,HELLO,RGB transfer,inference,RESULT validation; no GUI or debug pauses during each sample"
+}

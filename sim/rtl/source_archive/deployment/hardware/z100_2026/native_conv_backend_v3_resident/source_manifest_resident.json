@@ -1,0 +1,20 @@
+{
+  "schema": "z100-native-conv-source-closure/1",
+  "top": "z100_native_conv_backend_v3_resident",
+  "status": "LOCAL_ELABORATION_AND_RESIDENCY_PROTOCOL_ONLY",
+  "base_manifest": "deployment\\hardware\\z100_2026\\native_conv_backend_v3\\source_manifest.json",
+  "candidate_sources": {
+    "deployment\\hardware\\z100_2026\\native_conv_backend_v3_resident\\z100_native_conv_backend_v3_resident.sv": "7d4ddc2d1fcedca02f6aae6b3ffae3e8c0b8eaa38405cc45c3de2e8cc9c3ee30",
+    "deployment\\hardware\\z100_2026\\native_conv_backend_v3_resident\\z100_parameter_residency_v1.sv": "e6e2d3daeffab7914bbffe0955c685a5d0dfde5b7d5d54cda81179f3ed910531"
+  },
+  "optimization": "one-entry parameter residency keyed by epoch/event/destination-generation/job",
+  "physical_transfer_contract": "directory and parameter reader retain ownership on misses; cache hits issue no DDR command",
+  "not_accepted": [
+    "synthesis",
+    "route/timing",
+    "numeric Conv parity",
+    "physical DDR/HP",
+    "full graph",
+    "30 FPS"
+  ]
+}

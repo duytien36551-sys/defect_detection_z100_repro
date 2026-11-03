@@ -1,0 +1,103 @@
+{
+  "status": "ACTUAL_SINGLE_FRAME_OPERATOR_AGGREGATION_NOT_FPS",
+  "timer_hz": 333333343,
+  "operations": {
+    "conv": {
+      "nodes": 63,
+      "milliseconds": 5538.81174737446
+    },
+    "silu": {
+      "nodes": 57,
+      "milliseconds": 212.70188083164547
+    },
+    "slice": {
+      "nodes": 16,
+      "milliseconds": 112.21561174574725
+    },
+    "add": {
+      "nodes": 6,
+      "milliseconds": 192.83238940786072
+    },
+    "concat": {
+      "nodes": 16,
+      "milliseconds": 91.5081243462644
+    },
+    "maxpool": {
+      "nodes": 3,
+      "milliseconds": 131.04218319977667
+    },
+    "upsample": {
+      "nodes": 2,
+      "milliseconds": 54.4131344220191
+    }
+  },
+  "nonconv_milliseconds": 794.7133239533136,
+  "top_nonconv_nodes": [
+    {
+      "node": 12,
+      "op": "add",
+      "ms": 71.44608392806357
+    },
+    {
+      "node": 70,
+      "op": "maxpool",
+      "ms": 48.61796259007909
+    },
+    {
+      "node": 71,
+      "op": "maxpool",
+      "ms": 41.21215380484754
+    },
+    {
+      "node": 72,
+      "op": "maxpool",
+      "ms": 41.21206680485006
+    },
+    {
+      "node": 89,
+      "op": "upsample",
+      "ms": 36.175891950899135
+    },
+    {
+      "node": 26,
+      "op": "add",
+      "ms": 35.690383964978864
+    },
+    {
+      "node": 31,
+      "op": "add",
+      "ms": 35.57376796836073
+    },
+    {
+      "node": 1,
+      "op": "silu",
+      "ms": 24.38390629286672
+    },
+    {
+      "node": 76,
+      "op": "upsample",
+      "ms": 18.23724247111997
+    },
+    {
+      "node": 50,
+      "op": "add",
+      "ms": 17.76654248477027
+    },
+    {
+      "node": 45,
+      "op": "add",
+      "ms": 17.519876491923583
+    },
+    {
+      "node": 7,
+      "op": "slice",
+      "ms": 16.608323518358617
+    }
+  ],
+  "scope": "Distinct node intervals only; no nested counters summed. These unchanged PS operators remain a full-pipeline bottleneck after convolution acceleration.",
+  "inputs": {
+    "validation\\board_z100\\reference_assumed_jtag_466_v1\\full_model_execution\\profile_frame_20261023T052327Z\\result.json": "dfb56c4ea355983dde9e18996db37b24fddc177a55d2a4d2851577eaa1677a74",
+    "validation\\board_z100\\reference_assumed_jtag_466_v1\\full_model_execution\\profile_frame_20261023T052327Z\\pipeline_diagnostics.bin": "fcd61aeda85dd21c6149ec2e539ffd220d086e0bbe52553cdaf995ba40f607a8",
+    "deployment\\candidates\\pin640\\provisional_models\\20261022T131845Z_15a161\\pipeline\\model\\graph.json": "6ad39858999c9d7bc57b44887ad487f38a1a678d32e887a1c5c89fdcdd34e0b8"
+  }
+}

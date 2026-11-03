@@ -1,0 +1,8 @@
+{
+  "pcb_stopped_epoch112_full_backup_verified": true,
+  "new_random_initialization_verified": true,
+  "new_split_manifest_verified": true,
+  "gpu_rejected_for_formal_training": true,
+  "cpu_batch16_full_step_verified": true,
+  "original_validation_command": "run.py --domain pin --evaluate best_original"
+}

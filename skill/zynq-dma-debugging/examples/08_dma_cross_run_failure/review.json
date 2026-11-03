@@ -1,0 +1,107 @@
+{
+  "case": "08_dma_cross_run_failure",
+  "skill": "zynq-dma-debugging",
+  "review_method": "main-thread full-context deterministic evidence audit; NOT independent agent behavioral validation",
+  "status": "evidence_checks_pass",
+  "authenticity": "authentic_failure_and_separate_diagnostic_success_with_read_only_snapshot",
+  "facts": {
+    "failed_run": {
+      "started": "2026-10-15T18:44:38.001238+00:00",
+      "finished": "2026-10-15T18:44:39.902043+00:00",
+      "first_error": {
+        "sequence": 1,
+        "task": "pcb",
+        "type": "BoardProtocolError",
+        "message": "board rejected inference: board inference failed"
+      },
+      "passing_requests": 0
+    },
+    "snapshot": {
+      "generated": "2026-10-15T18:45:03.060841+00:00",
+      "completed": "2026-10-15T18:45:05.111888+00:00",
+      "elf_sha256": "2655c9fdbad33ac948c0c404117cc7d6210a38b56061d863e57b4d466a603e6b"
+    },
+    "diagnostic_run": {
+      "started": "2026-10-15T18:41:21.113766+00:00",
+      "finished": "2026-10-15T18:42:28.899138+00:00",
+      "passed": true,
+      "completed": 20
+    }
+  },
+  "findings": [
+    "The failed first request, post-event snapshot and later diagnostic pass are separate observations. A generic protocol error is not a decoded DMA root cause. Buffer bytes cannot establish hardware receipt at failure time without the matching driver/layout and transaction trace. Capture original LOAD/RUN identity, length/TLAST and active buffer ownership in a controlled, authorized discriminating test; no operation was performed here."
+  ],
+  "checks": [
+    "source snapshot SHA-256 intact",
+    "ELF linkage and distinct execution times checked; root cause remains undetermined"
+  ],
+  "input_sha256": {
+    "failed_run.log": "14f01301f66b3654d3fd1f2600dc6ea3bf8ce0fddfd20053338cde0218b7ee91",
+    "failed_run_acceptance.json": "3b615322378d4605de05991eff9d90e53415fed6b67f42a59b824dd91325e8d6",
+    "failed_run_build_report.json": "925bf7f8a2a82e6f370a706ef3aa18886f859715eb57442d33bd4eb652d6c198",
+    "failure_axi_dma_registers.bin": "07bad70df8676d51526a41216dcbf901772e62bc3c98c0bfed70c9717061deae",
+    "failure_dma_context.bin": "b7d47fec45c5784f7a3f2327b876e8502919a0e92b18acfe4b2274742de2f079",
+    "failure_dma_driver_state.bin": "b242d346d40cf8b4c1f1a7576107971514be219c78284c20f876c3d2aebfc3b8",
+    "failure_dma_rx_buffer.bin": "8aa5bd68982fa3d1475c9d366527c526ddd6eb389104f79fd2cc16a41c6b233b",
+    "failure_dma_tx_buffer.bin": "09550fbe0067126719e75ac4414d4ddf7a19fec3951133d9c2e537200e02cd03",
+    "failure_snapshot_manifest.json": "64ff0fe52bf8660c365420bdb6db019b98d7f22e931da441e193dafa5a37946c",
+    "later_diagnostic_acceptance.json": "96cbf9b8feb0fffa42151592e7a6549c5b60735ab4d74a3e27a13fe16c25cb81",
+    "later_diagnostic_run.log": "473b1ae28af370ac51bf0b1dc61cf998e473946438ebe244612cb5885e8c8636",
+    "snapshot_xsct.log": "1fec3df39c81b84a99dcd6693fa10d97b522e0b4bbce67de93c118a8f7aabb3d"
+  },
+  "evidence_refs": [
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/failed_run.log",
+      "sha256": "14f01301f66b3654d3fd1f2600dc6ea3bf8ce0fddfd20053338cde0218b7ee91"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/failed_run_acceptance.json",
+      "sha256": "3b615322378d4605de05991eff9d90e53415fed6b67f42a59b824dd91325e8d6"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/failed_run_build_report.json",
+      "sha256": "925bf7f8a2a82e6f370a706ef3aa18886f859715eb57442d33bd4eb652d6c198"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/failure_snapshot_manifest.json",
+      "sha256": "64ff0fe52bf8660c365420bdb6db019b98d7f22e931da441e193dafa5a37946c"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/snapshot_xsct.log",
+      "sha256": "1fec3df39c81b84a99dcd6693fa10d97b522e0b4bbce67de93c118a8f7aabb3d"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/failure_axi_dma_registers.bin",
+      "sha256": "07bad70df8676d51526a41216dcbf901772e62bc3c98c0bfed70c9717061deae"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/failure_dma_context.bin",
+      "sha256": "b7d47fec45c5784f7a3f2327b876e8502919a0e92b18acfe4b2274742de2f079"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/failure_dma_driver_state.bin",
+      "sha256": "b242d346d40cf8b4c1f1a7576107971514be219c78284c20f876c3d2aebfc3b8"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/failure_dma_tx_buffer.bin",
+      "sha256": "09550fbe0067126719e75ac4414d4ddf7a19fec3951133d9c2e537200e02cd03"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/failure_dma_rx_buffer.bin",
+      "sha256": "8aa5bd68982fa3d1475c9d366527c526ddd6eb389104f79fd2cc16a41c6b233b"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/later_diagnostic_run.log",
+      "sha256": "473b1ae28af370ac51bf0b1dc61cf998e473946438ebe244612cb5885e8c8636"
+    },
+    {
+      "path": "cases_20261025/08_dma_cross_run_failure/inputs/later_diagnostic_acceptance.json",
+      "sha256": "96cbf9b8feb0fffa42151592e7a6549c5b60735ab4d74a3e27a13fe16c25cb81"
+    }
+  ],
+  "not_performed": [
+    "new training/model evaluation or model selection",
+    "board operations",
+    "blind independent model execution"
+  ]
+}

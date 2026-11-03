@@ -1,0 +1,67 @@
+{
+  "schema": "z100-data-deduplication-v1",
+  "date": "2026-11-03",
+  "selected_epoch": 200,
+  "selected_images": 300,
+  "model_parameters_changed": false,
+  "removed_bytes": 43010044,
+  "aliases": {
+    "data/float_export/source.pt": "data/pin_epoch200.pt",
+    "data/model/export_snapshot/model/weights_float.npz": "data/float_export/weights_float.npz",
+    "data/model/weights_int8.npz": "data/quantization/weights_int8.npz"
+  },
+  "removed_files": [
+    {
+      "path": "data/float_export/source.pt",
+      "bytes": 12367939,
+      "sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+      "retained_path": "data/pin_epoch200.pt",
+      "reason": "byte_identical_duplicate"
+    },
+    {
+      "path": "data/model/export_snapshot/model/weights_float.npz",
+      "bytes": 12060162,
+      "sha256": "7d287c147e0438a738a5ba244da15f8af1d71c7b23f2a90c222f65a3085af83f",
+      "retained_path": "data/float_export/weights_float.npz",
+      "reason": "byte_identical_duplicate"
+    },
+    {
+      "path": "data/model/weights_int8.npz",
+      "bytes": 3142200,
+      "sha256": "09d763e65ba827fd126747e48bfffe20929f3b80085110439025f0c09639544d",
+      "retained_path": "data/quantization/weights_int8.npz",
+      "reason": "byte_identical_duplicate"
+    },
+    {
+      "path": "data/baseline/classes.json",
+      "bytes": 366,
+      "sha256": "c4be99901ddf513cd79ad3000a53f9cb3e01f602ad1f46cb6ff1b3e6df70594a",
+      "reason": "legacy_epoch108_not_current_model"
+    },
+    {
+      "path": "data/baseline/epoch108.pt",
+      "bytes": 12356163,
+      "sha256": "603853a8ec851b32578d79d34ddaeb9487f1c7924dc815d557565725f275a034",
+      "reason": "legacy_epoch108_not_current_model"
+    },
+    {
+      "path": "data/baseline/epoch108_int8.v8p",
+      "bytes": 3081632,
+      "sha256": "96211aa416da6b23955a8b62cca594275daaa4db3e3954632960707c0ec0d44f",
+      "reason": "legacy_epoch108_not_current_model"
+    },
+    {
+      "path": "data/baseline/package.json",
+      "bytes": 1123,
+      "sha256": "04201476ab42c2e2a97e925c0788e3ca8cf1c029ffa17e894cfbf6a17816ce70",
+      "reason": "legacy_epoch108_not_current_model"
+    },
+    {
+      "path": "data/baseline/readme.md",
+      "bytes": 459,
+      "sha256": "a4d0de3c06d7b70a5d898c2c5474af6d163899aaecee5bb2e30f15ab401def4d",
+      "reason": "legacy_epoch108_not_current_model"
+    }
+  ],
+  "scope": "Only byte-identical duplicate model files and obsolete epoch108 data were removed from the submission. The original full package is preserved outside this directory. Current detection uses the retained epoch200 inputs. No training, inference, simulation or vendor build was run."
+}

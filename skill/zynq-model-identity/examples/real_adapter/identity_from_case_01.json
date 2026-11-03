@@ -1,0 +1,682 @@
+{
+  "schema_version": 1,
+  "status": "incomplete",
+  "scan_root_label": "inputs",
+  "scanned_file_count": 3,
+  "reports": [
+    {
+      "path": "build_manifest.json",
+      "sha256": "046b13776f6085d5434034774551a778c9be0e475299246b68432f3c48a86544",
+      "schema": "stage28-v8-tile64-candidate/1",
+      "generated_at": "2026-10-18T13:16:26.190455+08:00",
+      "selected_fields": {
+        "source_sha256": {
+          "candidates/tile64/rtl/v8_tile64_mac.v": "24df207592f34c9a2f76d69e05d0dc50f1fb0fac2c29498bb9060aa4518fc285",
+          "candidates/tile64/rtl/v8_tile64_axis.v": "77bd692be3d887dbd3486c5240ec4a06ba5347f576256ca8a441c6e2f366f6c6",
+          "hardware/tile64_candidate/yolo_accel_top.v": "df960f52b9a80b95d9802c84a2e67158c8ab17e84254c4500e27a23bf0c69fe7",
+          "candidates/tile64/build_firmware_tile64.py": "bab9d6ba74a693c295e6598a44e204f42973916dcbd7f20e90cb747a741eb67a",
+          "candidates/tile64/firmware/v8_tile_abi.c": "c21a7731c868a81e8f42e8caac4f056d108b5fbff90fc8a14009966877be5b41",
+          "candidates/tile64/firmware/v8_tile_executor.c": "1dfbfb2f611371fe8b02b09e7018270b6be576a1e931e824bdea0458edfb517a",
+          "candidates/tile64/firmware/v8_tile_board_dma.c": "3630e62cd65ce6811194281c475c3fad94474aaca3b500902df1cb1b98622ad8",
+          "candidates/tile64/firmware/v8_board_tile_main.c": "3183d9255afed61ef9668fa4cc0a60df6ba774aa304baca6d93422db4487d1f3",
+          "candidates/tile64/firmware/v8_lwip.c": "b7710839fd40caa161ed62d6d463e628ed0b6b1c5415a837f2c057fee881a669"
+        },
+        "model_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3"
+      },
+      "checks": [
+        {
+          "field": "source_sha256:candidates/tile64/rtl/v8_tile64_mac.v",
+          "declared_sha256": "24df207592f34c9a2f76d69e05d0dc50f1fb0fac2c29498bb9060aa4518fc285",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/rtl/v8_tile64_axis.v",
+          "declared_sha256": "77bd692be3d887dbd3486c5240ec4a06ba5347f576256ca8a441c6e2f366f6c6",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:hardware/tile64_candidate/yolo_accel_top.v",
+          "declared_sha256": "df960f52b9a80b95d9802c84a2e67158c8ab17e84254c4500e27a23bf0c69fe7",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/build_firmware_tile64.py",
+          "declared_sha256": "bab9d6ba74a693c295e6598a44e204f42973916dcbd7f20e90cb747a741eb67a",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_tile_abi.c",
+          "declared_sha256": "c21a7731c868a81e8f42e8caac4f056d108b5fbff90fc8a14009966877be5b41",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_tile_executor.c",
+          "declared_sha256": "1dfbfb2f611371fe8b02b09e7018270b6be576a1e931e824bdea0458edfb517a",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_tile_board_dma.c",
+          "declared_sha256": "3630e62cd65ce6811194281c475c3fad94474aaca3b500902df1cb1b98622ad8",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_board_tile_main.c",
+          "declared_sha256": "3183d9255afed61ef9668fa4cc0a60df6ba774aa304baca6d93422db4487d1f3",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_lwip.c",
+          "declared_sha256": "b7710839fd40caa161ed62d6d463e628ed0b6b1c5415a837f2c057fee881a669",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "model_sha256",
+          "declared_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/boot_headers.txt",
+          "declared_sha256": "a05d52e9d7717b353c15b55e3bd4d3036a29590bbc1f619ea90e343f5e68a981",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/bootgen.log",
+          "declared_sha256": "105d313326c554fa5121b3dc056869e7bdae9d8b342dbf944137398750a2f2bd",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/build_report.json",
+          "declared_sha256": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/fsbl.elf",
+          "declared_sha256": "2a1223d0a7fd50b5cb31cb48ce90ebb9688a3def7893051fcd1410fe1a2d1037",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/jtag_launch_tile64.tcl",
+          "declared_sha256": "5c5c7898be63df2b86cdcedac256e7b2fecb0ec05add306a6f1eba73664b707f",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/ps7_init.tcl",
+          "declared_sha256": "3260f3a4e2ce0c604508caabc2a3732748919904950bb5c803f22074812fd4b4",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/startup_symbols.tcl",
+          "declared_sha256": "30ea15ac5985e014cdf9cefb4a7c79f09084f486468a3b44c7de82a4e2bbe9c9",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/tile64.bif",
+          "declared_sha256": "0e5c5bf065728407a7e8e3f8189b40c9172e8997ae96e534d7acff0ab4431fd8",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/tile64.bit",
+          "declared_sha256": "03f73ed59fc7f8bc398995cbf4dc0cdf74d1fcf86f914073c188c365ef523f23",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/tile64.xsa",
+          "declared_sha256": "66669f87ef9a4ff2c3aa6fecc09adaee78beb0b0c6fa11a96b9e3ecf4db52f50",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/v8_tile64_board.elf",
+          "declared_sha256": "198d962566ff42302f60e6f491aca9f155f508e4b62a752f095233d29d7a88e4",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:programming/v8_tile64_dma_config.h",
+          "declared_sha256": "185fc45d052ae84a59c341f969683d5411dc59986640a78e9572a8032bafea50",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:sd_root/BOOT.BIN",
+          "declared_sha256": "31c806718163b938968661e6c9d703befbce32c095c7529c2044cccd2528890d",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:sd_root/MODEL.V8P",
+          "declared_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "files:v8_generated_model.h",
+          "declared_sha256": "2bc16fc68de38367b3154b59e609da6d24310719ff7cd9c7e642442eda6c81d4",
+          "status": "declared_only",
+          "actual_sha256": null
+        }
+      ]
+    },
+    {
+      "path": "build_report.json",
+      "sha256": "99457c81a9cd601f81a27609e924a99606daa698569258a93ca77b1e728e0f68",
+      "schema": null,
+      "generated_at": null,
+      "selected_fields": {
+        "source_sha256": {
+          "candidates/tile64/firmware/v8_board_tile_main.c": "3183d9255afed61ef9668fa4cc0a60df6ba774aa304baca6d93422db4487d1f3",
+          "candidates/tile64/firmware/v8_lwip.c": "b7710839fd40caa161ed62d6d463e628ed0b6b1c5415a837f2c057fee881a669",
+          "candidates/tile64/firmware/v8_tile_abi.c": "c21a7731c868a81e8f42e8caac4f056d108b5fbff90fc8a14009966877be5b41",
+          "candidates/tile64/firmware/v8_tile_executor.c": "1dfbfb2f611371fe8b02b09e7018270b6be576a1e931e824bdea0458edfb517a",
+          "candidates/tile64/firmware/v8_tile_board_dma.c": "3630e62cd65ce6811194281c475c3fad94474aaca3b500902df1cb1b98622ad8",
+          "candidates/tile64/firmware/v8_runtime.c": "17f9e00d0e09e2374104f03e6e09b78a4af60eed73d08df309b4403706090b7c",
+          "candidates/tile64/firmware/v8_pipeline.c": "0585678aefa9b041c6658c00cfde86eec23da4c825341d51f38a902290bc3479",
+          "candidates/tile64/firmware/v8_decode.c": "b56c1363bb87c35289f5963bf59fbf69f3871dfb00180273c1706f9cb20ddf80",
+          "candidates/tile64/firmware/v8_service.c": "3b1a4e5c2a611ed48dd2f8e66d968ec0ba8c3f1bbf40df3dff0881b4aec31581",
+          "candidates/tile64/firmware/v8_sha256.c": "b97753a081eacce20cbf58d1f7de49280d24073f0b51f63742555b7dc3641c54",
+          "candidates/tile64/firmware/v8_vfp_selftest.c": "343fa6ceb4c43fe6e307a2beec5acee310bb1398871f2d596cd49cc167043701",
+          "candidates/tile64/firmware/v8_accel.h": "18ef56d8f714f0ad904eac2f613e434ce3e6a0748ba017d21e363515ce62912b",
+          "candidates/tile64/firmware/v8_decode.h": "343b267d055b20f6c56760f16035119f2bad84b6a27226d8690e5fe134605a16",
+          "candidates/tile64/firmware/v8_dma.h": "33e1200233ea5f402a6c88b5a2b803bbe8a3c43cf9f2835231bb49e20a468571",
+          "candidates/tile64/firmware/v8_lwip.h": "475f1ba5c2dcbf7ce5aa8e8f8b2b7c8a679226e94b56d58a91121962b93a0657",
+          "candidates/tile64/firmware/v8_pipeline.h": "1d79c3f664ae17d58077f72896762de11329979a26787afd1e385d2444b87fd1",
+          "candidates/tile64/firmware/v8_runtime.h": "e27fbc5f02f55509d7a17cdd042640419d029dc8d3bb503e75ef4dfca160a66e",
+          "candidates/tile64/firmware/v8_service.h": "f6b46d6fab58dbe439af60b072108a04712ed833a9de330e56c07b29a70e44f3",
+          "candidates/tile64/firmware/v8_sha256.h": "e2ca14ebf7fe5706003cee7554ee70a1a105efc3dae6fe823508848a3cc6f874",
+          "candidates/tile64/firmware/v8_startup_diagnostics.h": "77f5217366f6e21402af0d41a093e019e3f85772d5197d43f084dc6debd5364b",
+          "candidates/tile64/firmware/v8_tile_abi.h": "c60371a9e97a5e3b69c4ae47122a9414090290a0dfe44126f5ae969373eccf43",
+          "candidates/tile64/firmware/v8_tile_board_dma.h": "2bf906f95af20a11fabdac01e53b4b79314af9e3a420d5fd42f2f1b545ddeca2",
+          "candidates/tile64/firmware/v8_tile_executor.h": "1f3003fdc5e3998d2c14d08f40c2a2af1979f402c7d5769c700dab33c0295cf3",
+          "candidates/tile64/firmware/v8_tile_profile.h": "bd611f514dfadf210381f9d63ab5f57bae78ca1e0e76d56db990d64a11b39e8e",
+          "candidates/tile64/firmware/v8_vfp_requant.h": "8b2eca464cd2ab2b3d3ad5dfc845f593eed09bd72dea2d18574a9a6ead614cb6",
+          "candidates/tile64/firmware/lscript_v8.ld": "1d51ee397aa9c66208b92a377c7f9488170872ec2132ab4517dfe0d851c085fb",
+          "packages/stage28_p9995_integrated/v8_generated_model.h": "2bc16fc68de38367b3154b59e609da6d24310719ff7cd9c7e642442eda6c81d4",
+          "build/arm_tile64_run_cache_20261018/v8_tile64_dma_config.h": "185fc45d052ae84a59c341f969683d5411dc59986640a78e9572a8032bafea50"
+        },
+        "elf_sha256": "198d962566ff42302f60e6f491aca9f155f508e4b62a752f095233d29d7a88e4",
+        "package_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3"
+      },
+      "checks": [
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_board_tile_main.c",
+          "declared_sha256": "3183d9255afed61ef9668fa4cc0a60df6ba774aa304baca6d93422db4487d1f3",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_lwip.c",
+          "declared_sha256": "b7710839fd40caa161ed62d6d463e628ed0b6b1c5415a837f2c057fee881a669",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_tile_abi.c",
+          "declared_sha256": "c21a7731c868a81e8f42e8caac4f056d108b5fbff90fc8a14009966877be5b41",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_tile_executor.c",
+          "declared_sha256": "1dfbfb2f611371fe8b02b09e7018270b6be576a1e931e824bdea0458edfb517a",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_tile_board_dma.c",
+          "declared_sha256": "3630e62cd65ce6811194281c475c3fad94474aaca3b500902df1cb1b98622ad8",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_runtime.c",
+          "declared_sha256": "17f9e00d0e09e2374104f03e6e09b78a4af60eed73d08df309b4403706090b7c",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_pipeline.c",
+          "declared_sha256": "0585678aefa9b041c6658c00cfde86eec23da4c825341d51f38a902290bc3479",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_decode.c",
+          "declared_sha256": "b56c1363bb87c35289f5963bf59fbf69f3871dfb00180273c1706f9cb20ddf80",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_service.c",
+          "declared_sha256": "3b1a4e5c2a611ed48dd2f8e66d968ec0ba8c3f1bbf40df3dff0881b4aec31581",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_sha256.c",
+          "declared_sha256": "b97753a081eacce20cbf58d1f7de49280d24073f0b51f63742555b7dc3641c54",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_vfp_selftest.c",
+          "declared_sha256": "343fa6ceb4c43fe6e307a2beec5acee310bb1398871f2d596cd49cc167043701",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_accel.h",
+          "declared_sha256": "18ef56d8f714f0ad904eac2f613e434ce3e6a0748ba017d21e363515ce62912b",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_decode.h",
+          "declared_sha256": "343b267d055b20f6c56760f16035119f2bad84b6a27226d8690e5fe134605a16",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_dma.h",
+          "declared_sha256": "33e1200233ea5f402a6c88b5a2b803bbe8a3c43cf9f2835231bb49e20a468571",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_lwip.h",
+          "declared_sha256": "475f1ba5c2dcbf7ce5aa8e8f8b2b7c8a679226e94b56d58a91121962b93a0657",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_pipeline.h",
+          "declared_sha256": "1d79c3f664ae17d58077f72896762de11329979a26787afd1e385d2444b87fd1",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_runtime.h",
+          "declared_sha256": "e27fbc5f02f55509d7a17cdd042640419d029dc8d3bb503e75ef4dfca160a66e",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_service.h",
+          "declared_sha256": "f6b46d6fab58dbe439af60b072108a04712ed833a9de330e56c07b29a70e44f3",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_sha256.h",
+          "declared_sha256": "e2ca14ebf7fe5706003cee7554ee70a1a105efc3dae6fe823508848a3cc6f874",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_startup_diagnostics.h",
+          "declared_sha256": "77f5217366f6e21402af0d41a093e019e3f85772d5197d43f084dc6debd5364b",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_tile_abi.h",
+          "declared_sha256": "c60371a9e97a5e3b69c4ae47122a9414090290a0dfe44126f5ae969373eccf43",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_tile_board_dma.h",
+          "declared_sha256": "2bf906f95af20a11fabdac01e53b4b79314af9e3a420d5fd42f2f1b545ddeca2",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_tile_executor.h",
+          "declared_sha256": "1f3003fdc5e3998d2c14d08f40c2a2af1979f402c7d5769c700dab33c0295cf3",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_tile_profile.h",
+          "declared_sha256": "bd611f514dfadf210381f9d63ab5f57bae78ca1e0e76d56db990d64a11b39e8e",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/v8_vfp_requant.h",
+          "declared_sha256": "8b2eca464cd2ab2b3d3ad5dfc845f593eed09bd72dea2d18574a9a6ead614cb6",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:candidates/tile64/firmware/lscript_v8.ld",
+          "declared_sha256": "1d51ee397aa9c66208b92a377c7f9488170872ec2132ab4517dfe0d851c085fb",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:packages/stage28_p9995_integrated/v8_generated_model.h",
+          "declared_sha256": "2bc16fc68de38367b3154b59e609da6d24310719ff7cd9c7e642442eda6c81d4",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "source_sha256:build/arm_tile64_run_cache_20261018/v8_tile64_dma_config.h",
+          "declared_sha256": "185fc45d052ae84a59c341f969683d5411dc59986640a78e9572a8032bafea50",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "elf_sha256",
+          "declared_sha256": "198d962566ff42302f60e6f491aca9f155f508e4b62a752f095233d29d7a88e4",
+          "status": "declared_only",
+          "actual_sha256": null
+        },
+        {
+          "field": "package_sha256",
+          "declared_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+          "status": "declared_only",
+          "actual_sha256": null
+        }
+      ]
+    }
+  ],
+  "missing_declared_artifacts": [
+    {
+      "source": "build_manifest.json",
+      "field": "source_sha256:candidates/tile64/rtl/v8_tile64_mac.v",
+      "declared_sha256": "24df207592f34c9a2f76d69e05d0dc50f1fb0fac2c29498bb9060aa4518fc285"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "source_sha256:candidates/tile64/rtl/v8_tile64_axis.v",
+      "declared_sha256": "77bd692be3d887dbd3486c5240ec4a06ba5347f576256ca8a441c6e2f366f6c6"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "source_sha256:hardware/tile64_candidate/yolo_accel_top.v",
+      "declared_sha256": "df960f52b9a80b95d9802c84a2e67158c8ab17e84254c4500e27a23bf0c69fe7"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "source_sha256:candidates/tile64/build_firmware_tile64.py",
+      "declared_sha256": "bab9d6ba74a693c295e6598a44e204f42973916dcbd7f20e90cb747a741eb67a"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_tile_abi.c",
+      "declared_sha256": "c21a7731c868a81e8f42e8caac4f056d108b5fbff90fc8a14009966877be5b41"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_tile_executor.c",
+      "declared_sha256": "1dfbfb2f611371fe8b02b09e7018270b6be576a1e931e824bdea0458edfb517a"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_tile_board_dma.c",
+      "declared_sha256": "3630e62cd65ce6811194281c475c3fad94474aaca3b500902df1cb1b98622ad8"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_board_tile_main.c",
+      "declared_sha256": "3183d9255afed61ef9668fa4cc0a60df6ba774aa304baca6d93422db4487d1f3"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_lwip.c",
+      "declared_sha256": "b7710839fd40caa161ed62d6d463e628ed0b6b1c5415a837f2c057fee881a669"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "model_sha256",
+      "declared_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/boot_headers.txt",
+      "declared_sha256": "a05d52e9d7717b353c15b55e3bd4d3036a29590bbc1f619ea90e343f5e68a981"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/bootgen.log",
+      "declared_sha256": "105d313326c554fa5121b3dc056869e7bdae9d8b342dbf944137398750a2f2bd"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/build_report.json",
+      "declared_sha256": "137d9f6e6c18c0eb8ed032b528c785aa1df0ef64096b54fd70c9e38ac8c949f9"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/fsbl.elf",
+      "declared_sha256": "2a1223d0a7fd50b5cb31cb48ce90ebb9688a3def7893051fcd1410fe1a2d1037"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/jtag_launch_tile64.tcl",
+      "declared_sha256": "5c5c7898be63df2b86cdcedac256e7b2fecb0ec05add306a6f1eba73664b707f"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/ps7_init.tcl",
+      "declared_sha256": "3260f3a4e2ce0c604508caabc2a3732748919904950bb5c803f22074812fd4b4"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/startup_symbols.tcl",
+      "declared_sha256": "30ea15ac5985e014cdf9cefb4a7c79f09084f486468a3b44c7de82a4e2bbe9c9"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/tile64.bif",
+      "declared_sha256": "0e5c5bf065728407a7e8e3f8189b40c9172e8997ae96e534d7acff0ab4431fd8"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/tile64.bit",
+      "declared_sha256": "03f73ed59fc7f8bc398995cbf4dc0cdf74d1fcf86f914073c188c365ef523f23"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/tile64.xsa",
+      "declared_sha256": "66669f87ef9a4ff2c3aa6fecc09adaee78beb0b0c6fa11a96b9e3ecf4db52f50"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/v8_tile64_board.elf",
+      "declared_sha256": "198d962566ff42302f60e6f491aca9f155f508e4b62a752f095233d29d7a88e4"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:programming/v8_tile64_dma_config.h",
+      "declared_sha256": "185fc45d052ae84a59c341f969683d5411dc59986640a78e9572a8032bafea50"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:sd_root/BOOT.BIN",
+      "declared_sha256": "31c806718163b938968661e6c9d703befbce32c095c7529c2044cccd2528890d"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:sd_root/MODEL.V8P",
+      "declared_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3"
+    },
+    {
+      "source": "build_manifest.json",
+      "field": "files:v8_generated_model.h",
+      "declared_sha256": "2bc16fc68de38367b3154b59e609da6d24310719ff7cd9c7e642442eda6c81d4"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_board_tile_main.c",
+      "declared_sha256": "3183d9255afed61ef9668fa4cc0a60df6ba774aa304baca6d93422db4487d1f3"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_lwip.c",
+      "declared_sha256": "b7710839fd40caa161ed62d6d463e628ed0b6b1c5415a837f2c057fee881a669"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_tile_abi.c",
+      "declared_sha256": "c21a7731c868a81e8f42e8caac4f056d108b5fbff90fc8a14009966877be5b41"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_tile_executor.c",
+      "declared_sha256": "1dfbfb2f611371fe8b02b09e7018270b6be576a1e931e824bdea0458edfb517a"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_tile_board_dma.c",
+      "declared_sha256": "3630e62cd65ce6811194281c475c3fad94474aaca3b500902df1cb1b98622ad8"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_runtime.c",
+      "declared_sha256": "17f9e00d0e09e2374104f03e6e09b78a4af60eed73d08df309b4403706090b7c"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_pipeline.c",
+      "declared_sha256": "0585678aefa9b041c6658c00cfde86eec23da4c825341d51f38a902290bc3479"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_decode.c",
+      "declared_sha256": "b56c1363bb87c35289f5963bf59fbf69f3871dfb00180273c1706f9cb20ddf80"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_service.c",
+      "declared_sha256": "3b1a4e5c2a611ed48dd2f8e66d968ec0ba8c3f1bbf40df3dff0881b4aec31581"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_sha256.c",
+      "declared_sha256": "b97753a081eacce20cbf58d1f7de49280d24073f0b51f63742555b7dc3641c54"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_vfp_selftest.c",
+      "declared_sha256": "343fa6ceb4c43fe6e307a2beec5acee310bb1398871f2d596cd49cc167043701"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_accel.h",
+      "declared_sha256": "18ef56d8f714f0ad904eac2f613e434ce3e6a0748ba017d21e363515ce62912b"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_decode.h",
+      "declared_sha256": "343b267d055b20f6c56760f16035119f2bad84b6a27226d8690e5fe134605a16"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_dma.h",
+      "declared_sha256": "33e1200233ea5f402a6c88b5a2b803bbe8a3c43cf9f2835231bb49e20a468571"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_lwip.h",
+      "declared_sha256": "475f1ba5c2dcbf7ce5aa8e8f8b2b7c8a679226e94b56d58a91121962b93a0657"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_pipeline.h",
+      "declared_sha256": "1d79c3f664ae17d58077f72896762de11329979a26787afd1e385d2444b87fd1"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_runtime.h",
+      "declared_sha256": "e27fbc5f02f55509d7a17cdd042640419d029dc8d3bb503e75ef4dfca160a66e"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_service.h",
+      "declared_sha256": "f6b46d6fab58dbe439af60b072108a04712ed833a9de330e56c07b29a70e44f3"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_sha256.h",
+      "declared_sha256": "e2ca14ebf7fe5706003cee7554ee70a1a105efc3dae6fe823508848a3cc6f874"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_startup_diagnostics.h",
+      "declared_sha256": "77f5217366f6e21402af0d41a093e019e3f85772d5197d43f084dc6debd5364b"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_tile_abi.h",
+      "declared_sha256": "c60371a9e97a5e3b69c4ae47122a9414090290a0dfe44126f5ae969373eccf43"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_tile_board_dma.h",
+      "declared_sha256": "2bf906f95af20a11fabdac01e53b4b79314af9e3a420d5fd42f2f1b545ddeca2"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_tile_executor.h",
+      "declared_sha256": "1f3003fdc5e3998d2c14d08f40c2a2af1979f402c7d5769c700dab33c0295cf3"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_tile_profile.h",
+      "declared_sha256": "bd611f514dfadf210381f9d63ab5f57bae78ca1e0e76d56db990d64a11b39e8e"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/v8_vfp_requant.h",
+      "declared_sha256": "8b2eca464cd2ab2b3d3ad5dfc845f593eed09bd72dea2d18574a9a6ead614cb6"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:candidates/tile64/firmware/lscript_v8.ld",
+      "declared_sha256": "1d51ee397aa9c66208b92a377c7f9488170872ec2132ab4517dfe0d851c085fb"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:packages/stage28_p9995_integrated/v8_generated_model.h",
+      "declared_sha256": "2bc16fc68de38367b3154b59e609da6d24310719ff7cd9c7e642442eda6c81d4"
+    },
+    {
+      "source": "build_report.json",
+      "field": "source_sha256:build/arm_tile64_run_cache_20261018/v8_tile64_dma_config.h",
+      "declared_sha256": "185fc45d052ae84a59c341f969683d5411dc59986640a78e9572a8032bafea50"
+    },
+    {
+      "source": "build_report.json",
+      "field": "elf_sha256",
+      "declared_sha256": "198d962566ff42302f60e6f491aca9f155f508e4b62a752f095233d29d7a88e4"
+    },
+    {
+      "source": "build_report.json",
+      "field": "package_sha256",
+      "declared_sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3"
+    }
+  ],
+  "conflicts": [],
+  "unsupported_reports": [],
+  "interpretation": "Only build manifest/report JSON files and files physically present below the supplied root were inspected. A matching hash does not prove that an artifact ran on the board; absent files remain unverified."
+}

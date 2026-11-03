@@ -1,0 +1,152 @@
+{
+  "schema": "z100-synthesis-implementation-summary-v1",
+  "date": "2026-11-03",
+  "scope": "Historical synthesis and final post-route export reports, summarized without raw logs/intermediates. New source rebuild acceptance is recorded separately.",
+  "tool": "Vivado 2026.1 Build 6511674",
+  "part": "xc7z100ffg900-2",
+  "top": "system_wrapper",
+  "clock_name": "clk_fpga_0",
+  "period_ns": 10.0,
+  "clock_mhz": 100,
+  "synthesis": {
+    "state": "Synthesized",
+    "resources": {
+      "lut": {
+        "used": 102815.0,
+        "available": 277400.0,
+        "percent": 37.06
+      },
+      "register": {
+        "used": 98746.0,
+        "available": 554800.0,
+        "percent": 17.8
+      },
+      "bram_tile": {
+        "used": 287.5,
+        "available": 755.0,
+        "percent": 38.08
+      },
+      "dsp": {
+        "used": 1252.0,
+        "available": 2020.0,
+        "percent": 61.98
+      }
+    }
+  },
+  "implementation": {
+    "state": "Physopt postRoute",
+    "resources": {
+      "lut": {
+        "used": 95260.0,
+        "available": 277400.0,
+        "percent": 34.34
+      },
+      "register": {
+        "used": 98764.0,
+        "available": 554800.0,
+        "percent": 17.8
+      },
+      "bram_tile": {
+        "used": 287.5,
+        "available": 755.0,
+        "percent": 38.08
+      },
+      "dsp": {
+        "used": 1252.0,
+        "available": 2020.0,
+        "percent": 61.98
+      }
+    },
+    "metrics": {
+      "wns_ns": 0.005,
+      "tns_ns": 0.0,
+      "setup_fail_endpoints": 0,
+      "setup_total_endpoints": 314636,
+      "whs_ns": 0.045,
+      "ths_ns": 0.0,
+      "hold_fail_endpoints": 0,
+      "hold_total_endpoints": 314636,
+      "wpws_ns": 4.232,
+      "tpws_ns": 0.0,
+      "pulse_width_fail_endpoints": 0,
+      "pulse_width_total_endpoints": 104759,
+      "timing_check_counts": {
+        "no_clock": 0,
+        "constant_clock": 0,
+        "pulse_width_clock": 0,
+        "unconstrained_internal_endpoints": 0,
+        "no_input_delay": 0,
+        "no_output_delay": 0,
+        "multiple_clock": 0,
+        "generated_clocks": 0,
+        "loops": 0,
+        "partial_input_delay": 0,
+        "partial_output_delay": 0,
+        "latch_loops": 0
+      },
+      "routable_nets": 238792,
+      "fully_routed_nets": 238792,
+      "route_error_nets": 0,
+      "route_counts_complete": true,
+      "critical_drc_count": 0,
+      "warning_drc_groups": 1447,
+      "timing_coverage_complete": true,
+      "timing_checks_pass": true,
+      "timing_pass": true,
+      "implementation_pass": true,
+      "pass": true
+    },
+    "status": "EXPORT_PASS"
+  },
+  "original_report_identities": [
+    {
+      "path": "build/hardware_source/evidence/synthesis/synth_utilization.rpt",
+      "bytes": 10179,
+      "sha256": "6bb3a47fae006c6101a2bbcd5c5141714c83ff457ae4de2d92dc904e9544a7fc"
+    },
+    {
+      "path": "report/final_hardware/check_timing_export.rpt",
+      "bytes": 3217,
+      "sha256": "aec30fa302e8dc981373cd8dd551d7072ece1a9e0f8749a1a232208141ef1490"
+    },
+    {
+      "path": "report/final_hardware/drc_export.rpt",
+      "bytes": 2625086,
+      "sha256": "b99ae19e2cc833e88782b14cf928abbb3866fc3242bf3b4425c2e5366099d11d"
+    },
+    {
+      "path": "report/final_hardware/pulse_width_export.rpt",
+      "bytes": 1842,
+      "sha256": "9d859810cbacab25a909eb384e3f8e1cfbabc89e746c2c9d53f52d4c76ff2636"
+    },
+    {
+      "path": "report/final_hardware/route_status_export.rpt",
+      "bytes": 663,
+      "sha256": "71118efb693e83685a90fbcb4a77d46c8d091a6b2d0828d4fa208b6785989d33"
+    },
+    {
+      "path": "report/final_hardware/timing_export.rpt",
+      "bytes": 37442,
+      "sha256": "171ae4ea4c31b85ba49db444b5e2867cf79b81ed744e06ed729456cea3378050"
+    },
+    {
+      "path": "report/final_hardware/utilization_export.rpt",
+      "bytes": 12641,
+      "sha256": "3e4d0fa9bc6000a396044f2c140299e2410f80d6a82869a81bdf1a8c9bc83631"
+    }
+  ],
+  "final_artifacts": [
+    {
+      "path": "board/artifacts/z100_platform.bit",
+      "sha256": "9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f",
+      "bytes": 17416553
+    },
+    {
+      "path": "board/artifacts/z100_platform.xsa",
+      "sha256": "d314d650e12e36e4669f956e03f7388d95b4f3031a9da071dea7366495a57b5e",
+      "bytes": 287275
+    }
+  ],
+  "raw_tool_reports_included": false,
+  "board_access": false
+}

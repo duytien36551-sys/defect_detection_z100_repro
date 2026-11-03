@@ -1,0 +1,486 @@
+{
+  "title": "External static reuse audit: PYNQ image resizer",
+  "date": "2026-10-25",
+  "status": "partial_static_reuse_with_explicit_workflow_reviews",
+  "conclusion": "The frozen zynq-ps-pl-performance 1.0.0-rc1 workflow is useful as an evidence-organization and measurement-caveat framework for this unrelated PYNQ resizer, but this static-only packet does not validate hardware behavior or general PYNQ portability. A high-priority possible row-stride correctness issue requires confirmation before treating the saved timing as a valid baseline.",
+  "objective": "Review supplied static image-resizer evidence for platform and interface identity, PS/PL dataflow, DMA contract, saved notebook timing meaning, source locations, and a minimal next check. Second round: explicitly review the same allowed source bundle using zynq-model-identity and zynq-dma-debugging workflows, while preserving the first-round selection history.",
+  "scope": {
+    "writable_files": [
+      "skill/validation/external_pynq_rc1_20261025/report.md",
+      "skill/validation/external_pynq_rc1_20261025/report.json",
+      "skill/validation/external_pynq_rc1_20261025/execution_log.md"
+    ],
+    "readable_inputs": [
+      "skill/validation/external_reuse_20261025/inputs/**",
+      "skill/validation/external_reuse_20261025/source_manifest.json",
+      "skill/installed_sources/zynq-ps-pl-performance/skill.md",
+      "skill/installed_sources/zynq-ps-pl-performance/references/workflow.md",
+      "skill/installed_sources/zynq-model-identity/skill.md",
+      "skill/installed_sources/zynq-model-identity/references/workflow.md",
+      "skill/installed_sources/zynq-dma-debugging/skill.md",
+      "skill/installed_sources/zynq-dma-debugging/references/workflow.md",
+      "skill/validation/external_pynq_rc1_20261025/report.md (prior-pass artifact for this task only)",
+      "skill/validation/external_pynq_rc1_20261025/report.json (prior-pass artifact for this task only)"
+    ],
+    "prohibited_actions_not_performed": [
+      "No repository or notebook execution",
+      "No network or hardware access",
+      "No dependency download or installation",
+      "No training, inference, Vivado, HLS, or C-simulation execution"
+    ]
+  },
+  "selected_skill": {
+    "name": "zynq-ps-pl-performance",
+    "version": "1.0.0-rc1",
+    "selection_rationale": "The task is principally about PS/PL dataflow and what a saved timing measurement can support. Platform identity and DMA contract are reviewed as evidence within that performance workflow.",
+    "entry_and_workflow_read": [
+      "skill/installed_sources/zynq-ps-pl-performance/skill.md",
+      "skill/installed_sources/zynq-ps-pl-performance/references/workflow.md"
+    ],
+    "reuse_assessment": "partial: useful for framing measured versus estimated results, separating dataflow timing components, and withholding FPS/P95 claims without evidence; detector-specific MAC/postprocessing assumptions need adaptation to pixels and image correctness. No blind or hardware behavior validation was performed."
+  },
+  "source_identity": {
+    "repository": "https://github.com/Xilinx/PYNQ-HelloWorld",
+    "commit": "9728edf2ea6b7bc157acb126f773e93c3e9561c2",
+    "manifest_acquired_at": "2026-10-25T15:19:34.544480+08:00",
+    "declared_design_target": "The supplied Pynq-Z2 resizer Tcl names Vivado part xc7z020clg400-1 and instantiates processing_system7.",
+    "runtime_board_identity": "unverified",
+    "overlay_identity": "unverified: notebook expects resizer.bit, but supplied manifest has no .bit or .hwh file",
+    "routed_timing_report": "not supplied"
+  },
+  "hash_verification": {
+    "manifest": {
+      "path": "skill/validation/external_reuse_20261025/source_manifest.json",
+      "sha256_before": "bf0150c741a6a3dfb76fcc66e0b07113ac3ff2f611b7a5e0f2f94518681562a2",
+      "sha256_after": "bf0150c741a6a3dfb76fcc66e0b07113ac3ff2f611b7a5e0f2f94518681562a2",
+      "unchanged": true
+    },
+    "selected_skill_files": [
+      {
+        "path": "skill/installed_sources/zynq-ps-pl-performance/skill.md",
+        "sha256_before": "b6b53bbedf8259d5dbe7e0a0715c15b0c039d2ed985731976a90876fc0bba4c6",
+        "sha256_after": "b6b53bbedf8259d5dbe7e0a0715c15b0c039d2ed985731976a90876fc0bba4c6",
+        "unchanged": true
+      },
+      {
+        "path": "skill/installed_sources/zynq-ps-pl-performance/references/workflow.md",
+        "sha256_before": "9b056333c56364ff740adab90dfba0651bc22d9a1b317b0f90bf070b1d203034",
+        "sha256_after": "9b056333c56364ff740adab90dfba0651bc22d9a1b317b0f90bf070b1d203034",
+        "unchanged": true
+      }
+    ],
+    "input_files": [
+      {
+        "path": "license",
+        "bytes": 1506,
+        "manifest_sha256": "46ad5847120c5b73447e7ce08a1cc33ad44f786f203a76fdcb287016f4be383b",
+        "sha256_before": "46ad5847120c5b73447e7ce08a1cc33ad44f786f203a76fdcb287016f4be383b",
+        "sha256_after": "46ad5847120c5b73447e7ce08a1cc33ad44f786f203a76fdcb287016f4be383b",
+        "matches_manifest_before_and_after": true
+      },
+      {
+        "path": "readme.md",
+        "bytes": 1599,
+        "manifest_sha256": "95209743631ec022ed559f8099c811e6cf409453a38a738197f7ae3b7d4d2237",
+        "sha256_before": "95209743631ec022ed559f8099c811e6cf409453a38a738197f7ae3b7d4d2237",
+        "sha256_after": "95209743631ec022ed559f8099c811e6cf409453a38a738197f7ae3b7d4d2237",
+        "matches_manifest_before_and_after": true
+      },
+      {
+        "path": "setup.py",
+        "bytes": 3053,
+        "manifest_sha256": "00a36253e06341cb8ca5ea3c9f9b3d5cb86fe112023574ea87a681f6c389af20",
+        "sha256_before": "00a36253e06341cb8ca5ea3c9f9b3d5cb86fe112023574ea87a681f6c389af20",
+        "sha256_after": "00a36253e06341cb8ca5ea3c9f9b3d5cb86fe112023574ea87a681f6c389af20",
+        "matches_manifest_before_and_after": true
+      },
+      {
+        "path": "boards/Pynq-Z2/resizer/resizer.tcl",
+        "bytes": 16344,
+        "manifest_sha256": "9a56c31e61cc99ba089f84309b013632be643dd10565557e8787607f1f217d56",
+        "sha256_before": "9a56c31e61cc99ba089f84309b013632be643dd10565557e8787607f1f217d56",
+        "sha256_after": "9a56c31e61cc99ba089f84309b013632be643dd10565557e8787607f1f217d56",
+        "matches_manifest_before_and_after": true
+      },
+      {
+        "path": "boards/Pynq-Z2/resizer/__init__.py",
+        "bytes": 1619,
+        "manifest_sha256": "fe25233b1c6a4434a9a2263bc0046ec401433836d9260e764fba251f3042ef77",
+        "sha256_before": "fe25233b1c6a4434a9a2263bc0046ec401433836d9260e764fba251f3042ef77",
+        "sha256_after": "fe25233b1c6a4434a9a2263bc0046ec401433836d9260e764fba251f3042ef77",
+        "matches_manifest_before_and_after": true
+      },
+      {
+        "path": "boards/Pynq-Z2/resizer/check_resizer.tcl",
+        "bytes": 491,
+        "manifest_sha256": "4413450fd4cd3ce41a17397b23b1da559a9e76ce9303402e4d63c7c224c975ea",
+        "sha256_before": "4413450fd4cd3ce41a17397b23b1da559a9e76ce9303402e4d63c7c224c975ea",
+        "sha256_after": "4413450fd4cd3ce41a17397b23b1da559a9e76ce9303402e4d63c7c224c975ea",
+        "matches_manifest_before_and_after": true
+      },
+      {
+        "path": "boards/ip/src/xf_resize_accel_stream.cpp",
+        "bytes": 3600,
+        "manifest_sha256": "3df90bfedf576bcc1f622d35d272ca50d7fd2ff9c42c25e1081c528214e7970c",
+        "sha256_before": "3df90bfedf576bcc1f622d35d272ca50d7fd2ff9c42c25e1081c528214e7970c",
+        "sha256_after": "3df90bfedf576bcc1f622d35d272ca50d7fd2ff9c42c25e1081c528214e7970c",
+        "matches_manifest_before_and_after": true
+      },
+      {
+        "path": "pynq_helloworld/notebooks/edge/resizer_pl.ipynb",
+        "bytes": 649101,
+        "manifest_sha256": "a4ca9e4e49a65266ae3554ba662f2259af6752cda5f9f204e0eb5a75a9577624",
+        "sha256_before": "a4ca9e4e49a65266ae3554ba662f2259af6752cda5f9f204e0eb5a75a9577624",
+        "sha256_after": "a4ca9e4e49a65266ae3554ba662f2259af6752cda5f9f204e0eb5a75a9577624",
+        "matches_manifest_before_and_after": true
+      }
+    ],
+    "explicitly_loaded_skill_files": [
+      {
+        "path": "skill/installed_sources/zynq-model-identity/skill.md",
+        "sha256_before": "b9cc1d0c174832ec456d6b3a6261fa3418049fca48f297c7f05129f440adaca0",
+        "sha256_after": "b9cc1d0c174832ec456d6b3a6261fa3418049fca48f297c7f05129f440adaca0",
+        "unchanged": true
+      },
+      {
+        "path": "skill/installed_sources/zynq-model-identity/references/workflow.md",
+        "sha256_before": "ec6fed552e1c548739884a1688a1fb36f5e1030fa70d70694ea7d1a4721b1ae3",
+        "sha256_after": "ec6fed552e1c548739884a1688a1fb36f5e1030fa70d70694ea7d1a4721b1ae3",
+        "unchanged": true
+      },
+      {
+        "path": "skill/installed_sources/zynq-dma-debugging/skill.md",
+        "sha256_before": "e1fb05a68b58ffbe09af5ea0d522a462231319083233580ac0462d245faf2aff",
+        "sha256_after": "e1fb05a68b58ffbe09af5ea0d522a462231319083233580ac0462d245faf2aff",
+        "unchanged": true
+      },
+      {
+        "path": "skill/installed_sources/zynq-dma-debugging/references/workflow.md",
+        "sha256_before": "fde5d9bfc6d58b642afc3d8a4db2892a5d6013443977809d1463a0579c66e909",
+        "sha256_after": "fde5d9bfc6d58b642afc3d8a4db2892a5d6013443977809d1463a0579c66e909",
+        "unchanged": true
+      }
+    ],
+    "previous_pass_snapshots": [
+      {
+        "path": "skill/validation/external_pynq_rc1_20261025/previous_pass/report.md",
+        "sha256_original_before_snapshot": "9aeba46a63c7d6c9555a170f51c4f11677984149b1cbcd01958ddda85fd35280",
+        "sha256_snapshot": "9aeba46a63c7d6c9555a170f51c4f11677984149b1cbcd01958ddda85fd35280",
+        "bytes": 7382,
+        "same": true
+      },
+      {
+        "path": "skill/validation/external_pynq_rc1_20261025/previous_pass/report.json",
+        "sha256_original_before_snapshot": "a62236ae14741054a7a5f6af9c58e1389505990de360228796422e86da83dc2c",
+        "sha256_snapshot": "a62236ae14741054a7a5f6af9c58e1389505990de360228796422e86da83dc2c",
+        "bytes": 15123,
+        "same": true
+      },
+      {
+        "path": "skill/validation/external_pynq_rc1_20261025/previous_pass/execution_log.md",
+        "sha256_original_before_snapshot": "62f7bb17e096f77bc1ff248a037edfe367f75051be8fd66f53530593c4b3276c",
+        "sha256_snapshot": "62f7bb17e096f77bc1ff248a037edfe367f75051be8fd66f53530593c4b3276c",
+        "bytes": 3789,
+        "same": true
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "platform_identity",
+      "status": "source_declared_runtime_unverified",
+      "summary": "The concrete Tcl targets xc7z020clg400-1 and uses processing_system7; the notebook loads resizer.bit, but no bit/HWH or runtime board evidence is supplied.",
+      "evidence": [
+        {
+          "path": "inputs/readme.md",
+          "lines": "20, 32-39",
+          "detail": "Repository-level PYNQ support/version statements."
+        },
+        {
+          "path": "inputs/boards/Pynq-Z2/resizer/resizer.tcl",
+          "lines": "44-50, 128-133, 235-303",
+          "detail": "Target part, IP catalog, Processing System and clock/HP0 configuration."
+        },
+        {
+          "path": "inputs/pynq_helloworld/notebooks/edge/resizer_pl.ipynb",
+          "lines": "82-104",
+          "detail": "Overlay filename and Python IP object names."
+        }
+      ]
+    },
+    {
+      "id": "ps_pl_dma_flow",
+      "status": "static_connections_found_runtime_contract_unverified",
+      "summary": "Tcl wires DMA memory masters to PS HP0, GP0 to AXI-Lite controls, and streams through 4-byte/3-byte width converters around the 24-bit HLS resizer. Notebook uses contiguous uint8 RGB buffers and starts/waits both channels.",
+      "evidence": [
+        {
+          "path": "inputs/boards/Pynq-Z2/resizer/resizer.tcl",
+          "lines": "199-232, 235-303, 311-333",
+          "detail": "DMA properties, width conversion, PS configuration, stream and memory/control interfaces."
+        },
+        {
+          "path": "inputs/boards/ip/src/xf_resize_accel_stream.cpp",
+          "lines": "10-21, 25-30, 32-89, 91-117",
+          "detail": "Pixel and stream width, adapter behavior, TLAST/TKEEP, control and resize kernel."
+        },
+        {
+          "path": "inputs/pynq_helloworld/notebooks/edge/resizer_pl.ipynb",
+          "lines": "228-236, 290-331",
+          "detail": "Buffers, DMA transfer sequence and dimension registers."
+        }
+      ]
+    },
+    {
+      "id": "possible_linear_index_stride_defect",
+      "status": "high_priority_static_suspicion_unconfirmed",
+      "summary": "The adapters use i*rows+j as a single Mat index. Under row-major linear indexing this overlaps row spans for the supplied non-square dimensions; exact vendor Mat semantics and behavior remain untested.",
+      "evidence": [
+        {
+          "path": "inputs/boards/ip/src/xf_resize_accel_stream.cpp",
+          "lines": "38-53",
+          "detail": "Input rows/cols loop and img.write(i*rows+j,...)."
+        },
+        {
+          "path": "inputs/boards/ip/src/xf_resize_accel_stream.cpp",
+          "lines": "61-86",
+          "detail": "Output rows/cols loop and img.read(i*rows+j)."
+        }
+      ],
+      "integrity_note": "No source modification or execution was performed. Treat as a candidate data-ordering defect pending confirmation, not as a demonstrated runtime failure."
+    },
+    {
+      "id": "saved_timing_scope",
+      "status": "one_historical_best_of_three_scalar_only",
+      "summary": "Saved output is 1 loop, best of 3: 247 ms per loop; the timed body includes run_kernel and Image.fromarray, while setup and display are in other cells. It is not isolated PL latency, P50/P95, sustained FPS, or a reproducible current board baseline.",
+      "evidence": [
+        {
+          "path": "inputs/pynq_helloworld/notebooks/edge/resizer_pl.ipynb",
+          "lines": "395-410",
+          "detail": "Saved output and %%timeit source."
+        },
+        {
+          "path": "inputs/pynq_helloworld/notebooks/edge/resizer_pl.ipynb",
+          "lines": "228-236, 269-275, 290-331",
+          "detail": "Outside-timing setup and timed run_kernel implementation."
+        },
+        {
+          "path": "inputs/pynq_helloworld/notebooks/edge/resizer_pl.ipynb",
+          "lines": "341-349, 359-384",
+          "detail": "Separate initial invocation and display cell."
+        }
+      ]
+    },
+    {
+      "id": "timing_build_evidence",
+      "status": "no_routed_report_supplied",
+      "summary": "The checker looks for a success string in an external routed timing report. The report itself is absent, and the Tcl FCLK0 value is configuration rather than measured clock or proof of timing closure.",
+      "evidence": [
+        {
+          "path": "inputs/boards/Pynq-Z2/resizer/check_resizer.tcl",
+          "lines": "1-16",
+          "detail": "External routed report scan and success/failure condition."
+        },
+        {
+          "path": "inputs/boards/Pynq-Z2/resizer/resizer.tcl",
+          "lines": "263-303",
+          "detail": "Configured PS FCLK0 value and HP0 enable."
+        }
+      ]
+    }
+  ],
+  "independent_calculations": {
+    "input": {
+      "width": 3840,
+      "height": 2160,
+      "channels": 3,
+      "dtype": "uint8",
+      "pixels": 8294400,
+      "bytes": 24883200
+    },
+    "output": {
+      "width": 1920,
+      "height": 1080,
+      "channels": 3,
+      "dtype": "uint8",
+      "pixels": 2073600,
+      "bytes": 6220800
+    },
+    "nominal_dma_read_plus_write_bytes": 31104000,
+    "frame_byte_alignment": {
+      "input_bytes_div_4": 6220800,
+      "output_bytes_div_4": 1555200,
+      "note": "Arithmetic only; not a transfer trace or TLAST/TKEEP validation."
+    },
+    "linear_row_major_stride_check": {
+      "assumption": "Mat write/read argument is a zero-based row-major linear pixel index.",
+      "input": {
+        "code_formula": "i*rows+j",
+        "code_max_index": 4667279,
+        "expected_max_index": 8294399,
+        "index_span_under_formula": 4667280,
+        "nominal_pixels": 8294400,
+        "indices_outside_span": 3627120
+      },
+      "output": {
+        "code_formula": "i*rows+j",
+        "code_max_index": 1167239,
+        "expected_max_index": 2073599,
+        "index_span_under_formula": 1167240,
+        "nominal_pixels": 2073600,
+        "indices_outside_span": 906360
+      },
+      "caveat": "The vendor Mat implementation was not in the permitted input set and was not inspected."
+    }
+  },
+  "next_minimal_check": {
+    "action": "Run an isolated, tiny non-square C-simulation of the exact HLS adapters using unique per-pixel RGB markers; confirm Mat index semantics, row/column order, frame byte counts, and TLAST/TKEEP boundaries before relying on the timing output.",
+    "reason": "It is the smallest discriminating check for the i*rows+j suspicion and stream contract, without using the notebook or claiming a new board run.",
+    "not_performed_in_this_packet": true
+  },
+  "unassessed": [
+    "Physical board and runtime PYNQ/Vivado/HLS identities",
+    "resizer.bit/resizer.hwh binding and source-to-overlay consistency",
+    "Vendor xf::cv::Mat index implementation and adapter C-sim correctness",
+    "Cache synchronization behavior for cacheable buffers",
+    "Actual DMA addresses, lengths, TLAST/TKEEP, backpressure, and channel timings",
+    "Routed timing report, resource use, achieved clock, and measured bandwidth",
+    "Repeated latency distribution, P50/P95, sustained throughput, and output image quality"
+  ],
+  "human_assistance": "No user-provided artifacts or manual hardware actions were added. The primary thread explicitly directed the second-round model-identity and DMA skill review; these were not described as automatic triggers. Static analysis and arithmetic only.",
+  "validation": {
+    "json_parse": "passed",
+    "input_manifest_hashes": "passed: all 8 input files match manifest SHA-256 and byte counts before/after; source_manifest SHA-256 unchanged",
+    "all_three_skills_before_after_hashes": "passed: all 6 loaded skill.md/workflow.md files unchanged",
+    "previous_pass_snapshots": "passed: all 3 original first-round artifacts match recorded SHA-256 and byte count",
+    "source_or_notebook_execution": "not performed by instruction"
+  },
+  "skill_invocation_history": [
+    {
+      "round": 1,
+      "trigger": "Initial natural-language task from the primary thread",
+      "selected_skill": "zynq-ps-pl-performance",
+      "reason": "Task focused on PS/PL dataflow and interpretation of saved timing.",
+      "other_skills_automatically_triggered": [],
+      "actual_entry_and_workflow_read": true
+    },
+    {
+      "round": 2,
+      "trigger": "Explicit instruction from the primary thread",
+      "selected_skills": [
+        "zynq-model-identity",
+        "zynq-dma-debugging"
+      ],
+      "actual_entry_and_workflow_read": true,
+      "automatic_trigger_claim": false
+    }
+  ],
+  "explicit_workflow_reviews": {
+    "zynq-model-identity": {
+      "version": "1.0.0-rc1",
+      "entry_and_workflow_read": [
+        "skill/installed_sources/zynq-model-identity/skill.md",
+        "skill/installed_sources/zynq-model-identity/references/workflow.md"
+      ],
+      "workflow_steps_applied": [
+        "Separated target configuration, offline source candidate, and notebook-saved as-run evidence.",
+        "Checked input dimensions, resize scale, stream protocol declarations, and PS/PL control and DMA routing.",
+        "Checked available file hashes and searched the manifest inventory for bit/HWH, XSA, ELF, and routed reports.",
+        "Marked runtime/build identities as unknown rather than inferring them from filenames or source paths."
+      ],
+      "identity_table": [
+        {
+          "layer": "target configuration",
+          "evidence": "Pynq-Z2 Tcl path; part xc7z020clg400-1; processing_system7; IP VLNVs; source manifest commit and acquisition time.",
+          "evidence_time": "manifest acquisition timestamp 2026-10-25T15:19:34.544480+08:00; this is not build/run time",
+          "unknown": [
+            "physical board identity",
+            "actual build output",
+            "Vivado/HLS versions",
+            "routed timing report"
+          ]
+        },
+        {
+          "layer": "offline source candidate",
+          "evidence": "HLS C++ file recomputed SHA-256 matches manifest; source declares 24-bit XF_8UC3 NPPC1 and max 3840x2160.",
+          "unknown": [
+            "generated bitstream and HWH",
+            "binding between source and generated overlay",
+            "XSA/BSP/ELF artifacts"
+          ]
+        },
+        {
+          "layer": "notebook-saved as-run evidence",
+          "evidence": "Notebook expects resizer.bit, references axi_dma_0 and resize_accel_0, and stores execution counts and 247 ms best-of-3 output.",
+          "unknown": [
+            "board and board serial",
+            "loaded bit/HWH SHA",
+            "runtime PYNQ/Python versions",
+            "execution wall time and same-session identity"
+          ]
+        }
+      ],
+      "input_and_protocol_review": {
+        "documented": "Notebook references images/sahara.jpg, saved dimensions 3840x2160, resize factor 2, output 1920x1080, and allocates three-channel uint8 arrays.",
+        "not_in_manifest_or_unverified": [
+          "source image bytes/hash",
+          "Pillow image mode and RGB channel order assertion",
+          "actual runtime buffer contents"
+        ],
+        "model_classes_weights": "not applicable to this image-resizer sample"
+      },
+      "next_minimal_check": "Read-only collect the exact loaded resizer.bit and paired .hwh hashes, then bind them to the supplied Tcl/manifest commit, part/IP/register map, and board PYNQ version record."
+    },
+    "zynq-dma-debugging": {
+      "version": "1.0.0-rc1",
+      "entry_and_workflow_read": [
+        "skill/installed_sources/zynq-dma-debugging/skill.md",
+        "skill/installed_sources/zynq-dma-debugging/references/workflow.md"
+      ],
+      "workflow_steps_applied": [
+        "Built a notebook cell-order timeline while explicitly marking that timestamps/session identity are absent.",
+        "Reviewed data direction, computed buffer lengths, TLAST/TKEEP declaration, cacheable setting, buffer waits, and initialization evidence separately.",
+        "Separated source-level suspicion from an actual DMA root cause.",
+        "Did not replay, reset, overwrite, reuse, or start any hardware transaction."
+      ],
+      "timeline": [
+        {
+          "saved_cell_execution_count": 2,
+          "operation": "Overlay(\"resizer.bit\")"
+        },
+        {
+          "saved_cell_execution_count": 3,
+          "operation": "Bind notebook names to axi_dma_0 and resize_accel_0"
+        },
+        {
+          "saved_cell_execution_count": 7,
+          "operation": "Allocate input/output buffers"
+        },
+        {
+          "saved_cell_execution_count": 8,
+          "operation": "Copy PIL source image to input buffer"
+        },
+        {
+          "saved_cell_execution_count": 10,
+          "operation": "Write source/destination dimensions through register_map"
+        },
+        {
+          "saved_cell_execution_count": 11,
+          "operation": "Call run_kernel and create PIL image"
+        },
+        {
+          "saved_cell_execution_count": 13,
+          "operation": "timeit run_kernel plus Image.fromarray; saved 1 loop, best of 3: 247 ms"
+        }
+      ],
+      "same_execution_evidence": "No wall-clock timestamps, kernel session ID, DMA snapshots, or failure record; execution counts do not prove the output cells came from one current board run.",
+      "contract_review": {
+        "data_length": "Source passes whole arrays to sendchannel.transfer/recvchannel.transfer; computed shape byte counts are not actual transaction-length logs.",
+        "stream_boundary": "Input adapter sizes reads from dimensions and does not inspect incoming TLAST/TKEEP; output adapter asserts TLAST on final pixel and sets keep to all ones. No AXIS transaction trace exists.",
+        "cache": "cacheable=1 is present and explicit flush/invalidate is absent from the inspected notebook snippet; driver auto-sync behavior is unknown, so no cache fault is inferred.",
+        "ownership_initialization": "The function waits on both channels, but no status/error/length/state snapshots or initialization history are supplied; safe reuse/replay cannot be established from runtime state."
+      },
+      "incident_assessment": "No actual DMA failure incident is captured. The workflow supports static contract review only; no DMA root cause or recovery decision is made.",
+      "next_minimal_check": "First perform the previously identified tiny non-square C-simulation of the exact adapters to check index and stream-boundary behavior. If a runtime failure is later investigated, capture one same-run transaction state before considering recovery; do not reset/replay without board-level contract."
+    }
+  }
+}

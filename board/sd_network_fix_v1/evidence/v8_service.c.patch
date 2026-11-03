@@ -1,0 +1,32 @@
+--- C:\z100v13\gpt_softpack_build_plan01\build_output\native_sources\v8_service.c
++++ src/v8_service.c
+@@ -42,7 +42,11 @@
+ }
+ static int receive_json(V8Service *s,char *buf,size_t cap){
+     uint8_t length[4];size_t n;
+-    if(io_read(s,length,4))return -1;
++    /* Zero is clean EOF only before any byte of the next frame prefix. */
++    int first=s->read(s->transport,length,4);
++    if(first==0)return 0;
++    if(first<0||first>4)return -1;
++    if(first<4&&io_read(s,length+first,4-(size_t)first))return -1;
+     n=((size_t)length[0]<<24)|((size_t)length[1]<<16)|((size_t)length[2]<<8)|length[3];
+     if(n==0||n>V8_SERVICE_MAX_REQUEST_JSON||n>=cap)return -2;
+     if(io_read(s,(uint8_t*)buf,n))return -1;
+@@ -135,7 +139,7 @@
+        !s->detections||s->detection_capacity==0||s->detection_capacity>10000||
+        !s->response||s->response_capacity<1024)return -1;
+     n=receive_json(s,request,sizeof(request));
+-    if(n<0||parse_fields(request,&f))return -2;
++    if(n<=0||parse_fields(request,&f))return -2;
+     if(!eq(&f,"type","HELLO")||!eq(&f,"protocol",WIRE_PROTOCOL)||
+        !eq(&f,"model_sha256",s->model_sha256)||!eq(&f,"classes_sha256",s->classes_sha256)){
+         error_reply(s,NULL,"V8 protocol/model/class identity mismatch");return -3;
+@@ -145,6 +149,7 @@
+         WIRE_PROTOCOL,s->model_sha256,s->classes_sha256,(unsigned)s->class_count,s->class_domain);
+     if(n<0||(size_t)n>=s->response_capacity||send_json(s,s->response,(size_t)n))return -4;
+     n=receive_json(s,request,sizeof(request));
++    if(n==0)return V8_SERVICE_PROBE_ONLY; /* HELLO-only probe; no INFER bytes were received. */
+     if(n<0||parse_fields(request,&f))return -5;
+     request_id=field(&f,"request_id");
+     if(!request_id_ok(request_id)||!eq(&f,"type","INFER")||!eq(&f,"protocol",WIRE_PROTOCOL)||

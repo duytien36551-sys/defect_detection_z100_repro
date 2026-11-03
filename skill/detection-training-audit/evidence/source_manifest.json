@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "scope": "Portable examples derived from authentic local records; author paths/serial redacted, JSON serialized anew. Text decoded UTF-8, falling back to GB18030 with replacement for legacy logs. Original and distributed hashes are separate; no new training/board run.",
+  "files": [
+    {
+      "snapshot_path": "examples/09_training_finish200/inputs/final_report.json",
+      "source_origin": "v8/pin_paperstyle300e_20261021/final_report.json",
+      "source_sha256": "e50d0d64d66b072ca9e25c89644f8de94857a0e0ef5d98184ed79bbec79270f9",
+      "snapshot_sha256": "84560e7187b97426596934c02be2fe7b769c27d79ffac0c7ce90f49942819f01",
+      "bytes": 9379,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/09_training_finish200/inputs/finish200_audit.json",
+      "source_origin": "v8/pin_paperstyle300e_20261021/reports/finish200_audit.json",
+      "source_sha256": "2a3333c17d8b6f2da4a77a9f99197d25f3ebb0a22d1064ad361c03ab0f00f8c9",
+      "snapshot_sha256": "c1551d090c3d31c33d21fd9e5fe650e2b369786b1d8d70341e9a38c743ba4e1c",
+      "bytes": 2236,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/09_training_finish200/inputs/final_acceptance.json",
+      "source_origin": "v8/pin_paperstyle300e_20261021/reports/final_acceptance_20261024.json",
+      "source_sha256": "d834ee13066ed6f321c3111b85a38523b344411cfa1603607a0df17ecedf3458",
+      "snapshot_sha256": "b616f4464ab90e257722eaebbf453448b16af19e0d6a7b608a8f75b23303a6a3",
+      "bytes": 559,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/09_training_finish200/inputs/results.csv",
+      "source_origin": "v8/pin_paperstyle300e_20261021/runs/pin/results.csv",
+      "source_sha256": "dbbf84b30b68402e70a0451ea9999792bbbf789c21182c2e93f4c1208cab5723",
+      "snapshot_sha256": "dbbf84b30b68402e70a0451ea9999792bbbf789c21182c2e93f4c1208cab5723",
+      "bytes": 23685,
+      "redacted_or_reserialized": false
+    },
+    {
+      "snapshot_path": "examples/09_training_finish200/inputs/split_manifest.json",
+      "source_origin": "v8/pin_paperstyle300e_20261021/split_manifest.json",
+      "source_sha256": "cea60674b314b3d5ddf85d51f9d3b85cf563ded5fa29b85a2553aaef6aad189d",
+      "snapshot_sha256": "eb0861b81b2bbd4b4669f5ba9884466a8adf1d4f0a726c74a8b032508c217f5a",
+      "bytes": 3295599,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/10_training_gate_limits/inputs/final_report.json",
+      "source_origin": "v8/pin_paperstyle300e_20261021/final_report.json",
+      "source_sha256": "e50d0d64d66b072ca9e25c89644f8de94857a0e0ef5d98184ed79bbec79270f9",
+      "snapshot_sha256": "84560e7187b97426596934c02be2fe7b769c27d79ffac0c7ce90f49942819f01",
+      "bytes": 9379,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "examples/10_training_gate_limits/inputs/final_acceptance.json",
+      "source_origin": "v8/pin_paperstyle300e_20261021/reports/final_acceptance_20261024.json",
+      "source_sha256": "d834ee13066ed6f321c3111b85a38523b344411cfa1603607a0df17ecedf3458",
+      "snapshot_sha256": "b616f4464ab90e257722eaebbf453448b16af19e0d6a7b608a8f75b23303a6a3",
+      "bytes": 559,
+      "redacted_or_reserialized": true
+    },
+    {
+      "snapshot_path": "validation/independent/09_training_finish200/report.md",
+      "source_origin": "validation/independent_normal_20261025/09_training_finish200.md",
+      "source_sha256": "376b346e2713b6d6e0fd9d8ec091e491371e3fdfda2a7d8aad25b9598ca98bb3",
+      "snapshot_sha256": "8c6fd4a2ca27111918b90ac4224f40f0f4eadfe8ff77ae17d252ecc8e8cfae85",
+      "bytes": 6649,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/09_training_finish200/report.json",
+      "source_origin": "validation/independent_normal_20261025/09_training_finish200.json",
+      "source_sha256": "b16a40ad22034ab97c41b22d01274aeaf27c36ca26cfdf708cab6028b23f199e",
+      "snapshot_sha256": "53edd5ad6e5efe3aeae77e054855e96b8750f6441dce9cf5bf33a1d534bc113e",
+      "bytes": 101580,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/10_training_gate_limits/report.md",
+      "source_origin": "validation/behavior_run_b_20261025/10_training_gate_limits/report.md",
+      "source_sha256": "514f5c9a15e62426576f3a7e697efbc74397e695706d421e2d86936081192536",
+      "snapshot_sha256": "514f5c9a15e62426576f3a7e697efbc74397e695706d421e2d86936081192536",
+      "bytes": 5282,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    },
+    {
+      "snapshot_path": "validation/independent/10_training_gate_limits/report.json",
+      "source_origin": "validation/behavior_run_b_20261025/10_training_gate_limits/report.json",
+      "source_sha256": "e2c218fa95de8bba601d037ecd2e8baf4500d7da98ec2cc2e82b9e28020db315",
+      "snapshot_sha256": "074e1657491e7e2b47f8af11517e796449575d9d4cb67b77fdc8c3f0e51976f7",
+      "bytes": 13913,
+      "redacted_or_reserialized": true,
+      "editorial_correction": false
+    }
+  ],
+  "submission_transform": "2026-10-31 standalone skill folder; Markdown navigation converted to readable text and workflow included in entry/readme. Original source hashes preserved."
+}

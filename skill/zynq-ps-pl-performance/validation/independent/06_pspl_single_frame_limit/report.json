@@ -1,0 +1,254 @@
+{
+  "case_id": "06_pspl_single_frame_limit",
+  "task": "Review inference timing scope and minimum collection plan; no hardware operation.",
+  "skill_loaded": {
+    "name": "zynq-ps-pl-performance",
+    "version": "1.0.0-rc1",
+    "files": [
+      "skill/installed_sources/zynq-ps-pl-performance/skill.md",
+      "skill/installed_sources/zynq-ps-pl-performance/references/workflow.md"
+    ]
+  },
+  "execution": {
+    "mode": "read-only fixture review",
+    "actual_operations": [
+      "Read assigned task, frozen skill.md/workflow and board_result.json, first_frame_summary.json, profile_summary.json only.",
+      "Parsed the JSON timing/counter/identity fields; converted board_result total ticks using supplied timer frequency; recomputed single-sample percentage difference.",
+      "Checked profile input hash for first_frame_summary against provided file; found no supplied file matching the historical result.json hash. No raw-head binary was supplied.",
+      "No board or model-inference operation."
+    ],
+    "prohibited_operations_performed": []
+  },
+  "input_integrity": {
+    "files": [
+      {
+        "path": "skill/validation/cases_20261025/06_pspl_single_frame_limit/inputs/board_result.json",
+        "bytes": 2214,
+        "sha256_before": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c",
+        "sha256_after": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/06_pspl_single_frame_limit/inputs/first_frame_summary.json",
+        "bytes": 28056,
+        "sha256_before": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9",
+        "sha256_after": "02476c6ba77efc492d4ea5162c39b5ca528c7dd8a85f2844fbe0255396e674c9",
+        "unchanged": true
+      },
+      {
+        "path": "skill/validation/cases_20261025/06_pspl_single_frame_limit/inputs/profile_summary.json",
+        "bytes": 2880,
+        "sha256_before": "76f3e94a96a805f3893b9b1836ce87dafd66f9df12cc847c0901693b93b3e998",
+        "sha256_after": "76f3e94a96a805f3893b9b1836ce87dafd66f9df12cc847c0901693b93b3e998",
+        "unchanged": true
+      }
+    ],
+    "all_unchanged": true
+  },
+  "conclusion": {
+    "status": "LIMITED_SINGLE_FRAME_EVIDENCE",
+    "profiled_ms": 6497.6336705686235,
+    "baseline_ms": 6579.094519206259,
+    "speedup": "not supported",
+    "p50_p95": "not measurable",
+    "sustained_fps": "not measured"
+  },
+  "findings": [
+    {
+      "id": "one_frame",
+      "status": "observed_as_recorded",
+      "fact": "One fixed image, total 6579.095 ms baseline and 6497.634 ms profiled; board record reports 0 raw-head mismatches over 613200 bytes and 2 detections."
+    },
+    {
+      "id": "counters",
+      "status": "reported_nested_counters",
+      "fact": "6413 DMA calls, TX 82883776 B, RX 57057860 B; nested/overlap caveat and CPU overhead for DMA polling."
+    },
+    {
+      "id": "p50_p95_fps",
+      "status": "not_measured",
+      "fact": "One sample per condition; sustained FPS and full pipeline transport marked false."
+    },
+    {
+      "id": "speedup",
+      "status": "unsupported",
+      "fact": "Observed pair difference -1.238% is not speedup because only one run each and variability/overhead are unestablished."
+    },
+    {
+      "id": "identity",
+      "status": "incomplete",
+      "fact": "Profile declares result hash dfb56c4ea355983dde9e18996db37b24fddc177a55d2a4d2851577eaa1677a74; provided board_result hash 5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c differs. Profile raw binary artifacts/ELF identity missing."
+    }
+  ],
+  "timing": {
+    "profile_phase_ms": {
+      "preprocess_ticks": 27.571154200436528,
+      "graph_ticks": 6345.577855978242,
+      "dequantization_ticks": 16.22797452938874,
+      "decode_ticks": 108.25404886063258
+    },
+    "baseline_phase_ms": {
+      "preprocess_ticks": 27.65933619787925,
+      "graph_ticks": 6403.554000296934,
+      "dequantization_ticks": 16.235102529182026,
+      "decode_ticks": 131.64308318235058,
+      "total_ticks": 6579.094519206259
+    },
+    "nested_counter_ms": {
+      "load_pack_ticks": 69.25895199149039,
+      "run_pack_ticks": 940.585793723012,
+      "load_transfer_ticks": 18.924068451202015,
+      "run_transfer_ticks": 2009.720860718095,
+      "dma_prepare_ticks": 404.59825226665066,
+      "dma_poll_ticks": 1525.1683207701187,
+      "dma_finalize_ticks": 95.1387002409777,
+      "response_parse_ticks": 416.5058039213317,
+      "conv_requant_ticks": 2080.03000467913
+    },
+    "counters": {
+      "load_pack_ticks": 23086318,
+      "run_pack_ticks": 313528607,
+      "load_transfer_ticks": 6308023,
+      "run_transfer_ticks": 669906973,
+      "dma_prepare_ticks": 134866088,
+      "dma_poll_ticks": 508389455,
+      "dma_finalize_ticks": 31712901,
+      "load_bytes": 3114176,
+      "run_bytes": 79769600,
+      "load_calls": 94,
+      "run_calls": 6319,
+      "dma_tx_bytes": 82883776,
+      "dma_rx_bytes": 57057860,
+      "dma_calls": 6413,
+      "response_parse_ticks": 138835272,
+      "conv_requant_ticks": 693343355
+    },
+    "timer_hz": 333333343,
+    "board_result_total_ms_from_ticks": 6579.094519206259,
+    "single_sample_difference_percent_reported": -1.2381772050823714,
+    "single_sample_difference_percent_recomputed": -1.2381772050823692,
+    "profile_historical_result_sha256": "dfb56c4ea355983dde9e18996db37b24fddc177a55d2a4d2851577eaa1677a74",
+    "provided_board_result_sha256": "5b134868fc2c79fec89d635addcdb8677d1d9f03c0619f0743720546a774cd8c",
+    "first_frame_hash_matches": true,
+    "top_nodes": [
+      {
+        "node_id": 0,
+        "op": "conv",
+        "op_code": 0,
+        "ticks": 165738606,
+        "milliseconds": 497.2158035807417
+      },
+      {
+        "node_id": 2,
+        "op": "conv",
+        "op_code": 0,
+        "ticks": 113004942,
+        "milliseconds": 339.01481616857035
+      },
+      {
+        "node_id": 14,
+        "op": "conv",
+        "op_code": 0,
+        "ticks": 73132252,
+        "milliseconds": 219.39674963749425
+      }
+    ]
+  },
+  "limitations": [
+    "Timer source not independently calibrated.",
+    "Nested counters; DMA poll includes CPU overhead.",
+    "No P50/P95, sustained throughput, full-pipeline transport or routed timing.",
+    "Referenced historical result/raw-head files absent; profile identity incomplete."
+  ],
+  "next_checks": [
+    "After authorization, identity-bind and time >=100 consecutive full requests plus an unprofiled control; retain raw per-request and phase timings, bytes and outcomes.",
+    "Only after repeated profiling, test one node-0 convolution/packing candidate with logical parity and paired latency distributions."
+  ],
+  "evidence_refs": [
+    {
+      "file": "board_result.json",
+      "json_pointer": "/utc",
+      "line": 2
+    },
+    {
+      "file": "board_result.json",
+      "json_pointer": "/elf_sha256",
+      "line": 8
+    },
+    {
+      "file": "board_result.json",
+      "json_pointer": "/raw_head_mismatch_count",
+      "line": 49
+    },
+    {
+      "file": "board_result.json",
+      "json_pointer": "/pipeline_ticks",
+      "lines": "55-74"
+    },
+    {
+      "file": "board_result.json",
+      "json_pointer": "/release_eligible",
+      "line": 4
+    },
+    {
+      "file": "first_frame_summary.json",
+      "json_pointer": "/phase_milliseconds",
+      "lines": "14-21"
+    },
+    {
+      "file": "first_frame_summary.json",
+      "json_pointer": "/top_nodes/0",
+      "note": "first entry is node 0 convolution"
+    },
+    {
+      "file": "profile_summary.json",
+      "json_pointer": "/timer_hz",
+      "line": 4
+    },
+    {
+      "file": "profile_summary.json",
+      "json_pointer": "/phase_milliseconds",
+      "lines": "5-10"
+    },
+    {
+      "file": "profile_summary.json",
+      "json_pointer": "/nested_counter_milliseconds",
+      "lines": "12-21"
+    },
+    {
+      "file": "profile_summary.json",
+      "json_pointer": "/counters",
+      "lines": "22-39"
+    },
+    {
+      "file": "profile_summary.json",
+      "json_pointer": "/baseline_total_ms",
+      "line": 40
+    },
+    {
+      "file": "profile_summary.json",
+      "json_pointer": "/profile_total_ms",
+      "line": 41
+    },
+    {
+      "file": "profile_summary.json",
+      "json_pointer": "/instrumentation_overhead_established",
+      "line": 43
+    },
+    {
+      "file": "profile_summary.json",
+      "json_pointer": "/interpretation",
+      "line": 46
+    },
+    {
+      "file": "profile_summary.json",
+      "json_pointer": "/sustained_fps_measured",
+      "line": 50
+    },
+    {
+      "file": "profile_summary.json",
+      "json_pointer": "/inputs",
+      "lines": "52-58"
+    }
+  ]
+}

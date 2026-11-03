@@ -1,0 +1,6 @@
+{
+  "exit_code": 15,
+  "peak_python_tree_rss_gib": 6.367393493652344,
+  "min_free_gib": 0.577545166015625,
+  "guard_reason": "memory_or_timeout_guard"
+}

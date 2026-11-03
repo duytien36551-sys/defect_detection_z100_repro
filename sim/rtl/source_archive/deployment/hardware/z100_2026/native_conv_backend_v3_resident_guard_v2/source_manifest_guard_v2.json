@@ -1,0 +1,35 @@
+{
+  "schema": "z100-native-conv-resident-guard-v2/1",
+  "status": "LOCAL_PROTOCOL_AND_ELABORATION_ONLY",
+  "tops": {
+    "helper": "z100_parameter_residency_guard_v2",
+    "backend": "z100_native_conv_backend_v3_resident_guard_v2",
+    "mmio": "z100_native_conv_mmio_backend_resident_guard_v2"
+  },
+  "base_manifest": "deployment/hardware/z100_2026/native_conv_backend_v3/source_manifest.json",
+  "base_v3_rtl_count": 35,
+  "base_v3_roms": [
+    {
+      "path": "deployment/hardware/z100_2026/native_conv_backend_v3/conv_event_map.hex",
+      "sha256": "7f5dbedbc8b0487350ea40465b2e6ae1bc404e6c167da25b72cedf94e4dbaf85"
+    },
+    {
+      "path": "deployment/hardware/z100_2026/native_conv_backend_v3/conv_tiles.hex",
+      "sha256": "8295ab50a944c6b8c61b97515d8a388919f287dd2c487c63c6da997a64c99f0c"
+    }
+  ],
+  "sources": {
+    "deployment/hardware/z100_2026/native_conv_backend_v3_resident_guard_v2/z100_parameter_residency_guard_v2.sv": "9e58d3048e45cc70fedc3c29f76669661fd9ac33c66455070140422c36080617",
+    "deployment/hardware/z100_2026/native_conv_backend_v3_resident_guard_v2/tb_z100_parameter_residency_guard_v2.sv": "8448f0347c55a04b58a4857630056bd003ebbf9dc4329824ee448b1ffa6eb3fd",
+    "deployment/hardware/z100_2026/native_conv_backend_v3_resident_guard_v2/z100_native_conv_backend_v3_resident_guard_v2.sv": "a72706f31f5e453e3b36c5dd79321db89ba560c51aa3b5f290118f14c3aba751",
+    "deployment/hardware/z100_2026/native_conv_backend_v3_resident_guard_v2/z100_native_conv_mmio_backend_resident_guard_v2.sv": "5d723b31b79c6913e9903d8a666b759e0b7f1d74eb818c14b9ffbe600b607d82",
+    "deployment/hardware/z100_2026/native_conv_mmio_v2/z100_native_conv_mmio_v2.sv": "f9c2ebc336470a2de6053b066a3e09f5a020278a845dc0981016893c55ccd239"
+  },
+  "completion_behavior": "lower one-cycle pulse is accepted into a pending register; upstream valid and request identity stay stable until done_ready",
+  "cancel_drain_contract": "cancel discards the logical helper transaction; the native backend readers/writer retain AXI ownership and all_io_quiet remains false until they drain",
+  "not_accepted": [
+    "helper simulation uses a one-cycle lower completion pulse, not a full parameter-loader transaction",
+    "full native backend is elaborated but its Conv datapath is not numerically simulated in this run",
+    "no Vivado synthesis, routing, timing, physical DDR, board, or FPS evidence"
+  ]
+}

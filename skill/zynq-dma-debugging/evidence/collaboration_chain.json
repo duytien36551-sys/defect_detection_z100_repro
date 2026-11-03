@@ -1,0 +1,799 @@
+{
+  "skill": "zynq-dma-debugging",
+  "selected_source_chains": {
+    "schema_version": "1.0",
+    "review_date": "2026-10-25",
+    "objective": "Document traceable, real user-to-assistant collaboration chains for five installed skills, distinguishing visible chat reports from file-verified facts.",
+    "scope": {
+      "writable_directory": "skill/validation/collaboration_chains_review_20261025/",
+      "readable_sources_used": [
+        "skill/validation/collaboration_archive_20261025/*.json",
+        "skill/installed_sources/*/references/lessons.md",
+        "skill/validation/case_index_20261025.json",
+        "skill/validation/cases_20261025/{02_identity_missing_runtime_derived,04_parity_quality_gate,06_pspl_single_frame_limit,08_dma_cross_run_failure,10_training_gate_limits}/inputs/"
+      ],
+      "not_read": [
+        "case task.md files",
+        "oracle files",
+        "main_review, other agent reports, prior output directories",
+        "project source code or historical absolute-path reports linked from chat"
+      ],
+      "no_live_actions": [
+        "No board control, network access, training, model inference, package installation, or execution of input code."
+      ],
+      "quote_policy": "JSON excerpt strings are exact substrings of visible user/assistant messages. No hidden reasoning is included. Markdown ellipses are editorial omissions."
+    },
+    "method_and_validation": {
+      "archive_manifest": "skill/validation/collaboration_archive_20261025/archive_manifest.json",
+      "archive_manifest_sha256": "7c4c43335a9410eac9b1f409a6665dd13deeab2d7907561f15dc761a64604e0f",
+      "checks": [
+        "Recomputed cited archive page SHA-256 values and compared them with the archive manifest.",
+        "Cited each archive message with page, thread ID, turn ID, and item/message ID.",
+        "Used JSON Pointer paths for structured fixture facts and byte offsets for manually viewed DMA register bytes.",
+        "Historical linked report paths were not opened. Assistant messages are attributed as chat reports unless independently cross-checked by permitted input files."
+      ],
+      "evidence_semantics": "Distinct executions are never combined into a causal sequence. A chat message proves only that the assistant reported an observation."
+    },
+    "archive_pages": {
+      "older_2": {
+        "path": "skill/validation/collaboration_archive_20261025/v8deploy_older_2.json",
+        "thread_id": "01a13ece-2d42-7be1-98a5-7f30a6e09c61",
+        "sha256": "1cd78068641c1833054c69107db13a5e79db777fe8b4c22ec2b58bcc813ec1de",
+        "matches_manifest": true
+      },
+      "older_3": {
+        "path": "skill/validation/collaboration_archive_20261025/v8deploy_older_3.json",
+        "thread_id": "01a13ece-2d42-7be1-98a5-7f30a6e09c61",
+        "sha256": "65a7718dfe421e1d67274e1c35e5d20a980f684df11ac75247db4a116140b169",
+        "matches_manifest": true
+      },
+      "older_5": {
+        "path": "skill/validation/collaboration_archive_20261025/v8deploy_older_5.json",
+        "thread_id": "01a13ece-2d42-7be1-98a5-7f30a6e09c61",
+        "sha256": "521ecae3f6cb196f8911b84c2f5d6fc815f4d34662415ffd147a5ae248e5a4fb",
+        "matches_manifest": true
+      },
+      "older_6_screened_not_cited": {
+        "path": "skill/validation/collaboration_archive_20261025/v8deploy_older_6.json",
+        "thread_id": "01a13ece-2d42-7be1-98a5-7f30a6e09c61",
+        "sha256": "e25ced7a5af2867d7093802a4828d93f1436ab208ee4bb12d545e0afb5ac1c12",
+        "matches_manifest": true,
+        "reason": "Reviewed the 32-lane attempt, but its captured turn stops before a post-initialization board result; the complete 64-lane chain is in older_5."
+      },
+      "training": {
+        "path": "skill/validation/collaboration_archive_20261025/01a15bc5-17ba-7d80-a6ba-3f28ffe04ac7.json",
+        "thread_id": "01a15bc5-17ba-7d80-a6ba-3f28ffe04ac7",
+        "sha256": "a3406766b9dd8f4c0906aae1ea0ba1d329047a5f56f2b1f044b251150d962b54",
+        "matches_manifest": true
+      }
+    },
+    "skill_lesson_sources": [
+      {
+        "skill": "zynq-model-identity",
+        "path": "skill/installed_sources/zynq-model-identity/references/lessons.md",
+        "sha256": "a89008f2ac4febbfc0077b895ba62b80e5aa929e3a5d2bf36abd377d1125f904",
+        "loaded": "Entire lessons.md"
+      },
+      {
+        "skill": "zynq-inference-parity",
+        "path": "skill/installed_sources/zynq-inference-parity/references/lessons.md",
+        "sha256": "3fc506667c22b6810b29c82cd1a355a8da0b133e2fa33c6b678d6422e2d38ee0",
+        "loaded": "Entire lessons.md"
+      },
+      {
+        "skill": "zynq-ps-pl-performance",
+        "path": "skill/installed_sources/zynq-ps-pl-performance/references/lessons.md",
+        "sha256": "5f533da29bf73fac6a4b799715c58bace1fb8f1b6ecc860dfc24ba522ef6a605",
+        "loaded": "Entire lessons.md"
+      },
+      {
+        "skill": "zynq-dma-debugging",
+        "path": "skill/installed_sources/zynq-dma-debugging/references/lessons.md",
+        "sha256": "152e217e6555bcbddf3bc1d66244a9fb27a0d22b181ec378fb5f98a4e690f220",
+        "loaded": "Entire lessons.md"
+      },
+      {
+        "skill": "detection-training-audit",
+        "path": "skill/installed_sources/detection-training-audit/references/lessons.md",
+        "sha256": "d57d02ada48c647c752256aeeba98455498a60729e5bdf54de65dc19d132e3ad",
+        "loaded": "Entire lessons.md"
+      }
+    ],
+    "messages": [
+      {
+        "ref": "identity.request",
+        "page": "older_2",
+        "turn": "01a15195-b586-77e2-b97a-59879d4c5ab0",
+        "id": "01a15195-b8c6-7e20-b421-14dadfaf9a7a",
+        "speaker": "user",
+        "excerpt": "现在先把目前效果最好的模型部署到板端"
+      },
+      {
+        "ref": "identity.advice",
+        "page": "older_2",
+        "turn": "01a15195-b586-77e2-b97a-59879d4c5ab0",
+        "id": "msg_0dab378e239e39a1016ad565d6aa38819b9057b79b60f41293",
+        "speaker": "assistant",
+        "excerpt": "我先核对训练记录中当前效果最好的权重，以及它是否已有配套量化模型包，再沿用已优化的板端程序部署，保留现有版本供回退。"
+      },
+      {
+        "ref": "identity.user_correction",
+        "page": "older_2",
+        "turn": "01a15195-b586-77e2-b97a-59879d4c5ab0",
+        "id": "01a15197-3099-7f41-9aa7-3475e7357c0c",
+        "speaker": "user",
+        "excerpt": "目前效果最好的应该是两个77左右的模型"
+      },
+      {
+        "ref": "identity.correction_reply",
+        "page": "older_2",
+        "turn": "01a15195-b586-77e2-b97a-59879d4c5ab0",
+        "id": "msg_0dab378e239e39a1016ad566367eac819b8ee7f67ad8db7bdb",
+        "speaker": "assistant",
+        "excerpt": "收到，你指的是 PCB 和光电两项 AP 都在 77% 左右的版本。我会按这个目标查找对应权重和完整评估记录，先不部署刚才提到的 76%／66% 版本。"
+      },
+      {
+        "ref": "identity.model_selected",
+        "page": "older_2",
+        "turn": "01a15195-b586-77e2-b97a-59879d4c5ab0",
+        "id": "msg_0dab378e239e39a1016ad566693724819b9f24bcd6f2c625b7",
+        "speaker": "assistant",
+        "excerpt": "找到了你说的版本：人工修订标签后继续训练的模型，当前记录中的最佳轮是本阶段第 28 轮。"
+      },
+      {
+        "ref": "identity.board_report",
+        "page": "older_2",
+        "turn": "01a15195-b586-77e2-b97a-59879d4c5ab0",
+        "id": "msg_0dab378e239e39a1016ad569705e20819bafead0e05a2d60a3",
+        "speaker": "assistant",
+        "excerpt": "光电正样例也返回了与参考一致的缺陷框。"
+      },
+      {
+        "ref": "identity.quality_limit",
+        "page": "older_2",
+        "turn": "01a15195-b586-77e2-b97a-59879d4c5ab0",
+        "id": "msg_0dab378e239e39a1016ad56c5b5608819ba62c2903985b57d5",
+        "speaker": "assistant",
+        "excerpt": "超过原定的 2 点目标，因此这版不能标记为精度全部验收通过。"
+      },
+      {
+        "ref": "identity.final",
+        "page": "older_2",
+        "turn": "01a15195-b586-77e2-b97a-59879d4c5ab0",
+        "id": "msg_0dab378e239e39a1016ad56c823ca8819b998b282ffc8c5ae5",
+        "speaker": "assistant",
+        "excerpt": "当前是 JTAG 临时运行，SD 卡尚未更新。"
+      },
+      {
+        "ref": "parity.reference_correction",
+        "page": "older_2",
+        "turn": "01a15195-b586-77e2-b97a-59879d4c5ab0",
+        "id": "msg_0dab378e239e39a1016ad569144034819baf212d444fa42baa",
+        "speaker": "assistant",
+        "excerpt": "板端检测头核对中发现了一个参考程序的精度差异：Python 参考最后用 float32 相乘，板端用 double 相乘后转 float32，造成极小差值。按板端既定规则修正参考后，PCB 的全部 291,018 个值已逐字节一致，没有修改板端计算来迁就结果。"
+      },
+      {
+        "ref": "parity.both_heads_match",
+        "page": "older_2",
+        "turn": "01a15195-b586-77e2-b97a-59879d4c5ab0",
+        "id": "msg_0dab378e239e39a1016ad56943a730819ba77958de37ada563",
+        "speaker": "assistant",
+        "excerpt": "PCB 和光电的检测头都已与新模型参考逐字节一致。"
+      },
+      {
+        "ref": "pspl.prior_advice",
+        "page": "older_3",
+        "turn": "01a1450c-d35d-77d0-b929-5c770f264207",
+        "id": "msg_0dab378e239e39a1016ad2305d0410819bad735d3d20fc9ed0",
+        "speaker": "assistant",
+        "excerpt": "暂时不建议继续增加并行路数，先优化数据搬运更值得。"
+      },
+      {
+        "ref": "pspl.request",
+        "page": "older_3",
+        "turn": "01a14d3f-9303-7553-9861-17a02d61ad1f",
+        "id": "01a14d3f-961c-7112-9039-3c2e46e0fe3e",
+        "speaker": "user",
+        "excerpt": "按照你的想法优化"
+      },
+      {
+        "ref": "pspl.plan",
+        "page": "older_3",
+        "turn": "01a14d3f-9303-7553-9861-17a02d61ad1f",
+        "id": "msg_0dab378e239e39a1016ad449a43794819bb3b67b35d6dd3be8",
+        "speaker": "assistant",
+        "excerpt": "我会以已验证的 1.672 秒版本为基线，先优化重复打包和数据搬运，单独生成候选并保留现有版本；有实测收益且输出一致后再采用。"
+      },
+      {
+        "ref": "pspl.narrowed_plan",
+        "page": "older_3",
+        "turn": "01a14d3f-9303-7553-9861-17a02d61ad1f",
+        "id": "msg_0dab378e239e39a1016ad449e75734819ba85383b68266f207",
+        "speaker": "assistant",
+        "excerpt": "正在比较两条可行路径：减少打包循环中的重复寻址，以及复用同一层跨输出通道组的输入数据。此前“四位置分块打包”实测更慢，这轮不会直接沿用它。"
+      },
+      {
+        "ref": "pspl.correction",
+        "page": "older_3",
+        "turn": "01a14d3f-9303-7553-9861-17a02d61ad1f",
+        "id": "msg_0dab378e239e39a1016ad44a416c04819bbc8707cc8c629296",
+        "speaker": "assistant",
+        "excerpt": "简单改写 1×1 打包循环没有减少 ARM 指令，已放弃；现在改为优化 3×3 卷积内部区域，边缘仍走原有处理逻辑。"
+      },
+      {
+        "ref": "pspl.diff_check",
+        "page": "older_3",
+        "turn": "01a14d3f-9303-7553-9861-17a02d61ad1f",
+        "id": "msg_0dab378e239e39a1016ad44ac43360819bb11e6bf914d4c6bc",
+        "speaker": "assistant",
+        "excerpt": "3×3 内部区域快路径已完成，现有 106 组打包差分检查全部通过，边界和尾块输出也一致。"
+      },
+      {
+        "ref": "pspl.first_result",
+        "page": "older_3",
+        "turn": "01a14d3f-9303-7553-9861-17a02d61ad1f",
+        "id": "msg_0dab378e239e39a1016ad44b9b2820819bba984dbc2f308924",
+        "speaker": "assistant",
+        "excerpt": "候选的 20 次网络请求全部通过，中位耗时从 **1.672 秒降到 1.594 秒**，约快 **4.7%**。"
+      },
+      {
+        "ref": "pspl.repeated_result",
+        "page": "older_3",
+        "turn": "01a14d3f-9303-7553-9861-17a02d61ad1f",
+        "id": "msg_0dab378e239e39a1016ad44c568a0c819ba10650616d2596cd",
+        "speaker": "assistant",
+        "excerpt": "两组候选共 40 次请求和 7 项边界用例全部通过，可以采用这个版本；SD 卡文件尚未替换。"
+      },
+      {
+        "ref": "pspl.final",
+        "page": "older_3",
+        "turn": "01a14d3f-9303-7553-9861-17a02d61ad1f",
+        "id": "msg_0dab378e239e39a1016ad44c83a534819b9e1d65f5f95f6182",
+        "speaker": "assistant",
+        "excerpt": "本次优化减少了 3×3 卷积输入打包的重复判断，模型和 FPGA 逻辑未变。计时包含传图和结果返回，不含电脑预处理、界面绘制。"
+      },
+      {
+        "ref": "dma.request",
+        "page": "older_5",
+        "turn": "01a13fcc-35f9-7bd3-9007-d216527c5598",
+        "id": "01a13fcc-364a-7170-922b-610adc8bd17e",
+        "speaker": "user",
+        "excerpt": "改用64位试一下"
+      },
+      {
+        "ref": "dma.advice",
+        "page": "older_5",
+        "turn": "01a13fcc-35f9-7bd3-9007-d216527c5598",
+        "id": "msg_0dab378e239e39a1016ad0d8230838819b9a296ae010348c6b",
+        "speaker": "assistant",
+        "excerpt": "我按“64 路输出通道并行”来做独立候选版，保留当前已验证的 32 路版本。先改 RTL 和配套 ARM 接口，再检查资源、时序及实板速度。"
+      },
+      {
+        "ref": "dma.32_baseline",
+        "page": "older_5",
+        "turn": "01a13f98-76b6-7e81-a656-2ca52205fe88",
+        "id": "msg_0dab378e239e39a1016ad0d5f5df48819b969c7a99cb7d2bec",
+        "speaker": "assistant",
+        "excerpt": "已修复 DMA 驱动长度配置不匹配的问题。"
+      },
+      {
+        "ref": "dma.first_failure",
+        "page": "older_5",
+        "turn": "01a140b9-f3a1-7530-a429-593de350da14",
+        "id": "msg_0dab378e239e39a1016ad11c50f56c819b8032f287163203f2",
+        "speaker": "assistant",
+        "excerpt": "还没有完整耗时结果。现场数据已抓取，正在定位失败的层和传输状态。"
+      },
+      {
+        "ref": "dma.instrumentation",
+        "page": "older_5",
+        "turn": "01a140b9-f3a1-7530-a429-593de350da14",
+        "id": "msg_0dab378e239e39a1016ad11d4ea41c819b852a56a8e5c7f3f0",
+        "speaker": "assistant",
+        "excerpt": "首错已定位到第 37 个图节点、第二组 64 输出通道。正在增加只保存实际发送数据的 ARM 诊断快照；这一步不改 FPGA，先核实偏置和权重包是否正确。"
+      },
+      {
+        "ref": "dma.instrumented_success",
+        "page": "older_5",
+        "turn": "01a140b9-f3a1-7530-a429-593de350da14",
+        "id": "msg_0dab378e239e39a1016ad11ece0e38819bb2489391071f5fd1",
+        "speaker": "assistant",
+        "excerpt": "现在重新加载未加快照的原版 ARM 程序，检查首次溢出是否会再次出现。"
+      },
+      {
+        "ref": "dma.original_failure",
+        "page": "older_5",
+        "turn": "01a140b9-f3a1-7530-a429-593de350da14",
+        "id": "msg_0dab378e239e39a1016ad11f350924819bbc16c6093eb8394a",
+        "speaker": "assistant",
+        "excerpt": "原版复测再次失败，而且这次停在第一层 LOAD，说明故障位置并不固定。"
+      },
+      {
+        "ref": "dma.breakpoint",
+        "page": "older_5",
+        "turn": "01a140b9-f3a1-7530-a429-593de350da14",
+        "id": "msg_0dab378e239e39a1016ad122a065dc819b8356f9eef669c937",
+        "speaker": "assistant",
+        "excerpt": "加入这次暂停后，原版两张图片都通过了。暂停改变了时序，所以还不能算修复。"
+      },
+      {
+        "ref": "dma.full_initialization",
+        "page": "older_5",
+        "turn": "01a140b9-f3a1-7530-a429-593de350da14",
+        "id": "msg_0dab378e239e39a1016ad124c3aab8819bb16c9ad184615b8c",
+        "speaker": "assistant",
+        "excerpt": "启动包中复用的 PS 初始化配置与当前 XSA 逐条一致。"
+      },
+      {
+        "ref": "dma.two_runs",
+        "page": "older_5",
+        "turn": "01a140b9-f3a1-7530-a429-593de350da14",
+        "id": "msg_0dab378e239e39a1016ad126c6a708819bbe893a4b800f7b45",
+        "speaker": "assistant",
+        "excerpt": "此前加载故障的具体原因仍未完全定位，但这两次使用完整初始化流程均未复发。"
+      },
+      {
+        "ref": "dma.final",
+        "page": "older_5",
+        "turn": "01a140b9-f3a1-7530-a429-593de350da14",
+        "id": "msg_0dab378e239e39a1016ad1270f35f8819bbf19e5ad49a51d06",
+        "speaker": "assistant",
+        "excerpt": "此前加载故障的具体原因尚未完全定位；完整初始化流程本轮未复发，SD 冷启动仍待验证。"
+      },
+      {
+        "ref": "training.user_question",
+        "page": "training",
+        "turn": "01a1685d-bf88-7fd2-a0c8-de7a6e89fde4",
+        "id": "01a1685d-bfcc-76e3-9add-bd4708050327",
+        "speaker": "user",
+        "excerpt": "目前训练的提升效果明显吗 还有继续的必要吗"
+      },
+      {
+        "ref": "training.advice",
+        "page": "training",
+        "turn": "01a1685d-bf88-7fd2-a0c8-de7a6e89fde4",
+        "id": "msg_02d39ccfeca5c48b016adb3ae2cae887d0b7ba075ce41577ed",
+        "speaker": "assistant",
+        "excerpt": "早期提升明显，现在已经进入收益较小的阶段；我认为没有很强的必要一定跑满300轮。"
+      },
+      {
+        "ref": "training.user_acceptance",
+        "page": "training",
+        "turn": "01a1685e-c63f-79a3-b396-d2d5e27adecb",
+        "id": "01a1685e-c6bd-7672-92d8-e3a51f907c80",
+        "speaker": "user",
+        "excerpt": "可以 按照200轮收尾的想法来"
+      },
+      {
+        "ref": "training.plan",
+        "page": "training",
+        "turn": "01a1685e-c63f-79a3-b396-d2d5e27adecb",
+        "id": "msg_02d39ccfeca5c48b016adb3b1bafa087d0b1905d0fa327f059",
+        "speaker": "assistant",
+        "excerpt": "我把后台训练改为到第200轮后收尾，保留当前学习率计划和完整断点。完成后复评最佳权重在完整验证集及160张原图子集上的表现，测试集保持不动。"
+      },
+      {
+        "ref": "training.result",
+        "page": "training",
+        "turn": "01a16d03-0748-7583-a2a8-05c42128036d",
+        "id": "msg_02d39ccfeca5c48b016adc6bb1067087d0a9d71a7cbe088d9f",
+        "speaker": "assistant",
+        "excerpt": "已确认1—200轮记录连续、完整断点可读取，没有继续完成第201轮。"
+      }
+    ],
+    "input_files": [
+      {
+        "ref": "dma.fixture.failed",
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failed_run_acceptance.json",
+        "sha256": "3b615322378d4605de05991eff9d90e53415fed6b67f42a59b824dd91325e8d6",
+        "json_pointers": {
+          "$.status": "failed",
+          "$.case_parity_pass": false,
+          "$.batch_acceptance_pass": false,
+          "$.planned_count": 2,
+          "$.requests_completed": 1,
+          "$.started_at_utc": "2026-10-15T18:44:38.001238+00:00",
+          "$.model.sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3",
+          "$.requests[0].status": "error",
+          "$.requests[0].elapsed_seconds": 1.844
+        }
+      },
+      {
+        "ref": "dma.fixture.diagnostic",
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/later_diagnostic_acceptance.json",
+        "sha256": "96cbf9b8feb0fffa42151592e7a6549c5b60735ab4d74a3e27a13fe16c25cb81",
+        "json_pointers": {
+          "$.status": "complete",
+          "$.case_parity_pass": true,
+          "$.batch_acceptance_pass": true,
+          "$.planned_count": 20,
+          "$.requests_completed": 20,
+          "$.started_at_utc": "2026-10-15T18:41:21.113766+00:00",
+          "$.elapsed_distribution_seconds.median_seconds": 3.375,
+          "$.model.sha256": "f5394b31cf55502d6b3bc458b212db2c3422f8fe30dbdb509742f5c085a8d9b3"
+        }
+      },
+      {
+        "ref": "dma.fixture.build",
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failed_run_build_report.json",
+        "sha256": "925bf7f8a2a82e6f370a706ef3aa18886f859715eb57442d33bd4eb652d6c198",
+        "json_pointers": {
+          "$.accelerator_abi": "tile64-v1",
+          "$.lanes": 64,
+          "$.build_mode": "XSA metadata checked; physical board not verified",
+          "$.physical_board_dma_width_verified": false,
+          "$.dma_driver_limits.effective_length_width_bits": 20
+        }
+      },
+      {
+        "ref": "dma.fixture.snapshot_manifest",
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failure_snapshot_manifest.json",
+        "sha256": "64ff0fe52bf8660c365420bdb6db019b98d7f22e931da441e193dafa5a37946c",
+        "json_pointers": {
+          "$.generated_utc": "2026-10-16T02:45:03.060841+08:00",
+          "$.xsdb_host_access_policy": "save global force-mem-accesses, enable only for this XSDB read snapshot, restore and verify the saved value before resuming; generated Tcl uses mrd only",
+          "$.register_captures[1].decoded_registers[1].value": "0x00001002",
+          "$.register_captures[1].decoded_registers[4].value": "0x000007c0",
+          "$.register_captures[1].decoded_registers[6].value": "0x00001001",
+          "$.register_captures[1].decoded_registers[9].value": "0x00000014"
+        }
+      },
+      {
+        "ref": "dma.fixture.snapshot_log",
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/snapshot_xsct.log",
+        "sha256": "1fec3df39c81b84a99dcd6693fa10d97b522e0b4bbce67de93c118a8f7aabb3d",
+        "line_refs": {
+          "1": "HOST_FORCE_MEM_ACCESS_INITIAL=0",
+          "2": "HOST_FORCE_MEM_ACCESS_ENABLED=1",
+          "25": "HOST_FORCE_MEM_ACCESS_RESTORED=1",
+          "26": "CPU_RESUMED=1",
+          "27": "PASS TILE64_READ_ONLY_SNAPSHOT"
+        }
+      },
+      {
+        "ref": "dma.fixture.snapshot_registers",
+        "path": "skill/validation/cases_20261025/08_dma_cross_run_failure/inputs/failure_axi_dma_registers.bin",
+        "sha256": "07bad70df8676d51526a41216dcbf901772e62bc3c98c0bfed70c9717061deae",
+        "bytes": 92,
+        "byte_offsets": {
+          "4": "02 10 00 00 (little-endian MM2S_DMASR=0x00001002)",
+          "40": "c0 07 00 00 (little-endian MM2S_LENGTH=0x000007c0)",
+          "52": "01 10 00 00 (little-endian S2MM_DMASR=0x00001001)",
+          "88": "14 00 00 00 (little-endian S2MM_LENGTH=0x00000014)"
+        }
+      },
+      {
+        "ref": "training.fixture.acceptance",
+        "path": "skill/validation/cases_20261025/10_training_gate_limits/inputs/final_acceptance.json",
+        "sha256": "d834ee13066ed6f321c3111b85a38523b344411cfa1603607a0df17ecedf3458",
+        "json_pointers": {
+          "$.status": "passed",
+          "$.continuous_epochs_1_to_200": true,
+          "$.no_epoch_201_completed": true,
+          "$.best_epoch": 200,
+          "$.best_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+          "$.both_evaluations_same_frozen_weight": true,
+          "$.test_used": false
+        }
+      },
+      {
+        "ref": "training.fixture.report",
+        "path": "skill/validation/cases_20261025/10_training_gate_limits/inputs/final_report.json",
+        "sha256": "e50d0d64d66b072ca9e25c89644f8de94857a0e0ef5d98184ed79bbec79270f9",
+        "json_pointers": {
+          "$.completion.completed_epochs": 200,
+          "$.completion.original_schedule_epochs": 300,
+          "$.completion.best_epoch": 200,
+          "$.completion.best_selection": "Maximum frozen validation AP50:95",
+          "$.completion.seconds": 229836.46999999997,
+          "$.completion.test_used": false,
+          "$.best_sha256": "2446f469d9aaf9802ad97128bd4ecd976cf1c830d374a87a1b9e76b8551663a6",
+          "$.validation.images": 800,
+          "$.validation.normal_images": 0,
+          "$.validation.targets": 2295,
+          "$.validation.ap50": 0.9686362152053408,
+          "$.validation.ap50_95": 0.7973330565091301,
+          "$.validation.fixed_point.tp": 2156,
+          "$.validation.fixed_point.fp": 124,
+          "$.validation.fixed_point.fn": 139,
+          "$.original_validation.images": 160,
+          "$.original_validation.normal_images": 0,
+          "$.original_validation.targets": 476,
+          "$.original_validation.ap50": 0.9718569403792263,
+          "$.original_validation.ap50_95": 0.812918224482882,
+          "$.int8_evaluated": false,
+          "$.board_evaluated": false,
+          "$.business_acceptance": "not_evaluated"
+        }
+      }
+    ],
+    "chains": [
+      {
+        "skill": "zynq-model-identity",
+        "status": "chat_chain_complete_artifacts_unverified",
+        "stages": [
+          {
+            "stage": "request",
+            "refs": [
+              "identity.request"
+            ]
+          },
+          {
+            "stage": "assistant advice",
+            "refs": [
+              "identity.advice"
+            ]
+          },
+          {
+            "stage": "user correction",
+            "refs": [
+              "identity.user_correction"
+            ]
+          },
+          {
+            "stage": "reselection",
+            "refs": [
+              "identity.correction_reply",
+              "identity.model_selected"
+            ]
+          },
+          {
+            "stage": "reported board observation",
+            "refs": [
+              "identity.board_report"
+            ]
+          },
+          {
+            "stage": "result and boundary",
+            "refs": [
+              "identity.quality_limit",
+              "identity.final"
+            ]
+          }
+        ],
+        "result": "User specified the model with both AP values near 77%; assistant identified stage-best round 28 (PCB 76.07%, optoelectronic 77.84%) and reported JTAG deployment. Full INT8 AP50:95 quantization loss exceeded the stated 2-point goal; SD was not updated.",
+        "evidence": "Selection, deployment and metrics are visible chat reports only; no historical checkpoint, ELF, XSA, or run report was opened.",
+        "limits": [
+          "JTAG success does not establish cold SD boot.",
+          "The historical model identity and reported metrics were not independently artifact-verified."
+        ]
+      },
+      {
+        "skill": "zynq-inference-parity",
+        "status": "chat_chain_complete_artifacts_unverified",
+        "stages": [
+          {
+            "stage": "user request and assistant advice",
+            "refs": [
+              "identity.request",
+              "identity.advice"
+            ]
+          },
+          {
+            "stage": "reference mismatch and correction",
+            "refs": [
+              "parity.reference_correction"
+            ]
+          },
+          {
+            "stage": "reported output comparison",
+            "refs": [
+              "parity.both_heads_match"
+            ]
+          },
+          {
+            "stage": "quality and deployment boundary",
+            "refs": [
+              "identity.quality_limit",
+              "identity.final"
+            ]
+          }
+        ],
+        "result": "Assistant reported Python float32 versus board double-then-float32 arithmetic mismatch, corrected the reference to the board rule, then reported bitwise-equal 291,018-value heads for PCB and optoelectronic tasks.",
+        "evidence": "Execution details are chat reports only; no raw tensors/output arrays or reference code from that historical run were opened.",
+        "limits": [
+          "Bitwise parity is not model-quality acceptance; INT8 AP50:95 loss was reported as 3.78 percentage points.",
+          "SD cold boot remained unverified."
+        ]
+      },
+      {
+        "skill": "zynq-ps-pl-performance",
+        "status": "chat_chain_complete_artifacts_unverified",
+        "stages": [
+          {
+            "stage": "prior advice",
+            "refs": [
+              "pspl.prior_advice"
+            ]
+          },
+          {
+            "stage": "user request",
+            "refs": [
+              "pspl.request"
+            ]
+          },
+          {
+            "stage": "plan",
+            "refs": [
+              "pspl.plan",
+              "pspl.narrowed_plan"
+            ]
+          },
+          {
+            "stage": "failed attempt and correction",
+            "refs": [
+              "pspl.correction"
+            ]
+          },
+          {
+            "stage": "differential check",
+            "refs": [
+              "pspl.diff_check"
+            ]
+          },
+          {
+            "stage": "first comparison",
+            "refs": [
+              "pspl.first_result"
+            ]
+          },
+          {
+            "stage": "repeated result",
+            "refs": [
+              "pspl.repeated_result",
+              "pspl.final"
+            ]
+          }
+        ],
+        "result": "A simple 1x1 packing rewrite was dropped because it did not reduce ARM instructions. A 3x3 interior fast path was reported to pass 106 packing diffs; two comparisons totalled 40 requests and 7 edge cases, with network median about 1.66–1.67 s to 1.59 s.",
+        "evidence": "All optimization and timing results are chat reports; the final answer links to an acceptance report that was not opened.",
+        "limits": [
+          "Timing includes transfer and response, excluding desktop preprocessing and UI.",
+          "This does not establish general FPS or cold-SD behavior."
+        ]
+      },
+      {
+        "skill": "zynq-dma-debugging",
+        "status": "chat_chain_complete_root_cause_unresolved_fixture_conflicts_separate",
+        "stages": [
+          {
+            "stage": "64-lane request/advice",
+            "refs": [
+              "dma.request",
+              "dma.advice"
+            ]
+          },
+          {
+            "stage": "32-lane comparison baseline",
+            "refs": [
+              "dma.32_baseline"
+            ]
+          },
+          {
+            "stage": "first failure and instrumentation",
+            "refs": [
+              "dma.first_failure",
+              "dma.instrumentation"
+            ]
+          },
+          {
+            "stage": "diagnostic pass then original failure",
+            "refs": [
+              "dma.instrumented_success",
+              "dma.original_failure"
+            ]
+          },
+          {
+            "stage": "breakpoint and initialization observations",
+            "refs": [
+              "dma.breakpoint",
+              "dma.full_initialization",
+              "dma.two_runs"
+            ]
+          },
+          {
+            "stage": "result and boundary",
+            "refs": [
+              "dma.final"
+            ]
+          }
+        ],
+        "result": "The historical 64-lane run had a first-board failure. The instrumented build passed 20 requests, but the uninstrumented build failed again at a different point; breakpoint success was explicitly not treated as a fix because it changed timing. Two full-initialization runs then passed 40/40, with bitwise head parity and about 3.38 s/image. The assistant left root cause unresolved and SD cold boot pending.",
+        "evidence": "Historical sequence is visible assistant chat reporting only. Case 08 fixtures are separately recorded cross-run evidence and are not joined to this sequence.",
+        "limits": [
+          "No unique DMA mechanism is proven.",
+          "The linked historical production report was not opened.",
+          "Case 08 successful-fixture timestamp predates its failed-fixture timestamp; snapshot host-access restoration conflicts with its manifest policy. These are reported separately below."
+        ]
+      },
+      {
+        "skill": "detection-training-audit",
+        "status": "chat_chain_cross_checked_by_fixture_files",
+        "stages": [
+          {
+            "stage": "question and reported validation trend/advice",
+            "refs": [
+              "training.user_question",
+              "training.advice"
+            ]
+          },
+          {
+            "stage": "user acceptance and plan",
+            "refs": [
+              "training.user_acceptance",
+              "training.plan"
+            ]
+          },
+          {
+            "stage": "chat completion report",
+            "refs": [
+              "training.result"
+            ]
+          },
+          {
+            "stage": "independent file cross-check",
+            "input_refs": [
+              "training.fixture.acceptance",
+              "training.fixture.report"
+            ]
+          }
+        ],
+        "reported_trend": {
+          "source": "training.advice",
+          "rounds": [
+            107,
+            160,
+            179
+          ],
+          "ap50_percent": [
+            97.18,
+            97.11,
+            97.07
+          ],
+          "ap50_95_percent": [
+            76.85,
+            78.35,
+            79.09
+          ],
+          "fp": [
+            167,
+            132,
+            121
+          ],
+          "fn": [
+            123,
+            130,
+            132
+          ],
+          "interpretation": "AP50 had plateaued and gains were smaller; AP50:95 improved and FP declined while FN did not improve."
+        },
+        "result": "The user accepted a 200-epoch cutoff after advice that gains had diminished. Permitted input files verify epochs 1–200, no epoch 201, best epoch 200 and the same best-weight SHA. Full validation: 800 images/2,295 targets, AP50 96.8636%, AP50:95 79.7333%, TP/FP/FN 2,156/124/139. Original subset: 160 images/476 targets, AP50 97.1857%, AP50:95 81.2918%.",
+        "limits": [
+          "The intermediate round trend is a chat report; the permitted final fixture cross-checks completion and final selected checkpoint, not intermediate checkpoints.",
+          "Original schedule was 300 epochs; the requested 200-epoch cutoff is not a completed 300-epoch run.",
+          "Both validation sources have zero normal images; normal-image false alarm rate is not evaluable.",
+          "The 160-image subset is not an independent blind test. Test, INT8, board, and business acceptance were not evaluated."
+        ]
+      }
+    ],
+    "unresolved_integrity_notes": [
+      {
+        "issue": "Case 08 run chronology",
+        "evidence_refs": [
+          "dma.fixture.failed",
+          "dma.fixture.diagnostic"
+        ],
+        "finding": "The file named later_diagnostic_acceptance.json records 2026-10-15T18:41:21.113766+00:00, 196.887472 seconds before failed_run_acceptance.json at 18:44:38.001238+00:00. Both are separate executions with the same model hash. No post-failure causal fix is inferred."
+      },
+      {
+        "issue": "Case 08 snapshot host-access restoration",
+        "evidence_refs": [
+          "dma.fixture.snapshot_manifest",
+          "dma.fixture.snapshot_log"
+        ],
+        "finding": "Manifest policy says restore and verify the saved XSDB host-access value. Log records initial 0 and restored 1. CPU resume and snapshot PASS are logged, but restoration to the initial value is not verified by the records."
+      }
+    ]
+  },
+  "selection_note": "See the entry for this skill; full selected chain index retained to preserve shared chronology."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS_CURATED_300_IMAGE_LABEL_HASHES",
+  "images": 300,
+  "labels": 300,
+  "all_from_original_test": true,
+  "original_test_images": 800,
+  "ranking": "F1 desc, matched mean IoU desc, matched confidence desc, image ID asc",
+  "representative_test_set": false,
+  "original_full_dataset_images": 8000,
+  "training_images_included": 0,
+  "validation_images_included": 0,
+  "historical_training_contact": true,
+  "physical_device_independence_not_established": true
+}

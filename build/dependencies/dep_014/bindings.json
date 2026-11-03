@@ -1,0 +1,449 @@
+{
+  "package_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+  "graph_sha256": "9d6064e37e92e61c687608d2c5e216cccb31e0b1fc9603de0c8b21eb3acbae9f",
+  "view_events": [
+    {
+      "index": 3,
+      "event": 9,
+      "input_node": 7,
+      "shape": [
+        16,
+        160,
+        160
+      ],
+      "reads": [
+        {
+          "node": 5,
+          "slot": 1,
+          "generation": 4
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "event": 15,
+      "input_node": 13,
+      "shape": [
+        48,
+        160,
+        160
+      ],
+      "reads": [
+        {
+          "node": 5,
+          "slot": 1,
+          "generation": 4
+        },
+        {
+          "node": 12,
+          "slot": 0,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "event": 23,
+      "input_node": 21,
+      "shape": [
+        32,
+        80,
+        80
+      ],
+      "reads": [
+        {
+          "node": 19,
+          "slot": 1,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "event": 34,
+      "input_node": 32,
+      "shape": [
+        128,
+        80,
+        80
+      ],
+      "reads": [
+        {
+          "node": 19,
+          "slot": 1,
+          "generation": 10
+        },
+        {
+          "node": 26,
+          "slot": 0,
+          "generation": 13
+        },
+        {
+          "node": 31,
+          "slot": 2,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "event": 42,
+      "input_node": 40,
+      "shape": [
+        64,
+        40,
+        40
+      ],
+      "reads": [
+        {
+          "node": 38,
+          "slot": 1,
+          "generation": 19
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "event": 53,
+      "input_node": 51,
+      "shape": [
+        256,
+        40,
+        40
+      ],
+      "reads": [
+        {
+          "node": 38,
+          "slot": 1,
+          "generation": 19
+        },
+        {
+          "node": 45,
+          "slot": 0,
+          "generation": 22
+        },
+        {
+          "node": 50,
+          "slot": 2,
+          "generation": 25
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "event": 61,
+      "input_node": 59,
+      "shape": [
+        128,
+        20,
+        20
+      ],
+      "reads": [
+        {
+          "node": 57,
+          "slot": 1,
+          "generation": 28
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "event": 67,
+      "input_node": 65,
+      "shape": [
+        384,
+        20,
+        20
+      ],
+      "reads": [
+        {
+          "node": 57,
+          "slot": 1,
+          "generation": 28
+        },
+        {
+          "node": 64,
+          "slot": 0,
+          "generation": 31
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "event": 75,
+      "input_node": 73,
+      "shape": [
+        512,
+        20,
+        20
+      ],
+      "reads": [
+        {
+          "node": 69,
+          "slot": 0,
+          "generation": 33
+        },
+        {
+          "node": 70,
+          "slot": 1,
+          "generation": 34
+        },
+        {
+          "node": 71,
+          "slot": 2,
+          "generation": 35
+        },
+        {
+          "node": 72,
+          "slot": 5,
+          "generation": 36
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "event": 79,
+      "input_node": 77,
+      "shape": [
+        384,
+        40,
+        40
+      ],
+      "reads": [
+        {
+          "node": 53,
+          "slot": 4,
+          "generation": 26
+        },
+        {
+          "node": 75,
+          "slot": 6,
+          "generation": 37
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "event": 83,
+      "input_node": 81,
+      "shape": [
+        64,
+        40,
+        40
+      ],
+      "reads": [
+        {
+          "node": 79,
+          "slot": 0,
+          "generation": 38
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "event": 88,
+      "input_node": 86,
+      "shape": [
+        192,
+        40,
+        40
+      ],
+      "reads": [
+        {
+          "node": 79,
+          "slot": 0,
+          "generation": 38
+        },
+        {
+          "node": 85,
+          "slot": 2,
+          "generation": 40
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "event": 92,
+      "input_node": 90,
+      "shape": [
+        192,
+        80,
+        80
+      ],
+      "reads": [
+        {
+          "node": 34,
+          "slot": 3,
+          "generation": 17
+        },
+        {
+          "node": 88,
+          "slot": 1,
+          "generation": 41
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "event": 96,
+      "input_node": 94,
+      "shape": [
+        32,
+        80,
+        80
+      ],
+      "reads": [
+        {
+          "node": 92,
+          "slot": 0,
+          "generation": 42
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "event": 101,
+      "input_node": 99,
+      "shape": [
+        96,
+        80,
+        80
+      ],
+      "reads": [
+        {
+          "node": 92,
+          "slot": 0,
+          "generation": 42
+        },
+        {
+          "node": 98,
+          "slot": 3,
+          "generation": 44
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "event": 106,
+      "input_node": 104,
+      "shape": [
+        192,
+        40,
+        40
+      ],
+      "reads": [
+        {
+          "node": 88,
+          "slot": 1,
+          "generation": 41
+        },
+        {
+          "node": 103,
+          "slot": 0,
+          "generation": 46
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "event": 110,
+      "input_node": 108,
+      "shape": [
+        64,
+        40,
+        40
+      ],
+      "reads": [
+        {
+          "node": 106,
+          "slot": 3,
+          "generation": 47
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "event": 115,
+      "input_node": 113,
+      "shape": [
+        192,
+        40,
+        40
+      ],
+      "reads": [
+        {
+          "node": 106,
+          "slot": 3,
+          "generation": 47
+        },
+        {
+          "node": 112,
+          "slot": 1,
+          "generation": 49
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "event": 120,
+      "input_node": 118,
+      "shape": [
+        384,
+        20,
+        20
+      ],
+      "reads": [
+        {
+          "node": 75,
+          "slot": 6,
+          "generation": 37
+        },
+        {
+          "node": 117,
+          "slot": 1,
+          "generation": 51
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "event": 124,
+      "input_node": 122,
+      "shape": [
+        128,
+        20,
+        20
+      ],
+      "reads": [
+        {
+          "node": 120,
+          "slot": 3,
+          "generation": 52
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "event": 129,
+      "input_node": 127,
+      "shape": [
+        384,
+        20,
+        20
+      ],
+      "reads": [
+        {
+          "node": 120,
+          "slot": 3,
+          "generation": 52
+        },
+        {
+          "node": 126,
+          "slot": 4,
+          "generation": 54
+        }
+      ]
+    }
+  ],
+  "no_physical_scratch_reservation": true
+}

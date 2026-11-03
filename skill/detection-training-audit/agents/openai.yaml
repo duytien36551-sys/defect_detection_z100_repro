@@ -1,0 +1,4 @@
+interface:
+  display_name: "数据质量、量化汇报与训练收尾"
+  short_description: "核对数据来源与选模规则，生成完整质量报告并检查指定轮次收尾条件"
+  default_prompt: "使用 $detection-training-audit，自动查找当前工程材料，按对应工作流执行并说明证据与缺项。"

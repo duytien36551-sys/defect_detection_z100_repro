@@ -1,0 +1,12 @@
+{
+  "schema": "z100_hardware_provenance_v1",
+  "source_checkpoint": "inputs/post_route.dcp",
+  "source_checkpoint_sha256": "1d29a946c0d4add26a61cec761b10ad5b71a2ac107d6056c45677e1ee1ab8483",
+  "source_checkpoint_bytes": 86571892,
+  "historical_post_physopt_checkpoint_sha256": "10083f410bec116cb83b33b5d90294774ebe5b88346a7fc0754756d14ecc8940",
+  "historical_bit_sha256": "9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f",
+  "historical_xsa_sha256": "d314d650e12e36e4669f956e03f7388d95b4f3031a9da071dea7366495a57b5e",
+  "historical_export_status": "EXPORT_PASS_BOARD_PENDING",
+  "historical_board_programmed": false,
+  "source_kind": "post-route Vivado design checkpoint; RTL sources are not included"
+}

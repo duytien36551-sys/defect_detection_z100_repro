@@ -1,0 +1,36 @@
+{
+  "status": "CANDIDATE_PREPARED_STATIC_ONLY",
+  "baseline": {
+    "path": "build\\v12p_d46da432\\rtl\\z100_window_mac.sv",
+    "sha256": "f573c82fab313161d4097eedafcb7669026dbf6e4c29efa313f0a575fe29e474"
+  },
+  "candidate": {
+    "path": "deployment\\hardware\\z100_2026\\mac_bias_local_control_v1\\z100_window_mac.sv",
+    "sha256": "8290ed5a69549182aefb4994ccb4c511923f8e7cb6542a2fc20d16bfcfaa315c"
+  },
+  "directed_tb": {
+    "path": "deployment\\hardware\\z100_2026\\mac_bias_local_control_v1\\tb_z100_mac_bias_local_control_v1.sv",
+    "sha256": "b9eeaea70c3ccec3f6b35f6ebc4659c0738d0934a812f5f47240eced0f0fccf0"
+  },
+  "checker": {
+    "path": "tools\\check_z100_mac_bias_local_control_v1.py",
+    "sha256": "8abb8eb8a71826f88b566492197252d0cdfe263db50d346a328800eb7b62b3a2"
+  },
+  "report": {
+    "path": "deployment\\hardware\\z100_2026\\mac_bias_local_control_v1\\static_review.json",
+    "sha256": "3fa671be722742a4b1c1d5b223960a0d7f58eb3dab89bbe54f303d54b89c2bca"
+  },
+  "bound_route_evidence": {
+    "validation\\board_z100\\v12_A_default_physopt_route\\20261027t212850z_default_physopt\\setup_paths_routed.rpt": "4c91200c5d2288fdef41a75e8b985db114b80d92cf038f06310b143b6e655c38",
+    "validation\\board_z100\\timing_first_stage1_supplement\\20261027T143133.391619Z\\result.json": "5863e6bd43ce98e0cd3c4f7a96723bccb1876bd1177375ccd1e3bf196b09b2b5"
+  },
+  "validation": {
+    "static_exact_diff": "PASS",
+    "finite_state_model": "PASS_FINITE_BOOLEAN_TRANSITION_MODEL",
+    "rtl_miter": "NOT_RUN",
+    "full_core_regression": "NOT_RUN",
+    "synthesis": "NOT_RUN",
+    "route": "NOT_RUN",
+    "board": "NOT_TESTED"
+  }
+}

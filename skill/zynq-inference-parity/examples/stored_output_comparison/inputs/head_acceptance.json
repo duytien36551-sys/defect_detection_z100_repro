@@ -1,0 +1,24 @@
+{
+  "model_package_sha256": "dbe8b874fce2e5740ed778b311eb2ad31f5648dc28b9d6e4da91b6636f045ea5",
+  "checkpoint_sha256": "e53cc905a4e3f3b2749d29d6ac9cc6a651b6b2bce702d7e2bceab52add78f77b",
+  "dequantization": "INT8 multiplied by float64 scale, then cast to float32; matches board C",
+  "tasks": {
+    "pcb": {
+      "passed": true,
+      "heads_byte_exact": true,
+      "decoded_detections_match": true,
+      "actual_heads_sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8",
+      "reference_heads_sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8",
+      "preserved_old_reference_result": "board\\jtag_pcb\\result_old_reference.json"
+    },
+    "pin": {
+      "passed": true,
+      "heads_byte_exact": true,
+      "decoded_detections_match": true,
+      "actual_heads_sha256": "fd0a99ef8238c84690a983203cdc14add3d70954cea9bb4f8e497950210ee0bd",
+      "reference_heads_sha256": "fd0a99ef8238c84690a983203cdc14add3d70954cea9bb4f8e497950210ee0bd",
+      "preserved_old_reference_result": "board\\jtag_pin\\result_old_reference.json"
+    }
+  },
+  "passed": true
+}

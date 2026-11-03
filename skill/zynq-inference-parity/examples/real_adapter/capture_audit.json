@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "historical_output_files_equal",
+  "sources": [
+    {
+      "role": "capture_metadata",
+      "path": "skill\\installed_sources\\zynq-inference-parity\\examples\\stored_output_comparison\\inputs\\capture_result.json",
+      "sha256": "9e81597a1ab7d2c1df32413b26d8042ea53ae1ff87b3839d693d478f2823c2dd"
+    },
+    {
+      "role": "comparison_metadata",
+      "path": "skill\\installed_sources\\zynq-inference-parity\\examples\\stored_output_comparison\\comparison.json",
+      "sha256": "7deae4b4d7ba445080168ff094e63df43d3ada6e1c22d1c8d257e1a8b7cdfb45"
+    },
+    {
+      "role": "observed_output",
+      "path": "skill\\installed_sources\\zynq-inference-parity\\examples\\stored_output_comparison\\inputs\\board_float32.bin",
+      "sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8",
+      "bytes": 1164072
+    },
+    {
+      "role": "reference_output",
+      "path": "skill\\installed_sources\\zynq-inference-parity\\examples\\stored_output_comparison\\inputs\\host_reference_float32.bin",
+      "sha256": "1e8e9e02e13b322ff861fc5949a9cce3f93da25f1dd60c133d7d6996e238e5a8",
+      "bytes": 1164072
+    }
+  ],
+  "field_mapping": {
+    "elements": "capture.head_elements",
+    "observed_sha256": "capture.actual_heads_sha256 and comparison.observed.sha256",
+    "reference_sha256": "comparison.reference.sha256",
+    "dtype_byte_order": "comparison.scope explicit declaration"
+  },
+  "contract": {
+    "dtype": "float32",
+    "byte_order": "little",
+    "elements": 291018,
+    "logical_bytes": 1164072
+  },
+  "byte_equal": true,
+  "reference_updated_after_capture": true,
+  "reference_revision_status": "declared_true",
+  "acceptance_metadata_checked": true,
+  "limitations": [
+    "Verifies saved files and declarations only; does not establish that the captured output came from a particular hardware run beyond supplied records.",
+    "Reference correction after capture limits contemporaneous parity claims.",
+    "Byte equality does not assess detection quality."
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "schema": "z100-rtl-reproduction-v1",
+  "status": "PASS_NINE_FRESH_COMPONENT_TESTS",
+  "started_utc": "2026-11-02T20:32:41+00:00",
+  "finished_utc": "2026-11-02T20:50:14+00:00",
+  "new_simulation_run": true,
+  "board_access": false,
+  "command": "python -B sim/run_rtl.py --run --case all --vivado-bin <vivado-bin> --output-dir <external-new-directory>",
+  "simulator_version": "2026.1",
+  "tool_version_probes": [
+    {
+      "tool": "vivado",
+      "return_code": 1,
+      "reported_version": "2026.1",
+      "log_sha256": "d9c5f86048682884b08d8713000cc82096a8e28a15b2910f4b351d6e3e7843dd"
+    },
+    {
+      "tool": "xvlog",
+      "return_code": 0,
+      "reported_version": "2026.1",
+      "log_sha256": "d1f9b09c79bdea9f45ed76ef1ac311dc875f94fecd50e75a325c3d83c0e6997a"
+    },
+    {
+      "tool": "xelab",
+      "return_code": 0,
+      "reported_version": "2026.1",
+      "log_sha256": "d1f9b09c79bdea9f45ed76ef1ac311dc875f94fecd50e75a325c3d83c0e6997a"
+    },
+    {
+      "tool": "xsim",
+      "return_code": 0,
+      "reported_version": "2026.1",
+      "log_sha256": "9554b6f27d24c3186a3ac28530c4143332ea50a12625e70463d6d929e74be27b"
+    }
+  ],
+  "version_note": "Vivado full-CLI -version returned 1; three XSim tool version probes and all 27 actual compile/elaborate/simulate steps returned 0.",
+  "cases": [
+    {
+      "id": "control01",
+      "status": "PASS_FRESH_COMPONENT_TEST",
+      "pass_marker": "PLATFORM_V13C_CONTROL_PASS reads=8 writes=32 stalled_cycles=120 drained_beats=16 resets=2",
+      "marker_matched": true,
+      "commands": [
+        {
+          "tool": "xvlog",
+          "return_code": 0,
+          "elapsed_seconds": 0.866,
+          "log_sha256": "c52863e28eaecc6f3cd845c31ff8bf7d14e58a7067ffa0046b19faa823c2c07f"
+        },
+        {
+          "tool": "xelab",
+          "return_code": 0,
+          "elapsed_seconds": 79.121,
+          "log_sha256": "f663bcd79c6d96a6d6b0272f8437b097fba8e31326c25469712b551a0750aa6f"
+        },
+        {
+          "tool": "xsim",
+          "return_code": 0,
+          "elapsed_seconds": 3.248,
+          "log_sha256": "1e244538049f6395a79272eda6b36e4d1f5599bf0c06b21e01afeb2074f6bd32"
+        }
+      ]
+    },
+    {
+      "id": "fault_diagnostics01",
+      "status": "PASS_FRESH_COMPONENT_TEST",
+      "pass_marker": "COUNTER_PHYSICAL_FAULT_PASS cases=15 rid=7 bid=7 cancel=1",
+      "marker_matched": true,
+      "commands": [
+        {
+          "tool": "xvlog",
+          "return_code": 0,
+          "elapsed_seconds": 0.835,
+          "log_sha256": "54592c8473d13de079679f64823a9500bd375352d38b41ec88b5d4d0677c76b3"
+        },
+        {
+          "tool": "xelab",
+          "return_code": 0,
+          "elapsed_seconds": 103.878,
+          "log_sha256": "2866066d9506b8819a8f9534eac25af02cd43fc73b752f4528397b081101d5b1"
+        },
+        {
+          "tool": "xsim",
+          "return_code": 0,
+          "elapsed_seconds": 87.8,
+          "log_sha256": "83f3258f5f6adcb6d2c670e7537d0938359f8e10beb86bc1a5e483e9ef763b77"
+        }
+      ]
+    },
+    {
+      "id": "id_fault01",
+      "status": "PASS_FRESH_COMPONENT_TEST",
+      "pass_marker": "ACP_ID_FAULT_PASS cases=14 rid=7 bid=7 resets=14 ar_stalls=1372 aw_stalls=21 w_stalls=56",
+      "marker_matched": true,
+      "commands": [
+        {
+          "tool": "xvlog",
+          "return_code": 0,
+          "elapsed_seconds": 0.822,
+          "log_sha256": "5f66ee378ef89742dc5068d425d2804a16b3ad780615cffa0e7c006f7890b1f0"
+        },
+        {
+          "tool": "xelab",
+          "return_code": 0,
+          "elapsed_seconds": 85.771,
+          "log_sha256": "6c30c1787d750a2bfe0763aeaa3e061fbf5c8eec8f32841d105bb17d8b2403d9"
+        },
+        {
+          "tool": "xsim",
+          "return_code": 0,
+          "elapsed_seconds": 67.667,
+          "log_sha256": "b67f6cb3ea79f280c4e626ee6847a5bbf33e689a673f9b4b0b62eea0be0fb1cf"
+        }
+      ]
+    },
+    {
+      "id": "mixed01",
+      "status": "PASS_FRESH_COMPONENT_TEST",
+      "pass_marker": "PLATFORM_V13C_MIXED_PASS jobs=5 switches=3 pool=3 conv=2 one_reset=1",
+      "marker_matched": true,
+      "commands": [
+        {
+          "tool": "xvlog",
+          "return_code": 0,
+          "elapsed_seconds": 0.807,
+          "log_sha256": "c2b51e568c1f018f08262d616f776a7c07f267bf718639593bd93e465bd6dfaa"
+        },
+        {
+          "tool": "xelab",
+          "return_code": 0,
+          "elapsed_seconds": 71.3,
+          "log_sha256": "8db5b3fb918af93fe06b843e7f623ac2911af68b5ece51bff8b42f2e5c90caac"
+        },
+        {
+          "tool": "xsim",
+          "return_code": 0,
+          "elapsed_seconds": 73.826,
+          "log_sha256": "1b0cee85b3a510451df964cde5ac71fbe7ec8ffec7c6379325d3348333aa1c1d"
+        }
+      ]
+    },
+    {
+      "id": "mixed_diagnostics01",
+      "status": "PASS_FRESH_COMPONENT_TEST",
+      "pass_marker": "COUNTER_PHYSICAL_MIXED_PASS jobs=5 switches=3 pool=3 conv=2 one_reset=1",
+      "marker_matched": true,
+      "commands": [
+        {
+          "tool": "xvlog",
+          "return_code": 0,
+          "elapsed_seconds": 0.805,
+          "log_sha256": "6710e5d53de4df0327efafe6f68423c771b582a8711bf94b428695f81244d36a"
+        },
+        {
+          "tool": "xelab",
+          "return_code": 0,
+          "elapsed_seconds": 63.881,
+          "log_sha256": "c99ef887e8719dc4458167ffccc4ba395a2b333dfc0b5396cbcca266005b6b2f"
+        },
+        {
+          "tool": "xsim",
+          "return_code": 0,
+          "elapsed_seconds": 88.669,
+          "log_sha256": "25baeda018aa833e1df0a9d644dfc228cf76ca1c68bb52f34957d8b0fddc9e46"
+        }
+      ]
+    },
+    {
+      "id": "pool_control01",
+      "status": "PASS_FRESH_COMPONENT_TEST",
+      "pass_marker": "PLATFORM_V13C_CONTROL_PASS reads=8 writes=32 stalled_cycles=120 drained_beats=16 resets=2",
+      "marker_matched": true,
+      "commands": [
+        {
+          "tool": "xvlog",
+          "return_code": 0,
+          "elapsed_seconds": 0.879,
+          "log_sha256": "dc8bf482bc1ed2dfeb0e500ae928260e645ccc9f49c49266fc6f2f22111f719b"
+        },
+        {
+          "tool": "xelab",
+          "return_code": 0,
+          "elapsed_seconds": 79.759,
+          "log_sha256": "012ac3f887aebd6dec016e792b9b176c0422194c16672d164b8cccca9fd48480"
+        },
+        {
+          "tool": "xsim",
+          "return_code": 0,
+          "elapsed_seconds": 3.089,
+          "log_sha256": "9d52aa3a93646be9a15ee61d8f394195384da576dcfdd6da7f656e976d51161b"
+        }
+      ]
+    },
+    {
+      "id": "pool_fault01",
+      "status": "PASS_FRESH_COMPONENT_TEST",
+      "pass_marker": "PLATFORM_V13C_POOL_FAULT_PASS cases=15 cancelled_r_hold=20 cancelled_b_hold=20 ar_hold=20 aw_hold=20 lease_loss=1 replay=2 errors=2 timeouts=3 reset_retries=14",
+      "marker_matched": true,
+      "commands": [
+        {
+          "tool": "xvlog",
+          "return_code": 0,
+          "elapsed_seconds": 0.863,
+          "log_sha256": "c2f2fb85af7c31d385977f4d2027e3abb161f3ea577adab05046475d25a99f7f"
+        },
+        {
+          "tool": "xelab",
+          "return_code": 0,
+          "elapsed_seconds": 62.627,
+          "log_sha256": "4d10bffd74716495f9c21c0d4e8fec5195005700b17f1029fe30fb672b553d01"
+        },
+        {
+          "tool": "xsim",
+          "return_code": 0,
+          "elapsed_seconds": 86.319,
+          "log_sha256": "7f47ed9537311e879f3e426f10046b6e8b506e15eb5b57eff4baf72ad330ebe8"
+        }
+      ]
+    },
+    {
+      "id": "tail01",
+      "status": "PASS_FRESH_COMPONENT_TEST",
+      "pass_marker": "PLATFORM_V13C_NUMERIC_PASS cases=3 logical_bytes=2079 padded_bytes=3456",
+      "marker_matched": true,
+      "commands": [
+        {
+          "tool": "xvlog",
+          "return_code": 0,
+          "elapsed_seconds": 0.868,
+          "log_sha256": "5869c69ac60c86ea6d1a75076043bb1f0b8c1648ac24e09c01b4faf7145c7c57"
+        },
+        {
+          "tool": "xelab",
+          "return_code": 0,
+          "elapsed_seconds": 69.955,
+          "log_sha256": "014a0698907da1900dcdc3de419d8a17126b047ee3d89c07a5b2c0993c234267"
+        },
+        {
+          "tool": "xsim",
+          "return_code": 0,
+          "elapsed_seconds": 8.617,
+          "log_sha256": "4641500294dbb97525dc57d09efec13eece61f6f2116efaa70ac703274315b28"
+        }
+      ]
+    },
+    {
+      "id": "unit01",
+      "status": "PASS_FRESH_COMPONENT_TEST",
+      "pass_marker": "PASS: S12 counter and MMIO checks",
+      "marker_matched": true,
+      "commands": [
+        {
+          "tool": "xvlog",
+          "return_code": 0,
+          "elapsed_seconds": 0.546,
+          "log_sha256": "a3c1280f1551a8e1936247e169a72fbd88131254aa214c9f30b5a99d623e9288"
+        },
+        {
+          "tool": "xelab",
+          "return_code": 0,
+          "elapsed_seconds": 2.01,
+          "log_sha256": "3219de84014fb7512dadea6cd7d221da7ebc92bb8fed937a2fc21c70446bfd7a"
+        },
+        {
+          "tool": "xsim",
+          "return_code": 0,
+          "elapsed_seconds": 2.252,
+          "log_sha256": "f06d0cb8f80d5f704d9516c6cdf05fab56760679ad80512fc0fe3410c4cc0dc0"
+        }
+      ]
+    }
+  ],
+  "checked_log_hashes": 27,
+  "matched_markers": 9,
+  "package_manifest_sha256": "ec71fedee82df881dd517c335c9c3bb04d4f943123fefa3a609803ca00ea0766",
+  "runner_sha256": "4c96abdf3e396825ac7c1d91ababedf3e4d95a9ab3e54eff2f6e1c7c8f897bce",
+  "external_full_report_sha256": "38eda340efc3d20d73a1084d0fe649066be93ec6d2cb912b3799a2b14ab32788",
+  "scope": "Component/core regressions only; does not establish full-network RTL inference or board acceptance. Raw logs and intermediates remain outside the package."
+}

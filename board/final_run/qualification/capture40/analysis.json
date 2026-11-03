@@ -1,0 +1,16 @@
+{
+  "board_timing_ms": {
+    "preprocess": 5.655881835979427,
+    "graph": 257.8199595232212,
+    "decode": 2.217806935683599,
+    "infer": 265.69364829488416,
+    "connection": 341.55921509478276
+  },
+  "clock_hz": 333333343,
+  "next_epoch": 49040,
+  "delivered": 40,
+  "raw_heads_equal": true,
+  "raw_bytes": 613200,
+  "irq_guard_low4096_intact": true,
+  "irq_written_extent": 528
+}

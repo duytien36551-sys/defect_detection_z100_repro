@@ -1,0 +1,19 @@
+{
+  "path": ".",
+  "test": "test.txt",
+  "names": [
+    "PIN_破损",
+    "PIN_裂痕",
+    "PIN_击穿",
+    "PIN_薄膜破损",
+    "PIN_电极缺失",
+    "PIN_异物",
+    "PIN_有机物污染",
+    "PIN_部分缺失",
+    "PIN_冗余"
+  ],
+  "subset_kind": "curated_showcase",
+  "images": 300,
+  "source_split": "test",
+  "training_dataset_included": false
+}

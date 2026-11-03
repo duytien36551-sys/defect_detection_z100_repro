@@ -1,0 +1,986 @@
+{
+  "layout": "NCHW int8; input and parameters separate",
+  "arena_bytes": 3276800,
+  "budget_bytes": 8388608,
+  "fits_budget": true,
+  "allocations": [
+    {
+      "node": 0,
+      "offset": 0,
+      "bytes": 1638400,
+      "last_use": 1
+    },
+    {
+      "node": 1,
+      "offset": 1638400,
+      "bytes": 1638400,
+      "last_use": 2
+    },
+    {
+      "node": 2,
+      "offset": 0,
+      "bytes": 819200,
+      "last_use": 3
+    },
+    {
+      "node": 3,
+      "offset": 819200,
+      "bytes": 819200,
+      "last_use": 4
+    },
+    {
+      "node": 4,
+      "offset": 0,
+      "bytes": 819200,
+      "last_use": 5
+    },
+    {
+      "node": 5,
+      "offset": 819200,
+      "bytes": 819200,
+      "last_use": 7
+    },
+    {
+      "node": 6,
+      "offset": 0,
+      "bytes": 409600,
+      "last_use": 13
+    },
+    {
+      "node": 7,
+      "offset": 409600,
+      "bytes": 409600,
+      "last_use": 13
+    },
+    {
+      "node": 8,
+      "offset": 819200,
+      "bytes": 409600,
+      "last_use": 9
+    },
+    {
+      "node": 9,
+      "offset": 1228800,
+      "bytes": 409600,
+      "last_use": 10
+    },
+    {
+      "node": 10,
+      "offset": 819200,
+      "bytes": 409600,
+      "last_use": 11
+    },
+    {
+      "node": 11,
+      "offset": 1228800,
+      "bytes": 409600,
+      "last_use": 12
+    },
+    {
+      "node": 12,
+      "offset": 819200,
+      "bytes": 409600,
+      "last_use": 13
+    },
+    {
+      "node": 13,
+      "offset": 1228800,
+      "bytes": 1228800,
+      "last_use": 14
+    },
+    {
+      "node": 14,
+      "offset": 0,
+      "bytes": 819200,
+      "last_use": 15
+    },
+    {
+      "node": 15,
+      "offset": 819200,
+      "bytes": 819200,
+      "last_use": 16
+    },
+    {
+      "node": 16,
+      "offset": 0,
+      "bytes": 409600,
+      "last_use": 17
+    },
+    {
+      "node": 17,
+      "offset": 409600,
+      "bytes": 409600,
+      "last_use": 18
+    },
+    {
+      "node": 18,
+      "offset": 0,
+      "bytes": 409600,
+      "last_use": 19
+    },
+    {
+      "node": 19,
+      "offset": 409600,
+      "bytes": 409600,
+      "last_use": 21
+    },
+    {
+      "node": 20,
+      "offset": 0,
+      "bytes": 204800,
+      "last_use": 32
+    },
+    {
+      "node": 21,
+      "offset": 204800,
+      "bytes": 204800,
+      "last_use": 32
+    },
+    {
+      "node": 22,
+      "offset": 409600,
+      "bytes": 204800,
+      "last_use": 23
+    },
+    {
+      "node": 23,
+      "offset": 614400,
+      "bytes": 204800,
+      "last_use": 24
+    },
+    {
+      "node": 24,
+      "offset": 409600,
+      "bytes": 204800,
+      "last_use": 25
+    },
+    {
+      "node": 25,
+      "offset": 614400,
+      "bytes": 204800,
+      "last_use": 26
+    },
+    {
+      "node": 26,
+      "offset": 409600,
+      "bytes": 204800,
+      "last_use": 32
+    },
+    {
+      "node": 27,
+      "offset": 614400,
+      "bytes": 204800,
+      "last_use": 28
+    },
+    {
+      "node": 28,
+      "offset": 819200,
+      "bytes": 204800,
+      "last_use": 29
+    },
+    {
+      "node": 29,
+      "offset": 614400,
+      "bytes": 204800,
+      "last_use": 30
+    },
+    {
+      "node": 30,
+      "offset": 819200,
+      "bytes": 204800,
+      "last_use": 31
+    },
+    {
+      "node": 31,
+      "offset": 614400,
+      "bytes": 204800,
+      "last_use": 32
+    },
+    {
+      "node": 32,
+      "offset": 819200,
+      "bytes": 819200,
+      "last_use": 33
+    },
+    {
+      "node": 33,
+      "offset": 0,
+      "bytes": 409600,
+      "last_use": 34
+    },
+    {
+      "node": 34,
+      "offset": 409600,
+      "bytes": 409600,
+      "last_use": 90
+    },
+    {
+      "node": 35,
+      "offset": 0,
+      "bytes": 204800,
+      "last_use": 36
+    },
+    {
+      "node": 36,
+      "offset": 204800,
+      "bytes": 204800,
+      "last_use": 37
+    },
+    {
+      "node": 37,
+      "offset": 0,
+      "bytes": 204800,
+      "last_use": 38
+    },
+    {
+      "node": 38,
+      "offset": 204800,
+      "bytes": 204800,
+      "last_use": 40
+    },
+    {
+      "node": 39,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 51
+    },
+    {
+      "node": 40,
+      "offset": 102400,
+      "bytes": 102400,
+      "last_use": 51
+    },
+    {
+      "node": 41,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 42
+    },
+    {
+      "node": 42,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 43
+    },
+    {
+      "node": 43,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 44
+    },
+    {
+      "node": 44,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 45
+    },
+    {
+      "node": 45,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 51
+    },
+    {
+      "node": 46,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 47
+    },
+    {
+      "node": 47,
+      "offset": 819200,
+      "bytes": 102400,
+      "last_use": 48
+    },
+    {
+      "node": 48,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 49
+    },
+    {
+      "node": 49,
+      "offset": 819200,
+      "bytes": 102400,
+      "last_use": 50
+    },
+    {
+      "node": 50,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 51
+    },
+    {
+      "node": 51,
+      "offset": 819200,
+      "bytes": 409600,
+      "last_use": 52
+    },
+    {
+      "node": 52,
+      "offset": 0,
+      "bytes": 204800,
+      "last_use": 53
+    },
+    {
+      "node": 53,
+      "offset": 204800,
+      "bytes": 204800,
+      "last_use": 77
+    },
+    {
+      "node": 54,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 55
+    },
+    {
+      "node": 55,
+      "offset": 102400,
+      "bytes": 102400,
+      "last_use": 56
+    },
+    {
+      "node": 56,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 57
+    },
+    {
+      "node": 57,
+      "offset": 102400,
+      "bytes": 102400,
+      "last_use": 59
+    },
+    {
+      "node": 58,
+      "offset": 0,
+      "bytes": 51200,
+      "last_use": 65
+    },
+    {
+      "node": 59,
+      "offset": 51200,
+      "bytes": 51200,
+      "last_use": 65
+    },
+    {
+      "node": 60,
+      "offset": 102400,
+      "bytes": 51200,
+      "last_use": 61
+    },
+    {
+      "node": 61,
+      "offset": 153600,
+      "bytes": 51200,
+      "last_use": 62
+    },
+    {
+      "node": 62,
+      "offset": 102400,
+      "bytes": 51200,
+      "last_use": 63
+    },
+    {
+      "node": 63,
+      "offset": 153600,
+      "bytes": 51200,
+      "last_use": 64
+    },
+    {
+      "node": 64,
+      "offset": 102400,
+      "bytes": 51200,
+      "last_use": 65
+    },
+    {
+      "node": 65,
+      "offset": 819200,
+      "bytes": 153600,
+      "last_use": 66
+    },
+    {
+      "node": 66,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 67
+    },
+    {
+      "node": 67,
+      "offset": 102400,
+      "bytes": 102400,
+      "last_use": 68
+    },
+    {
+      "node": 68,
+      "offset": 0,
+      "bytes": 51200,
+      "last_use": 69
+    },
+    {
+      "node": 69,
+      "offset": 51200,
+      "bytes": 51200,
+      "last_use": 73
+    },
+    {
+      "node": 70,
+      "offset": 0,
+      "bytes": 51200,
+      "last_use": 73
+    },
+    {
+      "node": 71,
+      "offset": 102400,
+      "bytes": 51200,
+      "last_use": 73
+    },
+    {
+      "node": 72,
+      "offset": 153600,
+      "bytes": 51200,
+      "last_use": 73
+    },
+    {
+      "node": 73,
+      "offset": 819200,
+      "bytes": 204800,
+      "last_use": 74
+    },
+    {
+      "node": 74,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 75
+    },
+    {
+      "node": 75,
+      "offset": 102400,
+      "bytes": 102400,
+      "last_use": 118
+    },
+    {
+      "node": 76,
+      "offset": 819200,
+      "bytes": 409600,
+      "last_use": 77
+    },
+    {
+      "node": 77,
+      "offset": 1228800,
+      "bytes": 614400,
+      "last_use": 78
+    },
+    {
+      "node": 78,
+      "offset": 204800,
+      "bytes": 204800,
+      "last_use": 79
+    },
+    {
+      "node": 79,
+      "offset": 819200,
+      "bytes": 204800,
+      "last_use": 81
+    },
+    {
+      "node": 80,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 86
+    },
+    {
+      "node": 81,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 86
+    },
+    {
+      "node": 82,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 83
+    },
+    {
+      "node": 83,
+      "offset": 819200,
+      "bytes": 102400,
+      "last_use": 84
+    },
+    {
+      "node": 84,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 85
+    },
+    {
+      "node": 85,
+      "offset": 819200,
+      "bytes": 102400,
+      "last_use": 86
+    },
+    {
+      "node": 86,
+      "offset": 921600,
+      "bytes": 307200,
+      "last_use": 87
+    },
+    {
+      "node": 87,
+      "offset": 204800,
+      "bytes": 204800,
+      "last_use": 88
+    },
+    {
+      "node": 88,
+      "offset": 819200,
+      "bytes": 204800,
+      "last_use": 104
+    },
+    {
+      "node": 89,
+      "offset": 1024000,
+      "bytes": 819200,
+      "last_use": 90
+    },
+    {
+      "node": 90,
+      "offset": 1843200,
+      "bytes": 1228800,
+      "last_use": 91
+    },
+    {
+      "node": 91,
+      "offset": 204800,
+      "bytes": 409600,
+      "last_use": 92
+    },
+    {
+      "node": 92,
+      "offset": 1024000,
+      "bytes": 409600,
+      "last_use": 94
+    },
+    {
+      "node": 93,
+      "offset": 204800,
+      "bytes": 204800,
+      "last_use": 99
+    },
+    {
+      "node": 94,
+      "offset": 409600,
+      "bytes": 204800,
+      "last_use": 99
+    },
+    {
+      "node": 95,
+      "offset": 614400,
+      "bytes": 204800,
+      "last_use": 96
+    },
+    {
+      "node": 96,
+      "offset": 1024000,
+      "bytes": 204800,
+      "last_use": 97
+    },
+    {
+      "node": 97,
+      "offset": 614400,
+      "bytes": 204800,
+      "last_use": 98
+    },
+    {
+      "node": 98,
+      "offset": 1024000,
+      "bytes": 204800,
+      "last_use": 99
+    },
+    {
+      "node": 99,
+      "offset": 1228800,
+      "bytes": 614400,
+      "last_use": 100
+    },
+    {
+      "node": 100,
+      "offset": 204800,
+      "bytes": 409600,
+      "last_use": 101
+    },
+    {
+      "node": 101,
+      "offset": 1024000,
+      "bytes": 409600,
+      "last_use": 135
+    },
+    {
+      "node": 102,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 103
+    },
+    {
+      "node": 103,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 104
+    },
+    {
+      "node": 104,
+      "offset": 307200,
+      "bytes": 307200,
+      "last_use": 105
+    },
+    {
+      "node": 105,
+      "offset": 614400,
+      "bytes": 204800,
+      "last_use": 106
+    },
+    {
+      "node": 106,
+      "offset": 204800,
+      "bytes": 204800,
+      "last_use": 108
+    },
+    {
+      "node": 107,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 113
+    },
+    {
+      "node": 108,
+      "offset": 409600,
+      "bytes": 102400,
+      "last_use": 113
+    },
+    {
+      "node": 109,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 110
+    },
+    {
+      "node": 110,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 111
+    },
+    {
+      "node": 111,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 112
+    },
+    {
+      "node": 112,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 113
+    },
+    {
+      "node": 113,
+      "offset": 512000,
+      "bytes": 307200,
+      "last_use": 114
+    },
+    {
+      "node": 114,
+      "offset": 204800,
+      "bytes": 204800,
+      "last_use": 115
+    },
+    {
+      "node": 115,
+      "offset": 409600,
+      "bytes": 204800,
+      "last_use": 146
+    },
+    {
+      "node": 116,
+      "offset": 0,
+      "bytes": 51200,
+      "last_use": 117
+    },
+    {
+      "node": 117,
+      "offset": 51200,
+      "bytes": 51200,
+      "last_use": 118
+    },
+    {
+      "node": 118,
+      "offset": 204800,
+      "bytes": 153600,
+      "last_use": 119
+    },
+    {
+      "node": 119,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 120
+    },
+    {
+      "node": 120,
+      "offset": 102400,
+      "bytes": 102400,
+      "last_use": 122
+    },
+    {
+      "node": 121,
+      "offset": 0,
+      "bytes": 51200,
+      "last_use": 127
+    },
+    {
+      "node": 122,
+      "offset": 51200,
+      "bytes": 51200,
+      "last_use": 127
+    },
+    {
+      "node": 123,
+      "offset": 102400,
+      "bytes": 51200,
+      "last_use": 124
+    },
+    {
+      "node": 124,
+      "offset": 153600,
+      "bytes": 51200,
+      "last_use": 125
+    },
+    {
+      "node": 125,
+      "offset": 102400,
+      "bytes": 51200,
+      "last_use": 126
+    },
+    {
+      "node": 126,
+      "offset": 153600,
+      "bytes": 51200,
+      "last_use": 127
+    },
+    {
+      "node": 127,
+      "offset": 204800,
+      "bytes": 153600,
+      "last_use": 128
+    },
+    {
+      "node": 128,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 129
+    },
+    {
+      "node": 129,
+      "offset": 102400,
+      "bytes": 102400,
+      "last_use": 157
+    },
+    {
+      "node": 130,
+      "offset": 614400,
+      "bytes": 409600,
+      "last_use": 131
+    },
+    {
+      "node": 131,
+      "offset": 1433600,
+      "bytes": 409600,
+      "last_use": 132
+    },
+    {
+      "node": 132,
+      "offset": 614400,
+      "bytes": 409600,
+      "last_use": 133
+    },
+    {
+      "node": 133,
+      "offset": 1433600,
+      "bytes": 409600,
+      "last_use": 134
+    },
+    {
+      "node": 134,
+      "offset": 614400,
+      "bytes": 409600,
+      "last_use": 140
+    },
+    {
+      "node": 135,
+      "offset": 1433600,
+      "bytes": 409600,
+      "last_use": 136
+    },
+    {
+      "node": 136,
+      "offset": 1024000,
+      "bytes": 409600,
+      "last_use": 137
+    },
+    {
+      "node": 137,
+      "offset": 1433600,
+      "bytes": 409600,
+      "last_use": 138
+    },
+    {
+      "node": 138,
+      "offset": 1024000,
+      "bytes": 409600,
+      "last_use": 139
+    },
+    {
+      "node": 139,
+      "offset": 0,
+      "bytes": 57600,
+      "last_use": 140
+    },
+    {
+      "node": 140,
+      "offset": 1024000,
+      "bytes": 467200,
+      "last_use": 163
+    },
+    {
+      "node": 141,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 142
+    },
+    {
+      "node": 142,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 143
+    },
+    {
+      "node": 143,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 144
+    },
+    {
+      "node": 144,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 145
+    },
+    {
+      "node": 145,
+      "offset": 0,
+      "bytes": 102400,
+      "last_use": 151
+    },
+    {
+      "node": 146,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 147
+    },
+    {
+      "node": 147,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 148
+    },
+    {
+      "node": 148,
+      "offset": 204800,
+      "bytes": 102400,
+      "last_use": 149
+    },
+    {
+      "node": 149,
+      "offset": 307200,
+      "bytes": 102400,
+      "last_use": 150
+    },
+    {
+      "node": 150,
+      "offset": 204800,
+      "bytes": 14400,
+      "last_use": 151
+    },
+    {
+      "node": 151,
+      "offset": 219200,
+      "bytes": 116800,
+      "last_use": 163
+    },
+    {
+      "node": 152,
+      "offset": 0,
+      "bytes": 25600,
+      "last_use": 153
+    },
+    {
+      "node": 153,
+      "offset": 25600,
+      "bytes": 25600,
+      "last_use": 154
+    },
+    {
+      "node": 154,
+      "offset": 0,
+      "bytes": 25600,
+      "last_use": 155
+    },
+    {
+      "node": 155,
+      "offset": 25600,
+      "bytes": 25600,
+      "last_use": 156
+    },
+    {
+      "node": 156,
+      "offset": 0,
+      "bytes": 25600,
+      "last_use": 162
+    },
+    {
+      "node": 157,
+      "offset": 25600,
+      "bytes": 25600,
+      "last_use": 158
+    },
+    {
+      "node": 158,
+      "offset": 51200,
+      "bytes": 25600,
+      "last_use": 159
+    },
+    {
+      "node": 159,
+      "offset": 25600,
+      "bytes": 25600,
+      "last_use": 160
+    },
+    {
+      "node": 160,
+      "offset": 51200,
+      "bytes": 25600,
+      "last_use": 161
+    },
+    {
+      "node": 161,
+      "offset": 25600,
+      "bytes": 3648,
+      "last_use": 162
+    },
+    {
+      "node": 162,
+      "offset": 29248,
+      "bytes": 29248,
+      "last_use": 163
+    }
+  ]
+}

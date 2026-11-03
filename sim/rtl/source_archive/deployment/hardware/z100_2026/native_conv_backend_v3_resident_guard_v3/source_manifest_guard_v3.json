@@ -1,0 +1,47 @@
+{
+  "schema": "z100-native-conv-resident-guard-v3/1",
+  "status": "LOCAL_COMMAND_BOUNDARY_PROTOCOL_AND_ELABORATION_ONLY",
+  "tops": {
+    "helper": "z100_parameter_residency_guard_v3",
+    "backend": "z100_native_conv_backend_v3_resident_guard_v3",
+    "mmio": "z100_native_conv_mmio_backend_resident_guard_v3"
+  },
+  "base_manifest": "deployment/hardware/z100_2026/native_conv_backend_v3/source_manifest.json",
+  "parent_candidate_manifest": "deployment/hardware/z100_2026/native_conv_backend_v3_resident_guard_v2/source_manifest_guard_v2.json",
+  "base_v3_rtl_count": 35,
+  "base_v3_roms": [
+    {
+      "path": "deployment/hardware/z100_2026/native_conv_backend_v3/conv_event_map.hex",
+      "sha256": "7f5dbedbc8b0487350ea40465b2e6ae1bc404e6c167da25b72cedf94e4dbaf85"
+    },
+    {
+      "path": "deployment/hardware/z100_2026/native_conv_backend_v3/conv_tiles.hex",
+      "sha256": "8295ab50a944c6b8c61b97515d8a388919f287dd2c487c63c6da997a64c99f0c"
+    }
+  ],
+  "sources": {
+    "deployment/hardware/z100_2026/native_conv_backend_v3_resident_guard_v3/z100_parameter_residency_guard_v3.sv": "16f5a1d1a0da98ba8ba0c7842fd08eaaf26af97cdacc2b2570e730fb751e8aa1",
+    "deployment/hardware/z100_2026/native_conv_backend_v3_resident_guard_v3/tb_z100_parameter_residency_guard_v3.sv": "288538577abda31be171fc85e5117f7446d9298079f5573c1ab05157159b0bd9",
+    "deployment/hardware/z100_2026/native_conv_backend_v3_resident_guard_v3/z100_native_conv_backend_v3_resident_guard_v3.sv": "f8e57eeb8bb232e2323bdadaf9d161102bd4704bafb1cbe23c001374e53411e1",
+    "deployment/hardware/z100_2026/native_conv_backend_v3_resident_guard_v3/z100_native_conv_mmio_backend_resident_guard_v3.sv": "0a1a684bb5256d66e4f2c15d73bce382526a082c3f0a768491b7632003499ba2",
+    "deployment/hardware/z100_2026/native_conv_mmio_v2/z100_native_conv_mmio_v2.sv": "f9c2ebc336470a2de6053b066a3e09f5a020278a845dc0981016893c55ccd239"
+  },
+  "cache_lifecycle": "invalidate on cmd_valid && cmd_ready at the accepted outer backend command edge; reuse is allowed for tiles within that command; invalidation with an active parameter owner faults closed",
+  "outer_command_atomicity_checks": {
+    "outer_cmd_ready_independent_of_residency": true,
+    "event_rom_accepts_only_while_idle": true,
+    "outer_event_completion_waits_for_quiet": true,
+    "outer_handshake_connected_to_guard": true,
+    "boundary_cycle_blocks_parameter_handshake": true,
+    "boundary_cycle_blocks_upstream_completion": true,
+    "active_boundary_fails_closed": true,
+    "native_loader_done_is_single_cycle_pulse": true,
+    "native_loader_pulse_connected": true,
+    "quiet_fence_covers_parameter_and_physical_readers": true
+  },
+  "not_accepted": [
+    "outer command boundary is modeled at the helper interface, not a full backend transaction",
+    "real native_parameter_reader transaction/backpressure/cancel is not dynamically simulated",
+    "no Conv numeric simulation, Vivado implementation, physical DDR, board, or FPS evidence"
+  ]
+}

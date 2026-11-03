@@ -1,0 +1,66 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "created_at_utc": "2026-11-01T09:31:32.298803+00:00",
+  "run_dir": "hardware_workspace/gpt_ctrp_phys01/export_01",
+  "input_dcp": "hardware_workspace/gpt_ctrp_phys01/trial_01/post_physopt.dcp",
+  "input_dcp_sha256": "10083f410bec116cb83b33b5d90294774ebe5b88346a7fc0754756d14ecc8940",
+  "reviewed_report_hashes": {
+    "hardware_workspace/gpt_ctrp_phys01/trial_01/post_physopt.dcp": "10083f410bec116cb83b33b5d90294774ebe5b88346a7fc0754756d14ecc8940",
+    "hardware_workspace/gpt_ctrp_phys01/trial_01/timing_after.rpt": "e3000c9fa7e97ae1d561c943006809bf869771cd17419120c11d05fed419d7c2",
+    "hardware_workspace/gpt_ctrp_phys01/trial_01/route_status_after.rpt": "67552926d3e9b9b26c3f0ae49d95bef261fe10d4ec1e862a663718dc241ab7db",
+    "hardware_workspace/gpt_ctrp_phys01/trial_01/drc_after.rpt": "37f0185b44ed24a4ab3765888dd26600d50131a65e6f1d9484228e728c799ee0",
+    "hardware_workspace/gpt_ctrp_phys01/trial_01/check_timing_after.rpt": "5b2878ab8d2343953ac0844e4cc733fa1844cf5d2025cb9704d1b475a92bf588",
+    "hardware_workspace/gpt_ctrp_phys01/trial_01/pulse_width_after.rpt": "b1faadcb694cf5916c454f5c2c0b6ebd695c48798c1a3e9aa54ecf32d27a26f2"
+  },
+  "historical_trial_01_hashes": {
+    "hardware_workspace/gpt_ctrp_phys01/trial_01/acceptance.json": "3741e1561ef98ef064730a77b59c19d2fe8b886d14935f964fc10663c463f636",
+    "hardware_workspace/gpt_ctrp_phys01/trial_01/result.json": "6e4ff05c35503377e53bba8d0549ce69befc75994786bae4f963ff6dc8ab37b5",
+    "hardware_workspace/gpt_ctrp_phys01/trial_01/candidate.tcl": "9d2160b6ba92dc501a37f6e0f1ebcec1a71129b3be0adeeb5769ace5c603d9fd"
+  },
+  "package_hashes": {
+    "candidate_export.tcl.in": "badd2e1b82b934d091ae34ecf25fe19b7db3312cdca899e43c452dd24ad4c977",
+    "candidate_export.tcl": "841582a1c5b3ddca867c5c688937622d04ee2334654de16f5ab2057043f07e68",
+    "run_export.py": "450311a440ed3c7e4b17bae069346c5e246cd52df5efd65317ddace6095b7ca2",
+    "validation/mock_driver.tcl": "95e326ab6f32efd7ded9bfde2a37b64ab0cd500a30e1df32af2498b047a2697b",
+    "README.md": "787bf691d9109d16870b03f84bf4034ecb531ae289f29949720f443f65bafa6b"
+  },
+  "vivado": {
+    "version": "2026.1",
+    "launcher": "vendor_sdk/Vivado/bin/vivado.bat",
+    "launcher_sha256": "a5f91ee867cea61be4355caf9f7a784c6c34351c5c1d1618562ddda299e38a8b"
+  },
+  "identity": {
+    "part": "xc7z100ffg900-2",
+    "clock": "clk_fpga_0",
+    "period_ns": 10.0,
+    "dsp_count": 1252,
+    "rtl_changed": false,
+    "clock_changed": false
+  },
+  "reviewed_post_physopt_metrics": {
+    "wns_ns": 0.005,
+    "tns_ns": 0.0,
+    "whs_ns": 0.045,
+    "wpws_ns": 4.232,
+    "setup_fail_endpoints": 0,
+    "hold_fail_endpoints": 0,
+    "pulse_width_fail_endpoints": 0,
+    "fully_routed_nets": 238792,
+    "route_error_nets": 0,
+    "critical_drc_count": 0,
+    "timing_coverage_check_count": 12
+  },
+  "mutex": "Local\\Z100_Vivado_Implementation",
+  "resource_gate": {
+    "free_ram_gib_min": 8,
+    "free_disk_gib_min": 20,
+    "reject_if_vivado_or_board_tool_active": true
+  },
+  "acceptance": "Reopen the exact post_physopt.dcp; verify part, one 10 ns clock, 1252 DSPs, complete routing, nonnegative setup/hold/pulse slack, zero timing failures, zero Error/Critical Warning DRC, and all 12 timing coverage checks present and zero. Export only after all pass.",
+  "automatic_retry": false,
+  "board_access": false,
+  "implementation_commands_forbidden": [
+    "phys_opt_design",
+    "route_design"
+  ]
+}

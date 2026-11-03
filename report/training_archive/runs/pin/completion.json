@@ -1,0 +1,10 @@
+{
+  "completed_epochs": 200,
+  "original_schedule_epochs": 300,
+  "finish_reason": "User requested epoch-200 cutoff; original LR and mosaic schedules preserved",
+  "best_epoch": 200,
+  "best_selection": "Maximum frozen validation AP50:95",
+  "seconds": 229836.46999999997,
+  "completed_at": "2026-10-24T00:34:32.473982+08:00",
+  "test_used": false
+}

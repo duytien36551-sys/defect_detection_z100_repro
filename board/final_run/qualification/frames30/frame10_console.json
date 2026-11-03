@@ -1,0 +1,115 @@
+{
+  "mode": "execute",
+  "endpoint": "192.168.10.2:5001",
+  "local_address": "192.168.10.1",
+  "protocol": "pin9-v8/2-input640",
+  "input": "source_project\\validation\\board_z100\\pin640_epoch200_headconcat_host\\20261024T104121.305479Z\\input_rgb.bin",
+  "tensor_bytes": 1228800,
+  "model": "source_project\\deployment\\candidates\\pin640\\quant_candidates\\epoch200_head_concat_20261024T103836.103919Z\\package\\MODEL.V8P",
+  "host_reference_response": "source_project\\validation\\board_z100\\graph_service_cpu_numeric\\20261027T030815.290658Z\\success_response.bin",
+  "expected_reference_detections": [
+    {
+      "class_id": 6,
+      "score": 0.87188375,
+      "xyxy": [
+        0.135667011,
+        0.556364477,
+        0.312501609,
+        0.661802471
+      ]
+    },
+    {
+      "class_id": 0,
+      "score": 0.866531312,
+      "xyxy": [
+        0.583621323,
+        0.852097988,
+        0.746215045,
+        0.918462753
+      ]
+    }
+  ],
+  "offline_checks": "metadata, model header/length, RGB length, reference framing, INFER framing",
+  "network_used": true,
+  "hashes_computed": false,
+  "limitation": "Preparation does not verify artifact digests or running firmware. Reference is host CPU evidence only.",
+  "retry_count": 0,
+  "status": "VALIDATED_BOARD_RESULT",
+  "raw_response": "hardware_workspace\\gpt_softpack_launch02\\qualification\\frames30\\frame10\\response.bin",
+  "request_id": "1a58325fbeee4787a598cd24606c6f61",
+  "detections_model_pixels": [
+    {
+      "class_id": 6,
+      "class_name": "PIN_有机物污染",
+      "score": 0.87188375,
+      "xyxy": [
+        86.82688704,
+        356.07326528,
+        200.00102976,
+        423.55358144
+      ]
+    },
+    {
+      "class_id": 0,
+      "class_name": "PIN_破损",
+      "score": 0.866531312,
+      "xyxy": [
+        373.51764672,
+        545.34271232,
+        477.5776288,
+        587.81616192
+      ]
+    }
+  ],
+  "sender_transaction_seconds": 0.361915500019677,
+  "sender_clock": {
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-07
+  },
+  "timing_scope": "client setup, connect, HELLO, INFER header, RGB send, RESULT receive/validation; excludes input read and file setup; includes response capture I/O; no fresh hashes",
+  "raw_messages": [
+    {
+      "type": "HELLO_OK",
+      "protocol": "pin9-v8/2-input640",
+      "runtime": "board",
+      "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+      "classes_sha256": "d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754",
+      "class_count": 9,
+      "class_domain": "pin",
+      "input": "rgb-u8-640-letterbox114",
+      "box_space": "normalized-model-xyxy"
+    },
+    {
+      "type": "RESULT",
+      "protocol": "pin9-v8/2-input640",
+      "runtime": "board",
+      "request_id": "1a58325fbeee4787a598cd24606c6f61",
+      "box_space": "normalized-model-xyxy",
+      "detections": [
+        {
+          "class_id": 6,
+          "score": 0.87188375,
+          "xyxy": [
+            0.135667011,
+            0.556364477,
+            0.312501609,
+            0.661802471
+          ]
+        },
+        {
+          "class_id": 0,
+          "score": 0.866531312,
+          "xyxy": [
+            0.583621323,
+            0.852097988,
+            0.746215045,
+            0.918462753
+          ]
+        }
+      ]
+    }
+  ],
+  "matches_host_reference_at_2e_minus6": true
+}

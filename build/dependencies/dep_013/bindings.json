@@ -1,0 +1,428 @@
+{
+  "model_package_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+  "graph_sha256": "9d6064e37e92e61c687608d2c5e216cccb31e0b1fc9603de0c8b21eb3acbae9f",
+  "view_events": [
+    {
+      "event_index": 3,
+      "event": 9,
+      "input_node": 7,
+      "source_bytes": 409600,
+      "graph_reads": [
+        {
+          "node": 5,
+          "slot": 1,
+          "generation": 4
+        }
+      ],
+      "tiles": 8,
+      "runs": 1280,
+      "windows": 46080
+    },
+    {
+      "event_index": 6,
+      "event": 15,
+      "input_node": 13,
+      "source_bytes": 1228800,
+      "graph_reads": [
+        {
+          "node": 5,
+          "slot": 1,
+          "generation": 4
+        },
+        {
+          "node": 12,
+          "slot": 0,
+          "generation": 7
+        }
+      ],
+      "tiles": 8,
+      "runs": 1280,
+      "windows": 15360
+    },
+    {
+      "event_index": 9,
+      "event": 23,
+      "input_node": 21,
+      "source_bytes": 204800,
+      "graph_reads": [
+        {
+          "node": 19,
+          "slot": 1,
+          "generation": 10
+        }
+      ],
+      "tiles": 4,
+      "runs": 320,
+      "windows": 23040
+    },
+    {
+      "event_index": 15,
+      "event": 34,
+      "input_node": 32,
+      "source_bytes": 819200,
+      "graph_reads": [
+        {
+          "node": 19,
+          "slot": 1,
+          "generation": 10
+        },
+        {
+          "node": 26,
+          "slot": 0,
+          "generation": 13
+        },
+        {
+          "node": 31,
+          "slot": 2,
+          "generation": 16
+        }
+      ],
+      "tiles": 4,
+      "runs": 640,
+      "windows": 20480
+    },
+    {
+      "event_index": 18,
+      "event": 42,
+      "input_node": 40,
+      "source_bytes": 122880,
+      "graph_reads": [
+        {
+          "node": 38,
+          "slot": 1,
+          "generation": 19
+        }
+      ],
+      "tiles": 2,
+      "runs": 160,
+      "windows": 23040
+    },
+    {
+      "event_index": 24,
+      "event": 53,
+      "input_node": 51,
+      "source_bytes": 491520,
+      "graph_reads": [
+        {
+          "node": 38,
+          "slot": 1,
+          "generation": 19
+        },
+        {
+          "node": 45,
+          "slot": 0,
+          "generation": 22
+        },
+        {
+          "node": 50,
+          "slot": 2,
+          "generation": 25
+        }
+      ],
+      "tiles": 2,
+      "runs": 320,
+      "windows": 20480
+    },
+    {
+      "event_index": 27,
+      "event": 61,
+      "input_node": 59,
+      "source_bytes": 81920,
+      "graph_reads": [
+        {
+          "node": 57,
+          "slot": 1,
+          "generation": 28
+        }
+      ],
+      "tiles": 1,
+      "runs": 80,
+      "windows": 23040
+    },
+    {
+      "event_index": 30,
+      "event": 67,
+      "input_node": 65,
+      "source_bytes": 245760,
+      "graph_reads": [
+        {
+          "node": 57,
+          "slot": 1,
+          "generation": 28
+        },
+        {
+          "node": 64,
+          "slot": 0,
+          "generation": 31
+        }
+      ],
+      "tiles": 1,
+      "runs": 160,
+      "windows": 15360
+    },
+    {
+      "event_index": 35,
+      "event": 75,
+      "input_node": 73,
+      "source_bytes": 327680,
+      "graph_reads": [
+        {
+          "node": 69,
+          "slot": 0,
+          "generation": 33
+        },
+        {
+          "node": 70,
+          "slot": 1,
+          "generation": 34
+        },
+        {
+          "node": 71,
+          "slot": 2,
+          "generation": 35
+        },
+        {
+          "node": 72,
+          "slot": 5,
+          "generation": 36
+        }
+      ],
+      "tiles": 2,
+      "runs": 160,
+      "windows": 20480
+    },
+    {
+      "event_index": 36,
+      "event": 79,
+      "input_node": 77,
+      "source_bytes": 737280,
+      "graph_reads": [
+        {
+          "node": 53,
+          "slot": 4,
+          "generation": 26
+        },
+        {
+          "node": 75,
+          "slot": 6,
+          "generation": 37
+        }
+      ],
+      "tiles": 3,
+      "runs": 320,
+      "windows": 30720
+    },
+    {
+      "event_index": 37,
+      "event": 83,
+      "input_node": 81,
+      "source_bytes": 122880,
+      "graph_reads": [
+        {
+          "node": 79,
+          "slot": 0,
+          "generation": 38
+        }
+      ],
+      "tiles": 2,
+      "runs": 160,
+      "windows": 23040
+    },
+    {
+      "event_index": 39,
+      "event": 88,
+      "input_node": 86,
+      "source_bytes": 368640,
+      "graph_reads": [
+        {
+          "node": 79,
+          "slot": 0,
+          "generation": 38
+        },
+        {
+          "node": 85,
+          "slot": 2,
+          "generation": 40
+        }
+      ],
+      "tiles": 2,
+      "runs": 320,
+      "windows": 15360
+    },
+    {
+      "event_index": 40,
+      "event": 92,
+      "input_node": 90,
+      "source_bytes": 1228800,
+      "graph_reads": [
+        {
+          "node": 34,
+          "slot": 3,
+          "generation": 17
+        },
+        {
+          "node": 88,
+          "slot": 1,
+          "generation": 41
+        }
+      ],
+      "tiles": 5,
+      "runs": 640,
+      "windows": 30720
+    },
+    {
+      "event_index": 41,
+      "event": 96,
+      "input_node": 94,
+      "source_bytes": 204800,
+      "graph_reads": [
+        {
+          "node": 92,
+          "slot": 0,
+          "generation": 42
+        }
+      ],
+      "tiles": 4,
+      "runs": 320,
+      "windows": 23040
+    },
+    {
+      "event_index": 43,
+      "event": 101,
+      "input_node": 99,
+      "source_bytes": 614400,
+      "graph_reads": [
+        {
+          "node": 92,
+          "slot": 0,
+          "generation": 42
+        },
+        {
+          "node": 98,
+          "slot": 3,
+          "generation": 44
+        }
+      ],
+      "tiles": 4,
+      "runs": 640,
+      "windows": 15360
+    },
+    {
+      "event_index": 45,
+      "event": 106,
+      "input_node": 104,
+      "source_bytes": 368640,
+      "graph_reads": [
+        {
+          "node": 88,
+          "slot": 1,
+          "generation": 41
+        },
+        {
+          "node": 103,
+          "slot": 0,
+          "generation": 46
+        }
+      ],
+      "tiles": 2,
+      "runs": 320,
+      "windows": 15360
+    },
+    {
+      "event_index": 46,
+      "event": 110,
+      "input_node": 108,
+      "source_bytes": 122880,
+      "graph_reads": [
+        {
+          "node": 106,
+          "slot": 3,
+          "generation": 47
+        }
+      ],
+      "tiles": 2,
+      "runs": 160,
+      "windows": 23040
+    },
+    {
+      "event_index": 48,
+      "event": 115,
+      "input_node": 113,
+      "source_bytes": 368640,
+      "graph_reads": [
+        {
+          "node": 106,
+          "slot": 3,
+          "generation": 47
+        },
+        {
+          "node": 112,
+          "slot": 1,
+          "generation": 49
+        }
+      ],
+      "tiles": 2,
+      "runs": 320,
+      "windows": 15360
+    },
+    {
+      "event_index": 50,
+      "event": 120,
+      "input_node": 118,
+      "source_bytes": 245760,
+      "graph_reads": [
+        {
+          "node": 75,
+          "slot": 6,
+          "generation": 37
+        },
+        {
+          "node": 117,
+          "slot": 1,
+          "generation": 51
+        }
+      ],
+      "tiles": 1,
+      "runs": 160,
+      "windows": 15360
+    },
+    {
+      "event_index": 51,
+      "event": 124,
+      "input_node": 122,
+      "source_bytes": 81920,
+      "graph_reads": [
+        {
+          "node": 120,
+          "slot": 3,
+          "generation": 52
+        }
+      ],
+      "tiles": 1,
+      "runs": 80,
+      "windows": 23040
+    },
+    {
+      "event_index": 53,
+      "event": 129,
+      "input_node": 127,
+      "source_bytes": 245760,
+      "graph_reads": [
+        {
+          "node": 120,
+          "slot": 3,
+          "generation": 52
+        },
+        {
+          "node": 126,
+          "slot": 4,
+          "generation": 54
+        }
+      ],
+      "tiles": 1,
+      "runs": 160,
+      "windows": 15360
+    }
+  ],
+  "scratch_is_private_fixture_not_reservation": true
+}

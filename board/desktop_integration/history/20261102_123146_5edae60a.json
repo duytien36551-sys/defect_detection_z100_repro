@@ -1,0 +1,60 @@
+{
+  "stage": "board_response_unverified",
+  "source": "C:\\Users\\Administrator\\Desktop\\yolov8n_z7z100\\validation\\desktop_z100_20261102\\board_ui01\\integration_1.png",
+  "task": "all",
+  "task_label": "全部9类光电缺陷",
+  "elapsed_seconds": 0.37030459998641163,
+  "timing_scope": "image read, RGB640 preprocessing, connect/HELLO, board inference and response validation; excludes result display dwell and rendering",
+  "protocol": "pin9-v8/2-input640",
+  "classes_sha256": "d194f74601c88214c24506a910c1bac71c87ce0be7ddda213d3eb00684d43754",
+  "result_message": "检测到 2 个缺陷",
+  "model_sha256": "65bb9d81aa111aa35be9ae0b2cceeb637089710e4d94d0c6acc9c65f26add13c",
+  "classes": [
+    "PIN_破损",
+    "PIN_裂痕",
+    "PIN_击穿",
+    "PIN_薄膜破损",
+    "PIN_电极缺失",
+    "PIN_异物",
+    "PIN_有机物污染",
+    "PIN_部分缺失",
+    "PIN_冗余"
+  ],
+  "display_classes": [
+    "破损",
+    "裂痕",
+    "击穿",
+    "薄膜破损",
+    "电极缺失",
+    "异物",
+    "有机物污染",
+    "部分缺失",
+    "冗余"
+  ],
+  "detections": [
+    {
+      "class_id": 6,
+      "class_name": "PIN_有机物污染",
+      "score": 0.87188375,
+      "xyxy": [
+        86.82688704,
+        356.07326528,
+        200.00102976,
+        423.55358144
+      ],
+      "display_name": "有机物污染"
+    },
+    {
+      "class_id": 0,
+      "class_name": "PIN_破损",
+      "score": 0.866531312,
+      "xyxy": [
+        373.51764672,
+        545.34271232,
+        477.5776288,
+        587.81616192
+      ],
+      "display_name": "破损"
+    }
+  ]
+}

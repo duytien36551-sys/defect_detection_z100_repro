@@ -1,0 +1,124 @@
+{
+  "schema": "z100-firmware-delivery-summary-v2",
+  "date": "2026-11-03",
+  "status": "PRIOR_SOURCE_BUILD_COMPLETE_BOARD_PENDING",
+  "source_snapshot_files": 1493,
+  "application_source_files": 89,
+  "application_objects": 90,
+  "tools": {
+    "vitis_release": "2026.1",
+    "arm_gcc": {
+      "version": "13.4.0"
+    },
+    "cmake": {
+      "version": "4.0.1"
+    },
+    "mingw_make": {
+      "version": "4.4.1"
+    },
+    "bootgen": {
+      "version": "2026.1",
+      "sha256": "101dfed91243ad521b3778cf261a06df6f34996e8944e3611dc0c0097e2ce35f"
+    }
+  },
+  "source_build": {
+    "status": "BOOTGEN_COMPLETE_BOARD_PENDING",
+    "result_json_sha256": "154bfb3d6bbf7971f39139dae0ec1cf841fd2d0fdc0872e0bfe8843d232a3537",
+    "outputs": {
+      "fsbl_elf": {
+        "path": "sd_rebuild3_20261103/fsbl.elf",
+        "bytes": 491112,
+        "sha256": "0a5a77d2da9191e49fa40fd8e423c51a27d926a2131597f42b570c51f970fb06"
+      },
+      "application_elf": {
+        "path": "sd_rebuild3_20261103/native_board_pool.elf",
+        "bytes": 4312076,
+        "sha256": "dcd2154a1041f49d7463c3f841eba83a6e814d84ef559c2ca4ed4423a135f80e",
+        "reference_sha256": "24ace23496c9e44500b83c35a59a8a6a8ca4fb0fa0c5dda7b76b9855a642cf10",
+        "byte_identical_to_reference": false
+      },
+      "boot_bif": {
+        "path": "sd_rebuild3_20261103/boot.bif",
+        "bytes": 90,
+        "sha256": "c31d8ea88ab736fcca4beccac5f0b601170815298ed62a1c42774fb41589d397"
+      },
+      "selected_bitstream": {
+        "path": "sd_rebuild3_20261103/z100_platform.bit",
+        "bytes": 17416553,
+        "sha256": "9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f",
+        "is_packaged_reference": true
+      },
+      "boot_bin": {
+        "path": "sd_rebuild3_20261103/BOOT.BIN",
+        "bytes": 21595588,
+        "sha256": "586d7bd141c4b1f9b92cc0440c1edeca14c28f44cb47242c52cb34131126952d",
+        "reference_sha256": "29c6d422cffd9e98694586312c7b8a4548ed8429b9f563498089ad636a42f5ac",
+        "byte_identical_to_reference": false
+      },
+      "bootgen_log_sha256": "a48253b932d2120c8939f267edc889e13879440ba5f872e796eee47b122d8cc5"
+    },
+    "platform_bsp_libraries": {
+      "count": 3,
+      "libxil.a": {
+        "bytes": 607816,
+        "sha256": "5df2245a9db6d349b7fbd965e76ea9e5b2cf778edea06804696bb77563375da4"
+      },
+      "libxilstandalone.a": {
+        "bytes": 334568,
+        "sha256": "300d8cf46ceb78754896bc4dbaa0e0aeb433120447d957a78bd3fc3b43051c4a"
+      },
+      "libxiltimer.a": {
+        "bytes": 17868,
+        "sha256": "d87d535be104c42eea1f4d7e48bf69f1994cc6cc96a75f8ff5a00b11314ab132"
+      }
+    },
+    "fsbl_bsp_libraries": {
+      "count": 4,
+      "libxil.a": {
+        "bytes": 607816,
+        "sha256": "5df2245a9db6d349b7fbd965e76ea9e5b2cf778edea06804696bb77563375da4"
+      },
+      "libxilstandalone.a": {
+        "bytes": 334568,
+        "sha256": "300d8cf46ceb78754896bc4dbaa0e0aeb433120447d957a78bd3fc3b43051c4a"
+      },
+      "libxiltimer.a": {
+        "bytes": 17868,
+        "sha256": "d87d535be104c42eea1f4d7e48bf69f1994cc6cc96a75f8ff5a00b11314ab132"
+      },
+      "libxilffs.a": {
+        "bytes": 122526,
+        "sha256": "f577782631b0bdc3537e38635dfb3884b4b9c660863021c5e380836928a2509a"
+      }
+    },
+    "board_validation": "NOT_RUN"
+  },
+  "source_input_manifests_at_build": {
+    "bsp_snapshot_manifest_sha256": "465728afa81e4b11f8846b5d9e13f87b7c6827b2bd1caaf0b3ef67811eb505a7",
+    "portable_firmware_manifest_sha256": "669a3fae0a15e0f9d1dfcfc28f07ec891df750c85e1fe54cc35cd41783d4e23d",
+    "sd_network_fix_manifest_sha256": "0964b5923ded02115d8d8c3c8d4832a128dc658aa8a7709f433becd70d73fddb",
+    "tested_reference_elf_sha256": "24ace23496c9e44500b83c35a59a8a6a8ca4fb0fa0c5dda7b76b9855a642cf10",
+    "tested_reference_boot_sha256": "29c6d422cffd9e98694586312c7b8a4548ed8429b9f563498089ad636a42f5ac",
+    "packaged_reference_bit_sha256": "9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f",
+    "boot_bif_sha256": "c31d8ea88ab736fcca4beccac5f0b601170815298ed62a1c42774fb41589d397"
+  },
+  "current_source_input_manifests": {
+    "bsp_snapshot": "465728afa81e4b11f8846b5d9e13f87b7c6827b2bd1caaf0b3ef67811eb505a7",
+    "portable_firmware": "cb1d72c3cc7614390b1054ae09508d661d8578e83bfbc835a1eb9d8b13e319ee",
+    "sd_network_fix": "0964b5923ded02115d8d8c3c8d4832a128dc658aa8a7709f433becd70d73fddb"
+  },
+  "boot_uses_original_packaged_bit": true,
+  "application_elf_byte_identical_to_original_tested_elf": false,
+  "source_hardware_boot_generated": false,
+  "bootgen_reuse_entry": "build/rebuild_sd_boot.py --bootgen-only --reuse-build <verified-build-dir> --bitstream <bit> --bootgen <bootgen.bat> --output-dir <new-external-dir>",
+  "scope": "Prior completed BSP/FSBL/application build and BOOT generation using the original reference bit. This packaging operation did not run a compiler or Bootgen.",
+  "board_access": false,
+  "sd_write": false,
+  "limitations": [
+    "New source-built ELF and BOOT differ from the original tested files; original performance is not assigned to them.",
+    "No source-built hardware bit was exported after the user stopped additional validation.",
+    "No new board boot, cold-start, or detection regression is claimed."
+  ],
+  "external_validation_record_sha256": "5eb2aed5842fe99923d630ca344ed3d6a66c91d11bd60ed2b4ba90127451b52f",
+  "current_source_input_manifest_note": "Current portable firmware manifest hash refreshed after README-only edits. Historical source_input_manifests_at_build hashes remain unchanged; no compiler, source/model/binary change, or board run is implied."
+}

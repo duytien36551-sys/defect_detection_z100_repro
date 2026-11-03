@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "batch": 16,
+  "imgsz": 640,
+  "loss": 189.95205688476562,
+  "seconds": 2.7732667999807745,
+  "finite_gradients": true
+}

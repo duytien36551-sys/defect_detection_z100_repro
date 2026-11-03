@@ -1,0 +1,102 @@
+{
+  "case": "05_pspl_profile",
+  "skill": "zynq-ps-pl-performance",
+  "review_method": "main-thread full-context deterministic evidence audit; NOT independent agent behavioral validation",
+  "status": "evidence_checks_pass",
+  "authenticity": "authentic_z100_single_frame_profile_and_operator_aggregation",
+  "facts": {
+    "timer_hz": 333333343,
+    "phase_ms": {
+      "preprocess_ticks": 27.571154200436528,
+      "graph_ticks": 6345.577855978242,
+      "dequantization_ticks": 16.22797452938874,
+      "decode_ticks": 108.25404886063258,
+      "total_ticks": 6497.6336705686235
+    },
+    "nested_ms_do_not_add": {
+      "load_pack_ticks": 69.25895199149039,
+      "run_pack_ticks": 940.585793723012,
+      "load_transfer_ticks": 18.924068451202015,
+      "run_transfer_ticks": 2009.720860718095,
+      "dma_prepare_ticks": 404.59825226665066,
+      "dma_poll_ticks": 1525.1683207701187,
+      "dma_finalize_ticks": 95.1387002409777,
+      "response_parse_ticks": 416.5058039213317,
+      "conv_requant_ticks": 2080.03000467913
+    },
+    "operations": {
+      "conv": {
+        "nodes": 63,
+        "milliseconds": 5538.81174737446
+      },
+      "silu": {
+        "nodes": 57,
+        "milliseconds": 212.70188083164547
+      },
+      "slice": {
+        "nodes": 16,
+        "milliseconds": 112.21561174574725
+      },
+      "add": {
+        "nodes": 6,
+        "milliseconds": 192.83238940786072
+      },
+      "concat": {
+        "nodes": 16,
+        "milliseconds": 91.5081243462644
+      },
+      "maxpool": {
+        "nodes": 3,
+        "milliseconds": 131.04218319977667
+      },
+      "upsample": {
+        "nodes": 2,
+        "milliseconds": 54.4131344220191
+      }
+    },
+    "counters": {
+      "load_pack_ticks": 23086318,
+      "run_pack_ticks": 313528607,
+      "load_transfer_ticks": 6308023,
+      "run_transfer_ticks": 669906973,
+      "dma_prepare_ticks": 134866088,
+      "dma_poll_ticks": 508389455,
+      "dma_finalize_ticks": 31712901,
+      "load_bytes": 3114176,
+      "run_bytes": 79769600,
+      "load_calls": 94,
+      "run_calls": 6319,
+      "dma_tx_bytes": 82883776,
+      "dma_rx_bytes": 57057860,
+      "dma_calls": 6413,
+      "response_parse_ticks": 138835272,
+      "conv_requant_ticks": 693343355
+    }
+  },
+  "findings": [
+    "Prioritize an isolated requantization/packing experiment with unchanged numerical semantics. Nested DMA counters include CPU/transfer wait and cannot be interpreted as pure PL time or summed with phases. Require raw-output equality and repeated same-scope measurements before claiming speedup."
+  ],
+  "checks": [
+    "source snapshot SHA-256 intact",
+    "timer conversion and disjoint nonconv aggregation checked; nested counters not added"
+  ],
+  "input_sha256": {
+    "operator_profile.json": "8753a3d0f42229324f03ab344801cdfa2b047ac7f927080d36b93f699f827779",
+    "profile_frame_result.json": "dfb56c4ea355983dde9e18996db37b24fddc177a55d2a4d2851577eaa1677a74"
+  },
+  "evidence_refs": [
+    {
+      "path": "cases_20261025/05_pspl_profile/inputs/profile_frame_result.json",
+      "sha256": "dfb56c4ea355983dde9e18996db37b24fddc177a55d2a4d2851577eaa1677a74"
+    },
+    {
+      "path": "cases_20261025/05_pspl_profile/inputs/operator_profile.json",
+      "sha256": "8753a3d0f42229324f03ab344801cdfa2b047ac7f927080d36b93f699f827779"
+    }
+  ],
+  "not_performed": [
+    "new training/model evaluation or model selection",
+    "board operations",
+    "blind independent model execution"
+  ]
+}
