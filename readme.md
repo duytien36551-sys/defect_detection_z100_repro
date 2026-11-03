@@ -1,5 +1,15 @@
 # Z100 缺陷检测工程复现包
 
+[![License: MIT](https://img.shields.io/badge/Original_code-MIT-green.svg)](license)
+
+**公开源码仓库：<https://github.com/duytien36551-sys/defect_detection_z100_repro>**
+
+项目原创源码采用赛题第 3.3.3.3 节推荐的 **MIT 许可证**，允许复制、修改和再分发，须保留版权与许可声明。第三方内容保留原许可，Ultralytics 相关内容的 AGPL 条款不被 MIT 替代。参见 [许可证全文](license)、[第三方许可与数据/模型授权范围](third_party_notices.md) 和 [开源发布说明](open_source.md)。公开仓库不代表数据再分发权或所有技术验收已完成。
+
+快速入口：[技术文档 PDF](report/documents/technical_document.pdf) · [Word](report/documents/technical_document.docx) · [复现状态](report/reproduction_validation.json) · [检测复现](sim/detection_reproduction.md) · [待验收项](report/missing_items.md)
+
+---
+
 本包从冻结的 epoch200 模型出发，提供 RTL/PS/BSP/启动程序源码、构建入口、RTL 组件回归、300 张优选 test 样例、检测参考结果和最终上板文件。供赛方安装工具后重建并运行作品，不要求从零训练。README 更新于 2026-11-03，按最新交付文件及已有实测证据整理；本次说明更新未重新运行构建、仿真、推理或板卡操作。已有结果和停止状态见 `report/reproduction_validation.json`，尚缺结果见 `report/missing_items.md`。
 
 | 目录 | 内容 |
