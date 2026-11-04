@@ -1,0 +1,12 @@
+{
+  "scope": "Lossy HWH parameter excerpt for offline audit only; not a full HWH, not a loadable overlay or hardware run. Original tasks do not affect the diagnostic code.",
+  "source_local_archive": "retained/platforms/z7020/project/resources/hardware_base/reports/xsa_system.hwh",
+  "source_sha256": "0f6023d4bbfefd6600662c8c21301157f059252a5aedae3f882cb62ecc6578b2",
+  "source_bytes": 854627,
+  "excerpt_sha256": "a19ef679ab6d34b5f69d248c2169a3b95c946d8f920ea164f34589d34d54c1ee",
+  "selected_ip_paths": [
+    "axi_dma_0",
+    "processing_system7_0"
+  ],
+  "removed": "Unselected modules, addresses, ports, registers and non-DMA parameters."
+}

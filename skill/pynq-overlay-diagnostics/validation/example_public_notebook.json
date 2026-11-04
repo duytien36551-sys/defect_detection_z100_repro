@@ -1,0 +1,136 @@
+{
+  "schema": "pynq-notebook-inspection-v1",
+  "status": "STATIC_INSPECTION_COMPLETE",
+  "sha256": "ad2efb34f6c3968559c2ce462cdd1db42de612064884c262c430cda3a4dea411",
+  "file": "resizer_source_only.ipynb",
+  "hardware_execution": false,
+  "saved_outputs_used_as_evidence": false,
+  "imports": [
+    {
+      "cell": 0,
+      "module": "PIL",
+      "names": [
+        "Image"
+      ]
+    },
+    {
+      "cell": 0,
+      "module": null,
+      "names": [
+        "numpy"
+      ]
+    },
+    {
+      "cell": 0,
+      "module": null,
+      "names": [
+        "matplotlib.pyplot"
+      ]
+    },
+    {
+      "cell": 0,
+      "module": "pynq",
+      "names": [
+        "allocate",
+        "Overlay"
+      ]
+    }
+  ],
+  "pynq_related_calls": [
+    {
+      "cell": 1,
+      "line": 1,
+      "call": "Overlay",
+      "args": [
+        "'resizer.bit'"
+      ],
+      "keywords": {}
+    },
+    {
+      "cell": 6,
+      "line": 1,
+      "call": "allocate",
+      "args": [],
+      "keywords": {
+        "shape": "(old_height, old_width, 3)",
+        "dtype": "np.uint8",
+        "cacheable": "1"
+      }
+    },
+    {
+      "cell": 6,
+      "line": 3,
+      "call": "allocate",
+      "args": [],
+      "keywords": {
+        "shape": "(new_height, new_width, 3)",
+        "dtype": "np.uint8",
+        "cacheable": "1"
+      }
+    },
+    {
+      "cell": 8,
+      "line": 2,
+      "call": "dma.sendchannel.transfer",
+      "args": [
+        "in_buffer"
+      ],
+      "keywords": {}
+    },
+    {
+      "cell": 8,
+      "line": 3,
+      "call": "dma.recvchannel.transfer",
+      "args": [
+        "out_buffer"
+      ],
+      "keywords": {}
+    },
+    {
+      "cell": 8,
+      "line": 5,
+      "call": "dma.sendchannel.wait",
+      "args": [],
+      "keywords": {}
+    },
+    {
+      "cell": 8,
+      "line": 6,
+      "call": "dma.recvchannel.wait",
+      "args": [],
+      "keywords": {}
+    }
+  ],
+  "findings": [
+    {
+      "cell": 0,
+      "code": "MAGICS_NOT_EXECUTED",
+      "detail": "Magic/shell lines excluded from AST inspection."
+    },
+    {
+      "cell": 1,
+      "code": "OVERLAY_MAY_PROGRAM_PL",
+      "detail": "Executing this Overlay call may program PL; inspect the selected build and current hardware before execution."
+    },
+    {
+      "cell": 8,
+      "code": "WAIT_BOUND_NOT_PROVEN",
+      "detail": "PYNQ DMA wait may poll indefinitely; this static call does not establish an external timeout or TLAST correctness."
+    },
+    {
+      "cell": 8,
+      "code": "WAIT_BOUND_NOT_PROVEN",
+      "detail": "PYNQ DMA wait may poll indefinitely; this static call does not establish an external timeout or TLAST correctness."
+    },
+    {
+      "cell": 12,
+      "code": "MAGICS_NOT_EXECUTED",
+      "detail": "Magic/shell lines excluded from AST inspection."
+    }
+  ],
+  "limits": [
+    "AST matching is syntactic, not symbolic execution: aliases, dynamically built calls and register writes require manual review.",
+    "Call order, buffer ownership, TLAST, driver cache maintenance and output quality are not runtime-verified.",
+    "Saved notebook outputs and execution_count do not establish a current hardware run."
+  ]
+}

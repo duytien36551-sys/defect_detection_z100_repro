@@ -1,25 +1,42 @@
 {
   "path": "report/documents/technical_document.docx",
   "source_filename": "技术文档.docx",
-  "bytes": 2452536,
-  "sha256": "f615455edacedad79ddfa6f3b6438e6faf7a4c950cb955b733a6bf15dad76da9",
-  "source_modified_local": "2026-11-03T18:10:35",
+  "bytes": 2453209,
+  "sha256": "89373cbde567aba40bfd783eccef8699cce3087e3e34bffd41d78b3b5d9e394a",
+  "source_modified_local": "2026-11-04T11:06:35+08:00",
   "content_edited": false,
   "schema": "z100-current-technical-documents-v2",
-  "role": "Latest technical document and matching PDF copied without changes.",
+  "role": "Latest workspace technical Word document and matching PDF copied byte-for-byte without editing.",
   "pdf": {
     "path": "report/documents/technical_document.pdf",
+    "bytes": 2297156,
+    "sha256": "46d30aaddcd0c65c63b007d9db865ae641227eb6089fb8128e8457dfa838c8ce",
     "source_filename": "技术文档.pdf",
-    "bytes": 2280589,
-    "sha256": "4b0edc1037953b6123ce5b50ae67439e3a5d34022321ac63f55bbc98a61bfc33",
-    "source_modified_local": "2026-11-03T18:05:38",
+    "source_modified_local": "2026-11-04T11:07:07+08:00",
     "content_edited": false
   },
-  "pages": 28,
+  "pages": 29,
   "abstract_revision": {
     "date": "2026-11-03",
     "scope": "Expanded abstract to one complete page, retained Songti 12 pt and 1.2 line spacing with italic Times New Roman for Latin/numerals; added verified JTAG scoped runtime conditions.",
     "characters": 1153,
     "other_pages_text_unchanged": true
+  },
+  "pynq_skill_revision": {
+    "date": "2026-11-03",
+    "section": "4.4",
+    "skill_count": 7,
+    "scope": "Added use, portability, software verification and independent review entry; refreshed TOC and page numbers. No new board/performance claims.",
+    "software_tests": 32,
+    "static_examples": 6,
+    "independent_agent_use_checks": 2,
+    "hardware_execution": false
+  },
+  "latest_sync": {
+    "date": "2026-11-04T11:18:15+08:00",
+    "pages": 29,
+    "source_pair_matches_existing_pdf_export": true,
+    "document_content_edited": false,
+    "previous_manifest_backup": "C:\\Users\\Administrator\\Desktop\\end_work\\.codex\\docpack_20261104_111815\\before\\report\\documents\\manifest.json"
   }
 }

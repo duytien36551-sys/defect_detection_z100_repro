@@ -1,0 +1,71 @@
+{
+  "schema": "pynq-overlay-audit-report-v1",
+  "status": "BLOCKED",
+  "hardware_execution": false,
+  "metadata": {
+    "file": "xsa_system.hwh",
+    "bytes": 854627,
+    "sha256": "0f6023d4bbfefd6600662c8c21301157f059252a5aedae3f882cb62ecc6578b2",
+    "hwh_member": null,
+    "hwh_sha256": "0f6023d4bbfefd6600662c8c21301157f059252a5aedae3f882cb62ecc6578b2"
+  },
+  "bit": null,
+  "device": "7z020",
+  "transfers": [
+    {
+      "direction": "mm2s",
+      "shape": [
+        640,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "bytes": 1228800,
+      "buffer_bytes": 1228800,
+      "start_bytes": 0,
+      "max_simple_dma_bytes": 65535
+    },
+    {
+      "direction": "s2mm",
+      "shape": [
+        64,
+        64,
+        3
+      ],
+      "dtype": "uint8",
+      "bytes": 12288,
+      "buffer_bytes": 12288,
+      "start_bytes": 0,
+      "max_simple_dma_bytes": 65535
+    }
+  ],
+  "findings": [
+    {
+      "severity": "unknown",
+      "code": "BIT_NOT_CHECKED",
+      "message": "No BIT supplied; pairing and hardware identity are not checked."
+    },
+    {
+      "severity": "error",
+      "code": "LENGTH_EXCEEDS_DMA",
+      "message": "mm2s: 1228800 bytes exceeds 65535; redesign/tile with matching stream boundaries, not blind slicing."
+    },
+    {
+      "severity": "unknown",
+      "code": "ADDRESS_NOT_OBSERVED",
+      "message": "mm2s: collect allocated physical_address and start; offline buffer size cannot prove alignment."
+    },
+    {
+      "severity": "unknown",
+      "code": "ADDRESS_NOT_OBSERVED",
+      "message": "s2mm: collect allocated physical_address and start; offline buffer size cannot prove alignment."
+    },
+    {
+      "severity": "info",
+      "code": "STATIC_LIMIT",
+      "message": "No hardware or notebook executed. TLAST, TKEEP, coherent ownership, content correctness and timing are not observed."
+    }
+  ],
+  "contract_sha256": "dea388ec994375a8517e414ad1552255f9b9f7a56a5f31f960805f8efe6f8916",
+  "scope": "Full original HWH/XSA checked offline, not only the distributed lossy excerpt. No board executed."
+}

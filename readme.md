@@ -8,6 +8,9 @@
 
 快速入口：[技术文档 PDF](report/documents/technical_document.pdf) · [Word](report/documents/technical_document.docx) · [复现状态](report/reproduction_validation.json) · [检测复现](sim/detection_reproduction.md) · [待验收项](report/missing_items.md)
 
+
+最新同步：2026-11-04，技术文档 Word/PDF 共 29 页，与本地最新版工程包一致；包含七项技能及现有 RTL/硬件/固件复现入口。
+
 ---
 
 本包从冻结的 epoch200 模型出发，提供 RTL/PS/BSP/启动程序源码、构建入口、RTL 组件回归、300 张优选 test 样例、检测参考结果和最终上板文件。供赛方安装工具后重建并运行作品，不要求从零训练。README 更新于 2026-11-03，按最新交付文件及已有实测证据整理；本次说明更新未重新运行构建、仿真、推理或板卡操作。已有结果和停止状态见 `report/reproduction_validation.json`，尚缺结果见 `report/missing_items.md`。
@@ -19,7 +22,7 @@
 | `build/` | 硬件/固件源码构建入口、BD/Tcl、BSP/FSBL 源码、依赖说明 |
 | `board/` | 原最终 bit/XSA/FSBL、性能归档版 ELF、SD 网络修复版 ELF/BOOT、运行入口及历史板端结果 |
 | `data/` | 300 对图/标签、冻结 PT/V8P、图与量化参数、参考数据及来源元数据 |
-| `skill/` | 工程技能、说明和教学材料 |
+| `skill/` | 六项工程分析/验证技能及一项独立通用PYNQ诊断技能，含说明、示例和验证材料 |
 | `report/` | 设计/资源/时序/质量摘要、现有结果、协作记录、最新 Word/PDF 技术文档和文件 SHA 清单 |
 
 目录和文件名均使用小写 ASCII。构建/仿真输出目录须在包外；包内不附对象、静态库、DCP、工具日志、波形或仿真数据库。测试台读取的 ROM/输入/期望值属于复现输入，保留在 `sim/rtl/`。已有最终 bit/XSA/ELF/BOOT 作为上板交付和参考保留，不被新构建覆盖。
@@ -49,7 +52,7 @@ python -B board/run_desktop.py --check
 
 - 模型固定为 epoch200、PIN 九类、640×640 INT8；硬件为 Z100、12 路、1252 DSP、100 MHz。模型、固件和 bit 的身份应分别核对，不能只看文件名。
 - PC 检测界面已包含在 `src/desktop/`。安装 `build/requirements_desktop.txt` 后，可双击 `board/start_desktop.bat`，或使用本文件第 6 节命令连接板卡。界面提供连接/身份诊断、图片导入、检测框与类别/置信度显示、结果和历史记录；它不负责给板卡下载或复位。
-- 最新技术文档为 [Word](report/documents/technical_document.docx) 和 [PDF](report/documents/technical_document.pdf)，共 28 页，含封面、三级目录和界面展示；文件来源与 SHA 见 `report/documents/manifest.json`。
+- 最新技术文档为 [Word](report/documents/technical_document.docx) 和 [PDF](report/documents/technical_document.pdf)，共 29 页，含封面、三级目录、界面展示及4.4节通用PYNQ诊断技能说明；文件来源与 SHA 见 `report/documents/manifest.json`。
 - 已补入 2026-11-03 的网络修复 ELF **JTAG + 已获资格的 SCOPED 缓存模式**实板记录：30 次同图请求全部与参考检测一致，主机请求耗时中位数 **362.421 ms**、P95 **364.628 ms**，批次吞吐率 **2.767125 FPS**；另有两图 ABABA 五帧原始检测头逐字节一致记录。计时含 TCP/HELLO、RGB 传输、板端推理和响应校验，不含输入预处理及界面停留。证据见 `board/evidence/pc_fast_20261103/`。
 - 该速度依赖外部 JTAG 启动/资格交接；自包含的 SCOPED 冷启动入口尚未随包提供。普通启动默认保守的 FULL 缓存维护，已有记录为 500 多 ms，不能只复制同一 ELF/BOOT 就承诺 362 ms。`board/final_run/launch.tcl` 是依赖外部工程的历史脚本。SD 镜像断电冷启动及 SD 自主 SCOPED 启动尚未验收。
 
@@ -95,3 +98,17 @@ python -B board/run_desktop.py --host 192.168.10.2 --port 5001
 原 800 张内部测试 INT8 AP50/AP50:95 为 93.6006%/74.6857%，不改写为 300 张的代表性成绩。未改模型、阈值和类别；未附其余 train/val/test 图片。历史数据接触、正常图和器件/批次独立性的限制见 `report/quality_summary.md`。
 
 性能归档版与 SD 网络修复版 ELF 不同，2.676367 FPS 属于原性能归档版。当前Word技术文档为`report/documents/technical_document.docx`，对应PDF为`report/documents/technical_document.pdf`；从工作区最新版“技术文档.docx”和“技术文档.pdf”原样同步，包含封面和三级目录，来源与SHA见同目录`manifest.json`。历史来源快照中的旧路径用于追溯，推荐复现入口、交付状态和未覆盖范围以本文件、`report/reproduction_validation.json`、`report/missing_items.md`为准。额外硬件源码构建已按要求在布线阶段停止，未形成新bit/XSA导出或最终时序结论。
+
+
+## 7. 通用PYNQ Skill（独立加分申报项）
+
+独立申报技能为 **pynq-overlay-diagnostics：PYNQ Overlay与DMA通用诊断**，位于[skill/pynq-overlay-diagnostics](skill/pynq-overlay-diagnostics/readme.md)。它检查不同工程的器件/IP、DMA传输容量与对齐，审查PYNQ notebook，并提供不下载bitstream的环境采集器；不依赖本队PCB/PIN类别、YOLO权重或私有协议。换题目修改数据/IP契约，换板提供该板的硬件文件并更新目标配置。
+
+评委入口：[独立申报说明](report/pynq_skill_submission.md)、[技能总目录](skill/readme.md)、[详细验证范围](skill/pynq-overlay-diagnostics/validation/acceptance.md)。在工程包根目录运行：
+
+```text
+python -B skill/pynq-overlay-diagnostics/scripts/run_examples.py --out-dir ../pynq_demo_results
+python -B -m unittest discover -s skill/pynq-overlay-diagnostics/tests -v
+```
+
+本项32项软件测试、6项静态演示和2项独立智能体使用检查已核验，独立包解压复测通过；与原五项工程技能的62项历史工具测试分开记录。当前证据覆盖通用软件诊断，尚无PYNQ实板推理记录；原生C/ELF/JTAG结果不作为PYNQ运行成绩。按已知通用PYNQ条件提交独立评审，最终加分由赛方认定。

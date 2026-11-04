@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/Xilinx/PYNQ-HelloWorld",
+  "commit": "9728edf2ea6b7bc157acb126f773e93c3e9561c2",
+  "source_path": "pynq_helloworld/notebooks/edge/resizer_pl.ipynb",
+  "source_sha256": "a4ca9e4e49a65266ae3554ba662f2259af6752cda5f9f204e0eb5a75a9577624",
+  "source_bytes": 649101,
+  "distributed_sha256": "ad2efb34f6c3968559c2ce462cdd1db42de612064884c262c430cda3a4dea411",
+  "transformation": "Only code cell sources retained verbatim, markdown/outputs/execution counts removed; source not executed.",
+  "license": "BSD-3-Clause, included",
+  "scope": "Real public PYNQ project source reuse, not physical board validation."
+}

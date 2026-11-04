@@ -1,0 +1,27 @@
+{
+  "schema": "pynq-overlay-contract-v1",
+  "name": "signal-acquisition",
+  "expected_device": "7z020",
+  "required_ips": [
+    {"name": "axi_dma_0", "vlnv_contains": ":axi_dma:"}
+  ],
+  "dma": {
+    "ip": "axi_dma_0",
+    "transfers": [
+      {
+        "direction": "mm2s",
+        "shape": [4096],
+        "dtype": "float32",
+        "buffer_bytes": 16384,
+        "start_bytes": 0
+      },
+      {
+        "direction": "s2mm",
+        "shape": [2048],
+        "dtype": "float32",
+        "buffer_bytes": 8192,
+        "start_bytes": 0
+      }
+    ]
+  }
+}

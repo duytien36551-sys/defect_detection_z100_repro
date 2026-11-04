@@ -1,0 +1,50 @@
+{
+  "status": "PASS_SOFTWARE_VALIDATION",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "tests": 32,
+  "static_examples": 6,
+  "hardware_execution": false,
+  "checks": [
+    {
+      "check": "unit_tests",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_capacity_check_includes_start_offset_and_length (test_audit_overlay.SyntheticDmaSafetyTests.test_capacity_check_includes_start_offset_and_length) ... ok\ntest_disabled_direction_is_reported_as_error (test_audit_overlay.SyntheticDmaSafetyTests.test_disabled_direction_is_reported_as_error) ... ok\ntest_dtype_controls_transfer_byte_count (test_audit_overlay.SyntheticDmaSafetyTests.test_dtype_controls_transfer_byte_count) ... ok\ntest_hierarchical_dma_paths_are_matched_exactly (test_audit_overlay.SyntheticDmaSafetyTests.test_hierarchical_dma_paths_are_matched_exactly) ... ok\ntest_micro_dma_does_not_receive_simple_mode_bound (test_audit_overlay.SyntheticDmaSafetyTests.test_micro_dma_does_not_receive_simple_mode_bound) ... ok\ntest_missing_length_or_sg_mode_parameters_stay_unknown (test_audit_overlay.SyntheticDmaSafetyTests.test_missing_length_or_sg_mode_parameters_stay_unknown) ... ok\ntest_missing_micro_dma_mode_does_not_apply_simple_dma_bound (test_audit_overlay.SyntheticDmaSafetyTests.test_missing_micro_dma_mode_does_not_apply_simple_dma_bound) ... ok\ntest_missing_micro_dma_mode_stays_unknown (test_audit_overlay.SyntheticDmaSafetyTests.test_missing_micro_dma_mode_stays_unknown) ... ok\ntest_non_dre_alignment_checks_physical_address_plus_start (test_audit_overlay.SyntheticDmaSafetyTests.test_non_dre_alignment_checks_physical_address_plus_start) ... ok\ntest_scatter_gather_does_not_receive_simple_mode_bound (test_audit_overlay.SyntheticDmaSafetyTests.test_scatter_gather_does_not_receive_simple_mode_bound) ... ok\ntest_simple_dma_accepts_exact_length_field_maximum (test_audit_overlay.SyntheticDmaSafetyTests.test_simple_dma_accepts_exact_length_field_maximum) ... ok\ntest_simple_dma_rejects_one_byte_above_length_field_maximum (test_audit_overlay.SyntheticDmaSafetyTests.test_simple_dma_rejects_one_byte_above_length_field_maximum) ... ok\ntest_bit_hwh_device_mismatch_is_reported (test_audit_overlay.SyntheticMetadataTests.test_bit_hwh_device_mismatch_is_reported) ... ok\ntest_duplicate_json_fields_are_rejected_at_any_level (test_audit_overlay.SyntheticMetadataTests.test_duplicate_json_fields_are_rejected_at_any_level) ... ok\ntest_entity_declaration_metadata_is_rejected (test_audit_overlay.SyntheticMetadataTests.test_entity_declaration_metadata_is_rejected) ... ok\ntest_hwh_reader_preserves_hierarchical_module_and_parameters (test_audit_overlay.SyntheticMetadataTests.test_hwh_reader_preserves_hierarchical_module_and_parameters) ... ok\ntest_malformed_xml_metadata_is_rejected (test_audit_overlay.SyntheticMetadataTests.test_malformed_xml_metadata_is_rejected) ... ok\ntest_absent_adjacent_hwh_is_reported_as_candidate_not_error (test_collect_runtime.RuntimeCollectorSimulationTests.test_absent_adjacent_hwh_is_reported_as_candidate_not_error) ... ok\ntest_adjacent_hwh_is_hashed_as_candidate_without_claiming_consumption (test_collect_runtime.RuntimeCollectorSimulationTests.test_adjacent_hwh_is_hashed_as_candidate_without_claiming_consumption) ... ok\ntest_cli_refuses_output_alias_before_collecting_even_for_missing_input (test_collect_runtime.RuntimeCollectorSimulationTests.test_cli_refuses_output_alias_before_collecting_even_for_missing_input) ... usage: python.exe -m unittest [-h] --bit BIT [--hwh HWH] --out OUT\npython.exe -m unittest: error: --out must not overwrite the supplied bit or HWH file\nok\ntest_default_hwh_candidate_is_hashed_without_claiming_consumption (test_collect_runtime.RuntimeCollectorSimulationTests.test_default_hwh_candidate_is_hashed_without_claiming_consumption) ... ok\ntest_download_false_hashes_metadata_and_is_loaded_false (test_collect_runtime.RuntimeCollectorSimulationTests.test_download_false_hashes_metadata_and_is_loaded_false) ... ok\ntest_is_loaded_none_is_recorded_as_observed_none (test_collect_runtime.RuntimeCollectorSimulationTests.test_is_loaded_none_is_recorded_as_observed_none) ... ok\ntest_missing_pynq_writes_unavailable_report_and_nonzero_cli_status (test_collect_runtime.RuntimeCollectorSimulationTests.test_missing_pynq_writes_unavailable_report_and_nonzero_cli_status) ... ok\ntest_default_overlay_detected_as_programming (test_notebook.NotebookTests.test_default_overlay_detected_as_programming) ... ok\ntest_download_false_is_recognized (test_notebook.NotebookTests.test_download_false_is_recognized) ... ok\ntest_invalid_source_is_unknown (test_notebook.NotebookTests.test_invalid_source_is_unknown) ... ok\ntest_legacy_allocator_is_flagged (test_notebook.NotebookTests.test_legacy_allocator_is_flagged) ... ok\ntest_never_executes_source (test_notebook.NotebookTests.test_never_executes_source) ... ok\ntest_saved_outputs_cannot_prove_hardware (test_notebook.NotebookTests.test_saved_outputs_cannot_prove_hardware) ... ok\ntest_timeit_body_is_inspected_without_execution (test_notebook.NotebookTests.test_timeit_body_is_inspected_without_execution) ... ok\ntest_unknown_magic_is_not_python (test_notebook.NotebookTests.test_unknown_magic_is_not_python) ... ok\n\n----------------------------------------------------------------------\nRan 32 tests in 0.144s\n\nOK\n",
+      "message": null
+    },
+    {
+      "check": "static_examples",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"cases\": 6, \"summary\": \"C:\\\\Users\\\\Administrator\\\\Desktop\\\\end_work\\\\.codex\\\\pynq_general_20261103\\\\integrated_examples\\\\summary.json\", \"hardware_execution\": false}\n",
+      "stderr": "",
+      "message": null
+    },
+    {
+      "check": "skill_creator_validator",
+      "passed": true,
+      "returncode": null,
+      "stdout": "",
+      "stderr": "",
+      "message": "Skill is valid!"
+    },
+    {
+      "check": "local_pynq_unavailable",
+      "passed": true,
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "",
+      "message": null
+    }
+  ],
+  "source_sha256": {
+    "scripts/audit_overlay.py": "f3039b073ee65e42ab268e327c09fa70375b53d93b13c19bc09634f1a406b069",
+    "scripts/collect_runtime.py": "88c6284137856ee79f07b275e941602d4645ab529fee1872738b6ce383d17120",
+    "scripts/inspect_notebook.py": "481e05579e60b91233cf40c4625f368f9f5a6ffd8aae685caad884f5fefddde6",
+    "scripts/run_examples.py": "ba681877fcfbfcef5a3a1ca47cea984739ed489cd50a93ff2adcae607bb88855",
+    "tests/test_audit_overlay.py": "500502ad9efacef434b0fecab78d6ec15db8c1965de6b3a78b185449b37dc6dc",
+    "tests/test_collect_runtime.py": "62934e2bfc9eba212a665142dc577702f9cf81c71e6f99f978101c06088a3ffa",
+    "tests/test_notebook.py": "26aa6da37eb9d6261e506369e8997cc91f1b3e7e8cc229fb7951d58c71d82b78"
+  }
+}

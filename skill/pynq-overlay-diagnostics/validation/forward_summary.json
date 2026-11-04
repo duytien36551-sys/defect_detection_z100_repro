@@ -1,0 +1,21 @@
+{
+  "status": "PASS_INDEPENDENT_USE_REVIEW",
+  "agents": 2,
+  "hardware_execution": false,
+  "review": "Primary reviewer inspected actual JSON, configuration and report artifacts.",
+  "signal": {
+    "task": "float32 MM2S[4096], S2MM[2048]",
+    "bytes": [
+      16384,
+      8192
+    ],
+    "status": "INCOMPLETE",
+    "conclusion": "No static capacity conflict; absent bit and physical addresses correctly remain unknown."
+  },
+  "notebook": {
+    "task": "External public PYNQ resizer notebook",
+    "status": "STATIC_INSPECTION_COMPLETE",
+    "conclusion": "Overlay programming and unbounded waits identified without execution."
+  },
+  "limits": "Two software agents in this environment, not external human teams or physical-board trials. Signal evaluator accidentally saw an unrelated older int16 example before receiving clarification; not a fully blind evaluation."
+}

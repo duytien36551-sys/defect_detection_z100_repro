@@ -1,0 +1,32 @@
+{
+  "schema": "pynq-overlay-contract-v1",
+  "name": "signal-vector",
+  "expected_device": "7z020",
+  "required_ips": [
+    {
+      "name": "axi_dma_0",
+      "vlnv_contains": ":axi_dma:"
+    }
+  ],
+  "dma": {
+    "ip": "axi_dma_0",
+    "transfers": [
+      {
+        "direction": "mm2s",
+        "shape": [
+          4096
+        ],
+        "dtype": "int16",
+        "buffer_bytes": 8192
+      },
+      {
+        "direction": "s2mm",
+        "shape": [
+          4096
+        ],
+        "dtype": "int16",
+        "buffer_bytes": 8192
+      }
+    ]
+  }
+}

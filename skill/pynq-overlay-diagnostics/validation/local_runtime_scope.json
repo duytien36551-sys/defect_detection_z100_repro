@@ -1,0 +1,6 @@
+{
+  "host": "Windows validation host",
+  "pynq_runtime": "unavailable",
+  "actual_board_execution": false,
+  "scope": "Collector unavailable branch was exercised on host; mocked tests only cover API behavior. No board-runtime claim."
+}

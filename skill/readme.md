@@ -1,11 +1,18 @@
-# Zynq 工程验证技能包
+# 工程技能与通用 PYNQ Skill
 
-2026-11-03目录说明：本包包含五项带脚本与验证记录的技能，以及一项 Vivado 布线优化文档技能。`vivado-routing-optimization/` 附有操作工作流、踩坑经验、报告模板和一个明确标注为合成数据的示例；它没有自动化脚本或技能验证记录。原五项技能记录的62项工具测试属于历史验证；本次交付没有新增技能测试，也不把它们扩写为第六项技能的成绩。
+更新日期：2026-11-03。本目录共七项技能：五项Zynq/训练工程验证技能、一项Vivado布线分析文档技能，以及一项可单独申报的通用PYNQ诊断技能。
 
-本技能包用于模型部署与FPGA工程中的身份核对、输出一致性、性能分析、DMA排障、训练质量审查和 Vivado 布线分析。前五项技能各自提供技能说明、实际使用步骤、可复用提示词、报告模板、校验脚本、案例、经验和验证证据。Vivado 布线优化项提供可执行的只读检查与实验设计文档、报告模板及合成示例；它不带自动化脚本，也没有独立技能验证结果。使用者可直接阅读所选目录材料，不需要从分类链接中拼装内容。
+**通用PYNQ加分申报项：** [pynq-overlay-diagnostics](pynq-overlay-diagnostics/readme.md)。评委可直接阅读[独立申报说明](../report/pynq_skill_submission.md)，按第七节运行演示与测试。该技能面向PYNQ框架，不依赖本队PCB/PIN检测题目；工程原有技能继续保留，各自的验证成绩分别记录。
+
+| 材料 | 数量 | 已有验证 |
+| --- | --- | --- |
+| Zynq/训练工程验证技能 | 5 | 合计62项历史工具测试，本次未重跑 |
+| Vivado布线分析文档技能 | 1 | 工作流、报告模板与合成示例，无独立工具测试 |
+| 通用PYNQ Overlay与DMA诊断 | 1 | 32项软件测试、6项静态演示、2项独立智能体使用检查，已完成隔离解压复测 |
 
 ## 目录结构
 
+```text
 skill/
   readme.md
   zynq-model-identity/
@@ -14,6 +21,8 @@ skill/
   zynq-dma-debugging/
   detection-training-audit/
   vivado-routing-optimization/
+  pynq-overlay-diagnostics/
+```
 
 前五项完整技能的内部结构包含 `skill.md`、`readme.md`、`scripts/`、`assets/`、`examples/`、`references/` 和相应的 `evidence/`、`validation/`。Vivado 布线优化文档技能是精简结构：`skill.md` 为入口，`readme.md` 介绍用途，`references/` 提供操作流程和经验，`assets/` 提供报告模板，`examples/` 展示合成数据如何分析；没有自动化脚本、证据目录或验证成绩。部分技能含 `agents/` 配置，供支持该格式的宿主使用。
 
@@ -129,14 +138,33 @@ skill/
 
 已验证效果：此项提供工作流、报告模板和合成示例，没有自动化脚本或独立测试记录；不扩充前五项技能合计62项测试的历史成绩。
 
+## 七 通用PYNQ Overlay与DMA诊断（独立加分申报项）
+
+目录：[pynq-overlay-diagnostics](pynq-overlay-diagnostics/readme.md)；[技能入口](pynq-overlay-diagnostics/skill.md)；[独立申报说明](../report/pynq_skill_submission.md)。
+
+用途：在部署前检查bit/HWH/XSA目标器件与IP，核对DMA字节数、缓冲容量、偏移和对齐；静态审查PYNQ notebook中的Overlay加载、allocate、DMA传输与等待调用；在已有PYNQ系统内采集版本和Overlay元数据。采集器使用download=False，不下载bitstream或执行DMA。
+
+通用性：换题目主要修改shape、dtype和IP契约；换板卡时提供该板自己的bit/HWH并更新器件/IP路径。同一套脚本可用于图像、信号等AXI流任务，无检测模型、类别或板端地址硬编码。不同器件的bitstream不能直接互换。
+
+在工程包根目录验收（Python标准库即可，结果写到包外）：
+
+```text
+python -B skill/pynq-overlay-diagnostics/scripts/run_examples.py --out-dir ../pynq_demo_results
+python -B -m unittest discover -s skill/pynq-overlay-diagnostics/tests -v
+```
+
+已有证据：32项软件测试和6项静态演示通过，使用真实7020/7100元数据及公开PYNQ缩放notebook；2项独立智能体使用检查经主线程查看实际产物，独立ZIP在隔离目录解压后复测通过。详见[验证说明](pynq-overlay-diagnostics/validation/acceptance.md)。缺BIT或物理地址时报告INCOMPLETE，发现冲突时报告BLOCKED，这些诊断状态不代表硬件运行成功。
+
+申报口径：本项面向赛方“通用PYNQ Skill”独立评审，不将旧7020/7100原生C/ELF/JTAG运行记录算作PYNQ实测。本轮未做PYNQ实板推理，运行采集器PYNQ分支使用软件替身验证。加分以完整赛规及赛方评审为准。
+
 ## 前五项技能的工具与证据材料
 
 前五项技能的提示词和工作流写在各自 `skill.md` 与 `readme.md`；案例报告模板位于 `assets/validation_report_template.md`；校验脚本位于 `scripts/`；经验说明位于 `readme.md` 与 `references/lessons.md`。Vivado 布线优化项是文档技能，其工作流与经验位于 `references/`，模板在 `assets/validation_report_template.md`，合成示例在 `examples/`；它没有脚本、独立证据或验证记录。以上文件均随工程包提供。
 
 ## 验证和能力范围
 
-原五项工具共62项测试通过，这些是技能各自记录的历史结果，本次交付未重新运行工具测试。历史独立任务与组合案例是有限材料审查验证，同平台子代理不等于陌生人类队伍。当前没有通用PYNQ两板两任务实测，不申报该加分能力。完整硬件工程、原始训练集和板端固件属于整个作品材料，不由技能包代替。
+原五项工具共62项测试通过，这些是技能各自记录的历史结果，本次交付未重新运行工具测试。历史独立任务与组合案例是有限材料审查验证，同平台子代理不等于陌生人类队伍。新增独立通用PYNQ诊断技能见下节；本轮完成其软件测试和静态跨工程复用，不申报两板PYNQ推理实测。旧五技能的62项历史测试与新技能结果分开记录。完整硬件工程、原始训练集和板端固件属于整个作品材料，不由技能包代替。
 
 ## 许可
 
-五个技能各自携带MIT许可文件license；第三方示例来源的相关声明随证据保留。GitHub发布按照整体工程和教程的后续安排处理。本次整理仅改变包装和说明呈现，不新增未经验证的技能能力。
+前五项工程验证技能与新增PYNQ技能各自携带MIT许可文件license。PYNQ公开缩放notebook的BSD-3-Clause许可、固定提交和来源哈希随包保留，见该目录third_party_notices.md；Vivado文档技能按其随附材料范围使用。

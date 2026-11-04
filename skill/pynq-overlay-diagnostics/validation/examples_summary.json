@@ -1,0 +1,123 @@
+{
+  "schema": "pynq-skill-static-demo-v1",
+  "status": "PASS",
+  "hardware_execution": false,
+  "scope": "Six software demonstrations, not board runtime or output-correctness validation. BLOCKED/INCOMPLETE are intended honest findings.",
+  "cases": [
+    {
+      "case": "rgb_tile",
+      "command": [
+        "python",
+        "-B",
+        "scripts\\audit_overlay.py",
+        "--hwh",
+        "examples\\metadata_7020\\design_excerpt.hwh",
+        "--config",
+        "examples\\metadata_7020\\rgb_tile.json",
+        "--out",
+        "../pynq_demo_results\\rgb_tile.json"
+      ],
+      "expected_status": "INCOMPLETE",
+      "actual_status": "INCOMPLETE",
+      "returncode": 4,
+      "passed": true,
+      "report": "rgb_tile.json",
+      "sha256": "8a895f7e35808f0b26c57301fdb43dfdcc8d9f753c32239a81e7588a89023b53"
+    },
+    {
+      "case": "signal_vector",
+      "command": [
+        "python",
+        "-B",
+        "scripts\\audit_overlay.py",
+        "--hwh",
+        "examples\\metadata_7020\\design_excerpt.hwh",
+        "--config",
+        "examples\\metadata_7020\\signal_vector.json",
+        "--out",
+        "../pynq_demo_results\\signal_vector.json"
+      ],
+      "expected_status": "INCOMPLETE",
+      "actual_status": "INCOMPLETE",
+      "returncode": 4,
+      "passed": true,
+      "report": "signal_vector.json",
+      "sha256": "d52c9e10910bdcbd0f368e97dd138c1e9a33e9584dc69386ab9ea8cf6b9d2c39"
+    },
+    {
+      "case": "oversized_frame",
+      "command": [
+        "python",
+        "-B",
+        "scripts\\audit_overlay.py",
+        "--hwh",
+        "examples\\metadata_7020\\design_excerpt.hwh",
+        "--config",
+        "examples\\metadata_7020\\oversized_frame.json",
+        "--out",
+        "../pynq_demo_results\\oversized_frame.json"
+      ],
+      "expected_status": "BLOCKED",
+      "actual_status": "BLOCKED",
+      "returncode": 2,
+      "passed": true,
+      "report": "oversized_frame.json",
+      "sha256": "b42b60f8664b7e09d676a92ad3d7688a3b959f7b8b4e6007c842c1a8a9c3afd4"
+    },
+    {
+      "case": "native_migration",
+      "command": [
+        "python",
+        "-B",
+        "scripts\\audit_overlay.py",
+        "--hwh",
+        "examples\\metadata_7100\\design_excerpt.hwh",
+        "--config",
+        "examples\\metadata_7100\\migration_probe.json",
+        "--out",
+        "../pynq_demo_results\\native_migration.json"
+      ],
+      "expected_status": "BLOCKED",
+      "actual_status": "BLOCKED",
+      "returncode": 2,
+      "passed": true,
+      "report": "native_migration.json",
+      "sha256": "bac74e34715fab87d7376dca8abdf8d96c47718523589589ca2ca429dc8c881d"
+    },
+    {
+      "case": "ip_inventory",
+      "command": [
+        "python",
+        "-B",
+        "scripts\\audit_overlay.py",
+        "--hwh",
+        "examples\\metadata_7100\\design_excerpt.hwh",
+        "--config",
+        "examples\\metadata_7100\\inventory.json",
+        "--out",
+        "../pynq_demo_results\\ip_inventory.json"
+      ],
+      "expected_status": "INCOMPLETE",
+      "actual_status": "INCOMPLETE",
+      "returncode": 4,
+      "passed": true,
+      "report": "ip_inventory.json",
+      "sha256": "367f35ea17fbbb73d5701eef6b60e1b5cb96e7b1c9a2bbea8895a9f91842752d"
+    },
+    {
+      "case": "public_pynq_notebook",
+      "command": [
+        "python",
+        "-B",
+        "scripts\\inspect_notebook.py",
+        "--notebook",
+        "examples\\public_resizer\\resizer_source_only.ipynb",
+        "--out",
+        "../pynq_demo_results\\public_notebook.json"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "report": "public_notebook.json"
+    }
+  ]
+}

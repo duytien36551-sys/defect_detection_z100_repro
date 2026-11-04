@@ -1,0 +1,9 @@
+# 来源与许可
+
+原创工作流、检查脚本、测试、配置和报告采用MIT许可，见license。
+
+examples/public_resizer/resizer_source_only.ipynb来自Xilinx/PYNQ-HelloWorld固定提交9728edf2ea6b7bc157acb126f773e93c3e9561c2的pynq_helloworld/notebooks/edge/resizer_pl.ipynb。仅保留代码单元源码，移除了markdown、保存输出、图像和执行计数；未执行该notebook。保留BSD-3-Clause原许可，见同目录license_bsd_3_clause。源码与分发哈希见provenance.json。该许可不构成Xilinx/AMD背书。
+
+examples/metadata_7020和metadata_7100是用户工程HWH的最小事实参数摘录，仅用于只读配置检查，不附完整vendor IP、可运行bitstream、模型权重或数据集。摘录不是可供Overlay加载的完整HWH，也不能用来重建原电路。来源与片段哈希见各目录provenance.json。工程板端推理成绩不由本技能重新授权或重作验证。
+
+PYNQ v3.0.1的overlay.py、lib/dma.py、buffer.py仅作为API语义参考，不随本技能复制驱动源码；固定来源与核对哈希见validation/framework_sources.json。使用者自行安装其板卡支持的PYNQ发行版及其依赖，原许可证继续适用。

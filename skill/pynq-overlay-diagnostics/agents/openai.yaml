@@ -1,0 +1,4 @@
+interface:
+  display_name: "PYNQ Overlay 与 DMA 通用诊断"
+  short_description: "检查任意PYNQ工程的器件、IP与DMA数据契约，生成可追溯报告和最小排障步骤"
+  default_prompt: "使用 $pynq-overlay-diagnostics 检查当前PYNQ工程的Overlay与DMA契约，先做离线检查并报告冲突、未知项和下一项最小检查。"

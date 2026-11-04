@@ -1,0 +1,25 @@
+{
+  "repository": "https://github.com/Xilinx/PYNQ",
+  "tag": "v3.0.1",
+  "commit": "93ddd21ab623883590a8c8b07f0b157b2855da4b",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ/93ddd21ab623883590a8c8b07f0b157b2855da4b/pynq/overlay.py",
+      "bytes": 39749,
+      "sha256": "949bbd3a1d296b487702f4c49013de24c3d6eb44da9fb2ebe1ada70d054237d7",
+      "scope": "API semantics inspection only; no vendor driver redistributed or executed."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ/93ddd21ab623883590a8c8b07f0b157b2855da4b/pynq/lib/dma.py",
+      "bytes": 26228,
+      "sha256": "a7e92fd180d9fa3322e81b49bb4141e08c8f5c8cb685fe608793b46acfe11d49",
+      "scope": "API semantics inspection only; no vendor driver redistributed or executed."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Xilinx/PYNQ/93ddd21ab623883590a8c8b07f0b157b2855da4b/pynq/buffer.py",
+      "bytes": 4676,
+      "sha256": "c3cfea4e2a94aa9b1981ae79210a69eee0f17b5a5c4cd26e7bc2cf7de01fb236",
+      "scope": "API semantics inspection only; no vendor driver redistributed or executed."
+    }
+  ]
+}

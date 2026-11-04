@@ -1,0 +1,54 @@
+{
+  "schema": "pynq-overlay-audit-report-v1",
+  "status": "BLOCKED",
+  "hardware_execution": false,
+  "metadata": {
+    "file": "design_excerpt.hwh",
+    "bytes": 1177,
+    "sha256": "3661101535d1c528321f4e3193f67ed51e535525a8aa394cdb795e513ac36a49",
+    "hwh_member": null,
+    "hwh_sha256": "3661101535d1c528321f4e3193f67ed51e535525a8aa394cdb795e513ac36a49"
+  },
+  "bit": null,
+  "device": "7z100",
+  "ip_inventory": {
+    "native_conv_backend_local_control_0": {
+      "vlnv": "xilinx.com:module_ref:z100_native_conv_pool_acp_v1:1.0",
+      "modtype": "z100_native_conv_pool_acp_v1",
+      "parameters": {}
+    },
+    "processing_system7_0": {
+      "vlnv": "xilinx.com:ip:processing_system7:5.5",
+      "modtype": "processing_system7",
+      "parameters": {
+        "c_include_acp_trans_check": "0",
+        "c_include_trace_buffer": "0",
+        "c_m_axi_gp0_enable_static_remap": "0",
+        "c_m_axi_gp0_id_width": "12",
+        "c_m_axi_gp0_thread_id_width": "12",
+        "c_m_axi_gp1_enable_static_remap": "0",
+        "c_m_axi_gp1_id_width": "12",
+        "c_m_axi_gp1_thread_id_width": "12"
+      }
+    }
+  },
+  "transfers": [],
+  "findings": [
+    {
+      "severity": "unknown",
+      "code": "BIT_NOT_CHECKED",
+      "message": "No BIT supplied; pairing and hardware identity are not checked."
+    },
+    {
+      "severity": "error",
+      "code": "DMA_MISSING",
+      "message": "No DMA at axi_dma_0; do not map a native accelerator to AXI DMA by name."
+    },
+    {
+      "severity": "info",
+      "code": "STATIC_LIMIT",
+      "message": "No hardware or notebook executed. TLAST, TKEEP, coherent ownership, content correctness and timing are not observed."
+    }
+  ],
+  "contract_sha256": "1adacfafc3293ffb343ff2d9cfb4fa17c64df25c2f69904a3d29e2b54c8932df"
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "pynq-overlay-contract-v1",
+  "name": "overlay-ip-inventory",
+  "expected_device": "7z100",
+  "required_ips": [
+    {
+      "name": "native_conv_backend_local_control_0"
+    }
+  ]
+}

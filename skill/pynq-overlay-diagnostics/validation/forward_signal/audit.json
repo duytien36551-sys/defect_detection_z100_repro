@@ -1,0 +1,100 @@
+{
+  "schema": "pynq-overlay-audit-report-v1",
+  "status": "INCOMPLETE",
+  "hardware_execution": false,
+  "metadata": {
+    "file": "design_excerpt.hwh",
+    "bytes": 2803,
+    "sha256": "a19ef679ab6d34b5f69d248c2169a3b95c946d8f920ea164f34589d34d54c1ee",
+    "hwh_member": null,
+    "hwh_sha256": "a19ef679ab6d34b5f69d248c2169a3b95c946d8f920ea164f34589d34d54c1ee"
+  },
+  "bit": null,
+  "device": "7z020",
+  "ip_inventory": {
+    "axi_dma_0": {
+      "vlnv": "xilinx.com:ip:axi_dma:7.1",
+      "modtype": "axi_dma",
+      "parameters": {
+        "c_include_sg": "0",
+        "c_sg_length_width": "16",
+        "c_m_axi_sg_addr_width": "32",
+        "c_m_axi_sg_data_width": "32",
+        "c_m_axis_mm2s_cntrl_tdata_width": "32",
+        "c_micro_dma": "0",
+        "c_include_mm2s": "1",
+        "c_include_mm2s_sf": "1",
+        "c_m_axi_mm2s_addr_width": "32",
+        "c_m_axi_mm2s_data_width": "32",
+        "c_m_axis_mm2s_tdata_width": "32",
+        "c_include_mm2s_dre": "0",
+        "c_include_s2mm": "1",
+        "c_include_s2mm_sf": "1",
+        "c_m_axi_s2mm_addr_width": "32",
+        "c_m_axi_s2mm_data_width": "32",
+        "c_include_s2mm_dre": "0"
+      }
+    },
+    "processing_system7_0": {
+      "vlnv": "xilinx.com:ip:processing_system7:5.5",
+      "modtype": "processing_system7",
+      "parameters": {
+        "c_include_trace_buffer": "0",
+        "c_include_acp_trans_check": "0",
+        "c_m_axi_gp0_id_width": "12",
+        "c_m_axi_gp0_enable_static_remap": "0",
+        "c_m_axi_gp1_id_width": "12",
+        "c_m_axi_gp1_enable_static_remap": "0",
+        "c_m_axi_gp0_thread_id_width": "12",
+        "c_m_axi_gp1_thread_id_width": "12"
+      }
+    }
+  },
+  "transfers": [
+    {
+      "direction": "mm2s",
+      "shape": [
+        4096
+      ],
+      "dtype": "float32",
+      "bytes": 16384,
+      "buffer_bytes": 16384,
+      "start_bytes": 0,
+      "max_simple_dma_bytes": 65535
+    },
+    {
+      "direction": "s2mm",
+      "shape": [
+        2048
+      ],
+      "dtype": "float32",
+      "bytes": 8192,
+      "buffer_bytes": 8192,
+      "start_bytes": 0,
+      "max_simple_dma_bytes": 65535
+    }
+  ],
+  "findings": [
+    {
+      "severity": "unknown",
+      "code": "BIT_NOT_CHECKED",
+      "message": "No BIT supplied; pairing and hardware identity are not checked."
+    },
+    {
+      "severity": "unknown",
+      "code": "ADDRESS_NOT_OBSERVED",
+      "message": "mm2s: collect allocated physical_address and start; offline buffer size cannot prove alignment."
+    },
+    {
+      "severity": "unknown",
+      "code": "ADDRESS_NOT_OBSERVED",
+      "message": "s2mm: collect allocated physical_address and start; offline buffer size cannot prove alignment."
+    },
+    {
+      "severity": "info",
+      "code": "STATIC_LIMIT",
+      "message": "No hardware or notebook executed. TLAST, TKEEP, coherent ownership, content correctness and timing are not observed."
+    }
+  ],
+  "contract_sha256": "aae88511594f5fbd57e4aea40f2efc1939282f289d4caf08f3f1a1a25f7fff7d"
+}

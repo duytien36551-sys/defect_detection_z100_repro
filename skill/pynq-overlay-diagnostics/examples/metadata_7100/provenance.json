@@ -1,0 +1,12 @@
+{
+  "scope": "Lossy HWH parameter excerpt for offline audit only; not a full HWH, not a loadable overlay or hardware run. Original tasks do not affect the diagnostic code.",
+  "source_local_archive": "board/artifacts/z100_platform.xsa::system.hwh",
+  "source_sha256": "61e8ec7caba1e08b395e6b4f67bbae876f6e9aa611f1591ac1aad3a7fc85c55f",
+  "source_bytes": 245995,
+  "excerpt_sha256": "3661101535d1c528321f4e3193f67ed51e535525a8aa394cdb795e513ac36a49",
+  "selected_ip_paths": [
+    "native_conv_backend_local_control_0",
+    "processing_system7_0"
+  ],
+  "removed": "Unselected modules, addresses, ports, registers and non-DMA parameters."
+}

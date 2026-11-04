@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<EDKSYSTEM VIVADOVERSION="2020.2">
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-2" />
+  <MODULES>
+    <MODULE FULLNAME="/axi_dma_0" INSTANCE="axi_dma_0" VLNV="xilinx.com:ip:axi_dma:7.1" MODTYPE="axi_dma">
+      <PARAMETERS>
+        <PARAMETER NAME="C_INCLUDE_SG" VALUE="0" />
+        <PARAMETER NAME="C_SG_LENGTH_WIDTH" VALUE="16" />
+        <PARAMETER NAME="C_M_AXI_SG_ADDR_WIDTH" VALUE="32" />
+        <PARAMETER NAME="C_M_AXI_SG_DATA_WIDTH" VALUE="32" />
+        <PARAMETER NAME="C_M_AXIS_MM2S_CNTRL_TDATA_WIDTH" VALUE="32" />
+        <PARAMETER NAME="C_MICRO_DMA" VALUE="0" />
+        <PARAMETER NAME="C_INCLUDE_MM2S" VALUE="1" />
+        <PARAMETER NAME="C_INCLUDE_MM2S_SF" VALUE="1" />
+        <PARAMETER NAME="C_M_AXI_MM2S_ADDR_WIDTH" VALUE="32" />
+        <PARAMETER NAME="C_M_AXI_MM2S_DATA_WIDTH" VALUE="32" />
+        <PARAMETER NAME="C_M_AXIS_MM2S_TDATA_WIDTH" VALUE="32" />
+        <PARAMETER NAME="C_INCLUDE_MM2S_DRE" VALUE="0" />
+        <PARAMETER NAME="C_INCLUDE_S2MM" VALUE="1" />
+        <PARAMETER NAME="C_INCLUDE_S2MM_SF" VALUE="1" />
+        <PARAMETER NAME="C_M_AXI_S2MM_ADDR_WIDTH" VALUE="32" />
+        <PARAMETER NAME="C_M_AXI_S2MM_DATA_WIDTH" VALUE="32" />
+        <PARAMETER NAME="C_INCLUDE_S2MM_DRE" VALUE="0" />
+        <PARAMETER NAME="c_include_sg" VALUE="0" />
+        <PARAMETER NAME="c_sg_length_width" VALUE="16" />
+        <PARAMETER NAME="c_micro_dma" VALUE="0" />
+        <PARAMETER NAME="c_include_mm2s" VALUE="1" />
+        <PARAMETER NAME="c_m_axi_mm2s_data_width" VALUE="32" />
+        <PARAMETER NAME="c_m_axis_mm2s_tdata_width" VALUE="32" />
+        <PARAMETER NAME="c_include_mm2s_dre" VALUE="0" />
+        <PARAMETER NAME="c_include_mm2s_sf" VALUE="1" />
+        <PARAMETER NAME="c_include_s2mm" VALUE="1" />
+        <PARAMETER NAME="c_m_axi_s2mm_data_width" VALUE="32" />
+        <PARAMETER NAME="c_include_s2mm_dre" VALUE="0" />
+        <PARAMETER NAME="c_include_s2mm_sf" VALUE="1" />
+      </PARAMETERS>
+    </MODULE>
+    <MODULE FULLNAME="/processing_system7_0" INSTANCE="processing_system7_0" VLNV="xilinx.com:ip:processing_system7:5.5" MODTYPE="processing_system7">
+      <PARAMETERS>
+        <PARAMETER NAME="C_INCLUDE_TRACE_BUFFER" VALUE="0" />
+        <PARAMETER NAME="C_INCLUDE_ACP_TRANS_CHECK" VALUE="0" />
+        <PARAMETER NAME="C_M_AXI_GP0_ID_WIDTH" VALUE="12" />
+        <PARAMETER NAME="C_M_AXI_GP0_ENABLE_STATIC_REMAP" VALUE="0" />
+        <PARAMETER NAME="C_M_AXI_GP1_ID_WIDTH" VALUE="12" />
+        <PARAMETER NAME="C_M_AXI_GP1_ENABLE_STATIC_REMAP" VALUE="0" />
+        <PARAMETER NAME="C_M_AXI_GP0_THREAD_ID_WIDTH" VALUE="12" />
+        <PARAMETER NAME="C_M_AXI_GP1_THREAD_ID_WIDTH" VALUE="12" />
+      </PARAMETERS>
+    </MODULE>
+  </MODULES>
+</EDKSYSTEM>

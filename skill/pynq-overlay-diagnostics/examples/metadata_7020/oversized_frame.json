@@ -1,0 +1,36 @@
+{
+  "schema": "pynq-overlay-contract-v1",
+  "name": "full-frame-length-check",
+  "expected_device": "7z020",
+  "required_ips": [
+    {
+      "name": "axi_dma_0",
+      "vlnv_contains": ":axi_dma:"
+    }
+  ],
+  "dma": {
+    "ip": "axi_dma_0",
+    "transfers": [
+      {
+        "direction": "mm2s",
+        "shape": [
+          640,
+          640,
+          3
+        ],
+        "dtype": "uint8",
+        "buffer_bytes": 1228800
+      },
+      {
+        "direction": "s2mm",
+        "shape": [
+          64,
+          64,
+          3
+        ],
+        "dtype": "uint8",
+        "buffer_bytes": 12288
+      }
+    ]
+  }
+}

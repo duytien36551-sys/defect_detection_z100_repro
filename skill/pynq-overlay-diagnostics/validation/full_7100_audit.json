@@ -1,0 +1,38 @@
+{
+  "schema": "pynq-overlay-audit-report-v1",
+  "status": "BLOCKED",
+  "hardware_execution": false,
+  "metadata": {
+    "file": "z100_platform.xsa",
+    "bytes": 287275,
+    "sha256": "d314d650e12e36e4669f956e03f7388d95b4f3031a9da071dea7366495a57b5e",
+    "hwh_member": "system.hwh",
+    "hwh_sha256": "61e8ec7caba1e08b395e6b4f67bbae876f6e9aa611f1591ac1aad3a7fc85c55f"
+  },
+  "bit": {
+    "file": "z100_platform.bit",
+    "sha256": "9250f9880debbb97a9fb240001dfe0bbd3e673b00c759c485c98a4fba39d957f",
+    "part": "7z100ffg900"
+  },
+  "device": "7z100",
+  "transfers": [],
+  "findings": [
+    {
+      "severity": "info",
+      "code": "PAIRING_NOT_PROVEN",
+      "message": "Matching device and hashes do not prove BIT/HWH came from the same build; bind them to a build manifest."
+    },
+    {
+      "severity": "error",
+      "code": "DMA_MISSING",
+      "message": "No DMA at axi_dma_0; do not map a native accelerator to AXI DMA by name."
+    },
+    {
+      "severity": "info",
+      "code": "STATIC_LIMIT",
+      "message": "No hardware or notebook executed. TLAST, TKEEP, coherent ownership, content correctness and timing are not observed."
+    }
+  ],
+  "contract_sha256": "1adacfafc3293ffb343ff2d9cfb4fa17c64df25c2f69904a3d29e2b54c8932df",
+  "scope": "Full original HWH/XSA checked offline, not only the distributed lossy excerpt. No board executed."
+}

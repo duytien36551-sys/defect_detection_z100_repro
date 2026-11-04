@@ -1,0 +1,26 @@
+{
+  "schema": "pynq-overlay-contract-v1",
+  "name": "native-to-pynq-migration",
+  "expected_device": "7z100",
+  "required_ips": [
+    {
+      "name": "native_conv_backend_local_control_0"
+    }
+  ],
+  "dma": {
+    "ip": "axi_dma_0",
+    "transfers": [
+      {
+        "direction": "mm2s",
+        "shape": [
+          640,
+          640,
+          3
+        ],
+        "dtype": "uint8",
+        "buffer_bytes": 1228800
+      }
+    ]
+  },
+  "scope_note": "Native ACP design has no AXI DMA. Expected BLOCKED is a correct diagnosis, not a failed hardware run."
+}

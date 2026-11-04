@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<EDKSYSTEM VIVADOVERSION="2026.1">
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z100" NAME="system" PACKAGE="ffg900" SPEEDGRADE="-2" />
+  <MODULES>
+    <MODULE FULLNAME="/native_conv_backend_local_control_0" INSTANCE="native_conv_backend_local_control_0" VLNV="xilinx.com:module_ref:z100_native_conv_pool_acp_v1:1.0" MODTYPE="z100_native_conv_pool_acp_v1">
+      <PARAMETERS />
+    </MODULE>
+    <MODULE FULLNAME="/processing_system7_0" INSTANCE="processing_system7_0" VLNV="xilinx.com:ip:processing_system7:5.5" MODTYPE="processing_system7">
+      <PARAMETERS>
+        <PARAMETER NAME="C_INCLUDE_ACP_TRANS_CHECK" VALUE="0" />
+        <PARAMETER NAME="C_INCLUDE_TRACE_BUFFER" VALUE="0" />
+        <PARAMETER NAME="C_M_AXI_GP0_ENABLE_STATIC_REMAP" VALUE="0" />
+        <PARAMETER NAME="C_M_AXI_GP0_ID_WIDTH" VALUE="12" />
+        <PARAMETER NAME="C_M_AXI_GP0_THREAD_ID_WIDTH" VALUE="12" />
+        <PARAMETER NAME="C_M_AXI_GP1_ENABLE_STATIC_REMAP" VALUE="0" />
+        <PARAMETER NAME="C_M_AXI_GP1_ID_WIDTH" VALUE="12" />
+        <PARAMETER NAME="C_M_AXI_GP1_THREAD_ID_WIDTH" VALUE="12" />
+      </PARAMETERS>
+    </MODULE>
+  </MODULES>
+</EDKSYSTEM>
